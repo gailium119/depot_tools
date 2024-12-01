@@ -16,6 +16,24 @@
       "message": "This broke my local non-corp checkout after I did a `gn clean`.\n\nBecause use_siso defaults to off for a non-corp machine, and `gn clean` clears the dotfiles in the output dir that we use to detect \"already using siso\", the script starts with use_siso set to false by default. Then my aregs.gn attempt to set it to true, and this assertion fires.\n\nEither we need to distinguish between \"user-set\" and \"defaulted\", or we need to just remove these asserts.",
       "revId": "db017d1ffe7dee96e9d93681d09d6266388efbec",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "27ead6cb_94973002",
+        "filename": "autoninja.py",
+        "patchSetId": 9
+      },
+      "lineNbr": 249,
+      "author": {
+        "id": 1577257
+      },
+      "writtenOn": "2024-12-01T04:44:43Z",
+      "side": 1,
+      "message": "I also just hit this from my non-corp machine at home. I sent a CL to remove the asserts for now: https://chromium-review.googlesource.com/c/chromium/tools/depot_tools/+/6058992",
+      "parentUuid": "66ead538_916f0d9a",
+      "revId": "db017d1ffe7dee96e9d93681d09d6266388efbec",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

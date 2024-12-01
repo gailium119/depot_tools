@@ -16,6 +16,23 @@
       "message": "I would remove the link to this doc since it\u0027s restricted access and most likely appropriate to remain that way.\n\nSince this is a Chromium CL, we shouldn\u0027t link to internal documentation if it\u0027s avoidable - both with the google doc which is restricted and the go link. We should look to move the relevant information to the open source docs [1] so there\u0027s a single source of truth for Chromium contributors.\n\n[1] https://chromium.googlesource.com/chromium/src/+/HEAD/docs/adding_to_third_party.md",
       "revId": "37a53e635c5216facd1a62820397923fe44f1da9",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "22e2360a_a2f29359",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1553262
+      },
+      "writtenOn": "2024-12-01T21:47:47Z",
+      "side": 1,
+      "message": "I would also tag @agrieve who reverted this change originally as an FYI.",
+      "revId": "37a53e635c5216facd1a62820397923fe44f1da9",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

@@ -34,6 +34,24 @@
       "parentUuid": "66ead538_916f0d9a",
       "revId": "db017d1ffe7dee96e9d93681d09d6266388efbec",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6fc36dd5_20508178",
+        "filename": "autoninja.py",
+        "patchSetId": 9
+      },
+      "lineNbr": 249,
+      "author": {
+        "id": 1001939
+      },
+      "writtenOn": "2024-12-02T00:25:29Z",
+      "side": 1,
+      "message": "https://crrev.com/c/6058992 landed",
+      "parentUuid": "27ead6cb_94973002",
+      "revId": "db017d1ffe7dee96e9d93681d09d6266388efbec",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

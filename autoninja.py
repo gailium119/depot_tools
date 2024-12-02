@@ -20,10 +20,13 @@ import multiprocessing
 import os
 import platform
 import re
+import selectors
 import shlex
 import shutil
+import signal
 import subprocess
 import sys
+import threading
 import time
 import uuid
 import warnings
@@ -226,6 +229,7 @@ def _main_inner(input_args, build_id, should_collect_logs=False):
     use_remoteexec = False
     use_reclient = _get_use_reclient_value(output_dir)
     use_siso = _get_use_siso_default(output_dir)
+    use_android_build_server = False
 
     # Attempt to auto-detect remote build acceleration. We support gn-based
     # builds, where we look for args.gn in the build tree, and cmake-based
@@ -256,6 +260,10 @@ def _main_inner(input_args, build_id, should_collect_logs=False):
                 continue
             if k == "use_reclient" and v == "false":
                 use_reclient = False
+                continue
+            if k == "android_static_analysis" and v == '"build_server"':
+                # TODO: only set to true if target_os == "android"
+                use_android_build_server = True
                 continue
         if use_reclient is None:
             use_reclient = use_remoteexec
@@ -322,11 +330,16 @@ def _main_inner(input_args, build_id, should_collect_logs=False):
                     file=sys.stderr,
                 )
                 return 1
+
+            if use_android_build_server:
+                local_dev_server_path = _start_fast_local_dev_server(
+                    build_id, output_dir)
+
             # Build ID consistently used in other tools. e.g. Reclient, ninjalog.
             os.environ.setdefault("SISO_BUILD_ID", build_id)
             if use_remoteexec:
                 if use_reclient and not t_specified:
-                    return reclient_helper.run_siso(
+                    exit_code = reclient_helper.run_siso(
                         [
                             'siso',
                             'ninja',
@@ -334,9 +347,16 @@ def _main_inner(input_args, build_id, should_collect_logs=False):
                             '-project=',
                             '-reapi_instance=',
                         ] + input_args[1:],
-                        should_collect_logs)
-                return siso.main(["siso", "ninja"] + input_args[1:])
-            return siso.main(["siso", "ninja", "--offline"] + input_args[1:])
+                        should_collect_logs,
+                        swallow_keyboard_interrupt=not use_android_build_server)
+                else:
+                    exit_code = siso.main(["siso", "ninja"] + input_args[1:])
+            else:
+                exit_code = siso.main(["siso", "ninja", "--offline"] +
+                                      input_args[1:])
+            if use_android_build_server:
+                _print_wait_command(local_dev_server_path, build_id)
+            return exit_code
 
         if os.path.exists(siso_marker):
             print(
@@ -436,9 +456,64 @@ def _main_inner(input_args, build_id, should_collect_logs=False):
         # are being used.
         _print_cmd(ninja_args)
 
+    if use_android_build_server:
+        local_dev_server_path = _start_fast_local_dev_server(
+            build_id, output_dir)
     if use_reclient and not t_specified:
-        return reclient_helper.run_ninja(ninja_args, should_collect_logs)
-    return ninja.main(ninja_args)
+        exit_code = reclient_helper.run_ninja(
+            ninja_args,
+            should_collect_logs,
+            swallow_keyboard_interrupt=not use_android_build_server)
+    else:
+        exit_code = ninja.main(ninja_args)
+    if use_android_build_server:
+        _print_wait_command(local_dev_server_path, build_id)
+    return exit_code
+
+
+def _register_build_id(local_dev_server_path, build_id):
+    subprocess.run([
+        local_dev_server_path, '--register-build-id', build_id, '--builder-pid',
+        str(os.getpid())
+    ])
+
+
+def _print_wait_command(local_dev_server_path, build_id):
+    print(
+        'Build server might still be running some tasks in the background. '
+        'Run this command to wait for pending build server tasks:',
+        file=sys.stderr)
+    cmd = [os.path.relpath(local_dev_server_path), '--wait-for-build', build_id]
+    print(' '.join(cmd), file=sys.stderr)
+
+
+def _start_fast_local_dev_server(build_id, output_dir):
+    print('+++ Detected android_static_analysis="build_server" +++',
+          file=sys.stderr)
+    print('build_id:', build_id, file=sys.stderr)
+
+    src_dir = os.path.abspath(output_dir)
+    while os.path.basename(src_dir) != 'src':
+        src_dir = os.path.dirname(src_dir)
+    local_dev_server_path = os.path.join(
+        src_dir, 'build/android/fast_local_dev_server.py')
+
+    print('Starting build server in the background.', file=sys.stderr)
+    subprocess.Popen([local_dev_server_path, '--exit-on-idle', '--quiet'],
+                     start_new_session=True)
+    original_sigint_handler = signal.getsignal(signal.SIGINT)
+
+    def _kill_handler(signum, frame):
+        # Cancel the pending build tasks if user CTRL+c early.
+        print('Canceling pending build_server tasks', file=sys.stderr)
+        subprocess.run([local_dev_server_path, '--cancel-build', build_id])
+        original_sigint_handler(signum, frame)
+
+    signal.signal(signal.SIGINT, _kill_handler)
+
+    # Tell the build server about us.
+    _register_build_id(local_dev_server_path, build_id)
+    return local_dev_server_path
 
 
 def _upload_ninjalog(args, exit_code, build_duration):
@@ -464,6 +539,44 @@ def _upload_ninjalog(args, exit_code, build_duration):
     )
 
 
+def _SetTtyEnv():
+    stdout_name = os.readlink('/proc/self/fd/1')
+    os.environ.setdefault("AUTONINJA_STDOUT_NAME", stdout_name)
+
+
+# DEPRECATED
+def _wait_for_build_server(server_path, build_id):
+    # Reset signal handler to not kill build server on CTRL+C anymore
+    signal.signal(signal.SIGINT, signal.SIG_DFL)
+
+    # Create a pipe to allow waiting on subprocess.run using select()
+    read_fd, write_fd = os.pipe()
+
+    cmd = [server_path, '--wait-for-build', build_id]
+
+    def _wait_helper():
+        exit_code = subprocess.run(cmd).returncode
+        if exit_code != 0:
+            print(
+                'Failed to wait on build server, server might still be running your tasks.',
+                file=sys.stderr)
+        # Write to the pipe to mark done (so the select() call returns).
+        os.write(write_fd, b'\n')
+
+    print(
+        'Build done, waiting for fast_local_dev_server.py to finish, You can press Enter to skip waiting.',
+        file=sys.stderr)
+    print(os.path.relpath(server_path), ' '.join(cmd[1:]), file=sys.stderr)
+    _thread = threading.Thread(target=_wait_helper)
+    _thread.start()
+
+    selector = selectors.DefaultSelector()
+    selector.register(read_fd, selectors.EVENT_READ)
+    selector.register(sys.stdin, selectors.EVENT_READ)
+    # Wait until either stdin is written to or we are done waiting for the server.
+    selector.select()
+
+
 def main(args):
     start = time.time()
     # Generate Build ID randomly.
@@ -472,6 +585,8 @@ def main(args):
     if not build_id:
         build_id = str(uuid.uuid4())
         os.environ.setdefault("AUTONINJA_BUILD_ID", build_id)
+
+    _SetTtyEnv()
 
     # Check the log collection opt-in/opt-out status, and display notice if necessary.
     should_collect_logs = build_telemetry.enabled()

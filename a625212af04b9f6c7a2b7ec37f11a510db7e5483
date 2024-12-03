@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8b0a12e8_dede8028",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1250067
+      },
+      "writtenOn": "2024-12-03T17:06:11Z",
+      "side": 1,
+      "message": "See discusson https://groups.google.com/a/chromium.org/g/python/c/K-8cJSgeT4w/m/R6w2qHOKBwAJ",
+      "revId": "a625212af04b9f6c7a2b7ec37f11a510db7e5483",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

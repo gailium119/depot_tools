@@ -1,0 +1,79 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d75146d9_190723b2",
+        "filename": "tests/git_footers_test.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 175,
+      "author": {
+        "id": 1560543
+      },
+      "writtenOn": "2024-12-03T16:29:02Z",
+      "side": 1,
+      "message": "This is confusing name, let\u0027s pick some other name.",
+      "fixSuggestions": [
+        {
+          "fixId": "974c3ecd_7d05bce6",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "tests/git_footers_test.py",
+              "range": {
+                "startLine": 175,
+                "startChar": 0,
+                "endLine": 176,
+                "endChar": 0
+              },
+              "replacement": "        add_change_id \u003d lambda lines: git_footers.add_footer_change_id(\n"
+            },
+            {
+              "path": "tests/git_footers_test.py",
+              "range": {
+                "startLine": 180,
+                "startChar": 0,
+                "endLine": 181,
+                "endChar": 0
+              },
+              "replacement": "            add_change_id([\n"
+            },
+            {
+              "path": "tests/git_footers_test.py",
+              "range": {
+                "startLine": 200,
+                "startChar": 0,
+                "endLine": 201,
+                "endChar": 0
+              },
+              "replacement": "            add_change_id([\n"
+            },
+            {
+              "path": "tests/git_footers_test.py",
+              "range": {
+                "startLine": 220,
+                "startChar": 0,
+                "endLine": 221,
+                "endChar": 0
+              },
+              "replacement": "            add_change_id([\n"
+            },
+            {
+              "path": "tests/git_footers_test.py",
+              "range": {
+                "startLine": 244,
+                "startChar": 0,
+                "endLine": 245,
+                "endChar": 0
+              },
+              "replacement": "            add_change_id([\n"
+            }
+          ]
+        }
+      ],
+      "revId": "fa08bd252e32f06d9e0143faed3be8e8cf7f7925",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

@@ -171,6 +171,101 @@ My commit message is my best friend. It is my life.
                                              'Ix'),
             'Header.\n\nBug: v8\nChange-Id: Ix\nN=t\nT=z')
 
+    def testAddFooterChangeIdWithMultilineFooters(self):
+        want = lambda lines: git_footers.add_footer_change_id(
+            '\n'.join(lines), 'Ixxx')
+        expected = '\n'.join
+
+        self.assertEqual(
+            want([
+                'header',
+                '',
+                '',
+                'BUG: yy',
+                'Test: hello ',
+                '  world',
+            ]),
+            expected([
+                'header',
+                '',
+                '',
+                'BUG: yy',
+                'Test: hello ',
+                '  world',
+                'Change-Id: Ixxx',
+            ]),
+        )
+
+        self.assertEqual(
+            want([
+                'header',
+                '',
+                '',
+                'BUG: yy',
+                'Yeah: hello ',
+                '  world',
+            ]),
+            expected([
+                'header',
+                '',
+                '',
+                'BUG: yy',
+                'Change-Id: Ixxx',
+                'Yeah: hello ',
+                '  world',
+            ]),
+        )
+
+        self.assertEqual(
+            want([
+                'header',
+                '',
+                '',
+                'Something: ',
+                '   looks great',
+                'BUG: yy',
+                'Test: hello ',
+                '  world',
+            ]),
+            expected([
+                'header',
+                '',
+                '',
+                'Something: ',
+                '   looks great',
+                'BUG: yy',
+                'Test: hello ',
+                '  world',
+                'Change-Id: Ixxx',
+            ]),
+        )
+
+        self.assertEqual(
+            want([
+                'header',
+                '',
+                '',
+                'Something: ',
+                'BUG: yy',
+                'Something: ',
+                '   looks great',
+                'Test: hello ',
+                '  world',
+            ]),
+            expected([
+                'header',
+                '',
+                '',
+                'Something: ',
+                'BUG: yy',
+                'Something: ',
+                '   looks great',
+                'Test: hello ',
+                '  world',
+                'Change-Id: Ixxx',
+            ]),
+        )
+
     def testAddFooter(self):
         with self.assertRaises(ValueError):
             git_footers.add_footer('', 'Invalid Footer', 'Value')

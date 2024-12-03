@@ -74,6 +74,24 @@
       ],
       "revId": "fa08bd252e32f06d9e0143faed3be8e8cf7f7925",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "04af3b29_cfda1fee",
+        "filename": "tests/git_footers_test.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 175,
+      "author": {
+        "id": 1147264
+      },
+      "writtenOn": "2024-12-03T17:14:35Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "d75146d9_190723b2",
+      "revId": "fa08bd252e32f06d9e0143faed3be8e8cf7f7925",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

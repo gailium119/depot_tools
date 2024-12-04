@@ -50,6 +50,30 @@
       ],
       "revId": "793bfaad21ba6eacfc1e6fb4c4c1f3ac95ac1974",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a3facb6c_89c35d68",
+        "filename": "git_cl.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 3892,
+      "author": {
+        "id": 3355336
+      },
+      "writtenOn": "2024-12-04T01:30:26Z",
+      "side": 1,
+      "message": "that\u0027s embarrassing, thanks\n\nI also fixed the string formatting and tested running the command this time.",
+      "parentUuid": "2da84773_b0c9b4d6",
+      "range": {
+        "startLine": 3892,
+        "startChar": 8,
+        "endLine": 3892,
+        "endChar": 25
+      },
+      "revId": "793bfaad21ba6eacfc1e6fb4c4c1f3ac95ac1974",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

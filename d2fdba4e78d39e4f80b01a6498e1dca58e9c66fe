@@ -16,6 +16,24 @@
       "message": "I feel this is easier to read.",
       "revId": "d2fdba4e78d39e4f80b01a6498e1dca58e9c66fe",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f314c092_5c89ad5c",
+        "filename": "bootstrap/bootstrap.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 293,
+      "author": {
+        "id": 3355336
+      },
+      "writtenOn": "2024-12-04T21:50:10Z",
+      "side": 0,
+      "message": "I don\u0027t have a strong opinion, but I\u0027m +0.5 with josip.",
+      "parentUuid": "3d2894bd_a2f52d3b",
+      "revId": "d2fdba4e78d39e4f80b01a6498e1dca58e9c66fe",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2da84773_b0c9b4d6",
+        "filename": "git_cl.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 3892,
+      "author": {
+        "id": 1367998
+      },
+      "writtenOn": "2024-12-04T01:26:51Z",
+      "side": 1,
+      "message": "move this before `host \u003d cl.GetGerritHost()`",
+      "range": {
+        "startLine": 3892,
+        "startChar": 8,
+        "endLine": 3892,
+        "endChar": 25
+      },
+      "fixSuggestions": [
+        {
+          "fixId": "46f7f150_d3ba4b0f",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "git_cl.py",
+              "range": {
+                "startLine": 3890,
+                "startChar": 0,
+                "endLine": 3890,
+                "endChar": 0
+              },
+              "replacement": "        cl \u003d Changelist()\n"
+            },
+            {
+              "path": "git_cl.py",
+              "range": {
+                "startLine": 3892,
+                "startChar": 0,
+                "endLine": 3893,
+                "endChar": 0
+              },
+              "replacement": ""
+            }
+          ]
+        }
+      ],
+      "revId": "793bfaad21ba6eacfc1e6fb4c4c1f3ac95ac1974",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

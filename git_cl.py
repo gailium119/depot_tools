@@ -3887,11 +3887,14 @@ def CMDcreds_check(parser, args):
     _, _ = parser.parse_args(args)
 
     if newauth.Enabled():
+        host = cl.GetGerritHost()
+        print('Using Gerrit host: %r', host)
         cl = Changelist()
         git_auth.Configure(os.getcwd(), cl)
         # Perform some advisory checks
         email = scm.GIT.GetConfig(os.getcwd(), 'user.email') or ''
-        if not gerrit_util.ShouldUseSSO(cl.GetGerritHost(), email):
+        print('Using email (configured in Git): %r', email)
+        if not gerrit_util.ShouldUseSSO(host, email):
             a = gerrit_util.LuciAuthAuthenticator()
             try:
                 a.luci_auth.get_access_token()

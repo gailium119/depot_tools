@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3d2894bd_a2f52d3b",
+        "filename": "bootstrap/bootstrap.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 293,
+      "author": {
+        "id": 1560543
+      },
+      "writtenOn": "2024-12-04T16:44:46Z",
+      "side": 0,
+      "message": "I feel this is easier to read.",
+      "revId": "d2fdba4e78d39e4f80b01a6498e1dca58e9c66fe",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

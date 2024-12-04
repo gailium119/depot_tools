@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6a9e42c0_62d2337a",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1560543
+      },
+      "writtenOn": "2024-12-04T16:44:46Z",
+      "side": 1,
+      "message": "IMO, this is a bit misleading - it\u0027s not a behavior change. Instead, it\u0027s ordering of checks.",
+      "revId": "d4183d815be1f5fb85ce2928cd4c7ab445099b88",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5621760b_a4ce823c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1560543
+      },
+      "writtenOn": "2024-12-04T16:44:46Z",
+      "side": 1,
+      "message": "I don\u0027t see any benefits of doing this - it can actually make it more complex to understand the codebase. Is there any other reason for this CL beyond what you wrote in the commit message?",
+      "revId": "d4183d815be1f5fb85ce2928cd4c7ab445099b88",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

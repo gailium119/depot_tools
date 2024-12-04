@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c68f2a62_b32049a6",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1289180
+      },
+      "writtenOn": "2024-12-04T19:10:32Z",
+      "side": 1,
+      "message": "https://crrev.com/c/6069412 will fix error in Build downstream Roller",
+      "revId": "a14b565433963293418838015efa809488e3a0ae",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

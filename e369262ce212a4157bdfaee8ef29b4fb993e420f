@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3719c406_136f58fa",
+        "filename": "git_cl.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 3896,
+      "author": {
+        "id": 1367998
+      },
+      "writtenOn": "2024-12-04T01:33:58Z",
+      "side": 1,
+      "message": "nit: use f string",
+      "range": {
+        "startLine": 3896,
+        "startChar": 14,
+        "endLine": 3896,
+        "endChar": 59
+      },
+      "revId": "e369262ce212a4157bdfaee8ef29b4fb993e420f",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

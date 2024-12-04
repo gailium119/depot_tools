@@ -290,11 +290,9 @@ def search_win_git_directory():
     """
     # Look for the git command in PATH outside of depot_tools.
     for p in os.environ.get('PATH', '').split(os.pathsep):
-        if _within_depot_tools(p):
-            continue
-
         for cmd in ('git.exe', 'git.bat'):
-            if os.path.isfile(os.path.join(p, cmd)):
+            if (os.path.isfile(os.path.join(p, cmd))
+                    and not _within_depot_tools(p)):
                 git_root = _traverse_to_git_root(p)
                 if git_root:
                     return git_root

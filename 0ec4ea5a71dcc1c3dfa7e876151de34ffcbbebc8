@@ -16,6 +16,23 @@
       "message": "Tested by uploading https://chromium-review.googlesource.com/c/chromium/tools/depot_tools/+/6073042",
       "revId": "0ec4ea5a71dcc1c3dfa7e876151de34ffcbbebc8",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8243ce52_f3a8f12c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 3355336
+      },
+      "writtenOn": "2024-12-05T22:34:07Z",
+      "side": 1,
+      "message": "ping",
+      "revId": "0ec4ea5a71dcc1c3dfa7e876151de34ffcbbebc8",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

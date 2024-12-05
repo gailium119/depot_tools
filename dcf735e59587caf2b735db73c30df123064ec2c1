@@ -106,6 +106,24 @@
       "parentUuid": "980daa5a_4bf83a26",
       "revId": "dcf735e59587caf2b735db73c30df123064ec2c1",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5cdd073e_eb4c82ba",
+        "filename": "bootstrap/bootstrap.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 366,
+      "author": {
+        "id": 1544922
+      },
+      "writtenOn": "2024-12-05T23:21:45Z",
+      "side": 1,
+      "message": "Based on the reports in the wild of being confused on what\u0027s being set, I think we do need to support explicitly telling users what config changes would be made.\n\nI\u0027ll update this CL to use `git config list --global` and remove the use of `depot-tools.gitPostprocessVersion`.",
+      "parentUuid": "dc6548a3_375045d6",
+      "revId": "dcf735e59587caf2b735db73c30df123064ec2c1",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

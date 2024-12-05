@@ -361,6 +361,18 @@ def _win_git_bootstrap_config():
         # version of the global git config. Nothing to do.
         return
 
+    # Get the current values for the settings which have defined values for
+    # optimal Chromium development.
+    config_keys = sorted(GIT_GLOBAL_CONFIG.keys())
+    mismatching_keys = []
+    for k in config_keys:
+        v = get_git_global_config_value(git_path=git_bat_path, key=k)
+        if v != GIT_GLOBAL_CONFIG.get(k):
+            mismatching_keys.append(k)
+    if not mismatching_keys:
+        # Global git config already has the desired values. Nothing to do.
+        return
+
     # Check whether the user has authorized depot_tools to update their global
     # git config.
     allow_global_key = 'depot-tools.allowGlobalGitConfig'

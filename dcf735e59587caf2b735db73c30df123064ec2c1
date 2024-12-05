@@ -16,6 +16,24 @@
       "message": "I don\u0027t think we should do this - it complicates code and adds a bit of latency (since it invokes git config additional N times, N\u003d4). And it\u0027s unlikely the user sets it by hand.",
       "revId": "dcf735e59587caf2b735db73c30df123064ec2c1",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "be93f751_9e3c23ba",
+        "filename": "bootstrap/bootstrap.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 366,
+      "author": {
+        "id": 1126912
+      },
+      "writtenOn": "2024-12-05T17:35:07Z",
+      "side": 1,
+      "message": "drive-by: I would disagree that users are unlikely to set this by hand. Maybe when unprompted before this warning but certainly not after the warning has been updated in the subsequent 1-2 patches (which also imo makes setting this less scary).\n\nWe\u0027re getting multiple reports in the wild (slack, team chats) that people are confused about what `depot-tools.allowGlobalGitConfig` would do and are hesitant to set it and people have linked to the `GIT_GLOBAL_CONFIG` code as a workaround. I can empathise with that and would probably set them once myself and then set `tools.allowGlobalGitConfig\u003dfalse` to silence the warning, but that means I won\u0027t be notified of any future changes you think are good for me.\n\nAlso since we already have to warn if any of these are off we do need to read the config. What if we use and parse `git config --list --global` to limit this to a single invocation then?\n\n```\n$ git config --list --global\nuser.email\u003dpbos@chromium.org\nhttp.cookiefile\u003d/Users/pbos/.gitcookies\nmaintenance.repo\u003d/Users/pbos/chromium/src\n```",
+      "parentUuid": "74954b89_7eb67f09",
+      "revId": "dcf735e59587caf2b735db73c30df123064ec2c1",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

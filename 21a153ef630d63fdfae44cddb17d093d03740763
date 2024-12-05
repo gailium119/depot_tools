@@ -1,0 +1,39 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "83374b3f_84a82bf0",
+        "filename": "bootstrap/bootstrap.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 393,
+      "author": {
+        "id": 1560543
+      },
+      "writtenOn": "2024-12-05T16:43:51Z",
+      "side": 1,
+      "message": "if we are encouraging folks to set those values, let\u0027s also ask them to set `depot-tools.gitPostprocessVersion`",
+      "fixSuggestions": [
+        {
+          "fixId": "5d270b34_edbfdae3",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "bootstrap/bootstrap.py",
+              "range": {
+                "startLine": 395,
+                "startChar": 0,
+                "endLine": 395,
+                "endChar": 0
+              },
+              "replacement": "            f\u0027$ git config --global {postprocess_key} {GIT_POSTPROCESS_VERSION}\u0027,\n"
+            }
+          ]
+        }
+      ],
+      "revId": "21a153ef630d63fdfae44cddb17d093d03740763",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

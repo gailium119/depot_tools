@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "246dfed4_58a06347",
+        "filename": "bootstrap/bootstrap.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 388,
+      "author": {
+        "id": 1126912
+      },
+      "writtenOn": "2024-12-05T08:21:45Z",
+      "side": 1,
+      "message": "Maybe something like this with better formatting?\n\n```\ndepot_tools recommends setting the following:\n\n$ git config --global \u003cfoo\u003e \u003cbar\u003e\n$ git config --global \u003cfoo\u003e \u003cbaz\u003e\n...\n\nYou can silence this message by setting these recommended values. You can allow depot_tools to update your global git config to recommended settings by running `git config --global depot-tools.allowGlobalGitConfig true`. To suppress this warning for this and future recommendations run `git config --global depot-tools.allowGlobalGitConfig false`.\n\n```",
+      "range": {
+        "startLine": 388,
+        "startChar": 13,
+        "endLine": 388,
+        "endChar": 24
+      },
+      "revId": "2581ef424833b6c1d6d118eec044c0a13fde8b2b",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

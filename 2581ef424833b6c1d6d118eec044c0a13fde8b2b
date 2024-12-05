@@ -22,6 +22,30 @@
       },
       "revId": "2581ef424833b6c1d6d118eec044c0a13fde8b2b",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5b09ce88_c30dde9d",
+        "filename": "bootstrap/bootstrap.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 388,
+      "author": {
+        "id": 1544922
+      },
+      "writtenOn": "2024-12-05T09:56:56Z",
+      "side": 1,
+      "message": "Thanks!\n\nDone in the chained CLs that update the warning contents: https://chromium-review.googlesource.com/c/chromium/tools/depot_tools/+/6072988 and https://chromium-review.googlesource.com/c/chromium/tools/depot_tools/+/6072989",
+      "parentUuid": "246dfed4_58a06347",
+      "range": {
+        "startLine": 388,
+        "startChar": 13,
+        "endLine": 388,
+        "endChar": 24
+      },
+      "revId": "2581ef424833b6c1d6d118eec044c0a13fde8b2b",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

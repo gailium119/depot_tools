@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "10dbc603_d24b3bc1",
+        "filename": "bootstrap/bootstrap.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 391,
+      "author": {
+        "id": 3355336
+      },
+      "writtenOn": "2024-12-05T22:24:58Z",
+      "side": 1,
+      "message": "This wording feels a bit awkward to me.  Suggest:\n\nYou can allow depot_tools to modify your global Git config by running:",
+      "range": {
+        "startLine": 390,
+        "startChar": 13,
+        "endLine": 391,
+        "endChar": 45
+      },
+      "revId": "ecf44cadaeaa8fb20ba8f46a0c903516c819f393",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

@@ -34,6 +34,24 @@
       ],
       "revId": "21a153ef630d63fdfae44cddb17d093d03740763",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "37656183_39d6e14b",
+        "filename": "bootstrap/bootstrap.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 393,
+      "author": {
+        "id": 3355336
+      },
+      "writtenOn": "2024-12-05T22:29:37Z",
+      "side": 1,
+      "message": "feel like we should just print what we want to set and ask the user yes/no, no point in asking the user to run these.",
+      "parentUuid": "83374b3f_84a82bf0",
+      "revId": "21a153ef630d63fdfae44cddb17d093d03740763",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

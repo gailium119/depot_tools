@@ -88,6 +88,24 @@
       "parentUuid": "2d36b3b7_7de34398",
       "revId": "dcf735e59587caf2b735db73c30df123064ec2c1",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "dc6548a3_375045d6",
+        "filename": "bootstrap/bootstrap.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 366,
+      "author": {
+        "id": 3355336
+      },
+      "writtenOn": "2024-12-05T22:21:57Z",
+      "side": 1,
+      "message": "FWIW I think peter\u0027s idea is great, but also unnecessary.  This will only be used to set values specific to Windows, which is unlikely to change very much beyond the status quo.  Thus, we only need the bare minimum to ensure we aren\u0027t fiddling with users who explicitly don\u0027t want to be fiddled with, and the status quo meets that bar.\n\n(The \"problem\" with peter\u0027s idea is that it requires more complexity for a small use case; it\u0027s overkill IMO)\n\n(Also, IIRC there\u0027s more git config fiddling logic in \"core\" depot_tools that is not windows specific.  It might be better to merge the Windows specific config there as well, rather than re-implement it here in bootstrap.py.  But that is a large enough work that it should be done as a separate effort, if at all.)",
+      "parentUuid": "980daa5a_4bf83a26",
+      "revId": "dcf735e59587caf2b735db73c30df123064ec2c1",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

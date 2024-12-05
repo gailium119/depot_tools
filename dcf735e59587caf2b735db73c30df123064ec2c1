@@ -34,6 +34,24 @@
       "parentUuid": "74954b89_7eb67f09",
       "revId": "dcf735e59587caf2b735db73c30df123064ec2c1",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7015b774_95b8e09f",
+        "filename": "bootstrap/bootstrap.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 366,
+      "author": {
+        "id": 1560543
+      },
+      "writtenOn": "2024-12-05T17:47:34Z",
+      "side": 1,
+      "message": "My suggestion in https://crrev.com/c/6072989/2 is to set `depot-tools.gitPostprocessVersion\u003d{version}`. We can elaborate what that config is used for. That way, we don\u0027t need to check each value - we can just assume that the configs are set correctly (which is the current behavior too).\n\nMoreover, with that change, the user won\u0027t need to set allowGlobalGitConfig config. If there\u0027s a bump in gitPostprocessVersion (which we rarely do), the user will know about the change. \n\nDo you think that\u0027s a good outcome, or do you think we should still proceed with this change?",
+      "parentUuid": "be93f751_9e3c23ba",
+      "revId": "dcf735e59587caf2b735db73c30df123064ec2c1",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

@@ -395,7 +395,16 @@ def _win_git_bootstrap_config():
             f'    git config --global {allow_global_key} false',
         ]
 
-        logging.warning('\n'.join(lines))
+        # Specify commands for the user to manually set their config.
+        manual = ['Alternatively, you can manually set your config to match.']
+        for k, v, desired in conflicts:
+            v = 'being unset' if not v else f'\'{v}\''
+            manual.extend([
+                f'{k} should be changed from {v} to \'{desired}\'. Run:',
+                f'    git config --global {k} {desired}',
+            ])
+
+        logging.warning('\n'.join(lines + manual))
         return
 
     # Global git config changes have been authorized - do the update.

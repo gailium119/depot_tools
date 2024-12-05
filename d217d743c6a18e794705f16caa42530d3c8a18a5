@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2f47e3f7_7e835ba7",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1147264
+      },
+      "writtenOn": "2024-12-05T01:26:42Z",
+      "side": 1,
+      "message": "remove reviewers until fixing the test failure in window",
+      "revId": "d217d743c6a18e794705f16caa42530d3c8a18a5",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

@@ -52,6 +52,24 @@
       "parentUuid": "be93f751_9e3c23ba",
       "revId": "dcf735e59587caf2b735db73c30df123064ec2c1",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2d36b3b7_7de34398",
+        "filename": "bootstrap/bootstrap.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 366,
+      "author": {
+        "id": 1126912
+      },
+      "writtenOn": "2024-12-05T18:03:14Z",
+      "side": 1,
+      "message": "I still think we need to tell (some) users what we\u0027re about to do and let them decide themselves. I think it\u0027s good to support users accepting the current best practices but be prompted if the best practices change, with a diff and suggested changes. Does that remove the need for `gitPostprocessVersion` completely? That\u0027d be a win right?\n\nI suspect that some users won\u0027t touch something automatic like `allowGlobalGitConfig\u003dtrue` with a 11-foot pole and some users won\u0027t want to think about any underlying config and just have \"please just do this for me, whatever\". Those are the two different scenarios that I hope we can support. I.e. with the suggested commands we can still get good performance for developers that want to audit config changes. Does that make sense?",
+      "parentUuid": "7015b774_95b8e09f",
+      "revId": "dcf735e59587caf2b735db73c30df123064ec2c1",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

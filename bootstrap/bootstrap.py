@@ -384,15 +384,18 @@ def _win_git_bootstrap_config():
         return
 
     if allow_global not in ('true', '1', 'yes', 'on'):
-        logging.warning(
-            'depot_tools would like to update your global Git config\n'
-            'to have the optimal settings for Chromium development.\n'
-            'Allow this by running:\n'
-            f'    git config --global {allow_global_key} true\n'
-            'Then, get depot_tools to update your config by running:\n'
-            '    gclient sync\n'
-            'To deny and silence this warning, run:\n'
-            f'    git config --global {allow_global_key} false\n')
+        lines = [
+            'depot_tools would like to update your global Git config',
+            'to have the optimal settings for Chromium development.',
+            'Allow automatic updates by running:',
+            f'    git config --global {allow_global_key} true',
+            'Then, get depot_tools to update your config by running:',
+            '    gclient sync',
+            'To deny automatic updates and silence this warning, run:',
+            f'    git config --global {allow_global_key} false',
+        ]
+
+        logging.warning('\n'.join(lines))
         return
 
     # Global git config changes have been authorized - do the update.

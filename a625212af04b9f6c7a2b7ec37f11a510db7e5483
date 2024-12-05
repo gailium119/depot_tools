@@ -16,6 +16,23 @@
       "message": "See discusson https://groups.google.com/a/chromium.org/g/python/c/K-8cJSgeT4w/m/R6w2qHOKBwAJ",
       "revId": "a625212af04b9f6c7a2b7ec37f11a510db7e5483",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4cd8d450_a104ca25",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1303432
+      },
+      "writtenOn": "2024-12-05T03:01:23Z",
+      "side": 1,
+      "message": "Thanks for waiting for the community threads to resolve and updating your approach.",
+      "revId": "a625212af04b9f6c7a2b7ec37f11a510db7e5483",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

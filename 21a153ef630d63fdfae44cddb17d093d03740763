@@ -52,6 +52,24 @@
       "parentUuid": "83374b3f_84a82bf0",
       "revId": "21a153ef630d63fdfae44cddb17d093d03740763",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "90b7e769_6d9e79f1",
+        "filename": "bootstrap/bootstrap.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 393,
+      "author": {
+        "id": 1544922
+      },
+      "writtenOn": "2024-12-06T02:50:11Z",
+      "side": 1,
+      "message": "Obsolete - `depot-tools.gitPostprocessVersion` will be redundant once the config values are read to determine whether an update is necessary (in [1]).\n\n[1]: https://chromium-review.googlesource.com/c/chromium/tools/depot_tools/+/6072987/3",
+      "parentUuid": "37656183_39d6e14b",
+      "revId": "21a153ef630d63fdfae44cddb17d093d03740763",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

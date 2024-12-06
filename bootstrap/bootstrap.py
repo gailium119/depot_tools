@@ -376,30 +376,23 @@ def _win_git_bootstrap_config():
 
     if allow_global not in ('true', '1', 'yes', 'on'):
         lines = [
-            'depot_tools recommends setting the following for',
-            'optimal Chromium development:',
-            '',
-        ] + [
-            f'$ git config --global {k} {GIT_GLOBAL_CONFIG.get(k)}'
-            for k in mismatching_keys
-        ] + [
-            '',
-            'You can silence this message by setting these recommended values.',
-            '',
-            'You can allow depot_tools to automatically update your global',
-            'Git config to recommended settings by running:',
+            'depot_tools would like to update your global Git config',
+            'to have the optimal settings for Chromium development.',
+            'You can allow depot_tools to automatically modify your global Git',
+            'config to recommended settings by running:',
             f'$ git config --global {allow_global_key} true',
             '',
-            'To suppress this warning and silence future recommendations, run:',
+            'To suppress this warning:',
             f'$ git config --global {allow_global_key} false',
         ]
 
         logging.warning('\n'.join(lines))
         return
 
-    # Global git config changes have been authorized - do the update.
-    for k, v in GIT_GLOBAL_CONFIG.items():
-        _check_call([git_bat_path, 'config', '--global', k, v])
+    # Global git config changes have been authorized - do the necessary updates.
+    for k in mismatching_keys:
+        desired = GIT_GLOBAL_CONFIG.get(k)
+        _check_call([git_bat_path, 'config', '--global', k, desired])
 
 
 def git_postprocess(template, add_docs):

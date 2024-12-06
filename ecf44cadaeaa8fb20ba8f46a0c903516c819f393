@@ -22,6 +22,30 @@
       },
       "revId": "ecf44cadaeaa8fb20ba8f46a0c903516c819f393",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "274c400d_78b11dbf",
+        "filename": "bootstrap/bootstrap.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 391,
+      "author": {
+        "id": 1544922
+      },
+      "writtenOn": "2024-12-06T02:47:54Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "10dbc603_d24b3bc1",
+      "range": {
+        "startLine": 390,
+        "startChar": 13,
+        "endLine": 391,
+        "endChar": 45
+      },
+      "revId": "ecf44cadaeaa8fb20ba8f46a0c903516c819f393",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

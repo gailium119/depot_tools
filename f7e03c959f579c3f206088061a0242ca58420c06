@@ -1,0 +1,49 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "60711f5a_0fbe11ee",
+        "filename": "bootstrap/bootstrap.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 325,
+      "author": {
+        "id": 1560543
+      },
+      "writtenOn": "2024-12-06T17:27:16Z",
+      "side": 1,
+      "message": "git config supports multiline values. So, use something like \u0027-z\u0027, and then split by \u0027\\0\u0027 instead of splitlines().",
+      "fixSuggestions": [
+        {
+          "fixId": "bf4eaa1c_d2a4a5f3",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "bootstrap/bootstrap.py",
+              "range": {
+                "startLine": 325,
+                "startChar": 0,
+                "endLine": 326,
+                "endChar": 0
+              },
+              "replacement": "        stdout, _ \u003d _check_call([git_path, \u0027config\u0027, \u0027list\u0027, \u0027--global\u0027, \u0027-z\u0027],\n"
+            },
+            {
+              "path": "bootstrap/bootstrap.py",
+              "range": {
+                "startLine": 333,
+                "startChar": 0,
+                "endLine": 335,
+                "endChar": 0
+              },
+              "replacement": "    for line in stdout.split(\u0027\\0\u0027):\n        entry \u003d line.strip().split(\u0027\u003d\u0027, 2)\n"
+            }
+          ]
+        }
+      ],
+      "revId": "f7e03c959f579c3f206088061a0242ca58420c06",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

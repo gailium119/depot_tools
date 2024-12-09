@@ -44,6 +44,24 @@
       ],
       "revId": "f7e03c959f579c3f206088061a0242ca58420c06",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b54ba5dc_0b2d3d7d",
+        "filename": "bootstrap/bootstrap.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 325,
+      "author": {
+        "id": 1544922
+      },
+      "writtenOn": "2024-12-09T00:42:45Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "60711f5a_0fbe11ee",
+      "revId": "f7e03c959f579c3f206088061a0242ca58420c06",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

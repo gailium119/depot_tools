@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "769e1940_5acab342",
+        "filename": "bootstrap/bootstrap.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 378,
+      "author": {
+        "id": 3355336
+      },
+      "writtenOn": "2024-12-09T21:46:20Z",
+      "side": 1,
+      "message": "Note that git config keys are not case sensitive on lookup (although case is saved when you set them)",
+      "range": {
+        "startLine": 378,
+        "startChar": 38,
+        "endLine": 378,
+        "endChar": 54
+      },
+      "revId": "5d42b34b4ec0c8706bed150e8d8a2b5e13546774",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

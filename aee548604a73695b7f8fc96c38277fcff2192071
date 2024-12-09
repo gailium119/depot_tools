@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fc4a0cb5_0908a2d2",
+        "filename": "bootstrap/bootstrap.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 393,
+      "author": {
+        "id": 3355336
+      },
+      "writtenOn": "2024-12-09T21:47:18Z",
+      "side": 0,
+      "message": "nit: include a cleanup that silently removes the existing key if present.  Just to minimize random clutter we\u0027re leaving in user configs.",
+      "revId": "aee548604a73695b7f8fc96c38277fcff2192071",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

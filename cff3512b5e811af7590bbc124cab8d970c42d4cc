@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "67de20c9_fb2b4388",
+        "filename": "presubmit_canned_checks.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 616,
+      "author": {
+        "id": 1560543
+      },
+      "writtenOn": "2024-12-09T21:59:18Z",
+      "side": 1,
+      "message": "Please fix this ERROR reported by If This Then That: \"LINT.ThenChange(\" should be \"LINT.ThenChange(\", or the provided file path and/or label name contains invalid characters\n\nAnalyzer Description: Reminders to change files when other files change\nOwner: ayeaye-team@google.com\n\n\"LINT.ThenChange(\" should be \"LINT.ThenChange(\", or the provided file path and/or label name contains invalid characters",
+      "range": {
+        "startLine": 616,
+        "startChar": 0,
+        "endLine": 616,
+        "endChar": 56
+      },
+      "revId": "cff3512b5e811af7590bbc124cab8d970c42d4cc",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

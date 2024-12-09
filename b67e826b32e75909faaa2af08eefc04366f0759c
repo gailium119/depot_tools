@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "45a0a56a_4e385e01",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1378025
+      },
+      "writtenOn": "2024-12-09T07:36:03Z",
+      "side": 1,
+      "message": "ptal.\n\ndoesn\u0027t fix everything I mentioned in the bug, but a slight improvement of regex (I.e. match with what\u0027s published in standard",
+      "revId": "b67e826b32e75909faaa2af08eefc04366f0759c",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

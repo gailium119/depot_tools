@@ -22,6 +22,30 @@
       },
       "revId": "b906c107a800ebc996076dce1da1857e717fc6b1",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a901a7fd_1cf0aa6b",
+        "filename": "bootstrap/bootstrap.py",
+        "patchSetId": 8
+      },
+      "lineNbr": 364,
+      "author": {
+        "id": 1544922
+      },
+      "writtenOn": "2024-12-10T11:21:01Z",
+      "side": 1,
+      "message": "Fixed both `list` and `unset` in https://chromium-review.googlesource.com/c/chromium/tools/depot_tools/+/6083215.\n\n@wujinli@bytedance.com sorry for the breakage. Please let me know if you still have issues?",
+      "parentUuid": "6ab7dcf0_1275798a",
+      "range": {
+        "startLine": 364,
+        "startChar": 8,
+        "endLine": 364,
+        "endChar": 77
+      },
+      "revId": "b906c107a800ebc996076dce1da1857e717fc6b1",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

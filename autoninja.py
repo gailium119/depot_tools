@@ -15,7 +15,6 @@ settings.
 """
 
 import importlib.util
-import logging
 import multiprocessing
 import os
 import platform
@@ -36,6 +35,7 @@ import ninja
 import ninjalog_uploader
 import reclient_helper
 import siso
+import android_build_server_helper
 
 if sys.platform in ["darwin", "linux"]:
     import resource
@@ -226,6 +226,7 @@ def _main_inner(input_args, build_id, should_collect_logs=False):
     use_remoteexec = False
     use_reclient = _get_use_reclient_value(output_dir)
     use_siso = _get_use_siso_default(output_dir)
+    use_android_build_server = False
 
     # Attempt to auto-detect remote build acceleration. We support gn-based
     # builds, where we look for args.gn in the build tree, and cmake-based
@@ -256,6 +257,9 @@ def _main_inner(input_args, build_id, should_collect_logs=False):
                 continue
             if k == "use_reclient" and v == "false":
                 use_reclient = False
+                continue
+            if k == "android_static_analysis" and v == '"build_server"':
+                use_android_build_server = True
                 continue
         if use_reclient is None:
             use_reclient = use_remoteexec
@@ -322,28 +326,36 @@ def _main_inner(input_args, build_id, should_collect_logs=False):
                     file=sys.stderr,
                 )
                 return 1
+
             # Build ID consistently used in other tools. e.g. Reclient, ninjalog.
             os.environ.setdefault("SISO_BUILD_ID", build_id)
-            if use_remoteexec:
-                if use_reclient and not t_specified:
-                    return reclient_helper.run_siso(
-                        [
-                            'siso',
-                            'ninja',
-                            # Do not authenticate when using Reproxy.
-                            '-project=',
-                            '-reapi_instance=',
-                        ] + input_args[1:],
-                        should_collect_logs)
-                return siso.main(["siso", "ninja"] + input_args[1:])
-            if not project:
-                project = _siso_rbe_project()
-            if not t_specified and project and not offline:
-                print(
-                    'Missing "use_remoteexec=true". No remote execution',
-                    file=sys.stderr,
-                )
-            return siso.main(["siso", "ninja", "--offline"] + input_args[1:])
+            with android_build_server_helper.build_server_context(
+                    build_id,
+                    output_dir,
+                    use_android_build_server=use_android_build_server):
+                if use_remoteexec:
+                    if use_reclient and not t_specified:
+                        return reclient_helper.run_siso(
+                            [
+                                'siso',
+                                'ninja',
+                                # Do not authenticate when using Reproxy.
+                                '-project=',
+                                '-reapi_instance=',
+                            ] + input_args[1:],
+                            should_collect_logs,
+                            swallow_keyboard_interrupt=
+                            not use_android_build_server)
+                    return siso.main(["siso", "ninja"] + input_args[1:])
+                if not project:
+                    project = _siso_rbe_project()
+                if not t_specified and project and not offline:
+                    print(
+                        'Missing "use_remoteexec=true". No remote execution',
+                        file=sys.stderr,
+                    )
+                return siso.main(["siso", "ninja", "--offline"] +
+                                 input_args[1:])
 
         if os.path.exists(siso_marker):
             print(
@@ -443,9 +455,15 @@ def _main_inner(input_args, build_id, should_collect_logs=False):
         # are being used.
         _print_cmd(ninja_args)
 
-    if use_reclient and not t_specified:
-        return reclient_helper.run_ninja(ninja_args, should_collect_logs)
-    return ninja.main(ninja_args)
+    with android_build_server_helper.build_server_context(
+            build_id, output_dir,
+            use_android_build_server=use_android_build_server):
+        if use_reclient and not t_specified:
+            return reclient_helper.run_ninja(
+                ninja_args,
+                should_collect_logs,
+                swallow_keyboard_interrupt=not use_android_build_server)
+        return ninja.main(ninja_args)
 
 
 def _upload_ninjalog(args, exit_code, build_duration):

@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6ab7dcf0_1275798a",
+        "filename": "bootstrap/bootstrap.py",
+        "patchSetId": 8
+      },
+      "lineNbr": 364,
+      "author": {
+        "id": 3637389
+      },
+      "writtenOn": "2024-12-10T09:58:31Z",
+      "side": 1,
+      "message": "git config list is supported after git version 2.46.0. The current version used by depot_tools is git version 2.41.0.windows.1. This command cannot be used and an error message is displayed: \"error: key does not contain a section: list\".\n\nI have submitted a fix, please review it: https://chromium-review.googlesource.com/c/chromium/tools/depot_tools/+/6084191\n@aredulla@google.com @sokcevic@chromium.org",
+      "range": {
+        "startLine": 364,
+        "startChar": 8,
+        "endLine": 364,
+        "endChar": 77
+      },
+      "revId": "b906c107a800ebc996076dce1da1857e717fc6b1",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

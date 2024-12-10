@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "dafd6462_77d50b6d",
+        "filename": "bootstrap/bootstrap.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 364,
+      "author": {
+        "id": 3637389
+      },
+      "writtenOn": "2024-12-10T09:56:20Z",
+      "side": 1,
+      "message": "@aredulla@google.com git config list is supported after git version 2.46.0. The current version used by depot_tools is git version 2.41.0.windows.1. This command cannot be used and an error message is displayed: \"error: key does not contain a section: list\".",
+      "range": {
+        "startLine": 364,
+        "startChar": 33,
+        "endLine": 364,
+        "endChar": 59
+      },
+      "revId": "6e47cb0a73c98f2f5ad514682ec7a82a77b0eb86",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

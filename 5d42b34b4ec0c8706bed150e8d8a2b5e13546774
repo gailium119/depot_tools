@@ -22,6 +22,30 @@
       },
       "revId": "5d42b34b4ec0c8706bed150e8d8a2b5e13546774",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a12aa160_1e47303a",
+        "filename": "bootstrap/bootstrap.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 378,
+      "author": {
+        "id": 1544922
+      },
+      "writtenOn": "2024-12-10T03:57:10Z",
+      "side": 1,
+      "message": "Done - made a custom `GitConfigDict` to handle mixed case sensitivity (case insensitive section, case sensitive subsection, and case insensitive name).",
+      "parentUuid": "769e1940_5acab342",
+      "range": {
+        "startLine": 378,
+        "startChar": 38,
+        "endLine": 378,
+        "endChar": 54
+      },
+      "revId": "5d42b34b4ec0c8706bed150e8d8a2b5e13546774",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

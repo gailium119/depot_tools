@@ -16,6 +16,24 @@
       "message": "nit: include a cleanup that silently removes the existing key if present.  Just to minimize random clutter we\u0027re leaving in user configs.",
       "revId": "aee548604a73695b7f8fc96c38277fcff2192071",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fc4157e0_a87938d2",
+        "filename": "bootstrap/bootstrap.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 393,
+      "author": {
+        "id": 1544922
+      },
+      "writtenOn": "2024-12-10T03:57:10Z",
+      "side": 0,
+      "message": "Done",
+      "parentUuid": "fc4a0cb5_0908a2d2",
+      "revId": "aee548604a73695b7f8fc96c38277fcff2192071",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

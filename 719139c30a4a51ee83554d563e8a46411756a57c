@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2ffab5f2_b007461e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1560543
+      },
+      "writtenOn": "2024-12-10T16:56:05Z",
+      "side": 1,
+      "message": "thanks for fixing it, and using owners-override when appropriate!",
+      "revId": "719139c30a4a51ee83554d563e8a46411756a57c",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

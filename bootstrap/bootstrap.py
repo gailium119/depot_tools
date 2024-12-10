@@ -365,7 +365,14 @@ def get_git_global_config(git_path):
                                 stdout=subprocess.PIPE,
                                 encoding='utf-8')
     except subprocess.CalledProcessError as e:
-        raise e
+        # 'git config list' is supported since version 2.46.0.
+        # Fallback compatibility with old versions of git.
+        try:
+            stdout, _ = _check_call([git_path, 'config', '--list', '--global', '-z'],
+                                    stdout=subprocess.PIPE,
+                                    encoding='utf-8')
+        except subprocess.CalledProcessError as e:
+            raise e
 
     # Process all entries in the config.
     config = {}

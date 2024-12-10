@@ -3,6 +3,23 @@
     {
       "unresolved": false,
       "key": {
+        "uuid": "ee4cb75d_9e264814",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 3355336
+      },
+      "writtenOn": "2024-12-10T23:04:15Z",
+      "side": 1,
+      "message": "IIRC, the newer syntax isn\u0027t widely available yet, last I checked.  (Since I tried to change depot_tools to the newer one  before)\n\nsorry, should have caught this since I ran into it too a while ago",
+      "revId": "719139c30a4a51ee83554d563e8a46411756a57c",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
         "uuid": "2ffab5f2_b007461e",
         "filename": "/PATCHSET_LEVEL",
         "patchSetId": 4

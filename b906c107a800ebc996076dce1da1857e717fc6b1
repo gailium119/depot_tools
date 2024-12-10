@@ -3,6 +3,23 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "465ab54d_44fa5664",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1489663
+      },
+      "writtenOn": "2024-12-10T17:18:32Z",
+      "side": 1,
+      "message": "I don\u0027t have access to the original issue (access denied) but it looks like it causes a defect in scenarios when there is no global Git config. It crashes for me when calling git there.\n\nInvestigation:\n\nBefore: `git config --global foo`\nWhich ends up in: `error: key does not contain a section: foo` and Exit Code 1\n\nAfter `git config list --global -z`\nEnds up in `fatal: unable to read config file \u0027/Users/maxschmitt/.gitconfig\u0027: No such file or directory` and Exit Code 128.\n\n```\nfatal: unable to read config file \u0027C:/Users/cloudtest/.gitconfig\u0027: No such file or directory\nTraceback (most recent call last):\n  File \"D:\\a\\_work\\playwright-browsers\\playwright-browsers\\browser_patches\\chromium\\depot_tools\\bootstrap\\bootstrap.py\", line 542, in \u003cmodule\u003e\n    sys.exit(main(sys.argv[1:]))\n             ^^^^^^^^^^^^^^^^^^\n  File \"D:\\a\\_work\\playwright-browsers\\playwright-browsers\\browser_patches\\chromium\\depot_tools\\bootstrap\\bootstrap.py\", line 514, in main\n    git_postprocess(template, add_docs)\n  File \"D:\\a\\_work\\playwright-browsers\\playwright-browsers\\browser_patches\\chromium\\depot_tools\\bootstrap\\bootstrap.py\", line 473, in git_postprocess\n    _win_git_bootstrap_config()\n  File \"D:\\a\\_work\\playwright-browsers\\playwright-browsers\\browser_patches\\chromium\\depot_tools\\bootstrap\\bootstrap.py\", line 395, in _win_git_bootstrap_config\n    current_config \u003d get_git_global_config(git_bat_path)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\a\\_work\\playwright-browsers\\playwright-browsers\\browser_patches\\chromium\\depot_tools\\bootstrap\\bootstrap.py\", line 369, in get_git_global_config\n    raise e\n  File \"D:\\a\\_work\\playwright-browsers\\playwright-browsers\\browser_patches\\chromium\\depot_tools\\bootstrap\\bootstrap.py\", line 364, in get_git_global_config\n    stdout, _ \u003d _check_call(\n                ^^^^^^^^^^^^\n  File \"D:\\a\\_work\\playwright-browsers\\playwright-browsers\\browser_patches\\chromium\\depot_tools\\bootstrap\\bootstrap.py\", line 203, in _check_call\n    raise subprocess.CalledProcessError(proc.returncode, argv, None)\nsubprocess.CalledProcessError: Command \u0027[\u0027D:\\\\a\\\\_work\\\\playwright-browsers\\\\playwright-browsers\\\\browser_patches\\\\chromium\\\\depot_tools\\\\git.bat\u0027, \u0027config\u0027, \u0027--list\u0027, \u0027--global\u0027, \u0027-z\u0027]\u0027 returned non-zero exit status 128.\n```",
+      "revId": "b906c107a800ebc996076dce1da1857e717fc6b1",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "6ab7dcf0_1275798a",
         "filename": "bootstrap/bootstrap.py",
         "patchSetId": 8

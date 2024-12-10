@@ -16,6 +16,24 @@
       "message": "Can this rollback speed up the merge? It obviously makes Windows not work. By the way, not a criticism, can verify the content of the next merge into the mainline on an actual machine?",
       "revId": "b4a115e4d9d783a692b6a156df7a75758096a37e",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b127c90f_86354e04",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1126912
+      },
+      "writtenOn": "2024-12-10T11:06:31Z",
+      "side": 1,
+      "message": "crrev.com/c/6083215 should fix forward, thanks and sorry for the breakage. If that\u0027s still busted please shout very loudly :)",
+      "parentUuid": "f9589109_800d24ee",
+      "revId": "b4a115e4d9d783a692b6a156df7a75758096a37e",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

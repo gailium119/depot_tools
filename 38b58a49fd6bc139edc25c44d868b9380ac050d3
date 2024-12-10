@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a82813d0_cee4340e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1560543
+      },
+      "writtenOn": "2024-12-10T23:55:08Z",
+      "side": 1,
+      "message": "I was initially worried about warnings that are not supressable, but either setting recommended configs or explicitly suppressing warnings will create global file and therefore remove warning too. lgtm!",
+      "revId": "38b58a49fd6bc139edc25c44d868b9380ac050d3",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

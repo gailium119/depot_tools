@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "058ebf7a_e7441a72",
+        "filename": "metadata/tests/data/README.chromium.test.multi-invalid",
+        "patchSetId": 5
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1553262
+      },
+      "writtenOn": "2024-12-11T21:55:24Z",
+      "side": 0,
+      "message": "Since this is in the invalid file, shouldn\u0027t we keep this as the invalid format with the `and` to ensure we\u0027re handling errors correctly?",
+      "revId": "8d20c1e0b56c68b14878b597080484f9445962b4",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

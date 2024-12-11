@@ -18,6 +18,24 @@
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "f5747973_5cb62ed1",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1544922
+      },
+      "writtenOn": "2024-12-11T05:36:35Z",
+      "side": 1,
+      "message": "Thanks for raising this, Max. This should be fixed in https://chromium-review.googlesource.com/c/chromium/tools/depot_tools/+/6086756.\n\nLet me know if you still get crashes. It should log a couple of warnings now, but not crash, in the event there is no global Git config.",
+      "parentUuid": "465ab54d_44fa5664",
+      "revId": "b906c107a800ebc996076dce1da1857e717fc6b1",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "6ab7dcf0_1275798a",

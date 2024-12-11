@@ -41,6 +41,30 @@
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "84258fd8_7cf52669",
+        "filename": "OWNERS",
+        "patchSetId": 16
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1250067
+      },
+      "writtenOn": "2024-12-11T18:07:56Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "295cb50d_58506c0d",
+      "range": {
+        "startLine": 23,
+        "startChar": 9,
+        "endLine": 23,
+        "endChar": 37
+      },
+      "revId": "11df6afbfb80b559e3d2cc9eb1a1f8ae9cdccef4",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "8eaa7e48_262a7f66",
@@ -54,6 +78,24 @@
       "writtenOn": "2024-12-11T01:26:41Z",
       "side": 1,
       "message": "nit: unnecessary. This script has no `__main__`",
+      "revId": "11df6afbfb80b559e3d2cc9eb1a1f8ae9cdccef4",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "edd134ea_4aec5cf1",
+        "filename": "android_build_server_helper.py",
+        "patchSetId": 16
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1250067
+      },
+      "writtenOn": "2024-12-11T18:07:56Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8eaa7e48_262a7f66",
       "revId": "11df6afbfb80b559e3d2cc9eb1a1f8ae9cdccef4",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
@@ -75,6 +117,24 @@
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "e879bbd2_998267c4",
+        "filename": "android_build_server_helper.py",
+        "patchSetId": 16
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1250067
+      },
+      "writtenOn": "2024-12-11T18:07:56Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "45d1353b_e5a5ccaf",
+      "revId": "11df6afbfb80b559e3d2cc9eb1a1f8ae9cdccef4",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "21b6f179_f9da958e",
@@ -92,6 +152,24 @@
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "b0b5f605_ad24fb6e",
+        "filename": "android_build_server_helper.py",
+        "patchSetId": 16
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 1250067
+      },
+      "writtenOn": "2024-12-11T18:07:56Z",
+      "side": 1,
+      "message": "Acknowledged",
+      "parentUuid": "21b6f179_f9da958e",
+      "revId": "11df6afbfb80b559e3d2cc9eb1a1f8ae9cdccef4",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "4d85a1fd_17d9f134",
@@ -105,6 +183,24 @@
       "writtenOn": "2024-12-11T01:26:41Z",
       "side": 1,
       "message": "nit: alphebetize",
+      "revId": "11df6afbfb80b559e3d2cc9eb1a1f8ae9cdccef4",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4797df86_4292f890",
+        "filename": "autoninja.py",
+        "patchSetId": 16
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1250067
+      },
+      "writtenOn": "2024-12-11T18:07:56Z",
+      "side": 1,
+      "message": "huh, you would think a formatter would have done that? Done.",
+      "parentUuid": "4d85a1fd_17d9f134",
       "revId": "11df6afbfb80b559e3d2cc9eb1a1f8ae9cdccef4",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }

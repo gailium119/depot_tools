@@ -16,6 +16,24 @@
       "message": "Since this is in the invalid file, shouldn\u0027t we keep this as the invalid format with the `and` to ensure we\u0027re handling errors correctly?",
       "revId": "8d20c1e0b56c68b14878b597080484f9445962b4",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3372b51e_10df0725",
+        "filename": "metadata/tests/data/README.chromium.test.multi-invalid",
+        "patchSetId": 5
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 3388142
+      },
+      "writtenOn": "2024-12-12T01:00:53Z",
+      "side": 0,
+      "message": "License field was previously valid but it makes for better coverage to have invalid data so I updated it along with the related tests.",
+      "parentUuid": "058ebf7a_e7441a72",
+      "revId": "8d20c1e0b56c68b14878b597080484f9445962b4",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

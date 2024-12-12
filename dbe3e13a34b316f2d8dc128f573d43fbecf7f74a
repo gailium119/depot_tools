@@ -61,6 +61,24 @@
       ],
       "revId": "dbe3e13a34b316f2d8dc128f573d43fbecf7f74a",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "25abe98d_45ae4ffd",
+        "filename": "android_build_server_helper.py",
+        "patchSetId": 17
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 1250067
+      },
+      "writtenOn": "2024-12-12T18:16:43Z",
+      "side": 1,
+      "message": "Fix applied.",
+      "parentUuid": "a6cce4a4_0624dd9b",
+      "revId": "dbe3e13a34b316f2d8dc128f573d43fbecf7f74a",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

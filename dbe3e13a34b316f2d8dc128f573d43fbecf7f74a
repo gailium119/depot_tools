@@ -16,6 +16,51 @@
       "message": "Adding agp@ for root OWNERS",
       "revId": "dbe3e13a34b316f2d8dc128f573d43fbecf7f74a",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a6cce4a4_0624dd9b",
+        "filename": "android_build_server_helper.py",
+        "patchSetId": 17
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 1560543
+      },
+      "writtenOn": "2024-12-12T17:09:13Z",
+      "side": 1,
+      "message": "very nit: move up",
+      "fixSuggestions": [
+        {
+          "fixId": "e08cc554_f966c7a3",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "android_build_server_helper.py",
+              "range": {
+                "startLine": 47,
+                "startChar": 0,
+                "endLine": 47,
+                "endChar": 0
+              },
+              "replacement": "def _set_tty_env():\n    stdout_name \u003d os.readlink(\u0027/proc/self/fd/1\u0027)\n    os.environ.setdefault(\"AUTONINJA_STDOUT_NAME\", stdout_name)\n\n\n"
+            },
+            {
+              "path": "android_build_server_helper.py",
+              "range": {
+                "startLine": 60,
+                "startChar": 0,
+                "endLine": 65,
+                "endChar": 0
+              },
+              "replacement": ""
+            }
+          ]
+        }
+      ],
+      "revId": "dbe3e13a34b316f2d8dc128f573d43fbecf7f74a",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

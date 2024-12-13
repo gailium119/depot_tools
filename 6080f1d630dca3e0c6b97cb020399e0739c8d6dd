@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "568d7099_a8d434cd",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1116066
+      },
+      "writtenOn": "2024-12-13T18:07:49Z",
+      "side": 1,
+      "message": "Nico, the comment says to not update the list without approval. Is your approval sufficient or do we need an additional (legal?) approver?",
+      "revId": "6080f1d630dca3e0c6b97cb020399e0739c8d6dd",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+#!/usr/bin/env vpython3
+# coding=utf-8
+# Copyright (c) 2012 The Chromium Authors. All rights reserved.
+# Use of this source code is governed by a BSD-style license that can be
+# found in the LICENSE file.
+
+import os
+import sys
+import unittest
+from unittest import mock
+
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+import gclient_paths_test
+import metrics_xml_format
+
+norm = lambda path: path.replace('/', os.sep)
+
+
+class GetMetricsDirTest(gclient_paths_test.TestBase):
+
+    def testWithAbsolutePath(self):
+        get = lambda path: metrics_xml_format.GetMetricsDir(norm(path))
+        self.assertTrue(get('/src/tools/metrics/actions/abc.xml'))
+        self.assertTrue(get('/src/tools/metrics/histograms/abc.xml'))
+        self.assertTrue(get('/src/tools/metrics/structured/abc.xml'))
+        self.assertTrue(get('/src/tools/metrics/ukm/abc.xml'))
+
+        self.assertFalse(get('/src/tools/metrics/actions/next/abc.xml'))
+        self.assertFalse(get('/src/tools/metrics/histograms/next/abc.xml'))
+        self.assertFalse(get('/src/tools/metrics/structured/next/abc.xml'))
+        self.assertFalse(get('/src/tools/metrics/ukm/next/abc.xml'))
+
+    def testWithRelativePaths(self):
+        get = lambda path: metrics_xml_format.GetMetricsDir(norm(path))
+        mock_abspath = lambda path: os.path.join(self.getcwd(), path)
+        with mock.patch('os.path.abspath', side_effect=mock_abspath):
+            self.cwd = os.path.join(self.cwd, 'tools')
+            self.assertFalse(get('abc.xml'))
+            self.assertTrue(get('metrics/actions/abc.xml'))
+
+
+class FindMetricsXMLFormatTool(gclient_paths_test.TestBase):
+
+    def setUp(self):
+        super().setUp()
+        # gclient_paths.GetPrimarysolutionPath() defaults to src.
+        self.make_file_tree({'.gclient': ''})
+        self.cwd = os.path.join(self.cwd, 'src')
+
+    def testWithMetricsXML(self):
+        findTool = metrics_xml_format.FindMetricsXMLFormatterTool
+        join = os.path.join
+
+        self.assertEqual(
+            findTool(norm('tools/metrics/actions/abc.xml')),
+            join(self.getcwd(), norm('tools/metrics/actions/pretty_print.py')),
+        )
+
+        # same test, but with an absolute path.
+        self.assertEqual(
+            findTool(join(self.getcwd(),
+                          norm('tools/metrics/actions/abc.xml')), ),
+            join(self.getcwd(), norm('tools/metrics/actions/pretty_print.py')),
+        )
+
+    def testWthNonMetricsXML(self):
+        findTool = metrics_xml_format.FindMetricsXMLFormatterTool
+        self.assertEqual(findTool('tools/metrics/actions/next/abc.xml'), '')
+
+    def testWithNonCheckout(self):
+        findTool = metrics_xml_format.FindMetricsXMLFormatterTool
+        self.cwd = self.root
+        self.assertEqual(findTool('tools/metrics/actions/abc.xml'), '')
+
+    def testWithDifferentCheckout(self):
+        findTool = metrics_xml_format.FindMetricsXMLFormatterTool
+        checkout2 = os.path.join(self.root, '..', self._testMethodName + '2',
+                                 'src')
+
+        self.assertEqual(
+            # this is the case the tool was given a file path that is located
+            # in a different checkout folder.
+            findTool(
+                os.path.join(checkout2,
+                             norm('tools/metrics/actions/abc.xml')), ),
+            '',
+        )
+
+
+if __name__ == '__main__':
+    unittest.main()

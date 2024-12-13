@@ -1,0 +1,84 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d167c489_ad828494",
+        "filename": "git_cl.py",
+        "patchSetId": 17
+      },
+      "lineNbr": 6958,
+      "author": {
+        "id": 1560543
+      },
+      "writtenOn": "2024-12-13T22:26:05Z",
+      "side": 1,
+      "message": "duplicated code with metrics_xml_format.GetMetricsDir, remove",
+      "fixSuggestions": [
+        {
+          "fixId": "1d54e960_47bceb04",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "git_cl.py",
+              "range": {
+                "startLine": 6958,
+                "startChar": 0,
+                "endLine": 6971,
+                "endChar": 0
+              },
+              "replacement": ""
+            }
+          ]
+        }
+      ],
+      "revId": "8d3ea66257ec6a5209a7442a712a6266589608cf",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fab5d07a_ad1d3fc3",
+        "filename": "metrics_xml_format.py",
+        "patchSetId": 17
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1560543
+      },
+      "writtenOn": "2024-12-13T22:26:05Z",
+      "side": 1,
+      "message": "unused?",
+      "fixSuggestions": [
+        {
+          "fixId": "6000679a_c32cb18b",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "metrics_xml_format.py",
+              "range": {
+                "startLine": 29,
+                "startChar": 0,
+                "endLine": 38,
+                "endChar": 0
+              },
+              "replacement": ""
+            },
+            {
+              "path": "metrics_xml_format.py",
+              "range": {
+                "startLine": 61,
+                "startChar": 0,
+                "endLine": 68,
+                "endChar": 0
+              },
+              "replacement": ""
+            }
+          ]
+        }
+      ],
+      "revId": "8d3ea66257ec6a5209a7442a712a6266589608cf",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

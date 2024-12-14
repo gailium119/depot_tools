@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "57adad76_877e8553",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1001629
+      },
+      "writtenOn": "2024-12-14T00:20:14Z",
+      "side": 1,
+      "message": "I\u0027m guessing we\u0027d need license review for this (i.e. make chromium-third-party@google.com a reviewer, and mention in the review message that you\u0027re looking for their opinion).",
+      "revId": "4ece38f3276d5b26279ce2487165646325c769a7",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

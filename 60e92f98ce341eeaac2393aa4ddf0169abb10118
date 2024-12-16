@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b3fa278e_9ca67c82",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1147264
+      },
+      "writtenOn": "2024-12-16T18:24:43Z",
+      "side": 1,
+      "message": "@gavinmak,\n\nhttps://chromium-review.googlesource.com/c/chromium/tools/depot_tools/+/6072565 was landed to move the XML formatting logic from git_cl.py to a standalone script. This is a follow-up fix on it.",
+      "revId": "60e92f98ce341eeaac2393aa4ddf0169abb10118",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

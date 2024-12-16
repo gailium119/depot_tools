@@ -50,6 +50,41 @@
       "message": "As a third-party reviewer, I do not think I am expected to review such a CL (and I have no idea how to). Can you add license-escalation instead?",
       "revId": "4ece38f3276d5b26279ce2487165646325c769a7",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "182b1eb3_dde281b0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1116066
+      },
+      "writtenOn": "2024-12-16T15:17:56Z",
+      "side": 1,
+      "message": "Ack. Gerrit won\u0027t let me add license-escalation directly.",
+      "parentUuid": "fcc6a1d6_3fb27ed0",
+      "revId": "4ece38f3276d5b26279ce2487165646325c769a7",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "19e30cfa_343b7393",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1116066
+      },
+      "writtenOn": "2024-12-16T15:17:56Z",
+      "side": 1,
+      "message": "Jordan, can you help me figure out who is the appropriate legal reviewer for this change?",
+      "revId": "4ece38f3276d5b26279ce2487165646325c769a7",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

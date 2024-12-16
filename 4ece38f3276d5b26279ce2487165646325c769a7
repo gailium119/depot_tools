@@ -16,6 +16,23 @@
       "message": "I\u0027m guessing we\u0027d need license review for this (i.e. make chromium-third-party@google.com a reviewer, and mention in the review message that you\u0027re looking for their opinion).",
       "revId": "4ece38f3276d5b26279ce2487165646325c769a7",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "cdb3d3f5_679b66d5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1116066
+      },
+      "writtenOn": "2024-12-16T14:32:53Z",
+      "side": 1,
+      "message": "chromium-third-party@google.com, can you PTAL? I\u0027m trying to update https://source.chromium.org/chromium/chromium/src/+/main:third_party/lzma_sdk/README.chromium;l\u003d6 to use the SPDX license identifier instead of saying \"Public Domain\", but the identifier is not allowlisted here.",
+      "revId": "4ece38f3276d5b26279ce2487165646325c769a7",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

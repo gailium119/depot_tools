@@ -85,6 +85,23 @@
       "message": "Jordan, can you help me figure out who is the appropriate legal reviewer for this change?",
       "revId": "4ece38f3276d5b26279ce2487165646325c769a7",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4f854a5f_7777302d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 3388142
+      },
+      "writtenOn": "2024-12-17T05:01:54Z",
+      "side": 1,
+      "message": "Sorry for the confusion here. This allowlist isn\u0027t replacing the existing process for introducing a dependency. We\u0027ll add clearer guidance on adding new licenses to this list, but in the meantime LGTM as this clearly falls into the category of \u0027Public Domain\u0027.",
+      "revId": "4ece38f3276d5b26279ce2487165646325c769a7",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

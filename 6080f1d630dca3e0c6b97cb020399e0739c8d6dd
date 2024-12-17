@@ -16,6 +16,24 @@
       "message": "Nico, the comment says to not update the list without approval. Is your approval sufficient or do we need an additional (legal?) approver?",
       "revId": "6080f1d630dca3e0c6b97cb020399e0739c8d6dd",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b0e8f224_fa8b732b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 3388142
+      },
+      "writtenOn": "2024-12-17T06:26:54Z",
+      "side": 1,
+      "message": "I put this here to stop people from just adding things. We are currently working out what this looks like, it\u0027ll likely be the approval you get when initially adding a dependency with that particular license. We are currently working on backfilling this with what\u0027s currently in chromium but that\u0027s taking a bit longer than expected.",
+      "parentUuid": "568d7099_a8d434cd",
+      "revId": "6080f1d630dca3e0c6b97cb020399e0739c8d6dd",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

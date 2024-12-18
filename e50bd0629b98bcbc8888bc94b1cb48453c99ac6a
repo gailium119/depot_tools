@@ -1,0 +1,39 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e0957aae_67fa37b9",
+        "filename": "git_rebase_update.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 169,
+      "author": {
+        "id": 1560543
+      },
+      "writtenOn": "2024-12-18T23:19:31Z",
+      "side": 1,
+      "message": "nit: The ongoing rebase should be aborted first (`git rebase --abort \u0026\u0026 git rebase_update`)",
+      "fixSuggestions": [
+        {
+          "fixId": "c19bc5e9_3e662cb4",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "git_rebase_update.py",
+              "range": {
+                "startLine": 169,
+                "startChar": 0,
+                "endLine": 171,
+                "endChar": 0
+              },
+              "replacement": "                 * try squashing your branch (git rebase --abort \u0026\u0026 git squash-branch) and try again; OR\n"
+            }
+          ]
+        }
+      ],
+      "revId": "e50bd0629b98bcbc8888bc94b1cb48453c99ac6a",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

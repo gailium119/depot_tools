@@ -105,6 +105,24 @@
       "parentUuid": "315367df_cb25d946",
       "revId": "21fdf43f808227d4f2e01d9c0e0c0cddc0f82d46",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e716d351_d7993807",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1499972
+      },
+      "writtenOn": "2024-12-18T23:13:49Z",
+      "side": 1,
+      "message": "Ok, I revamped the CL to just remove squashing. PTAL!",
+      "parentUuid": "17573fe0_7acb9ede",
+      "revId": "21fdf43f808227d4f2e01d9c0e0c0cddc0f82d46",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

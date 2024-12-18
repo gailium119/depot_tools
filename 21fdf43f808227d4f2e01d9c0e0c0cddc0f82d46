@@ -16,6 +16,23 @@
       "message": "PTAL, thanks!",
       "revId": "21fdf43f808227d4f2e01d9c0e0c0cddc0f82d46",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0267e0ed_e23bb600",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1560543
+      },
+      "writtenOn": "2024-12-18T22:19:26Z",
+      "side": 1,
+      "message": "If 5% is indeed true, I suggest we just delete squashing option and default to no-squash. That will reduce code, simplify the interface, and potentially confusion (if user doesn\u0027t want to squash things in the first place).\n\nOn failure, we can tell user they can squash changes on their own.",
+      "revId": "21fdf43f808227d4f2e01d9c0e0c0cddc0f82d46",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

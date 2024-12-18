@@ -16,6 +16,23 @@
       "message": "IIRC, some user want to use *.pyc (not on cog?),\nand something might kick autoninja.py instead of autoninja?",
       "revId": "2bb38d27b910536cadaf19b1fbcc9f8749a8298d",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d3a467ed_b4ece7cc",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1521372
+      },
+      "writtenOn": "2024-12-18T10:57:17Z",
+      "side": 1,
+      "message": "Apologies for the very slow review - I\u0027d missed this in my queue (and just spotted it now due to the update in the bug).\n\nAlthough this change is small and seems safe, I don\u0027t feel I\u0027m familiar enough with how Python bytecode generation and version control ignored files are intended to review it. Would you be able to find another suitable reviewer from the team?",
+      "revId": "2bb38d27b910536cadaf19b1fbcc9f8749a8298d",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

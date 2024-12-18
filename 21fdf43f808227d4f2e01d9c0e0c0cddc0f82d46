@@ -69,6 +69,24 @@
       "parentUuid": "da6a905d_d7372867",
       "revId": "21fdf43f808227d4f2e01d9c0e0c0cddc0f82d46",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "315367df_cb25d946",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1497432
+      },
+      "writtenOn": "2024-12-18T22:43:09Z",
+      "side": 1,
+      "message": "I\u0027ve *never* seen squashing work after the non-squashing merge didn\u0027t work.\n\n(I\u0027m also afraid of that happening because I use gerrit.squash-uploads \u003d false, so when I have multiple commits, each commit is a separate CL, and I want to keep them separate.)\n\nBut I suspect it might be more likely to work for people who intend their commits to be squashed, and make commits that \"undo\" earlier changes on the same branch.",
+      "parentUuid": "da6a905d_d7372867",
+      "revId": "21fdf43f808227d4f2e01d9c0e0c0cddc0f82d46",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

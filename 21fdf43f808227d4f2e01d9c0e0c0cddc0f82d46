@@ -33,6 +33,24 @@
       "message": "If 5% is indeed true, I suggest we just delete squashing option and default to no-squash. That will reduce code, simplify the interface, and potentially confusion (if user doesn\u0027t want to squash things in the first place).\n\nOn failure, we can tell user they can squash changes on their own.",
       "revId": "21fdf43f808227d4f2e01d9c0e0c0cddc0f82d46",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "da6a905d_d7372867",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1499972
+      },
+      "writtenOn": "2024-12-18T22:37:00Z",
+      "side": 1,
+      "message": "I\u0027d be 100% ok with this option, if it\u0027s ok with the code owners. I was afraid there must be some CQ bot use case for squashing or something that would break. But let me know, and I\u0027m happy to just delete squashing. For me at least, 5% is likely generous. It\u0027s more like 1%.",
+      "parentUuid": "0267e0ed_e23bb600",
+      "revId": "21fdf43f808227d4f2e01d9c0e0c0cddc0f82d46",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

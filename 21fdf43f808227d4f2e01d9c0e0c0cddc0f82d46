@@ -87,6 +87,24 @@
       "parentUuid": "da6a905d_d7372867",
       "revId": "21fdf43f808227d4f2e01d9c0e0c0cddc0f82d46",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "17573fe0_7acb9ede",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1499972
+      },
+      "writtenOn": "2024-12-18T23:00:20Z",
+      "side": 1,
+      "message": "I\u0027ve seen it work, but as I said, about 1% of the time. Typically, it\u0027s the case when you have a series of commits that do a bunch of \"damage\" (e.g. with debug printf() code) and then undo that damage for the final commit. And something in the intermediate state has a merge conflict.\n\nBut again, not often. I\u0027ll repurpose this CL to just rip out squashing!",
+      "parentUuid": "315367df_cb25d946",
+      "revId": "21fdf43f808227d4f2e01d9c0e0c0cddc0f82d46",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

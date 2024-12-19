@@ -42,20 +42,20 @@ class TestBase(gclient_paths_test.TestBase):
 class GetMetricsDirTest(TestBase):
 
     def testWithAbsolutePath(self):
-        get = lambda path: metrics_xml_format.GetMetricsDir(norm(path))
+        get = lambda path: metrics_xml_format.GetMetricsDir('/src', norm(path))
         self.assertTrue(get('/src/tools/metrics/actions/abc.xml'))
         self.assertTrue(get('/src/tools/metrics/histograms/abc.xml'))
         self.assertTrue(get('/src/tools/metrics/structured/abc.xml'))
         self.assertTrue(get('/src/tools/metrics/ukm/abc.xml'))
 
-        self.assertFalse(get('/src/tools/metrics/actions/next/abc.xml'))
-        self.assertFalse(get('/src/tools/metrics/histograms/next/abc.xml'))
-        self.assertFalse(get('/src/tools/metrics/structured/next/abc.xml'))
-        self.assertFalse(get('/src/tools/metrics/ukm/next/abc.xml'))
+        self.assertFalse(get('/src/tools/test/metrics/actions/abc.xml'))
+        self.assertFalse(get('/src/tools/test/metrics/histograms/abc.xml'))
+        self.assertFalse(get('/src/tools/test/metrics/structured/abc.xml'))
+        self.assertFalse(get('/src/tools/test/metrics/ukm/abc.xml'))
 
     def testWithRelativePaths(self):
-        get = lambda path: metrics_xml_format.GetMetricsDir(norm(path))
-        self.cwd = join(self.cwd, 'tools')
+        get = lambda path: metrics_xml_format.GetMetricsDir('/src', norm(path))
+        self.cwd = join(self.cwd, '/src/tools')
         self.assertFalse(get('abc.xml'))
         self.assertTrue(get('metrics/actions/abc.xml'))
 
@@ -79,7 +79,7 @@ class FindMetricsXMLFormatTool(TestBase):
 
     def testWthNonMetricsXML(self):
         findTool = metrics_xml_format.FindMetricsXMLFormatterTool
-        self.assertEqual(findTool('tools/metrics/actions/next/abc.xml'), '')
+        self.assertEqual(findTool('tools/metrics/test/abc.xml'), '')
 
     def testWithNonCheckout(self):
         findTool = metrics_xml_format.FindMetricsXMLFormatterTool
@@ -103,10 +103,16 @@ class FindMetricsXMLFormatTool(TestBase):
             join(self.getcwd(),
                  norm('tools/metrics/histograms/pretty_print.py')),
         )
+        self.assertEqual(
+            findTool(norm('tools/metrics/histograms/tests/histograms.xml')),
+            join(self.getcwd(),
+                 norm('tools/metrics/histograms/pretty_print.py')),
+        )
 
     def testNotSupportedHistogramsXML(self):
-        findTool = metrics_xml_format.FindMetricsXMLFormatterTool
-        self.assertEqual(findTool(norm('tools/metrics/histograms/NO.xml')), '')
+        tool = metrics_xml_format.FindMetricsXMLFormatterTool(
+            '/src', norm('tools/metrics/histograms/NO.xml'))
+        self.assertEqual(tool, '')
 
 
 if __name__ == '__main__':

@@ -11,24 +11,53 @@
 ALLOWED_SPDX_LICENSES = frozenset([
     # other_ignorable.
     "LZMA-SDK-9.22",
+    # unencumbered.
+    "CC0-1.0",
+    "Unlicense",
+    "blessing",
     # permissive.
+    "GPL-2.0-with-autoconf-exception",
     "GPL-2.0-with-classpath-exception",
+    "GPL-3.0-with-autoconf-exception",
     "MIT-0",
     # notice.
+    "AML",
     "Apache-2.0",
+    "Artistic-2.0",
     "BSD-2-Clause",
     "BSD-2-Clause-FreeBSD",
     "BSD-3-Clause",
+    "BSD-3-Clause-Attribution",
     "BSD-4-Clause",
     "BSD-4-Clause-UC",
+    "BSD-4.3TAHOE",
     "BSD-Source-Code",
     "BSL-1.0",
+<<<<<<< PATCH SET (eac343 Adding 'Notice' Licenses to 'ALLOWED_SPDX_LICENSES')
+    "Beerware",
+    "CC-BY-3.0",
+    "CC-BY-4.0",
+    "FTL",
+    "HPND",
+    "HPND-sell-variant",
+=======
+>>>>>>> BASE      (395726 Restructuring 'ALLOWED_SPDX_LICENSES')
     "ICU",
+<<<<<<< PATCH SET (eac343 Adding 'Notice' Licenses to 'ALLOWED_SPDX_LICENSES')
+    "IJG",
     "ISC",
+    "JSON",
+    "Libpng",
+=======
+    "ISC",
+>>>>>>> BASE      (395726 Restructuring 'ALLOWED_SPDX_LICENSES')
     "MIT",
     "MIT-Modern-Variant",
+    "MS-PL",
+    "NAIST-2003",
     "NCSA",
     "OFL-1.1",
+    "OpenSSL",
     "SGI-B-2.0",
     "SunPro",
     "Unicode-3.0",
@@ -36,6 +65,7 @@ ALLOWED_SPDX_LICENSES = frozenset([
     "Unicode-DFS-2016",
     "X11",
     "Zlib",
+    "libtiff",
     # reciprocal. TODO(b/385020146): Only allow for opensource projects.
     "APSL-2.0",
     "MPL-1.1",

@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6683b615_643359e1",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 11
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1553262
+      },
+      "writtenOn": "2024-12-19T04:06:34Z",
+      "side": 1,
+      "message": "LGTM % conflict",
+      "revId": "4cb775a3e2ca7ef765216e79c9dc304aac70a042",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cf1ef8a7_db1af6dd",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 11
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1553262
+      },
+      "writtenOn": "2024-12-19T04:06:34Z",
+      "side": 1,
+      "message": "LGTM % conflict",
+      "revId": "4cb775a3e2ca7ef765216e79c9dc304aac70a042",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

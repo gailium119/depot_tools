@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ff235d6e_047954ee",
+        "filename": "metadata/fields/custom/license_allowlist.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 114,
+      "author": {
+        "id": 3388142
+      },
+      "writtenOn": "2024-12-19T06:22:35Z",
+      "side": 1,
+      "message": "I don\u0027t know if these need to be handled separately or if people should just put the license without the \u0027Supplement\u0027 prefix, or if they should put both if license classifier detects both.",
+      "range": {
+        "startLine": 103,
+        "startChar": 0,
+        "endLine": 114,
+        "endChar": 39
+      },
+      "revId": "7e40791a74ed953306a4cfe4fb97c3e54d41a601",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

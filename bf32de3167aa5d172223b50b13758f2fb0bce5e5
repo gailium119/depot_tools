@@ -34,6 +34,24 @@
       "parentUuid": "69c96f44_1c3ef722",
       "revId": "bf32de3167aa5d172223b50b13758f2fb0bce5e5",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d7c1a408_edaca4ec",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 19
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1147264
+      },
+      "writtenOn": "2024-12-19T18:43:54Z",
+      "side": 1,
+      "message": "found the bug, and made a fix at https://crrev.com/c/6111994.",
+      "parentUuid": "30b82f31_e9e76859",
+      "revId": "bf32de3167aa5d172223b50b13758f2fb0bce5e5",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

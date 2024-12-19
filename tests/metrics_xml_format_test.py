@@ -103,6 +103,11 @@ class FindMetricsXMLFormatTool(TestBase):
             join(self.getcwd(),
                  norm('tools/metrics/histograms/pretty_print.py')),
         )
+        self.assertEqual(
+            findTool(norm('tools/metrics/histograms/tests/histograms.xml')),
+            join(self.getcwd(),
+                 norm('tools/metrics/histograms/pretty_print.py')),
+        )
 
     def testNotSupportedHistogramsXML(self):
         findTool = metrics_xml_format.FindMetricsXMLFormatterTool

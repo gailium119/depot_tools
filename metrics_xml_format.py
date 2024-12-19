@@ -11,17 +11,17 @@ import subprocess
 import sys
 
 
-def GetMetricsDir(path):
+def GetMetricsDir(top_dir, path):
     metrics_xml_dirs = [
-        'tools/metrics/actions',
-        'tools/metrics/histograms',
-        'tools/metrics/structured',
-        'tools/metrics/ukm',
+        os.path.join(top_dir, 'tools/metrics/actions'),
+        os.path.join(top_dir, 'tools/metrics/histograms'),
+        os.path.join(top_dir, 'tools/metrics/structured'),
+        os.path.join(top_dir, 'tools/metrics/ukm'),
     ]
     normalized_abs_dirname = os.path.dirname(os.path.realpath(path)).replace(
         os.sep, '/')
     for xml_dir in metrics_xml_dirs:
-        if normalized_abs_dirname.endswith(xml_dir):
+        if normalized_abs_dirname.startswith(xml_dir):
             return xml_dir
     return None
 
@@ -46,7 +46,7 @@ def FindMetricsXMLFormatterTool(path, verbose=False):
     if not top_dir:
         log('Not executed in a Chromium checkout; skip formatting', verbose)
         return ''
-    xml_dir = GetMetricsDir(path)
+    xml_dir = GetMetricsDir(top_dir, path)
     if not xml_dir:
         log(f'{path} is not a metric XML; skip formatting', verbose)
         return ''

@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "69c96f44_1c3ef722",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 19
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1529372
+      },
+      "writtenOn": "2024-12-19T14:32:09Z",
+      "side": 1,
+      "message": "Could this have broken git cl format for any histograms.xml? It used to work, but not anymore since this week.",
+      "revId": "bf32de3167aa5d172223b50b13758f2fb0bce5e5",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

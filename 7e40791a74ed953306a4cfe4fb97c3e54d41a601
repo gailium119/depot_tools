@@ -22,6 +22,30 @@
       },
       "revId": "7e40791a74ed953306a4cfe4fb97c3e54d41a601",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c225e98b_0e190680",
+        "filename": "metadata/fields/custom/license_allowlist.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 114,
+      "author": {
+        "id": 1553262
+      },
+      "writtenOn": "2024-12-19T23:13:54Z",
+      "side": 1,
+      "message": "For now, I think we should choose the more human readable version of these, unless they are different liceses legally (I\u0027m not the person to answer that). \n\nThe reasoning for that is that short to medium term, we don\u0027t have any intention of running the license classifier automatically over all these files, so we wouldn\u0027t be checking against these values past this initial clean up effort. Making the license classifier available on LUCI to enable this would be a project in itself which is low priority compared to other work we currently have earmarked for next year.",
+      "parentUuid": "ff235d6e_047954ee",
+      "range": {
+        "startLine": 103,
+        "startChar": 0,
+        "endLine": 114,
+        "endChar": 39
+      },
+      "revId": "7e40791a74ed953306a4cfe4fb97c3e54d41a601",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

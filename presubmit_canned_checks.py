@@ -861,7 +861,7 @@ def CheckLicense(input_api,
     return results
 
 
-def CheckChromiumDependencyMetadata(input_api, output_api, file_filter=None):
+def CheckChromiumDependencyMetadata(input_api, output_api, file_filter=None, allow_reciprocal_licenses=False):
     """Check files for Chromium third party dependency metadata have sufficient
     information, and are correctly formatted.
 
@@ -887,6 +887,7 @@ def CheckChromiumDependencyMetadata(input_api, output_api, file_filter=None):
             filepath=f.AbsoluteLocalPath(),
             repo_root_dir=repo_root_dir,
             reader=input_api.ReadFile,
+            allow_reciprocal_licenses=allow_reciprocal_licenses,
         )
 
         for warning in warnings:

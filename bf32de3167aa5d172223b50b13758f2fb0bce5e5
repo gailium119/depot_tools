@@ -52,6 +52,24 @@
       "parentUuid": "30b82f31_e9e76859",
       "revId": "bf32de3167aa5d172223b50b13758f2fb0bce5e5",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a686c92c_8b47c5dc",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 19
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1529372
+      },
+      "writtenOn": "2024-12-20T08:18:29Z",
+      "side": 1,
+      "message": "Thanks for the quick turnaround!",
+      "parentUuid": "d7c1a408_edaca4ec",
+      "revId": "bf32de3167aa5d172223b50b13758f2fb0bce5e5",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

@@ -33,6 +33,24 @@
       "message": "Tests are failing, GitRebaseUpdateTest expects removed code to work (tests/git_rebase_update_test.py):\n\nLogs are a bit verbose, but relevant error is:\n\n\n```\n\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\nFAIL: testRebaseConflicts (__main__.GitRebaseUpdateTest)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"depot_tools/tests/git_rebase_update_test.py\", line 285, in testRebaseConflicts\n    self.assertIn(\u0027Failed! Attempting to squash\u0027, output)\nAssertionError: \u0027Failed! Attempting to squash\u0027 not found in \u0027--snip--\u0027\n\n\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\nFAIL: testRebaseUpdate (__main__.GitRebaseUpdateTest)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"depot_tools/tests/git_rebase_update_test.py\", line 194, in testRebaseUpdate\n    self.assertIn(\u0027Squashing failed\u0027, output)\nAssertionError: \u0027Squashing failed\u0027 not found in \u0027Reparenting  --snip--\u0027\n\n----------------------------------------------------------------------\n```",
       "revId": "0434708adda347d50fb247dddad4dd719464f83f",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e013fc19_ac4daf1b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1499972
+      },
+      "writtenOn": "2024-12-20T01:03:37Z",
+      "side": 1,
+      "message": "Fixed.",
+      "parentUuid": "6ffbdaf2_3bf31e84",
+      "revId": "0434708adda347d50fb247dddad4dd719464f83f",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

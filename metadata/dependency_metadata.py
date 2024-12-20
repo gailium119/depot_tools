@@ -144,13 +144,16 @@ class DependencyMetadata:
         return required
 
     def validate(self, source_file_dir: str,
-                 repo_root_dir: str) -> List[vr.ValidationResult]:
+                 repo_root_dir: str,
+                 allow_reciprocal_licenses: bool = False) -> List[vr.ValidationResult]:
         """Validates all the metadata.
 
         Args:
             source_file_dir: the directory of the file that the metadata
                              is from.
             repo_root_dir: the repository's root directory.
+            allow_reciprocal_licenses: whether to allow reciprocal licenses.
+                            This should only be True for open source projects.
 
         Returns: the metadata's validation results.
         """

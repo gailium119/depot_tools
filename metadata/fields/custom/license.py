@@ -18,11 +18,12 @@ sys.path.insert(0, _ROOT_DIR)
 import metadata.fields.field_types as field_types
 import metadata.fields.util as util
 import metadata.validation_result as vr
-from metadata.fields.custom.license_allowlist import ALLOWED_LICENSES
+from metadata.fields.custom.license_allowlist import ALLOWED_SPDX_LICENSES,ALLOWED_OPEN_SOURCE_LICENSES
 
 
 def process_license_value(value: str,
-                          atomic_delimiter: str) -> List[Tuple[str, bool]]:
+                          atomic_delimiter: str,
+                          allow_reciprocal_licenses: bool = False) -> List[Tuple[str, bool]]:
     """Process a license field value, which may list multiple licenses.
 
     Args:
@@ -31,6 +32,8 @@ def process_license_value(value: str,
         atomic_delimiter: the delimiter to use as a final step; values
                           will not be further split after using this
                           delimiter.
+        allow_reciprocal_licenses: whether to allow reciprocal licenses.
+                            This should only be True for open source projects.
 
     Returns: a list of the constituent licenses within the given value,
              and whether the constituent license is on the allowlist.
@@ -39,7 +42,7 @@ def process_license_value(value: str,
     """
     # Check if the value is on the allowlist as-is, and thus does not
     # require further processing.
-    if is_license_allowlisted(value):
+    if is_license_allowlisted(value, allow_reciprocal_licenses=allow_reciprocal_licenses):
         return [(value, True)]
 
     breakdown = []
@@ -48,15 +51,21 @@ def process_license_value(value: str,
     for atomic_value in value.split(atomic_delimiter):
         atomic_value = atomic_value.strip()
         breakdown.append(
-            (atomic_value, is_license_allowlisted(atomic_value)))
+            (atomic_value, is_license_allowlisted(
+                atomic_value,
+                allow_reciprocal_licenses=allow_reciprocal_licenses,
+            ))
+        )
 
     return breakdown
 
 
-def is_license_allowlisted(value: str) -> bool:
+def is_license_allowlisted(value: str, allow_reciprocal_licenses: bool = False) -> bool:
     """Returns whether the value is in the allowlist for license
     types.
     """
+    if allow_reciprocal_licenses:
+        return value in ALLOWED_OPEN_SOURCE_LICENSES
     return value in ALLOWED_SPDX_LICENSES
 
 
@@ -68,14 +77,17 @@ class LicenseField(field_types.SingleLineTextField):
   def __init__(self):
     super().__init__(name="License")
 
-  def validate(self, value: str) -> Optional[vr.ValidationResult]:
+  def validate(self, value: str,
+               allow_reciprocal_licenses: bool = False) -> Optional[vr.ValidationResult]:
     """Checks the given value consists of recognized license types.
 
         Note: this field supports multiple values.
         """
     not_allowlisted = []
     licenses = process_license_value(value,
-                                         atomic_delimiter=self.VALUE_DELIMITER)
+          atomic_delimiter=self.VALUE_DELIMITER,
+          allow_reciprocal_licenses=allow_reciprocal_licenses,
+    )
     for license, allowed in licenses:
       if util.is_empty(license):
         return vr.ValidationError(

@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ad43eef1_c8cd8555",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 3388142
+      },
+      "writtenOn": "2024-12-20T06:54:10Z",
+      "side": 1,
+      "message": "I couldn\u0027t think of a more elegant way to solve this so I simply threaded a needle of if statements from top to bottom.",
+      "revId": "ca235fece0e27e111ce22af77a9cc2bb7fd8ca45",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

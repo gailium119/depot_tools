@@ -16,6 +16,127 @@
       "message": "I couldn\u0027t think of a more elegant way to solve this so I simply threaded a needle of if statements from top to bottom.",
       "revId": "ca235fece0e27e111ce22af77a9cc2bb7fd8ca45",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "46c54106_bfd2ab07",
+        "filename": "metadata/fields/custom/license.py",
+        "patchSetId": 7
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1553262
+      },
+      "writtenOn": "2024-12-22T23:54:05Z",
+      "side": 1,
+      "message": "nit: import ALLOWED_SPDX_LICENSES,ALLOWED_OPEN_SOURCE_LICENSES",
+      "fixSuggestions": [
+        {
+          "fixId": "40500344_01724d23",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "metadata/fields/custom/license.py",
+              "range": {
+                "startLine": 21,
+                "startChar": 0,
+                "endLine": 22,
+                "endChar": 0
+              },
+              "replacement": "from metadata.fields.custom.license_allowlist import ALLOWED_SPDX_LICENSES, ALLOWED_OPEN_SOURCE_LICENSES\n"
+            }
+          ]
+        }
+      ],
+      "revId": "ca235fece0e27e111ce22af77a9cc2bb7fd8ca45",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "025620ee_07457ad0",
+        "filename": "metadata/fields/custom/license.py",
+        "patchSetId": 7
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1553262
+      },
+      "writtenOn": "2024-12-22T23:54:05Z",
+      "side": 1,
+      "message": "I haven\u0027t looked at this code in a long time, but do you think this is architecturally the right way to set this up? We\u0027re passing this variable really deep into the code, which works, but might be messy long term. \n\nI\u0027m just wondering if we should consider bringing some of this into a class or property higher in the call stack so we can pass in the list we want to check against from there instead of having to bring the options all the way in here.",
+      "revId": "ca235fece0e27e111ce22af77a9cc2bb7fd8ca45",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "98051767_a225800e",
+        "filename": "metadata/fields/custom/license_allowlist.py",
+        "patchSetId": 7
+      },
+      "lineNbr": 109,
+      "author": {
+        "id": 1553262
+      },
+      "writtenOn": "2024-12-22T23:54:05Z",
+      "side": 1,
+      "message": "nit: The TODO is done now?",
+      "revId": "ca235fece0e27e111ce22af77a9cc2bb7fd8ca45",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8ce37454_dde67f46",
+        "filename": "presubmit_canned_checks.py",
+        "patchSetId": 7
+      },
+      "lineNbr": 864,
+      "author": {
+        "id": 1553262
+      },
+      "writtenOn": "2024-12-22T23:54:05Z",
+      "side": 1,
+      "message": "Would `is_open_source_project` or soemthing be more clear than being license specific? Users don\u0027t really care what this value is, just that the PRESUBMITs validate the way they expect. My long term concern is that we end up making something else conditional based on this value which is not license or not reciprocal license specific and then we\u0027d have to change a bunch of variable names.",
+      "revId": "ca235fece0e27e111ce22af77a9cc2bb7fd8ca45",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "42bad5b9_1831e9e9",
+        "filename": "presubmit_canned_checks.py",
+        "patchSetId": 7
+      },
+      "lineNbr": 864,
+      "author": {
+        "id": 1553262
+      },
+      "writtenOn": "2024-12-22T23:54:05Z",
+      "side": 1,
+      "message": "nit: Probably need to format this to break the long lines, surprised it didn\u0027t make you.",
+      "fixSuggestions": [
+        {
+          "fixId": "b677c9f7_1703199c",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "presubmit_canned_checks.py",
+              "range": {
+                "startLine": 864,
+                "startChar": 0,
+                "endLine": 865,
+                "endChar": 0
+              },
+              "replacement": "def CheckChromiumDependencyMetadata(input_api,\n                                   output_api,\n                                   file_filter\u003dNone,\n                                   allow_reciprocal_licenses\u003dFalse):\n"
+            }
+          ]
+        }
+      ],
+      "revId": "ca235fece0e27e111ce22af77a9cc2bb7fd8ca45",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

@@ -219,5 +219,41 @@ class ValidationWithLineNumbers(unittest.TestCase):
                 self.assertEqual(r.get_lines(), [13])
 
 
+class ValidateReciprocalLicenseTest(unittest.TestCase):
+    """Tests that validate_content handles allowing reciprocal licenses correctly."""
+    def test_reciprocal_licenses(self):
+        # Test content with a reciprocal license (MPL-2.0).
+        reciprocal_license_metadata_filepath = os.path.join(_THIS_DIR, "data",
+            "README.chromium.test.reciprocal-license")
+        # Without is_open_source_project, should get a warning.
+        results = metadata.validate.validate_content(
+            content=gclient_utils.FileRead(reciprocal_license_metadata_filepath),
+            source_file_dir=_SOURCE_FILE_DIR,
+            repo_root_dir=_THIS_DIR,
+            is_open_source_project=False
+        )
+
+        license_warnings = []
+        for result in results:
+            if not result.is_fatal() and "License has a license not in the allowlist" in result.get_reason():
+                license_warnings.append(result)
+
+        self.assertEqual(len(license_warnings), 1, "Should warn about reciprocal license when not allowed")
+
+        # With is_open_source_project=True, should be no warnings.
+        results = metadata.validate.validate_content(
+            content=gclient_utils.FileRead(reciprocal_license_metadata_filepath),
+            source_file_dir=_SOURCE_FILE_DIR,
+            repo_root_dir=_THIS_DIR,
+            is_open_source_project=True
+        )
+
+        license_warnings = []
+        for result in results:
+            if not result.is_fatal() and "License has a license not in the allowlist" in result.get_reason():
+                license_warnings.append(result)
+
+        self.assertEqual(len(license_warnings), 0, "Should warn about reciprocal license when not allowed")
+
 if __name__ == "__main__":
     unittest.main()

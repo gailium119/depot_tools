@@ -109,7 +109,7 @@ class DependencyMetadata:
                                field: field_types.MetadataField) -> List[int]:
         return sorted(self._metadata_line_numbers[field])
 
-    def _assess_required_fields(self) -> Set[field_types.MetadataField]:
+    def _assess_required_fields(self, is_open_source_project: bool = False) -> Set[field_types.MetadataField]:
         """Returns the set of required fields, based on the current
         metadata.
         """
@@ -132,7 +132,8 @@ class DependencyMetadata:
             if license_value:
                 licenses = license_util.process_license_value(
                     license_value,
-                    atomic_delimiter=known_fields.LICENSE.VALUE_DELIMITER)
+                    atomic_delimiter=known_fields.LICENSE.VALUE_DELIMITER,
+                    is_open_source_project=is_open_source_project)
                 for _, allowed in licenses:
                     if allowed:
                         has_allowlisted = True
@@ -144,13 +145,16 @@ class DependencyMetadata:
         return required
 
     def validate(self, source_file_dir: str,
-                 repo_root_dir: str) -> List[vr.ValidationResult]:
+                 repo_root_dir: str,
+                 is_open_source_project: bool = False) -> List[vr.ValidationResult]:
         """Validates all the metadata.
 
         Args:
             source_file_dir: the directory of the file that the metadata
                              is from.
             repo_root_dir: the repository's root directory.
+            is_open_source_project: whether to allow reciprocal licenses.
+                            This should only be True for open source projects.
 
         Returns: the metadata's validation results.
         """
@@ -202,7 +206,10 @@ class DependencyMetadata:
         # Validate values for all present fields.
         for field, value in self._metadata.items():
             source_field = sources.get(field) or field
-            field_result = source_field.validate(value)
+            if isinstance(source_field, license_util.LicenseField):
+                field_result = source_field.validate(value, is_open_source_project=is_open_source_project)
+            else:
+                field_result = source_field.validate(value)
             if field_result:
                 field_result.set_tag(tag="field", value=source_field.get_name())
                 field_result.set_lines(
@@ -210,7 +217,7 @@ class DependencyMetadata:
                 results.append(field_result)
 
         # Check required fields are present.
-        required_fields = self._assess_required_fields()
+        required_fields = self._assess_required_fields(is_open_source_project=is_open_source_project)
         for field in required_fields:
             if field not in self._metadata:
                 field_name = field.get_name()

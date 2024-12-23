@@ -70,6 +70,24 @@
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
     {
+      "unresolved": true,
+      "key": {
+        "uuid": "60aa2b11_16535bf1",
+        "filename": "metadata/fields/custom/license.py",
+        "patchSetId": 7
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 3388142
+      },
+      "writtenOn": "2024-12-23T01:48:36Z",
+      "side": 1,
+      "message": "I agree pushing flags deep into the validation chain isn\u0027t ideal architecturally. Depends on our appetite for added layers of complexity vs bloat.\n\n\nAn option would be to use dependency injection with a `LicenseStrategy` class that encapsulates the allowlist logic:\n\n```python\n# metadata/fields/license_strategy.py\nclass LicenseStrategy:\n    def __init__(self, allowed_licenses: frozenset):\n        self._allowed_licenses \u003d allowed_licenses\n        \n    def is_allowed(self, license: str) -\u003e bool:\n        return license in self._allowed_licenses\n\ndef create_license_strategy(is_open_source: bool) -\u003e LicenseStrategy:\n    from metadata.fields.custom.license_allowlist import (\n        ALLOWED_LICENSES, ALLOWED_OPEN_SOURCE_LICENSES)\n    allowed \u003d ALLOWED_OPEN_SOURCE_LICENSES if is_open_source else ALLOWED_LICENSES\n    return LicenseStrategy(allowed)\n\n# metadata/validate.py\ndef validate_content(...):\n   dependencies \u003d metadata.parse.parse_content(content)\n   strategy \u003d create_license_strategy(is_open_source_project) \n   for dep in dependencies:\n       dep.set_license_strategy(strategy)\n\n# metadata/dependency_metadata.py\nclass DependencyMetadata:\n    def __init__(self, license_strategy: Optional[LicenseStrategy] \u003d None):\n        self._license_strategy \u003d license_strategy or create_license_strategy(False)\n```\n\nThen LicenseField would use `self._metadata.license_strategy.is_allowed(license)`\n\nWDYT?",
+      "parentUuid": "025620ee_07457ad0",
+      "revId": "ca235fece0e27e111ce22af77a9cc2bb7fd8ca45",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
       "unresolved": false,
       "key": {
         "uuid": "98051767_a225800e",
@@ -83,6 +101,24 @@
       "writtenOn": "2024-12-22T23:54:05Z",
       "side": 1,
       "message": "nit: The TODO is done now?",
+      "revId": "ca235fece0e27e111ce22af77a9cc2bb7fd8ca45",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "703abc92_d8f6d489",
+        "filename": "metadata/fields/custom/license_allowlist.py",
+        "patchSetId": 7
+      },
+      "lineNbr": 109,
+      "author": {
+        "id": 3388142
+      },
+      "writtenOn": "2024-12-23T01:48:36Z",
+      "side": 1,
+      "message": "Done.",
+      "parentUuid": "98051767_a225800e",
       "revId": "ca235fece0e27e111ce22af77a9cc2bb7fd8ca45",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
@@ -135,6 +171,42 @@
           ]
         }
       ],
+      "revId": "ca235fece0e27e111ce22af77a9cc2bb7fd8ca45",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9ea23dbc_dfe4038b",
+        "filename": "presubmit_canned_checks.py",
+        "patchSetId": 7
+      },
+      "lineNbr": 864,
+      "author": {
+        "id": 3388142
+      },
+      "writtenOn": "2024-12-23T01:48:36Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8ce37454_dde67f46",
+      "revId": "ca235fece0e27e111ce22af77a9cc2bb7fd8ca45",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a6587d25_ec04d3d0",
+        "filename": "presubmit_canned_checks.py",
+        "patchSetId": 7
+      },
+      "lineNbr": 864,
+      "author": {
+        "id": 3388142
+      },
+      "writtenOn": "2024-12-23T01:48:36Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8ce37454_dde67f46",
       "revId": "ca235fece0e27e111ce22af77a9cc2bb7fd8ca45",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }

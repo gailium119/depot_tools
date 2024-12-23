@@ -893,7 +893,7 @@ class GitCredsAuthenticator(_Authenticator):
             return True
         try:
             info = GetAccountDetails(host, authenticator=cls())
-        except auth.LoginRequiredError:
+        except auth.GitLoginRequiredError:
             LOGGER.debug(
                 "Cannot check Gerrit account existence; missing luci-auth login"
             )

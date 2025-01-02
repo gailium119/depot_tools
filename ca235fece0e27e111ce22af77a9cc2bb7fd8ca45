@@ -88,6 +88,24 @@
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
     {
+      "unresolved": true,
+      "key": {
+        "uuid": "bd3aa38c_0ed05956",
+        "filename": "metadata/fields/custom/license.py",
+        "patchSetId": 7
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1553262
+      },
+      "writtenOn": "2025-01-02T00:04:52Z",
+      "side": 1,
+      "message": "I think that the license strategy option is better going forward to keep this modularised and flexible, rather than passing a single variable all the way through. I would probably recommend keeping it in the license field file as opposed to a new one since it\u0027s not actually a new field, but additional data used to validate the license field. I would also ask @aredulla@google.com for her thoughts as the original custom field architect.",
+      "parentUuid": "60aa2b11_16535bf1",
+      "revId": "ca235fece0e27e111ce22af77a9cc2bb7fd8ca45",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
       "unresolved": false,
       "key": {
         "uuid": "98051767_a225800e",

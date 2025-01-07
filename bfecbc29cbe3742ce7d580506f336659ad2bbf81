@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7a5e450d_875ec2fb",
+        "filename": "pylintrc-3.2",
+        "patchSetId": 4
+      },
+      "lineNbr": 428,
+      "author": {
+        "id": 1560543
+      },
+      "writtenOn": "2025-01-07T19:49:48Z",
+      "side": 1,
+      "message": "as we increase pylint 3.2 usage, do you think it would make sense to trim this list a bit?",
+      "revId": "bfecbc29cbe3742ce7d580506f336659ad2bbf81",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

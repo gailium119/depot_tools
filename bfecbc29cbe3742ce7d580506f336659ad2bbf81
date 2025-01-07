@@ -16,6 +16,24 @@
       "message": "as we increase pylint 3.2 usage, do you think it would make sense to trim this list a bit?",
       "revId": "bfecbc29cbe3742ce7d580506f336659ad2bbf81",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d838ce6a_d7067383",
+        "filename": "pylintrc-3.2",
+        "patchSetId": 4
+      },
+      "lineNbr": 428,
+      "author": {
+        "id": 1000768
+      },
+      "writtenOn": "2025-01-07T19:58:09Z",
+      "side": 1,
+      "message": "i was strongly considering it since the file is unique to 3.2 and not automatically re-used by any other versions and no one is automatically opted-in to it\n\ni\u0027ll give it a pass and trim some stuff",
+      "parentUuid": "7a5e450d_875ec2fb",
+      "revId": "bfecbc29cbe3742ce7d580506f336659ad2bbf81",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

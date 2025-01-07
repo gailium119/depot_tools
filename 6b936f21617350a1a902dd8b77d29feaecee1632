@@ -104,6 +104,24 @@
       ],
       "revId": "6b936f21617350a1a902dd8b77d29feaecee1632",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "20233bb8_251d7680",
+        "filename": "presubmit_canned_checks.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 601,
+      "author": {
+        "id": 1000768
+      },
+      "writtenOn": "2025-01-07T17:09:37Z",
+      "side": 1,
+      "message": "it\u0027s both variable name \u0026 string.  i tweaked the var name in the latest version.",
+      "parentUuid": "2f7f4d1e_8c1a875d",
+      "revId": "6b936f21617350a1a902dd8b77d29feaecee1632",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

@@ -1,0 +1,109 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2f7f4d1e_8c1a875d",
+        "filename": "presubmit_canned_checks.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 601,
+      "author": {
+        "id": 1381059
+      },
+      "writtenOn": "2025-01-07T17:06:34Z",
+      "side": 1,
+      "message": "I suspect it\u0027s the variable name that is triggering the error. Maybe IFTTT_EXCEPTION?",
+      "fixSuggestions": [
+        {
+          "fixId": "3c2dc638_9b76f797",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "presubmit_canned_checks.py",
+              "range": {
+                "startLine": 601,
+                "startChar": 0,
+                "endLine": 603,
+                "endChar": 0
+              },
+              "replacement": "    IFTTT_EXCEPTION \u003d (\u0027IF\u0027\n                       \u0027TTT.ThenChange(\u0027)\n"
+            },
+            {
+              "path": "presubmit_canned_checks.py",
+              "range": {
+                "startLine": 609,
+                "startChar": 0,
+                "endLine": 610,
+                "endChar": 0
+              },
+              "replacement": "                      \u0027// \u0027 + IFTTT_EXCEPTION)\n"
+            },
+            {
+              "path": "presubmit_canned_checks.py",
+              "range": {
+                "startLine": 612,
+                "startChar": 0,
+                "endLine": 613,
+                "endChar": 0
+              },
+              "replacement": "                       \u0027\u003c!-- \u0027 + IFTTT_EXCEPTION)\n"
+            },
+            {
+              "path": "presubmit_canned_checks.py",
+              "range": {
+                "startLine": 614,
+                "startChar": 0,
+                "endLine": 615,
+                "endChar": 0
+              },
+              "replacement": "    JAVA_EXCEPTIONS \u003d (\u0027import \u0027, \u0027package \u0027, \u0027// \u0027 + IFTTT_EXCEPTION)\n"
+            },
+            {
+              "path": "presubmit_canned_checks.py",
+              "range": {
+                "startLine": 617,
+                "startChar": 0,
+                "endLine": 618,
+                "endChar": 0
+              },
+              "replacement": "                     \u0027// \u0027 + IFTTT_EXCEPTION)\n"
+            },
+            {
+              "path": "presubmit_canned_checks.py",
+              "range": {
+                "startLine": 619,
+                "startChar": 0,
+                "endLine": 620,
+                "endChar": 0
+              },
+              "replacement": "    TS_EXCEPTIONS \u003d (\u0027import \u0027, \u0027// \u0027 + IFTTT_EXCEPTION)\n"
+            },
+            {
+              "path": "presubmit_canned_checks.py",
+              "range": {
+                "startLine": 622,
+                "startChar": 0,
+                "endLine": 623,
+                "endChar": 0
+              },
+              "replacement": "                       \u0027#pragma\u0027, \u0027// \u0027 + IFTTT_EXCEPTION)\n"
+            },
+            {
+              "path": "presubmit_canned_checks.py",
+              "range": {
+                "startLine": 624,
+                "startChar": 0,
+                "endLine": 625,
+                "endChar": 0
+              },
+              "replacement": "    PY_EXCEPTIONS \u003d (\u0027import\u0027, \u0027from\u0027, \u0027# \u0027 + IFTTT_EXCEPTION)\n"
+            }
+          ]
+        }
+      ],
+      "revId": "6b936f21617350a1a902dd8b77d29feaecee1632",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

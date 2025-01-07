@@ -106,6 +106,24 @@
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
     {
+      "unresolved": true,
+      "key": {
+        "uuid": "beca881d_2283c962",
+        "filename": "metadata/fields/custom/license.py",
+        "patchSetId": 7
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1544922
+      },
+      "writtenOn": "2025-01-07T22:56:36Z",
+      "side": 1,
+      "message": "tbh I didn\u0027t really expect field validation to be so case-dependent. I agree with Rachael on the license strategy approach over the flag being passed through.",
+      "parentUuid": "bd3aa38c_0ed05956",
+      "revId": "ca235fece0e27e111ce22af77a9cc2bb7fd8ca45",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
       "unresolved": false,
       "key": {
         "uuid": "98051767_a225800e",

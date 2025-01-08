@@ -35,6 +35,24 @@
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "75ffd2f8_de67c9df",
+        "filename": "recipes/recipe_modules/bot_update/resources/bot_update.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 1149,
+      "author": {
+        "id": 1549252
+      },
+      "writtenOn": "2025-01-08T18:16:48Z",
+      "side": 1,
+      "message": "I will address this in another follow up cl.",
+      "parentUuid": "71db7542_0612edc4",
+      "revId": "1adad05856285ee6b00a38cb469056fc445bbf3a",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "bff10856_a03e25a1",
@@ -48,6 +66,24 @@
       "writtenOn": "2025-01-08T17:00:34Z",
       "side": 1,
       "message": "can you use [the api from file module](https://source.chromium.org/chromium/infra/infra_superproject/+/main:recipes-py/recipe_modules/file/api.py;l\u003d728-748;drc\u003d0943f9f5448c218fdd808d3785a86ebb7a27e45a) to remove the dir so that it will show up as a step in the build?",
+      "revId": "1adad05856285ee6b00a38cb469056fc445bbf3a",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "91a22a13_1811ea2b",
+        "filename": "recipes/recipe_modules/bot_update/resources/bot_update.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 1150,
+      "author": {
+        "id": 1549252
+      },
+      "writtenOn": "2025-01-08T18:16:48Z",
+      "side": 1,
+      "message": "Since this script is from the bot_update resources, it does not have access to the recipe_engine.py module.",
+      "parentUuid": "bff10856_a03e25a1",
       "revId": "1adad05856285ee6b00a38cb469056fc445bbf3a",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }

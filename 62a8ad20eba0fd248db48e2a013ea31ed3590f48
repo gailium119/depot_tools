@@ -34,6 +34,24 @@
       "parentUuid": "a50a24ac_a0d81dc5",
       "revId": "62a8ad20eba0fd248db48e2a013ea31ed3590f48",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6f98648b_3261d63f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000768
+      },
+      "writtenOn": "2025-01-08T21:04:45Z",
+      "side": 1,
+      "message": "it would be a change in our development flow.  today we tell people to get depot_tools to bootstrap things, not to install repo via their distro or by themselves.  Googlers have an automated package in gLinux (albeit they have to manually install), but not all distros provide one, or keep it up-to-date.",
+      "parentUuid": "72363376_e6a7b82d",
+      "revId": "62a8ad20eba0fd248db48e2a013ea31ed3590f48",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

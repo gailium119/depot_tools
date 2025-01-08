@@ -34,6 +34,24 @@
       "parentUuid": "7a5e450d_875ec2fb",
       "revId": "bfecbc29cbe3742ce7d580506f336659ad2bbf81",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "44431008_6b6e8a07",
+        "filename": "pylintrc-3.2",
+        "patchSetId": 4
+      },
+      "lineNbr": 428,
+      "author": {
+        "id": 1000768
+      },
+      "writtenOn": "2025-01-08T19:26:49Z",
+      "side": 1,
+      "message": "set spacing to 4 above, sorted this list, and significantly trimmed things\n\ni\u0027m not sure every warning removed is something we widely want to enable, but we can at least start getting feedback.",
+      "parentUuid": "d838ce6a_d7067383",
+      "revId": "bfecbc29cbe3742ce7d580506f336659ad2bbf81",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

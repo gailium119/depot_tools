@@ -86,6 +86,24 @@
       "parentUuid": "bff10856_a03e25a1",
       "revId": "1adad05856285ee6b00a38cb469056fc445bbf3a",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5c78f513_44b11ba7",
+        "filename": "recipes/recipe_modules/bot_update/resources/bot_update.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 1150,
+      "author": {
+        "id": 1381059
+      },
+      "writtenOn": "2025-01-08T18:24:06Z",
+      "side": 1,
+      "message": "oh, that\u0027s right. then this change lgtm.",
+      "parentUuid": "91a22a13_1811ea2b",
+      "revId": "1adad05856285ee6b00a38cb469056fc445bbf3a",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

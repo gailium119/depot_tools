@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a50a24ac_a0d81dc5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000768
+      },
+      "writtenOn": "2025-01-08T20:09:06Z",
+      "side": 1,
+      "message": "sometimes i wish we could setup autoroller for this, but i have no idea how difficult that would be to pull off",
+      "revId": "62a8ad20eba0fd248db48e2a013ea31ed3590f48",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

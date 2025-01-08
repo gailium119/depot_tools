@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "71db7542_0612edc4",
+        "filename": "recipes/recipe_modules/bot_update/resources/bot_update.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 1149,
+      "author": {
+        "id": 1381059
+      },
+      "writtenOn": "2025-01-08T17:00:34Z",
+      "side": 1,
+      "message": "The print likely goes nowhere. If you are using the file api, you can make this the step name of removing dir and make the log on L1152 the step_text of the removal step",
+      "revId": "1adad05856285ee6b00a38cb469056fc445bbf3a",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bff10856_a03e25a1",
+        "filename": "recipes/recipe_modules/bot_update/resources/bot_update.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 1150,
+      "author": {
+        "id": 1381059
+      },
+      "writtenOn": "2025-01-08T17:00:34Z",
+      "side": 1,
+      "message": "can you use [the api from file module](https://source.chromium.org/chromium/infra/infra_superproject/+/main:recipes-py/recipe_modules/file/api.py;l\u003d728-748;drc\u003d0943f9f5448c218fdd808d3785a86ebb7a27e45a) to remove the dir so that it will show up as a step in the build?",
+      "revId": "1adad05856285ee6b00a38cb469056fc445bbf3a",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

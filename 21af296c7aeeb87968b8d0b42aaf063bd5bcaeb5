@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "588ed5df_22a9c256",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1161379
+      },
+      "writtenOn": "2025-01-08T02:37:59Z",
+      "side": 1,
+      "message": "Let me defer to the recipe owner.",
+      "revId": "21af296c7aeeb87968b8d0b42aaf063bd5bcaeb5",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

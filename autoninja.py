@@ -31,7 +31,6 @@ import android_build_server_helper
 import build_telemetry
 import gclient_paths
 import gclient_utils
-import gn_helper
 import ninja
 import ninjalog_uploader
 import reclient_helper
@@ -180,6 +179,26 @@ def _get_use_siso_default(output_dir):
     return r
 
 
+def _read_args_gn(output_dir):
+    root_dir = gclient_paths.GetPrimarySolutionPath()
+    if not root_dir:
+        return None
+    script_path = os.path.join(root_dir, "build/gn_helpers.py")
+    if not os.path.exists(script_path):
+        return None
+    script = _import_from_path("gn_helpers", script_path)
+    try:
+        r = script.ReadArgsGN(output_dir)
+    except:
+        raise RuntimeError(
+            'Could not call method "ReadArgsGN" in {}"'.format(script_path))
+    if not isinstance(r, dict):
+        raise TypeError(
+            'Method "ReadArgsGN" in "{}" returns invalid result. Expected dict, got "{}" (type "{}")'
+            .format(script_path, r, type(r)))
+    return r
+
+
 def _main_inner(input_args, build_id, should_collect_logs=False):
     # if user doesn't set PYTHONPYCACHEPREFIX and PYTHONDONTWRITEBYTECODE
     # set PYTHONDONTWRITEBYTECODE=1 not to create many *.pyc in workspace
@@ -231,38 +250,12 @@ def _main_inner(input_args, build_id, should_collect_logs=False):
     # Attempt to auto-detect remote build acceleration. We support gn-based
     # builds, where we look for args.gn in the build tree, and cmake-based
     # builds where we look for rules.ninja.
-    if gn_helper.exists(output_dir):
-        for k, v in gn_helper.args(output_dir):
-            # use_remoteexec will activate build acceleration.
-            #
-            # This test can match multi-argument lines. Examples of this
-            # are: is_debug=false use_remoteexec=true is_official_build=false
-            # use_remoteexec=false# use_remoteexec=true This comment is ignored
-            #
-            # Anything after a comment is not consider a valid argument.
-            if k == "use_remoteexec" and v == "true":
-                use_remoteexec = True
-                continue
-            if k == "use_remoteexec" and v == "false":
-                use_remoteexec = False
-                continue
-            if k == "use_siso" and v == "true":
-                use_siso = True
-                continue
-            if k == "use_siso" and v == "false":
-                use_siso = False
-                continue
-            if k == "use_reclient" and v == "true":
-                use_reclient = True
-                continue
-            if k == "use_reclient" and v == "false":
-                use_reclient = False
-                continue
-            if k == "android_static_analysis" and v == '"build_server"':
-                use_android_build_server = True
-                continue
-        if use_reclient is None:
-            use_reclient = use_remoteexec
+    args = _read_args_gn(output_dir)
+    if args is not None:
+        use_remoteexec = args.get('use_remoteexec')
+        use_reclient = args.get('use_reclient', use_reclient)
+        use_siso = args.get('use_siso', use_siso)
+        use_android_build_server = args.get('use_android_build_server')
 
         if use_remoteexec:
             if use_reclient:

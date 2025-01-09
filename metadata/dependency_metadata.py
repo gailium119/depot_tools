@@ -78,6 +78,10 @@ class DependencyMetadata:
         # The record of how many times a field entry was added.
         self._occurrences: Dict[field_types.MetadataField,
                                 int] = defaultdict(int)
+        self._license_strategy = None
+
+    def set_license_strategy(self, strategy: license_util.LicenseStrategy):
+        self._license_strategy = strategy
 
     def add_entry(self, field_name: str, field_value: str):
         value = field_value.strip()
@@ -162,8 +166,7 @@ class DependencyMetadata:
         return required
 
     def validate(self, source_file_dir: str,
-                 repo_root_dir: str,
-                 is_open_source_project: bool = False) -> List[vr.ValidationResult]:
+                 repo_root_dir: str) -> List[vr.ValidationResult]:
         """Validates all the metadata.
 
         Args:

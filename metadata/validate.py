@@ -17,7 +17,7 @@ sys.path.insert(0, _ROOT_DIR)
 import gclient_utils
 import metadata.parse
 import metadata.validation_result as vr
-
+import metadata.fields.custom.license as license_util
 
 _TRANSITION_PRESCRIPT = (
     "The following issue should be addressed now, as it will become a "
@@ -51,11 +51,14 @@ def validate_content(content: str,
         result = vr.ValidationError(reason="No dependency metadata found.")
         return [result]
 
+   strategy = license_util.create_license_strategy(is_open_source_project)
+   for dep in dependencies:
+       dep.set_license_strategy(strategy)
+
     for dependency in dependencies:
         dependency_results = dependency.validate(
             source_file_dir=source_file_dir,
             repo_root_dir=repo_root_dir,
-            is_open_source_project=is_open_source_project,
         )
         results.extend(dependency_results)
     return sorted(results)

@@ -19,10 +19,31 @@ import metadata.fields.field_types as field_types
 import metadata.fields.util as util
 import metadata.validation_result as vr
 from metadata.fields.custom.license_allowlist import ALLOWED_LICENSES, ALLOWED_OPEN_SOURCE_LICENSES
+<<<<<<< PATCH SET (b90f9b [Experimental] license strategy pattern)
+
+
+class LicenseStrategy:
+    def __init__(self, allowed_licenses: frozenset):
+        self._allowed_licenses = allowed_licenses
+
+    def is_allowed(self, license: str) -> bool:
+        return license in self._allowed_licenses
+
+
+def create_license_strategy(is_open_source: bool) -> LicenseStrategy:
+    return LicenseStrategy(
+        ALLOWED_OPEN_SOURCE_LICENSES if is_open_source else ALLOWED_LICENSES)
+=======
+>>>>>>> BASE      (f1c7e1 Add `allow_reciprocal_licenses` to metadata validation)
 
 
 def process_license_value(value: str,
+<<<<<<< PATCH SET (b90f9b [Experimental] license strategy pattern)
+                          atomic_delimiter: str,
+                          license_policy: LicenseStrategy) -> List[Tuple[str, bool]]:
+=======
                           atomic_delimiter: str) -> List[Tuple[str, bool]]:
+>>>>>>> BASE      (f1c7e1 Add `allow_reciprocal_licenses` to metadata validation)
     """Process a license field value, which may list multiple licenses.
 
     Args:
@@ -31,6 +52,10 @@ def process_license_value(value: str,
         atomic_delimiter: the delimiter to use as a final step; values
                           will not be further split after using this
                           delimiter.
+<<<<<<< PATCH SET (b90f9b [Experimental] license strategy pattern)
+        license_policy: whether to allow reciprocal licenses.
+=======
+>>>>>>> BASE      (f1c7e1 Add `allow_reciprocal_licenses` to metadata validation)
 
     Returns: a list of the constituent licenses within the given value,
              and whether the constituent license is on the allowlist.
@@ -39,7 +64,11 @@ def process_license_value(value: str,
     """
     # Check if the value is on the allowlist as-is, and thus does not
     # require further processing.
+<<<<<<< PATCH SET (b90f9b [Experimental] license strategy pattern)
+    if license_policy.is_allowed(value):
+=======
     if is_license_valid(value):
+>>>>>>> BASE      (f1c7e1 Add `allow_reciprocal_licenses` to metadata validation)
         return [(value, True)]
 
     breakdown = []
@@ -48,9 +77,13 @@ def process_license_value(value: str,
     for atomic_value in value.split(atomic_delimiter):
         atomic_value = atomic_value.strip()
         breakdown.append(
+<<<<<<< PATCH SET (b90f9b [Experimental] license strategy pattern)
+            (atomic_value, license_policy.is_allowed(atomic_value))
+=======
             (atomic_value, is_license_valid(
                 atomic_value,
             ))
+>>>>>>> BASE      (f1c7e1 Add `allow_reciprocal_licenses` to metadata validation)
         )
 
     return breakdown
@@ -79,7 +112,15 @@ class LicenseField(field_types.SingleLineTextField):
     """
   def __init__(self):
     super().__init__(name="License")
+    # Default to closed source license policy.
+    self._license_strategy = create_license_strategy(False)
 
+<<<<<<< PATCH SET (b90f9b [Experimental] license strategy pattern)
+  def enable_open_source_license_policy(self):
+    self._license_strategy = create_license_strategy(True)
+
+=======
+>>>>>>> BASE      (f1c7e1 Add `allow_reciprocal_licenses` to metadata validation)
   def validate(self, value: str) -> Optional[vr.ValidationResult]:
     """Checks the given value consists of recognized license types.
 
@@ -88,6 +129,10 @@ class LicenseField(field_types.SingleLineTextField):
     not_allowlisted = []
     licenses = process_license_value(value,
           atomic_delimiter=self.VALUE_DELIMITER,
+<<<<<<< PATCH SET (b90f9b [Experimental] license strategy pattern)
+          license_policy=self._license_strategy,
+=======
+>>>>>>> BASE      (f1c7e1 Add `allow_reciprocal_licenses` to metadata validation)
     )
     for license, allowed in licenses:
       if util.is_empty(license):

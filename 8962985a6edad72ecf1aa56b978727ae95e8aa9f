@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "39e5f08d_4e6bc67f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1003232
+      },
+      "writtenOn": "2025-01-09T22:36:03Z",
+      "side": 1,
+      "message": "@ddoman - can you review this again? I had to fix some tests and so the list of files to review changed and your review was reset.",
+      "revId": "8962985a6edad72ecf1aa56b978727ae95e8aa9f",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

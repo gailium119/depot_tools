@@ -237,8 +237,13 @@ def SplitCl(description_file, comment_file, changelist, cmd_upload, dry_run,
     Returns:
         0 in case of success. 1 in case of error.
     """
-    description = AddUploadedByGitClSplitToDescription(
-        gclient_utils.FileRead(description_file))
+    if not description_file and dry_run:
+        description = ('Dummy description for dry run.\n'
+                       'directory = $directory')
+    else:
+        description = gclient_utils.FileRead(description_file)
+
+    description = AddUploadedByGitClSplitToDescription(description)
     comment = gclient_utils.FileRead(comment_file) if comment_file else None
 
     try:
@@ -262,7 +267,7 @@ def SplitCl(description_file, comment_file, changelist, cmd_upload, dry_run,
         assert refactor_branch_upstream, \
             "Branch %s must have an upstream." % refactor_branch
 
-        if not CheckDescriptionBugLink(description):
+        if not dry_run and not CheckDescriptionBugLink(description):
             return 0
 
         files_split_by_reviewers = SelectReviewersForFiles(

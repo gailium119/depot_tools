@@ -124,6 +124,24 @@
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
     {
+      "unresolved": true,
+      "key": {
+        "uuid": "5b0c11bc_f64a71a7",
+        "filename": "metadata/fields/custom/license.py",
+        "patchSetId": 7
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 3388142
+      },
+      "writtenOn": "2025-01-09T07:41:44Z",
+      "side": 1,
+      "message": "I gave this a good go but have changed my mind. I think passing a flag is actually the cleanest and simplest solution here. \n\nTLDR: Passing a bool 6 times simpler than passing it 3 times then managing a Strategy Class.\n\nThe challenge with a strategy pattern is that LicenseField is static - it\u0027s created once at import time in known_fields.py and reused across all validations. There\u0027s no clean way to inject different strategies into an already-instantiated field without significantly complicating the architecture. We may as well just use a global variable.\n\nWhile passing flags deep in the call chain isn\u0027t ideal in general, in this specific case it\u0027s a reasonable tradeoff for simplicity and maintainability. \n\nPerhaps I\u0027ve overlooked a simpler solution, if so I\u0027m open to suggestions. I\u0027ll make my current attempt available as a CL https://crrev.com/c/6161120",
+      "parentUuid": "beca881d_2283c962",
+      "revId": "ca235fece0e27e111ce22af77a9cc2bb7fd8ca45",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
       "unresolved": false,
       "key": {
         "uuid": "98051767_a225800e",

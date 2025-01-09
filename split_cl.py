@@ -218,6 +218,38 @@ def PrintClInfo(cl_index, num_cls, directories, file_paths, description,
     print()
 
 
+def PrintSummary(files_split_by_reviewers):
+    """Print a brief summary of the splitting so the user
+       can review it before uploading.
+
+    Args:
+       files_split_by_reviewers: A dictonary mapping reviewer tuples
+           to the files and directories assigned to them.
+    """
+
+    for reviewers, file_info in files_split_by_reviewers.items():
+        print(
+            f'Reviewers: {reviewers}, files: {len(file_info.files)}, directories: {file_info.owners_directories}'
+        )
+
+    num_cls = len(files_split_by_reviewers)
+    print(
+        f'\n{num_cls} CLs were generated. Please quickly review them before proceeding.\n'
+    )
+    if (num_cls > CL_SPLIT_FORCE_LIMIT):
+        print('Warning: Uploading this many CLs may potentially '
+              'reach the limit of concurrent runs, imposed on you by the '
+              'build infrastructure. Your runs may be throttled as a '
+              'result.\n\nPlease email infra-dev@chromium.org if you '
+              'have any questions. '
+              'The infra team reserves the right to cancel '
+              'your jobs if they are overloading the CQ.\n\n'
+              '(Alternatively, you can reduce the number of CLs created by '
+              'using the --max-depth option. Pass --dry-run to examine the '
+              'CLs which will be created until you are happy with the '
+              'results.)')
+
+
 def SplitCl(description_file, comment_file, changelist, cmd_upload, dry_run,
             cq_dry_run, enable_auto_submit, max_depth, topic, repository_root):
     """"Splits a branch into smaller branches and uploads CLs.
@@ -268,21 +300,8 @@ def SplitCl(description_file, comment_file, changelist, cmd_upload, dry_run,
         files_split_by_reviewers = SelectReviewersForFiles(
             cl, author, files, max_depth)
 
-        num_cls = len(files_split_by_reviewers)
-        print('Will split current branch (' + refactor_branch + ') into ' +
-              str(num_cls) + ' CLs.\n')
-        if not dry_run and num_cls > CL_SPLIT_FORCE_LIMIT:
-            print('This will generate "%r" CLs. This many CLs may potentially'
-                  ' reach the limit of concurrent runs, imposed on you by the '
-                  'build infrastructure. Your runs may be throttled as a '
-                  'result.\n\nPlease email infra-dev@chromium.org if you '
-                  'have any questions. '
-                  'The infra team reserves the right to cancel'
-                  ' your jobs if they are overloading the CQ.\n\n'
-                  '(Alternatively, you can reduce the number of CLs created by'
-                  ' using the --max-depth option. Pass --dry-run to examine the'
-                  ' CLs which will be created until you are happy with the'
-                  ' results.)' % num_cls)
+        if not dry_run:
+            PrintSummary(files_split_by_reviewers)
             answer = gclient_utils.AskForData('Proceed? (y/n):')
             if answer.lower() != 'y':
                 return 0
@@ -294,9 +313,9 @@ def SplitCl(description_file, comment_file, changelist, cmd_upload, dry_run,
             reviewer_set = set(reviewers)
             if dry_run:
                 file_paths = [f for _, f in cl_info.files]
-                PrintClInfo(cl_index, num_cls, cl_info.owners_directories,
-                            file_paths, description, reviewer_set, cq_dry_run,
-                            enable_auto_submit, topic)
+                PrintClInfo(cl_index, len(files_split_by_reviewers),
+                            cl_info.owners_directories, file_paths, description,
+                            reviewer_set, cq_dry_run, enable_auto_submit, topic)
             else:
                 UploadCl(refactor_branch, refactor_branch_upstream,
                          cl_info.owners_directories, cl_info.files, description,

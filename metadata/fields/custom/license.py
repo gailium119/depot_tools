@@ -18,12 +18,25 @@ sys.path.insert(0, _ROOT_DIR)
 import metadata.fields.field_types as field_types
 import metadata.fields.util as util
 import metadata.validation_result as vr
-from metadata.fields.custom.license_allowlist import ALLOWED_SPDX_LICENSES, ALLOWED_OPEN_SOURCE_LICENSES
+from metadata.fields.custom.license_allowlist import ALLOWED_LICENSES, ALLOWED_OPEN_SOURCE_LICENSES
+
+
+class LicenseStrategy:
+    def __init__(self, allowed_licenses: frozenset):
+        self._allowed_licenses = allowed_licenses
+
+    def is_allowed(self, license: str) -> bool:
+        return license in self._allowed_licenses
+
+
+def create_license_strategy(is_open_source: bool) -> LicenseStrategy:
+    return LicenseStrategy(
+        ALLOWED_OPEN_SOURCE_LICENSES if is_open_source else ALLOWED_LICENSES)
 
 
 def process_license_value(value: str,
                           atomic_delimiter: str,
-                          is_open_source_project: bool = False) -> List[Tuple[str, bool]]:
+                          license_policy: LicenseStrategy) -> List[Tuple[str, bool]]:
     """Process a license field value, which may list multiple licenses.
 
     Args:
@@ -32,8 +45,7 @@ def process_license_value(value: str,
         atomic_delimiter: the delimiter to use as a final step; values
                           will not be further split after using this
                           delimiter.
-        is_open_source_project: whether to allow reciprocal licenses.
-                            This should only be True for open source projects.
+        license_policy: whether to allow reciprocal licenses.
 
     Returns: a list of the constituent licenses within the given value,
              and whether the constituent license is on the allowlist.
@@ -42,7 +54,7 @@ def process_license_value(value: str,
     """
     # Check if the value is on the allowlist as-is, and thus does not
     # require further processing.
-    if is_license_allowlisted(value, is_open_source_project=is_open_source_project):
+    if license_policy.is_allowed(value):
         return [(value, True)]
 
     breakdown = []
@@ -51,10 +63,7 @@ def process_license_value(value: str,
     for atomic_value in value.split(atomic_delimiter):
         atomic_value = atomic_value.strip()
         breakdown.append(
-            (atomic_value, is_license_allowlisted(
-                atomic_value,
-                is_open_source_project=is_open_source_project,
-            ))
+            (atomic_value, license_policy.is_allowed(atomic_value))
         )
 
     return breakdown
@@ -74,9 +83,13 @@ class LicenseField(field_types.SingleLineTextField):
     """
   def __init__(self):
     super().__init__(name="License")
+    # Default to closed source license policy.
+    self._license_strategy = create_license_strategy(False)
 
-  def validate(self, value: str,
-               is_open_source_project: bool = False) -> Optional[vr.ValidationResult]:
+  def enable_open_source_license_policy(self):
+    self._license_strategy = create_license_strategy(True)
+
+  def validate(self, value: str) -> Optional[vr.ValidationResult]:
     """Checks the given value consists of recognized license types.
 
         Note: this field supports multiple values.
@@ -84,7 +97,7 @@ class LicenseField(field_types.SingleLineTextField):
     not_allowlisted = []
     licenses = process_license_value(value,
           atomic_delimiter=self.VALUE_DELIMITER,
-          is_open_source_project=is_open_source_project,
+          license_policy=self._license_strategy,
     )
     for license, allowed in licenses:
       if util.is_empty(license):

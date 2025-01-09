@@ -16,6 +16,23 @@
       "message": "PTAL?",
       "revId": "c7a09a7f6e0dcb31d301798c4f117535a65bb40c",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5fd89f35_4ae3d907",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000768
+      },
+      "writtenOn": "2025-01-09T03:46:46Z",
+      "side": 1,
+      "message": "was not aware that gclient wrapped things like this",
+      "revId": "c7a09a7f6e0dcb31d301798c4f117535a65bb40c",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

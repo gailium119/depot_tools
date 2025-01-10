@@ -22,6 +22,7 @@ import metadata.fields.custom.version as version_util
 import metadata.fields.known as known_fields
 import metadata.fields.util as util
 import metadata.validation_result as vr
+from metadata.fields.custom.license_allowlist import ALLOWED_LICENSES, ALLOWED_OPEN_SOURCE_LICENSES
 
 
 class DependencyMetadata:
@@ -109,7 +110,33 @@ class DependencyMetadata:
                                field: field_types.MetadataField) -> List[int]:
         return sorted(self._metadata_line_numbers[field])
 
-    def _assess_required_fields(self) -> Set[field_types.MetadataField]:
+    def is_license_allowlisted(self, license_field_value: str, is_open_source_project: bool) -> bool:
+        """Returns whether the license is allowlisted."""
+        licenses = license_util.process_license_value(
+            license_field_value,
+            atomic_delimiter=known_fields.LICENSE.VALUE_DELIMITER)
+        has_allowlisted = False
+        for lic, valid in licenses:
+            allowed = license_util.is_license_allowlisted(lic, is_open_source_project=is_open_source_project)
+            if valid and allowed:
+                has_allowlisted = True
+            else:
+                return False
+        return has_allowlisted
+
+
+    def only_opensource_licenses(self, license_field_value: str) ->List[str]:
+        """Returns whether the license is allowlisted."""
+        licenses = license_util.process_license_value(
+            license_field_value,
+            atomic_delimiter=known_fields.LICENSE.VALUE_DELIMITER)
+        open_source_only = []
+        for lic, valid in licenses:
+            if valid and lic in ALLOWED_OPEN_SOURCE_LICENSES and lic not in ALLOWED_LICENSES:
+                open_source_only.append(lic)
+        return open_source_only
+
+    def _assess_required_fields(self, is_open_source_project: bool = False) -> Set[field_types.MetadataField]:
         """Returns the set of required fields, based on the current
         metadata.
         """
@@ -127,30 +154,24 @@ class DependencyMetadata:
             # License compatibility with Android must be set if the
             # package is shipped and the license is not in the
             # allowlist.
-            has_allowlisted = False
             license_value = self._metadata.get(known_fields.LICENSE)
-            if license_value:
-                licenses = license_util.process_license_value(
-                    license_value,
-                    atomic_delimiter=known_fields.LICENSE.VALUE_DELIMITER)
-                for _, allowed in licenses:
-                    if allowed:
-                        has_allowlisted = True
-                        break
-
-            if not has_allowlisted:
+            all_allowlisted = self.is_license_allowlisted(license_value, is_open_source_project)
+            if not license_value or not all_allowlisted:
                 required.add(known_fields.LICENSE_ANDROID_COMPATIBLE)
 
         return required
 
     def validate(self, source_file_dir: str,
-                 repo_root_dir: str) -> List[vr.ValidationResult]:
+                 repo_root_dir: str,
+                 is_open_source_project: bool = False) -> List[vr.ValidationResult]:
         """Validates all the metadata.
 
         Args:
             source_file_dir: the directory of the file that the metadata
                              is from.
             repo_root_dir: the repository's root directory.
+            is_open_source_project: whether to allow reciprocal licenses.
+                            This should only be True for open source projects.
 
         Returns: the metadata's validation results.
         """
@@ -210,7 +231,7 @@ class DependencyMetadata:
                 results.append(field_result)
 
         # Check required fields are present.
-        required_fields = self._assess_required_fields()
+        required_fields = self._assess_required_fields(is_open_source_project=is_open_source_project)
         for field in required_fields:
             if field not in self._metadata:
                 field_name = field.get_name()
@@ -248,6 +269,25 @@ class DependencyMetadata:
                 result.set_lines(
                     self.get_field_line_numbers(known_fields.LICENSE_FILE))
                 results.append(result)
+
+
+        if not is_open_source_project:
+            license_value = self._metadata.get(known_fields.LICENSE)
+            if license_value is not None:
+                not_allowed_licenses = self.only_opensource_licenses(license_value)
+                if len(not_allowed_licenses) > 0:
+                    license_result = vr.ValidationWarning(
+                        reason=f"License has a license not in the allowlist."
+                        " (see https://source.chromium.org/chromium/chromium/tools/depot_tools/+/main:metadata/fields/custom/license_allowlist.py).",
+                        additional=[
+                            f"The following license{'s  are' if len(not_allowed_licenses) > 1 else ' is'} only allowed in open source projects: "
+                            f"{util.quoted(not_allowed_licenses)}.",
+                    ])
+
+                    license_result.set_tag(tag="field", value=known_fields.LICENSE.get_name())
+                    license_result.set_lines(
+                        self.get_field_line_numbers(known_fields.LICENSE))
+                    results.append(license_result)
 
         return results
 

@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4b48bebc_49249505",
+        "filename": "metadata/dependency_metadata.py",
+        "patchSetId": 16
+      },
+      "lineNbr": 114,
+      "author": {
+        "id": 1544922
+      },
+      "writtenOn": "2025-01-10T04:22:20Z",
+      "side": 1,
+      "message": "`Returns whether all licenses in the field are allowlisted.`",
+      "fixSuggestions": [
+        {
+          "fixId": "c6bfe46b_55aae986",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "metadata/dependency_metadata.py",
+              "range": {
+                "startLine": 114,
+                "startChar": 0,
+                "endLine": 115,
+                "endChar": 0
+              },
+              "replacement": "        \"\"\"Returns whether all licenses in the field are allowlisted.\"\"\"\n"
+            }
+          ]
+        }
+      ],
+      "revId": "e75c2f20be955bad5635007c2a999c9adbf6e74e",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8ca21824_1e4470ff",
+        "filename": "metadata/dependency_metadata.py",
+        "patchSetId": 16
+      },
+      "lineNbr": 118,
+      "author": {
+        "id": 1544922
+      },
+      "writtenOn": "2025-01-10T04:22:20Z",
+      "side": 1,
+      "message": "This var is not needed. You can just return early if an invalid license is found, and return `True` at the very end if all are allowlisted.",
+      "revId": "e75c2f20be955bad5635007c2a999c9adbf6e74e",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9a572315_a05ea669",
+        "filename": "metadata/dependency_metadata.py",
+        "patchSetId": 16
+      },
+      "lineNbr": 120,
+      "author": {
+        "id": 1544922
+      },
+      "writtenOn": "2025-01-10T04:22:20Z",
+      "side": 1,
+      "message": "There\u0027s no such function anymore, I don\u0027t think?",
+      "revId": "e75c2f20be955bad5635007c2a999c9adbf6e74e",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

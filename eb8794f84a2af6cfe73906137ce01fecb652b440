@@ -1,0 +1,158 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ce5aaaeb_c1e301fb",
+        "filename": "metadata/dependency_metadata.py",
+        "patchSetId": 14
+      },
+      "lineNbr": 113,
+      "author": {
+        "id": 1544922
+      },
+      "writtenOn": "2025-01-10T03:14:59Z",
+      "side": 1,
+      "message": "As discussed offline, strictness of licecnse checking has changed from when this was originally written. I suggest renaming this to `all_licenses_allowlisted` or similar.",
+      "revId": "eb8794f84a2af6cfe73906137ce01fecb652b440",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e729a6c7_e3cd0e7f",
+        "filename": "metadata/dependency_metadata.py",
+        "patchSetId": 14
+      },
+      "lineNbr": 128,
+      "author": {
+        "id": 1544922
+      },
+      "writtenOn": "2025-01-10T03:14:59Z",
+      "side": 1,
+      "message": "nit: naming consistency `open_source` vs `opensource`",
+      "revId": "eb8794f84a2af6cfe73906137ce01fecb652b440",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9ca4fceb_c7ebfb05",
+        "filename": "metadata/dependency_metadata.py",
+        "patchSetId": 14
+      },
+      "lineNbr": 129,
+      "author": {
+        "id": 1544922
+      },
+      "writtenOn": "2025-01-10T03:14:59Z",
+      "side": 1,
+      "message": "Docstring needs to be updated.",
+      "revId": "eb8794f84a2af6cfe73906137ce01fecb652b440",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "46f9ce78_ada50be9",
+        "filename": "metadata/dependency_metadata.py",
+        "patchSetId": 14
+      },
+      "lineNbr": 135,
+      "author": {
+        "id": 1544922
+      },
+      "writtenOn": "2025-01-10T03:14:59Z",
+      "side": 1,
+      "message": "You could just check whether the license is in the diff of the sets.",
+      "revId": "eb8794f84a2af6cfe73906137ce01fecb652b440",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "30ce5a63_595b57fc",
+        "filename": "metadata/dependency_metadata.py",
+        "patchSetId": 14
+      },
+      "lineNbr": 173,
+      "author": {
+        "id": 1544922
+      },
+      "writtenOn": "2025-01-10T03:14:59Z",
+      "side": 1,
+      "message": "IMO this should just be `whether the project is open source`. Allowing reciprocal licenses is unnecessary detail, and is implemented in `license_allowlist.py` anyway.",
+      "revId": "eb8794f84a2af6cfe73906137ce01fecb652b440",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "dfe4c127_1efe294d",
+        "filename": "metadata/fields/custom/license.py",
+        "patchSetId": 14
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 1544922
+      },
+      "writtenOn": "2025-01-10T03:14:59Z",
+      "side": 1,
+      "message": "`is a recognized license type` owtte",
+      "fixSuggestions": [
+        {
+          "fixId": "ab088621_53374256",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "metadata/fields/custom/license.py",
+              "range": {
+                "startLine": 36,
+                "startChar": 0,
+                "endLine": 37,
+                "endChar": 0
+              },
+              "replacement": "             and whether the constituent license is a recognized license type.\n"
+            }
+          ]
+        }
+      ],
+      "revId": "eb8794f84a2af6cfe73906137ce01fecb652b440",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "056dd0df_d5dfb7bb",
+        "filename": "metadata/fields/custom/license.py",
+        "patchSetId": 14
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 1544922
+      },
+      "writtenOn": "2025-01-10T03:14:59Z",
+      "side": 1,
+      "message": "Docstring should be updated.",
+      "revId": "eb8794f84a2af6cfe73906137ce01fecb652b440",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0e86ed1f_abe5cf08",
+        "filename": "metadata/validate.py",
+        "patchSetId": 14
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 1544922
+      },
+      "writtenOn": "2025-01-10T03:14:59Z",
+      "side": 1,
+      "message": "Same comment as above in `dependency_metadata.py`.",
+      "revId": "eb8794f84a2af6cfe73906137ce01fecb652b440",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

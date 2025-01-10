@@ -18,6 +18,42 @@
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "cbc74c25_5ca924c7",
+        "filename": "metadata/dependency_metadata.py",
+        "patchSetId": 14
+      },
+      "lineNbr": 113,
+      "author": {
+        "id": 3388142
+      },
+      "writtenOn": "2025-01-10T03:36:12Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ce5aaaeb_c1e301fb",
+      "revId": "eb8794f84a2af6cfe73906137ce01fecb652b440",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ed5dc5f8_9f68dd13",
+        "filename": "metadata/dependency_metadata.py",
+        "patchSetId": 14
+      },
+      "lineNbr": 113,
+      "author": {
+        "id": 3388142
+      },
+      "writtenOn": "2025-01-10T03:36:12Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ce5aaaeb_c1e301fb",
+      "revId": "eb8794f84a2af6cfe73906137ce01fecb652b440",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "e729a6c7_e3cd0e7f",
@@ -31,6 +67,24 @@
       "writtenOn": "2025-01-10T03:14:59Z",
       "side": 1,
       "message": "nit: naming consistency `open_source` vs `opensource`",
+      "revId": "eb8794f84a2af6cfe73906137ce01fecb652b440",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a3ec6064_4a7850da",
+        "filename": "metadata/dependency_metadata.py",
+        "patchSetId": 14
+      },
+      "lineNbr": 128,
+      "author": {
+        "id": 3388142
+      },
+      "writtenOn": "2025-01-10T03:36:12Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e729a6c7_e3cd0e7f",
       "revId": "eb8794f84a2af6cfe73906137ce01fecb652b440",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
@@ -52,6 +106,24 @@
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "f98b0c4b_a9cb6ee5",
+        "filename": "metadata/dependency_metadata.py",
+        "patchSetId": 14
+      },
+      "lineNbr": 129,
+      "author": {
+        "id": 3388142
+      },
+      "writtenOn": "2025-01-10T03:36:12Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9ca4fceb_c7ebfb05",
+      "revId": "eb8794f84a2af6cfe73906137ce01fecb652b440",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "46f9ce78_ada50be9",
@@ -69,6 +141,24 @@
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "d7c2d19f_7abefe2f",
+        "filename": "metadata/dependency_metadata.py",
+        "patchSetId": 14
+      },
+      "lineNbr": 135,
+      "author": {
+        "id": 3388142
+      },
+      "writtenOn": "2025-01-10T03:36:12Z",
+      "side": 1,
+      "message": "OPEN_SOURCE_SPDX_LICENSES is just the open source ones.",
+      "parentUuid": "46f9ce78_ada50be9",
+      "revId": "eb8794f84a2af6cfe73906137ce01fecb652b440",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "30ce5a63_595b57fc",
@@ -82,6 +172,24 @@
       "writtenOn": "2025-01-10T03:14:59Z",
       "side": 1,
       "message": "IMO this should just be `whether the project is open source`. Allowing reciprocal licenses is unnecessary detail, and is implemented in `license_allowlist.py` anyway.",
+      "revId": "eb8794f84a2af6cfe73906137ce01fecb652b440",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0f25e6c4_a90e81cb",
+        "filename": "metadata/dependency_metadata.py",
+        "patchSetId": 14
+      },
+      "lineNbr": 173,
+      "author": {
+        "id": 3388142
+      },
+      "writtenOn": "2025-01-10T03:36:12Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "30ce5a63_595b57fc",
       "revId": "eb8794f84a2af6cfe73906137ce01fecb652b440",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
@@ -121,6 +229,24 @@
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "a6ecd9c4_4f3b8b32",
+        "filename": "metadata/fields/custom/license.py",
+        "patchSetId": 14
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 3388142
+      },
+      "writtenOn": "2025-01-10T03:36:12Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "dfe4c127_1efe294d",
+      "revId": "eb8794f84a2af6cfe73906137ce01fecb652b440",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "056dd0df_d5dfb7bb",
@@ -138,6 +264,24 @@
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "bc297e7f_e3e0528b",
+        "filename": "metadata/fields/custom/license.py",
+        "patchSetId": 14
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 3388142
+      },
+      "writtenOn": "2025-01-10T03:36:12Z",
+      "side": 1,
+      "message": "ack.",
+      "parentUuid": "056dd0df_d5dfb7bb",
+      "revId": "eb8794f84a2af6cfe73906137ce01fecb652b440",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "0e86ed1f_abe5cf08",
@@ -151,6 +295,24 @@
       "writtenOn": "2025-01-10T03:14:59Z",
       "side": 1,
       "message": "Same comment as above in `dependency_metadata.py`.",
+      "revId": "eb8794f84a2af6cfe73906137ce01fecb652b440",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2c878065_194a1746",
+        "filename": "metadata/validate.py",
+        "patchSetId": 14
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 3388142
+      },
+      "writtenOn": "2025-01-10T03:36:12Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0e86ed1f_abe5cf08",
       "revId": "eb8794f84a2af6cfe73906137ce01fecb652b440",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }

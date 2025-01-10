@@ -1,0 +1,101 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "de49628a_581e85bf",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1303432
+      },
+      "writtenOn": "2025-01-10T00:24:55Z",
+      "side": 1,
+      "message": "Tests for this change would also be good. I appreciate you thinking about how we could improve git cl split and just proactively working to do it!",
+      "revId": "007fbcbab8e96c16c571191fda6c6f632fe9973e",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9e0b3f60_8c155922",
+        "filename": "split_cl.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 304,
+      "author": {
+        "id": 1303432
+      },
+      "writtenOn": "2025-01-10T00:24:55Z",
+      "side": 1,
+      "message": "This will now print no information during a dry run where before it would have given basic info on # of CLs in split. I think we should probably print the summary in all modes even if we only prompt for proceeding in normal (non-dry) runs.",
+      "fixSuggestions": [
+        {
+          "fixId": "b998a4a8_4b27e2d9",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "split_cl.py",
+              "range": {
+                "startLine": 303,
+                "startChar": 0,
+                "endLine": 303,
+                "endChar": 0
+              },
+              "replacement": "        PrintSummary(files_split_by_reviewers)\n\n"
+            },
+            {
+              "path": "split_cl.py",
+              "range": {
+                "startLine": 304,
+                "startChar": 0,
+                "endLine": 305,
+                "endChar": 0
+              },
+              "replacement": ""
+            }
+          ]
+        }
+      ],
+      "revId": "007fbcbab8e96c16c571191fda6c6f632fe9973e",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d3fdcf3f_c59fb754",
+        "filename": "split_cl.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 305,
+      "author": {
+        "id": 1303432
+      },
+      "writtenOn": "2025-01-10T00:24:55Z",
+      "side": 1,
+      "message": "I\u0027m a little conflicted on this change but I am not a git cl split user either. I like the idea of people being sure they want the specific split but we\u0027re adding friction where I haven\u0027t seen a _ton_ of complaints on the existing behavior either.\n\nI\u0027d like the opinion of some of the other depot_tools OWNERS (or Chromies at large). People can always use dry run if they want to check the split (my other idea was maybe gate this on a new flag, something like -i(nteractive), on par with other linux commands but I don\u0027t think it\u0027s quite the standard interactive behavior and dry run should be sufficient). \n\nEither way I think the improvements in printing the split could be useful. I could be convinced to take this patch though if others are supportive.",
+      "fixSuggestions": [
+        {
+          "fixId": "f643df96_94666421",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "split_cl.py",
+              "range": {
+                "startLine": 305,
+                "startChar": 0,
+                "endLine": 308,
+                "endChar": 0
+              },
+              "replacement": ""
+            }
+          ]
+        }
+      ],
+      "revId": "007fbcbab8e96c16c571191fda6c6f632fe9973e",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

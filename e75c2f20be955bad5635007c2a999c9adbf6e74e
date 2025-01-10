@@ -36,6 +36,24 @@
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "98125c6b_22c11691",
+        "filename": "metadata/dependency_metadata.py",
+        "patchSetId": 16
+      },
+      "lineNbr": 114,
+      "author": {
+        "id": 3388142
+      },
+      "writtenOn": "2025-01-10T04:47:38Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4b48bebc_49249505",
+      "revId": "e75c2f20be955bad5635007c2a999c9adbf6e74e",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "8ca21824_1e4470ff",
@@ -53,6 +71,24 @@
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "c76f9842_53ce64e2",
+        "filename": "metadata/dependency_metadata.py",
+        "patchSetId": 16
+      },
+      "lineNbr": 118,
+      "author": {
+        "id": 3388142
+      },
+      "writtenOn": "2025-01-10T04:47:38Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8ca21824_1e4470ff",
+      "revId": "e75c2f20be955bad5635007c2a999c9adbf6e74e",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "9a572315_a05ea669",
@@ -66,6 +102,24 @@
       "writtenOn": "2025-01-10T04:22:20Z",
       "side": 1,
       "message": "There\u0027s no such function anymore, I don\u0027t think?",
+      "revId": "e75c2f20be955bad5635007c2a999c9adbf6e74e",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a39718c9_e108a849",
+        "filename": "metadata/dependency_metadata.py",
+        "patchSetId": 16
+      },
+      "lineNbr": 120,
+      "author": {
+        "id": 3388142
+      },
+      "writtenOn": "2025-01-10T04:47:38Z",
+      "side": 1,
+      "message": "huh this didn\u0027t show up when I tried looking before removing it.",
+      "parentUuid": "9a572315_a05ea669",
       "revId": "e75c2f20be955bad5635007c2a999c9adbf6e74e",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }

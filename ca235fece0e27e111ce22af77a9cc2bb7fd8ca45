@@ -144,6 +144,24 @@
     {
       "unresolved": false,
       "key": {
+        "uuid": "f8263825_52028f33",
+        "filename": "metadata/fields/custom/license.py",
+        "patchSetId": 7
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 3388142
+      },
+      "writtenOn": "2025-01-10T02:51:48Z",
+      "side": 1,
+      "message": "I decided to move as much logic as possible to the dependency manager",
+      "parentUuid": "5b0c11bc_f64a71a7",
+      "revId": "ca235fece0e27e111ce22af77a9cc2bb7fd8ca45",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
         "uuid": "98051767_a225800e",
         "filename": "metadata/fields/custom/license_allowlist.py",
         "patchSetId": 7

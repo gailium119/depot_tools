@@ -16,6 +16,24 @@
       "message": "This presubmit check is `chromium` specific. I would remove this flag here and just pass `true` on line `897`.",
       "revId": "604a673c5ab6dd3d5a24075e4ca2ea155925b5c9",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "91e7ee11_fecbc239",
+        "filename": "presubmit_canned_checks.py",
+        "patchSetId": 12
+      },
+      "lineNbr": 871,
+      "author": {
+        "id": 3388142
+      },
+      "writtenOn": "2025-01-10T02:51:48Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "bc8cc7a0_1a1d3a85",
+      "revId": "604a673c5ab6dd3d5a24075e4ca2ea155925b5c9",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

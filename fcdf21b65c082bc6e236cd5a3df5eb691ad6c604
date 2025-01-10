@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f947476d_ca7c9e4b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 18
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1553262
+      },
+      "writtenOn": "2025-01-10T05:17:47Z",
+      "side": 1,
+      "message": "LGTM. Adding @yiwzhang@google.com for changes to canned checks.",
+      "revId": "fcdf21b65c082bc6e236cd5a3df5eb691ad6c604",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

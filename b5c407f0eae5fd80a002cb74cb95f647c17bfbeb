@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "87ddaeac_522558f4",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1553262
+      },
+      "writtenOn": "2025-01-12T22:16:00Z",
+      "side": 1,
+      "message": "LGTM % conflict",
+      "revId": "b5c407f0eae5fd80a002cb74cb95f647c17bfbeb",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e2a6129c_f92adfef",
+        "filename": "metadata/fields/custom/license_allowlist.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 120,
+      "author": {
+        "id": 1553262
+      },
+      "writtenOn": "2025-01-12T22:16:00Z",
+      "side": 1,
+      "message": "To and from I would think should trigger a warning -  to make sure that we aren\u0027t accidentally changing away from any of these falsely. The warning can always be acked.",
+      "revId": "b5c407f0eae5fd80a002cb74cb95f647c17bfbeb",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

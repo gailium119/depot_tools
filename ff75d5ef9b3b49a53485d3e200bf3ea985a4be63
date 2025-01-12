@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ee346435_dcf7cef4",
+        "filename": "metadata/fields/custom/license_allowlist.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1553262
+      },
+      "writtenOn": "2025-01-12T22:21:18Z",
+      "side": 1,
+      "message": "\u003e added should be a valid SPDX Identifier\n\nThis isn\u0027t strictly true unless it\u0027s to the SPDX list now.",
+      "revId": "ff75d5ef9b3b49a53485d3e200bf3ea985a4be63",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "724c7347_0b39667d",
+        "filename": "metadata/fields/custom/license_allowlist.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1553262
+      },
+      "writtenOn": "2025-01-12T22:21:18Z",
+      "side": 1,
+      "message": "\u003e Unfortunately, this open source version is no longer maintained.\n\nIs this true? I thought Dash said that Uriah was working on this and new releases?",
+      "revId": "ff75d5ef9b3b49a53485d3e200bf3ea985a4be63",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cddee099_c120c2a2",
+        "filename": "metadata/fields/custom/license_allowlist.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1553262
+      },
+      "writtenOn": "2025-01-12T22:21:18Z",
+      "side": 1,
+      "message": "This section should probably be marked as internal only since the links are not reachable externally.",
+      "revId": "ff75d5ef9b3b49a53485d3e200bf3ea985a4be63",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9f4d3829_d653a5e3",
+        "filename": "metadata/fields/custom/license_allowlist.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1553262
+      },
+      "writtenOn": "2025-01-12T22:21:18Z",
+      "side": 1,
+      "message": "Is this an email address that we already have in the wild?",
+      "revId": "ff75d5ef9b3b49a53485d3e200bf3ea985a4be63",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "629da695_f0b42c23",
+        "filename": "metadata/fields/custom/license_allowlist.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1553262
+      },
+      "writtenOn": "2025-01-12T22:21:18Z",
+      "side": 1,
+      "message": "Same here. Are we comfortable with publishing this externally - I would err on the side of redaction with email addresses.",
+      "revId": "ff75d5ef9b3b49a53485d3e200bf3ea985a4be63",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

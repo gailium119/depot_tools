@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6f6cb482_1d76eb24",
+        "filename": "metadata/fields/custom/license_allowlist.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1553262
+      },
+      "writtenOn": "2025-01-12T22:13:44Z",
+      "side": 1,
+      "message": "Since this is on the chromium host, I think you should be able to use go/keep-sorted for these blocks and Gerrit will lint it for you, which should be helpful for long term maintainance.\n\nhttps://g3doc.corp.google.com/devtools/keep_sorted/README.md?cl\u003dhead#with-gerrit",
+      "revId": "a7afaad06319a2eef6547dec160f0a04b9d19989",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

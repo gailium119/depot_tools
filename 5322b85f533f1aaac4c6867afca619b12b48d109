@@ -61,6 +61,24 @@
       ],
       "revId": "5322b85f533f1aaac4c6867afca619b12b48d109",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9f1eb2a0_a9de8031",
+        "filename": "split_cl.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 222,
+      "author": {
+        "id": 3481761
+      },
+      "writtenOn": "2025-01-13T16:58:04Z",
+      "side": 1,
+      "message": "Theoretically the parser is responsible for validating this, but doesn\u0027t hurt to check again I guess, since we don\u0027t actually have any guarantees.",
+      "parentUuid": "bdbbda9a_161fc9c6",
+      "revId": "5322b85f533f1aaac4c6867afca619b12b48d109",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

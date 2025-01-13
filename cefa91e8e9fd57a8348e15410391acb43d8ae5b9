@@ -24,6 +24,30 @@
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "14d87844_3cf2b4b4",
+        "filename": "presubmit_diff.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 1147264
+      },
+      "writtenOn": "2025-01-13T17:17:29Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "29f10b29_683785fe",
+      "range": {
+        "startLine": 56,
+        "startChar": 6,
+        "endLine": 56,
+        "endChar": 10
+      },
+      "revId": "cefa91e8e9fd57a8348e15410391acb43d8ae5b9",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "44e59b51_abce609a",
@@ -37,6 +61,30 @@
       "writtenOn": "2025-01-13T17:12:23Z",
       "side": 1,
       "message": "also add unified here",
+      "range": {
+        "startLine": 142,
+        "startChar": 6,
+        "endLine": 142,
+        "endChar": 11
+      },
+      "revId": "cefa91e8e9fd57a8348e15410391acb43d8ae5b9",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e314e1e7_cd503f84",
+        "filename": "presubmit_diff.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 142,
+      "author": {
+        "id": 1147264
+      },
+      "writtenOn": "2025-01-13T17:17:29Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "44e59b51_abce609a",
       "range": {
         "startLine": 142,
         "startChar": 6,

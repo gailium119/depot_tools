@@ -18,6 +18,24 @@
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "9c12bfed_fa1de8f9",
+        "filename": "metadata/fields/custom/license_allowlist.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 3388142
+      },
+      "writtenOn": "2025-01-13T05:11:59Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ee346435_dcf7cef4",
+      "revId": "ff75d5ef9b3b49a53485d3e200bf3ea985a4be63",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "724c7347_0b39667d",
@@ -31,6 +49,24 @@
       "writtenOn": "2025-01-12T22:21:18Z",
       "side": 1,
       "message": "\u003e Unfortunately, this open source version is no longer maintained.\n\nIs this true? I thought Dash said that Uriah was working on this and new releases?",
+      "revId": "ff75d5ef9b3b49a53485d3e200bf3ea985a4be63",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7684fb08_c2cd5c4a",
+        "filename": "metadata/fields/custom/license_allowlist.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 3388142
+      },
+      "writtenOn": "2025-01-13T05:11:59Z",
+      "side": 1,
+      "message": "I thought that was only for our internal version. I\u0027ll check.",
+      "parentUuid": "724c7347_0b39667d",
       "revId": "ff75d5ef9b3b49a53485d3e200bf3ea985a4be63",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
@@ -52,6 +88,24 @@
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "99978e52_43b385ef",
+        "filename": "metadata/fields/custom/license_allowlist.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 3388142
+      },
+      "writtenOn": "2025-01-13T05:11:59Z",
+      "side": 1,
+      "message": "External people can use the opensource version linked above which will still work for older licenses. I don\u0027t want to give the impression that only googlers can contribute to this list. The ATL reviewing this can use these internal tools to double check the classification and ID.",
+      "parentUuid": "cddee099_c120c2a2",
+      "revId": "ff75d5ef9b3b49a53485d3e200bf3ea985a4be63",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "9f4d3829_d653a5e3",
@@ -69,6 +123,24 @@
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "59891647_a12b69c6",
+        "filename": "metadata/fields/custom/license_allowlist.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 3388142
+      },
+      "writtenOn": "2025-01-13T05:11:59Z",
+      "side": 1,
+      "message": "Yes. www.google.com/search?q\u003d\"opensource-licensing%40google.com\"",
+      "parentUuid": "9f4d3829_d653a5e3",
+      "revId": "ff75d5ef9b3b49a53485d3e200bf3ea985a4be63",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "629da695_f0b42c23",
@@ -82,6 +154,24 @@
       "writtenOn": "2025-01-12T22:21:18Z",
       "side": 1,
       "message": "Same here. Are we comfortable with publishing this externally - I would err on the side of redaction with email addresses.",
+      "revId": "ff75d5ef9b3b49a53485d3e200bf3ea985a4be63",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "49fcdd6d_d09f7f40",
+        "filename": "metadata/fields/custom/license_allowlist.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 3388142
+      },
+      "writtenOn": "2025-01-13T05:11:59Z",
+      "side": 1,
+      "message": "If you google it, it\u0027s already in a lot of things. www.google.com/search?q\u003d\"opensource-licensing%40google.com\"",
+      "parentUuid": "629da695_f0b42c23",
       "revId": "ff75d5ef9b3b49a53485d3e200bf3ea985a4be63",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }

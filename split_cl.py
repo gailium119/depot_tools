@@ -246,7 +246,7 @@ def SplitCl(description_file, comment_file, changelist, cmd_upload, dry_run,
         0 in case of success. 1 in case of error.
     """
 
-    description = LoadDescription(description_file, dry_run)
+    description = LoadDescription(description_file)
     description = AddUploadedByGitClSplitToDescription(description)
 
     comment = gclient_utils.FileRead(comment_file) if comment_file else None

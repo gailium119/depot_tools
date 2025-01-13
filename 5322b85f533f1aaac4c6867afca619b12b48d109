@@ -1,0 +1,66 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "66539fa7_d49430b4",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1303432
+      },
+      "writtenOn": "2025-01-13T16:53:33Z",
+      "side": 1,
+      "message": "Thanks for catching!",
+      "revId": "5322b85f533f1aaac4c6867afca619b12b48d109",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bdbbda9a_161fc9c6",
+        "filename": "split_cl.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 222,
+      "author": {
+        "id": 1303432
+      },
+      "writtenOn": "2025-01-13T16:53:33Z",
+      "side": 1,
+      "message": "I think the right fix might be to add the dry run argument and also check it here, so we don\u0027t generate a dummy description for real runs..",
+      "fixSuggestions": [
+        {
+          "fixId": "541ca200_7de82520",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "split_cl.py",
+              "range": {
+                "startLine": 221,
+                "startChar": 0,
+                "endLine": 223,
+                "endChar": 0
+              },
+              "replacement": "def LoadDescription(description_file, dry_run):\n    if not description_file or dry_run:\n"
+            },
+            {
+              "path": "split_cl.py",
+              "range": {
+                "startLine": 249,
+                "startChar": 0,
+                "endLine": 250,
+                "endChar": 0
+              },
+              "replacement": "    description \u003d LoadDescription(description_file, dry_run)\n"
+            }
+          ]
+        }
+      ],
+      "revId": "5322b85f533f1aaac4c6867afca619b12b48d109",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

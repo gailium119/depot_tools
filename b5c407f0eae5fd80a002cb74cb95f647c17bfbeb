@@ -33,6 +33,24 @@
       "message": "To and from I would think should trigger a warning -  to make sure that we aren\u0027t accidentally changing away from any of these falsely. The warning can always be acked.",
       "revId": "b5c407f0eae5fd80a002cb74cb95f647c17bfbeb",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "72ece170_6c7801b0",
+        "filename": "metadata/fields/custom/license_allowlist.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 120,
+      "author": {
+        "id": 3388142
+      },
+      "writtenOn": "2025-01-13T04:50:39Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e2a6129c_f92adfef",
+      "revId": "b5c407f0eae5fd80a002cb74cb95f647c17bfbeb",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

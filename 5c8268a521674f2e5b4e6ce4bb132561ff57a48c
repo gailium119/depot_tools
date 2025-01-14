@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f73ad7e6_98ec6a11",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 9
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 3388142
+      },
+      "writtenOn": "2025-01-14T02:27:19Z",
+      "side": 1,
+      "message": "Disucssed offline with Dash. He had these comments:\n```\nThis looks pretty good! Just a couple small notes:\n\n1) we probably want to clarify somewhere that by_exception_only or Forbidden should never enter Chromium, but that they should reach out to product counsel if the need arises.\n2) It might be helpful to explicitly clarify that the categories that are less-restrictive than Notice are Permissive and Unencumbered. \n3) I don\u0027t know what \"other_ignorable\" is and I\u0027m reluctant to say such components are categorically approved.\n4) we\u0027re of course happy to receive questions at opensource-licensing@, but it\u0027s not fun when people reach out to us without providing context they expect us to have because some note prompted them to contact us with \"any questions.\" It would be helpful if this mention of opensource-licensing@ was qualified to clarify the scope of support we\u0027re being asked to provide, and that Googlers are being instructed to provide us with any information we would need to be able to help advise them (e.g. \"if you are uncertain whether a given third-party library can be included in Chromium, please email opensource-licensing@ with the library\u0027s license documentation, and explain where and how the component is going to be used.)\n```",
+      "revId": "5c8268a521674f2e5b4e6ce4bb132561ff57a48c",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

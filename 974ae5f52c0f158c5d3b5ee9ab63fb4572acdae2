@@ -16,6 +16,23 @@
       "message": "Sending to ATLs for their approval",
       "revId": "974ae5f52c0f158c5d3b5ee9ab63fb4572acdae2",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5dbcf4d4_355b54f3",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 11
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 3388142
+      },
+      "writtenOn": "2025-01-14T04:14:43Z",
+      "side": 1,
+      "message": "Hi ATLs. After some back and forth with the opensource licensing team and product council we have settled on a process for maintaining the license allowlist.\n\nThey are happy for you (or someone on your behalf) to approve adding a license if their license classifier tool go/lican classifies it as \u0027unencumbered\u0027, \u0027permissive\u0027, or \u0027notice\u0027, as well as \u0027reciprocal\u0027 but only for open source projects. We\u0027ve implemented presubmits that handle will warn otherwise. All other details are laid out in the documentation in this file.\n\nFeel free to message me or reply if you have any questions.",
+      "revId": "974ae5f52c0f158c5d3b5ee9ab63fb4572acdae2",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

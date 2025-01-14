@@ -4,7 +4,7 @@
 
 from recipe_engine import recipe_api
 from recipe_engine.recipe_test_api import StepTestData
-from typing import Callable
+from typing import Callable, Optional
 
 class GerritApi(recipe_api.RecipeApi):
   """Module for interact with Gerrit endpoints"""
@@ -323,6 +323,7 @@ class GerritApi(recipe_api.RecipeApi):
       change: int,
       message: str,
       revision: str | int = 'current',
+      update_attention_set: Optional[bool] = None,
       step_name: str = None,
       step_test_data: Callable[[], StepTestData] | None = None) -> None:
     """Add a message to a change at given revision.
@@ -336,6 +337,7 @@ class GerritApi(recipe_api.RecipeApi):
           documented here:
           https://gerrit-review.googlesource.com/Documentation/rest-api-changes.html#revision-id
           This defaults to current, which names the most recent patchset.
+      * update_attention_set: Whether to update the attention set.
       * step_name: Optional step name.
       * step_test_data: Optional mock test data for the underlying gerrit
           client.
@@ -346,6 +348,11 @@ class GerritApi(recipe_api.RecipeApi):
         str(revision), '--message', message, '--json_file',
         self.m.json.output()
     ]
+    if update_attention_set is not None:
+      args += [
+          '--update-attention-set'
+          if update_attention_set else '--no-update-attention-set'
+      ]
     if not step_test_data:
       step_test_data = lambda: self.m.json.test_api.output({})
     return self(

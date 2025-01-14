@@ -35,6 +35,23 @@
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "e94e296e_cf4b9f07",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 11
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000112
+      },
+      "writtenOn": "2025-01-14T14:46:26Z",
+      "side": 1,
+      "message": "Thank you Jordan, it\u0027s great to have more automation here!",
+      "revId": "974ae5f52c0f158c5d3b5ee9ab63fb4572acdae2",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "84e8fccd_de63dd05",
@@ -48,6 +65,24 @@
       "writtenOn": "2025-01-14T14:15:55Z",
       "side": 1,
       "message": "by_exception_only includes LGPL, which we do use (I think ffmpeg is lgpl; parts of blink are LGPL due to coming in that way from webkit; possibly a few more). Maybe this comment here should reflect reality better?",
+      "revId": "974ae5f52c0f158c5d3b5ee9ab63fb4572acdae2",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6bef4263_aa4f1f4a",
+        "filename": "metadata/fields/custom/license_allowlist.py",
+        "patchSetId": 11
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1000112
+      },
+      "writtenOn": "2025-01-14T14:46:26Z",
+      "side": 1,
+      "message": "LGPL is classified as \"restricted\" not \"by-exception-only\" from what I see. The description below for how to handle \"\u003e\u003drestricted\" seems consistent with what we\u0027ve done for LGPL in the past, right?",
+      "parentUuid": "84e8fccd_de63dd05",
       "revId": "974ae5f52c0f158c5d3b5ee9ab63fb4572acdae2",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },

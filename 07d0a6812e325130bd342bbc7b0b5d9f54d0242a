@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "87b9c1e6_1a0dddbc",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1544922
+      },
+      "writtenOn": "2025-01-14T04:48:25Z",
+      "side": 1,
+      "message": "I intend to submit this 1 week after the warning has been updated with the date, so contributors have a chance to notice the warning and file a bug but not be blocked.",
+      "revId": "07d0a6812e325130bd342bbc7b0b5d9f54d0242a",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "db61fefc_0e470c6b",
+        "filename": "gerrit_util.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 1707,
+      "author": {
+        "id": 1381059
+      },
+      "writtenOn": "2025-01-14T20:32:55Z",
+      "side": 1,
+      "message": "Can we rename this to something like `ignore_default_attention_set_rules`? The SetReview API contains `add_to_attention_set` and `remove_from_attention_set` fields: https://gerrit-review.googlesource.com/Documentation/rest-api-changes.html#review-input. If we start to introduce them in the API in the future, I can see the caller may get confused if we name this parameter `update_attention_set`",
+      "range": {
+        "startLine": 1707,
+        "startChar": 14,
+        "endLine": 1707,
+        "endChar": 34
+      },
+      "fixSuggestions": [
+        {
+          "fixId": "c1bdf3bf_ea2a4971",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "gerrit_util.py",
+              "range": {
+                "startLine": 1707,
+                "startChar": 0,
+                "endLine": 1708,
+                "endChar": 0
+              },
+              "replacement": "              ignore_default_attention_set_rules: Optional[bool] \u003d None):\n"
+            },
+            {
+              "path": "gerrit_util.py",
+              "range": {
+                "startLine": 1724,
+                "startChar": 0,
+                "endLine": 1726,
+                "endChar": 0
+              },
+              "replacement": "    if ignore_default_attention_set_rules is not None:\n        body[\u0027ignore_automatic_attention_set_rules\u0027] \u003d (\n            ignore_default_attention_set_rules)\n"
+            }
+          ]
+        }
+      ],
+      "revId": "f749cc56f8843e6294499bf83a6b9b9a05f3e698",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

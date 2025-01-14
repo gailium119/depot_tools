@@ -105,6 +105,24 @@
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "f106db92_2d8b42ac",
+        "filename": "metadata/fields/custom/license_allowlist.py",
+        "patchSetId": 11
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 3388142
+      },
+      "writtenOn": "2025-01-14T23:49:37Z",
+      "side": 1,
+      "message": "By the sounds of it, this is resolved. If not, please re-open or make another comment.",
+      "parentUuid": "e88444e5_c2531dd2",
+      "revId": "974ae5f52c0f158c5d3b5ee9ab63fb4572acdae2",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "a3b57707_875de34e",
@@ -118,6 +136,30 @@
       "writtenOn": "2025-01-14T14:15:55Z",
       "side": 1,
       "message": "Is this supposed to replace the chromium-third-party@google.com license review mentioned at https://chromium.googlesource.com/chromium/src/+/HEAD/docs/adding_to_third_party.md#Get-a-review ?",
+      "range": {
+        "startLine": 21,
+        "startChar": 26,
+        "endLine": 21,
+        "endChar": 30
+      },
+      "revId": "974ae5f52c0f158c5d3b5ee9ab63fb4572acdae2",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cb10b890_73ca773b",
+        "filename": "metadata/fields/custom/license_allowlist.py",
+        "patchSetId": 11
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 3388142
+      },
+      "writtenOn": "2025-01-14T23:49:37Z",
+      "side": 1,
+      "message": "No, would you like me to replace ATLs with chromium-third-party@google.com?",
+      "parentUuid": "a3b57707_875de34e",
       "range": {
         "startLine": 21,
         "startChar": 26,

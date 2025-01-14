@@ -18,6 +18,24 @@
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "31108e8a_13c91814",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 3481761
+      },
+      "writtenOn": "2025-01-14T20:57:51Z",
+      "side": 1,
+      "message": "We didn\u0027t have any existing way to test the SplitCl function, so added a class for doing that. The class actually caught the bug fixed in crrev.com/c/6170638!",
+      "parentUuid": "de49628a_581e85bf",
+      "revId": "007fbcbab8e96c16c571191fda6c6f632fe9973e",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "9e0b3f60_8c155922",
@@ -63,6 +81,24 @@
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "a3625263_9541a7f0",
+        "filename": "split_cl.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 304,
+      "author": {
+        "id": 3481761
+      },
+      "writtenOn": "2025-01-14T20:57:51Z",
+      "side": 1,
+      "message": "Dry runs still print detailed information about each CL it was split into (via PrintClInfo). It\u0027s got all the information in the summary, so I don\u0027t think we need to print the summary as well.",
+      "parentUuid": "9e0b3f60_8c155922",
+      "revId": "007fbcbab8e96c16c571191fda6c6f632fe9973e",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "d3fdcf3f_c59fb754",
@@ -94,6 +130,24 @@
           ]
         }
       ],
+      "revId": "007fbcbab8e96c16c571191fda6c6f632fe9973e",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "099d79c3_872cecd2",
+        "filename": "split_cl.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 305,
+      "author": {
+        "id": 3481761
+      },
+      "writtenOn": "2025-01-14T20:57:51Z",
+      "side": 1,
+      "message": "Yes, this is definitely not frictionless, so it makes sense to get a few more opinions. My reasoning for changing it is below:\n\n1. I\u0027m very hesitant to let scripts made significant decisions on my behalf without supervision (in this case, uploading CLs, triggering CQ runs, notifying reviewers).\n2. The splitting algorithm is nondeterministic, so I can\u0027t trust that it will do the same thing as on a dry run.\n3. If something is wrong with the split, we\u0027d much prefer users notice before they start making visible changes (uploading and notifying people), instead of canceling it halfway through.\n4. The additional friction isn\u0027t much, especially since they were already going to run into a confirmation prompt if the split involved more than 10 CLs, which is pretty common.\n\nFor (3), it would have caught at least some of the problems with crbug.com/388990264, and saved crbug.com/40642562 from having to cancel the process manually. The latter bug also requested this behavior, as did crbug.com/40269201.\n\nI\u0027m also planning future improvements to `git cl split` which would benefit from this, e.g. sifferent splitting algorithms, or being able to save a splitting and edit it if it\u0027s close but not quite what the user would like.",
+      "parentUuid": "d3fdcf3f_c59fb754",
       "revId": "007fbcbab8e96c16c571191fda6c6f632fe9973e",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }

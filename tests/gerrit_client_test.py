@@ -174,7 +174,8 @@ class TestGerritClient(unittest.TestCase):
         util_mock.assert_called_once_with('example.org',
                                           1,
                                           revision='2',
-                                          msg='This is a message')
+                                          msg='This is a message',
+                                          update_attention_set=None)
 
 if __name__ == '__main__':
     logging.basicConfig(

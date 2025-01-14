@@ -421,15 +421,25 @@ def CMDaddMessage(parser, args):
         'https://gerrit-review.googlesource.com/Documentation/rest-api-changes.html#revision-id '  # pylint: disable=line-too-long
         'for acceptable format')
     parser.add_option('-m', '--message', type=str, help='message to add')
+    # This default matches the Gerrit REST API & web UI defaults.
+    parser.add_option('--update-attention-set',
+                      action='store_true',
+                      help='Update the attention set (default)')
+    parser.add_option('--no-update-attention-set',
+                      dest='update_attention_set',
+                      action='store_false',
+                      help='Do not update the attention set')
     (opt, args) = parser.parse_args(args)
     if not opt.change:
         parser.error('--change is required')
     if not opt.message:
         parser.error('--message is required')
-    result = gerrit_util.SetReview(urllib.parse.urlparse(opt.host).netloc,
-                                   opt.change,
-                                   revision=opt.revision,
-                                   msg=opt.message)
+    result = gerrit_util.SetReview(
+        urllib.parse.urlparse(opt.host).netloc,
+        opt.change,
+        revision=opt.revision,
+        msg=opt.message,
+        update_attention_set=opt.update_attention_set)
     logging.info(result)
     write_result(result, opt)
 

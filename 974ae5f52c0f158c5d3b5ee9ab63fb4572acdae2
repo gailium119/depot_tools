@@ -196,6 +196,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "427e9870_d664aab7",
+        "filename": "metadata/fields/custom/license_allowlist.py",
+        "patchSetId": 11
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1000112
+      },
+      "writtenOn": "2025-01-15T15:42:15Z",
+      "side": 1,
+      "message": "It sounds to me like the review process is now sufficiently algorithmic that we wouldn\u0027t need chromium-third-party@google.com experts, right? I.e. outside of exception cases, there\u0027s no judgement required - just follow these rules. I\u0027ve seen cases, especially with external contributors, where the assigedn chromium-third-party@google.com review is confused on how to review for Chromium, and the contributor is stuck not knowing how to nudge the reviewer.\n\nPersonally I\u0027d be happy if we could change the process to say that the ATLs need to do this ourselves as part of our third_party library review process, and we fall back to opensource-licensing@ and/or chromium-third-party@ for anything non-obvious according to these rules. WDYT?",
+      "parentUuid": "7293cb3d_75628018",
+      "range": {
+        "startLine": 21,
+        "startChar": 26,
+        "endLine": 21,
+        "endChar": 30
+      },
+      "revId": "974ae5f52c0f158c5d3b5ee9ab63fb4572acdae2",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "03e39c12_803b34c4",
         "filename": "metadata/fields/custom/license_allowlist.py",
         "patchSetId": 11
@@ -225,6 +249,24 @@
       "side": 1,
       "message": "(This was my reply to rbyers\u0027s explanation yesterday. Looks like I didn\u0027t hit send :/ Anyway, this is why I was confused.)",
       "parentUuid": "03e39c12_803b34c4",
+      "revId": "974ae5f52c0f158c5d3b5ee9ab63fb4572acdae2",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b4970f28_8300b2e7",
+        "filename": "metadata/fields/custom/license_allowlist.py",
+        "patchSetId": 11
+      },
+      "lineNbr": 171,
+      "author": {
+        "id": 1000112
+      },
+      "writtenOn": "2025-01-15T15:42:15Z",
+      "side": 1,
+      "message": "Good point that all 3P dependencies require \"permission\" the name is a little misleading. RESTRICTED_LICENSES or BY_EXCEPTION_ONLY would seem clearer to me.",
+      "parentUuid": "46d6e371_92b0374a",
       "revId": "974ae5f52c0f158c5d3b5ee9ab63fb4572acdae2",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }

@@ -244,6 +244,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "e0292356_f3036f5f",
+        "filename": "metadata/fields/custom/license_allowlist.py",
+        "patchSetId": 11
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1000112
+      },
+      "writtenOn": "2025-01-15T19:13:39Z",
+      "side": 1,
+      "message": "Yep either way is fine with me as long as responsibilities are clear in https://chromium.googlesource.com/chromium/src/+/main/docs/adding_to_third_party.md#get-a-review. Perhaps chromium-third-party@ does more than just apply these algorithmic rules though and so should remain?",
+      "parentUuid": "60e4425a_189067d2",
+      "range": {
+        "startLine": 21,
+        "startChar": 26,
+        "endLine": 21,
+        "endChar": 30
+      },
+      "revId": "974ae5f52c0f158c5d3b5ee9ab63fb4572acdae2",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "03e39c12_803b34c4",
         "filename": "metadata/fields/custom/license_allowlist.py",
         "patchSetId": 11
@@ -291,6 +315,24 @@
       "side": 1,
       "message": "Good point that all 3P dependencies require \"permission\" the name is a little misleading. RESTRICTED_LICENSES or BY_EXCEPTION_ONLY would seem clearer to me.",
       "parentUuid": "46d6e371_92b0374a",
+      "revId": "974ae5f52c0f158c5d3b5ee9ab63fb4572acdae2",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "df7b981c_364bad92",
+        "filename": "metadata/fields/custom/license_allowlist.py",
+        "patchSetId": 11
+      },
+      "lineNbr": 171,
+      "author": {
+        "id": 1000112
+      },
+      "writtenOn": "2025-01-15T19:13:39Z",
+      "side": 1,
+      "message": "Note that this name is mentioned in documentation here: https://chromium.googlesource.com/chromium/src/+/main/docs/adding_to_third_party.md#Get-a-review. I don\u0027t have a strong opinion on whether the name should be more clear, but if we do change the name then please change the docs too.",
+      "parentUuid": "b4970f28_8300b2e7",
       "revId": "974ae5f52c0f158c5d3b5ee9ab63fb4572acdae2",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }

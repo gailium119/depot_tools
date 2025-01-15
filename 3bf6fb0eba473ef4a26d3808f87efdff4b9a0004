@@ -1,0 +1,39 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7c22ee87_f20cd666",
+        "filename": "recipes/recipe_modules/gclient/config.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 526,
+      "author": {
+        "id": 1003232
+      },
+      "writtenOn": "2025-01-15T20:22:26Z",
+      "side": 1,
+      "message": "Note that the chromium_website recipe defines this context directly: https://source.chromium.org/chromium/infra/infra_superproject/+/main:build/recipes/recipes/chromium_website.py;drc\u003d5522255be525078957885623ca08292f2021582b;l\u003d110\n\nIf we can switch to this, we should remove the context in that recipe, I think.\n\nThough I wonder if there\u0027s some way to define the context in the website repo and have it be picked up by a recipe in a different repo?",
+      "fixSuggestions": [
+        {
+          "fixId": "70c1a3b6_acf34ce4",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "recipes/recipe_modules/gclient/config.py",
+              "range": {
+                "startLine": 526,
+                "startChar": 0,
+                "endLine": 527,
+                "endChar": 0
+              },
+              "replacement": "  m[\u0027website\u0027] \u003d \u0027got_revision\u0027\n"
+            }
+          ]
+        }
+      ],
+      "revId": "3bf6fb0eba473ef4a26d3808f87efdff4b9a0004",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

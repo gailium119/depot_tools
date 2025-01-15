@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a452c591_1a6bc44b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1560543
+      },
+      "writtenOn": "2025-01-15T20:51:46Z",
+      "side": 1,
+      "message": "I\u0027m not that familiar with split_cl, and can\u0027t judge if the changes are good UX changes without asking for feedback. So, adding pkotwicz@ who contributed to git split-cl to chime in.",
+      "revId": "57e62da5638d0dcd659f7a74afe0f15356066e14",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

@@ -209,6 +209,24 @@
       "message": "Aha! This is named WITH_PERMISSION_ONLY. It sounds more like \"by_exception_only\"., but you\u0027re right, the comment says \"restricted\".\n\nMaybe this variable here should be named \"RESTRICTED_LICENSES\" instead?",
       "revId": "974ae5f52c0f158c5d3b5ee9ab63fb4572acdae2",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "46d6e371_92b0374a",
+        "filename": "metadata/fields/custom/license_allowlist.py",
+        "patchSetId": 11
+      },
+      "lineNbr": 171,
+      "author": {
+        "id": 1001629
+      },
+      "writtenOn": "2025-01-15T14:19:22Z",
+      "side": 1,
+      "message": "(This was my reply to rbyers\u0027s explanation yesterday. Looks like I didn\u0027t hit send :/ Anyway, this is why I was confused.)",
+      "parentUuid": "03e39c12_803b34c4",
+      "revId": "974ae5f52c0f158c5d3b5ee9ab63fb4572acdae2",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

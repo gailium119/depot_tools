@@ -1,0 +1,279 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5bd8f495_b271040c",
+        "filename": "roll_dep.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 257,
+      "author": {
+        "id": 1378025
+      },
+      "writtenOn": "2025-01-15T23:32:28Z",
+      "side": 1,
+      "message": "Add a blank line between TODOs and one line docstring",
+      "range": {
+        "startLine": 256,
+        "startChar": 4,
+        "endLine": 257,
+        "endChar": 79
+      },
+      "fixSuggestions": [
+        {
+          "fixId": "8d22fe06_6eced980",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "roll_dep.py",
+              "range": {
+                "startLine": 256,
+                "startChar": 0,
+                "endLine": 256,
+                "endChar": 0
+              },
+              "replacement": "\n"
+            }
+          ]
+        }
+      ],
+      "revId": "1552246f3d9ff537c4a9b12e59cc43a5576cfe42",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e3e42875_c0e4394c",
+        "filename": "roll_dep.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 266,
+      "author": {
+        "id": 1378025
+      },
+      "writtenOn": "2025-01-15T23:32:28Z",
+      "side": 1,
+      "message": "Brewk line at 80 char",
+      "range": {
+        "startLine": 266,
+        "startChar": 8,
+        "endLine": 266,
+        "endChar": 112
+      },
+      "revId": "1552246f3d9ff537c4a9b12e59cc43a5576cfe42",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "59274a34_db98c67d",
+        "filename": "roll_dep.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 269,
+      "author": {
+        "id": 1378025
+      },
+      "writtenOn": "2025-01-15T23:32:28Z",
+      "side": 1,
+      "message": "This should be moved to caller (and you shouldn\u0027t pass args to this function",
+      "range": {
+        "startLine": 268,
+        "startChar": 0,
+        "endLine": 269,
+        "endChar": 20
+      },
+      "revId": "1552246f3d9ff537c4a9b12e59cc43a5576cfe42",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2d9b0d68_a7415479",
+        "filename": "roll_dep.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 271,
+      "author": {
+        "id": 1378025
+      },
+      "writtenOn": "2025-01-15T23:32:28Z",
+      "side": 1,
+      "message": "put a period at the end of sentence (ditto for other comments",
+      "range": {
+        "startLine": 271,
+        "startChar": 61,
+        "endLine": 271,
+        "endChar": 71
+      },
+      "fixSuggestions": [
+        {
+          "fixId": "8ac3d90e_cd7eb8cf",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "roll_dep.py",
+              "range": {
+                "startLine": 271,
+                "startChar": 0,
+                "endLine": 272,
+                "endChar": 0
+              },
+              "replacement": "    # README.chromium is typically one directory up from the dependency.\n"
+            },
+            {
+              "path": "roll_dep.py",
+              "range": {
+                "startLine": 284,
+                "startChar": 0,
+                "endLine": 285,
+                "endChar": 0
+              },
+              "replacement": "        print(\u0027README.chromium contains \"- DEPENDENCY DIVIDER -\", skipping update\u0027)\n"
+            }
+          ]
+        }
+      ],
+      "revId": "1552246f3d9ff537c4a9b12e59cc43a5576cfe42",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b38cfdb6_7d51c14d",
+        "filename": "roll_dep.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 271,
+      "author": {
+        "id": 1378025
+      },
+      "writtenOn": "2025-01-15T23:32:28Z",
+      "side": 1,
+      "message": "Is this always the case ?",
+      "fixSuggestions": [
+        {
+          "fixId": "1727866e_c3b9ca6b",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "roll_dep.py",
+              "range": {
+                "startLine": 271,
+                "startChar": 0,
+                "endLine": 272,
+                "endChar": 0
+              },
+              "replacement": "    # README.chromium is typically one directory up from the dependency.\n    # TODO(b/390067679): Add flag to provide custom location for README.chromium.\n"
+            }
+          ]
+        }
+      ],
+      "revId": "1552246f3d9ff537c4a9b12e59cc43a5576cfe42",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "28dfc370_b3088378",
+        "filename": "roll_dep.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 283,
+      "author": {
+        "id": 1378025
+      },
+      "writtenOn": "2025-01-15T23:32:28Z",
+      "side": 1,
+      "message": "Please use a matching constant (there\u0027s repeatition of - char)\n\nhttps://source.chromium.org/chromium/chromium/tools/depot_tools/+/main:metadata/parse.py;l\u003d22?q\u003d-f:weblayer%2F%20-f:aosp%2F%20-f:%5C.*.java%20%20%20%20DEPENDENCY%20DIVIDER\u0026ss\u003dchromium",
+      "range": {
+        "startLine": 283,
+        "startChar": 7,
+        "endLine": 283,
+        "endChar": 31
+      },
+      "fixSuggestions": [
+        {
+          "fixId": "148ab7eb_e12d844f",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "roll_dep.py",
+              "range": {
+                "startLine": 61,
+                "startChar": 0,
+                "endLine": 61,
+                "endChar": 0
+              },
+              "replacement": "# Constant used to separate dependencies in README.chromium files.\n_DEPENDENCY_DIVIDER \u003d \u0027- DEPENDENCY DIVIDER -\u0027\n"
+            },
+            {
+              "path": "roll_dep.py",
+              "range": {
+                "startLine": 283,
+                "startChar": 0,
+                "endLine": 285,
+                "endChar": 0
+              },
+              "replacement": "    if _DEPENDENCY_DIVIDER in content:\n        print(f\u0027README.chromium contains \"{_DEPENDENCY_DIVIDER}\"\u0027)\n"
+            }
+          ]
+        }
+      ],
+      "revId": "1552246f3d9ff537c4a9b12e59cc43a5576cfe42",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5e009577_417dcc2e",
+        "filename": "roll_dep.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 288,
+      "author": {
+        "id": 1378025
+      },
+      "writtenOn": "2025-01-15T23:32:28Z",
+      "side": 1,
+      "message": "You probably want to constraint this to a whole line with ^ and $",
+      "range": {
+        "startLine": 288,
+        "startChar": 38,
+        "endLine": 288,
+        "endChar": 57
+      },
+      "fixSuggestions": [
+        {
+          "fixId": "05ca1ce2_c9cf557e",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "roll_dep.py",
+              "range": {
+                "startLine": 288,
+                "startChar": 0,
+                "endLine": 289,
+                "endChar": 0
+              },
+              "replacement": "    revision_count \u003d len(re.findall(r\u0027^Revision: [a-f0-9]+$\u0027, content))\n"
+            },
+            {
+              "path": "roll_dep.py",
+              "range": {
+                "startLine": 295,
+                "startChar": 0,
+                "endLine": 296,
+                "endChar": 0
+              },
+              "replacement": "        r\u0027^Revision: [a-f0-9]+$\u0027,\n"
+            }
+          ]
+        }
+      ],
+      "revId": "1552246f3d9ff537c4a9b12e59cc43a5576cfe42",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

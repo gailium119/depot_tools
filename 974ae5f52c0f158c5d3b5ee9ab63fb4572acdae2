@@ -268,6 +268,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "ce23f5ba_420f7948",
+        "filename": "metadata/fields/custom/license_allowlist.py",
+        "patchSetId": 11
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1000112
+      },
+      "writtenOn": "2025-01-15T21:00:46Z",
+      "side": 1,
+      "message": "I looked into the Google internal third_party license approval process a bit and talked with Joey. There\u0027s more there than just validating these rules (though that\u0027s the bulk of it). Regardless though it sounds like Jordan\u0027s intention was not to change our approval process and I shouldn\u0027t have complicated this CL with such a suggestion (sorry!). We can always explore simplifying the process independently. \n\nSo now I agree with Nico - we should just clarify the comments that it is chromium-third-party@google.com reviewers (not Chrome ATLs) who perform this step.",
+      "parentUuid": "e0292356_f3036f5f",
+      "range": {
+        "startLine": 21,
+        "startChar": 26,
+        "endLine": 21,
+        "endChar": 30
+      },
+      "revId": "974ae5f52c0f158c5d3b5ee9ab63fb4572acdae2",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "03e39c12_803b34c4",
         "filename": "metadata/fields/custom/license_allowlist.py",
         "patchSetId": 11

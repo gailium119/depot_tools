@@ -168,6 +168,47 @@
       },
       "revId": "974ae5f52c0f158c5d3b5ee9ab63fb4572acdae2",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7293cb3d_75628018",
+        "filename": "metadata/fields/custom/license_allowlist.py",
+        "patchSetId": 11
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1001629
+      },
+      "writtenOn": "2025-01-15T14:18:30Z",
+      "side": 1,
+      "message": "It sounds like that\u0027s who you want to follow this process, so yes 😊\n\n(How will they learn about this?)",
+      "parentUuid": "cb10b890_73ca773b",
+      "range": {
+        "startLine": 21,
+        "startChar": 26,
+        "endLine": 21,
+        "endChar": 30
+      },
+      "revId": "974ae5f52c0f158c5d3b5ee9ab63fb4572acdae2",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "03e39c12_803b34c4",
+        "filename": "metadata/fields/custom/license_allowlist.py",
+        "patchSetId": 11
+      },
+      "lineNbr": 171,
+      "author": {
+        "id": 1001629
+      },
+      "writtenOn": "2025-01-15T14:18:30Z",
+      "side": 1,
+      "message": "Aha! This is named WITH_PERMISSION_ONLY. It sounds more like \"by_exception_only\"., but you\u0027re right, the comment says \"restricted\".\n\nMaybe this variable here should be named \"RESTRICTED_LICENSES\" instead?",
+      "revId": "974ae5f52c0f158c5d3b5ee9ab63fb4572acdae2",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

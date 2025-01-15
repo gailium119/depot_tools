@@ -16,6 +16,24 @@
       "message": "what is url in case of using cache_dir? Maybe we can skip this check if is not remote address, and let git_cache handle newauth.Enabled() (I would asasume it already handles it).",
       "revId": "3e2c05466102d135e9230663f023e2bb60a52a31",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f1696a31_320dfe18",
+        "filename": "gclient_scm.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 1377,
+      "author": {
+        "id": 3355336
+      },
+      "writtenOn": "2025-01-15T01:45:22Z",
+      "side": 1,
+      "message": "The url is the local cache repo directory path.\n\nI don\u0027t think we can skip it if users are uploading from these repos (which I assume human users using caching are, with `git cl upload`)",
+      "parentUuid": "6566f415_aa9a5030",
+      "revId": "3e2c05466102d135e9230663f023e2bb60a52a31",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

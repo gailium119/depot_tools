@@ -218,7 +218,7 @@ def gen_commit_msg(logs, cmdline, reviewers, bug):
     return commit_msg
 
 
-def finalize(commit_msg, current_dir, rolls):
+def finalize(args, commit_msg, current_dir, rolls):
     """Commits changes to the DEPS file, then uploads a CL."""
     print('Commit message:')
     print('\n'.join('    ' + i for i in commit_msg.splitlines()))
@@ -228,6 +228,10 @@ def finalize(commit_msg, current_dir, rolls):
     # submodule revision if present.
     for dependency, (_head, roll_to, full_dir) in sorted(rolls.items()):
         check_call(['git', 'checkout', '--quiet', roll_to], cwd=full_dir)
+
+        # Attempt to update README.chromium.
+        if update_readme_chromium(args, dependency, roll_to, current_dir):
+            print(f'Updated revision in README.chromium for {dependency} to {roll_to}')
 
         # This adds the submodule revision update to the commit.
         if is_submoduled():
@@ -246,6 +250,59 @@ def finalize(commit_msg, current_dir, rolls):
     check_call(['git', 'commit', '--quiet', '--file', commit_filename],
                cwd=current_dir)
     os.remove(commit_filename)
+
+def update_readme_chromium(args, dependency, roll_to, current_dir):
+    """Attempts to update the README.chromium file with the new revision.
+    TODO(b/390067679): Handle README.chromium files with multiple dependencies.
+    TODO(b/390067679): Add flag to provide custom location for README.chromium.
+
+    Args:
+        args: Parsed command line arguments containing update_readme flag
+        dependency: Path to the dependency being rolled
+        roll_to: New revision hash to roll to
+        current_dir: Current working directory
+
+    Returns:
+        bool: True if update was successful, False if README.chromium wasn't found or had multiple dependencies.
+    """
+    if not args.update_readme:
+        return False
+
+    # README.chromium is typically one directory up from the dependency
+    readme_path = os.path.join(os.path.dirname(os.path.join(current_dir, dependency)),
+                              'README.chromium')
+
+    if not os.path.exists(readme_path):
+        print(f'No README.chromium found at {readme_path}')
+        return False
+
+    with open(readme_path, 'r') as f:
+        content = f.read()
+
+    # TODO(b/390067679): Handle README.chromium files with multiple dependencies.
+    if '- DEPENDENCY DIVIDER -' in content:
+        print('README.chromium contains "- DEPENDENCY DIVIDER -"')
+        return False
+
+    # Only update when there is exactly one `Revision: line`.
+    revision_count = len(re.findall(r'Revision: [a-f0-9]+', content))
+    if revision_count > 1:
+        print(f'README.chromium contains {revision_count} Revision: lines, skipping update')
+        return False
+
+    # Update the revision line.
+    new_content = re.sub(
+        r'Revision: [a-f0-9]+',
+        f'Revision: {roll_to}',
+        content)
+
+    if new_content != content:
+        with open(readme_path, 'w') as f:
+            f.write(new_content)
+        check_call(['git', 'add', readme_path], cwd=current_dir)
+        return True
+
+    return False
 
 
 def main():
@@ -290,6 +347,9 @@ def main():
                         default=[],
                         help='Regex(es) for dependency in DEPS file')
     parser.add_argument('dep_path', nargs='+', help='Path(s) to dependency')
+    parser.add_argument('--update-readme',
+                       action='store_true',
+                       help='Update Revision in README.chromium if it exists')
     args = parser.parse_args()
 
     if len(args.dep_path) > 1:
@@ -367,7 +427,7 @@ def main():
         gclient(['setdep'] + setdep_args)
 
         commit_msg = gen_commit_msg(logs, cmdline, reviewers, args.bug)
-        finalize(commit_msg, current_dir, rolls)
+        finalize(args, commit_msg, current_dir, rolls)
     except Error as e:
         sys.stderr.write('error: %s\n' % e)
         return 2 if isinstance(e, AlreadyRolledError) else 1

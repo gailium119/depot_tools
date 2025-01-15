@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c96e433f_33cbfc25",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1115868
+      },
+      "writtenOn": "2025-01-15T16:07:08Z",
+      "side": 1,
+      "message": "I\u0027d think it should never retry on a 4xx error. Am I missing something?  +@sokcevic",
+      "revId": "14af093d832847a95c69126db88aaf4b8848a647",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

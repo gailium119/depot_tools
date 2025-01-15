@@ -34,6 +34,24 @@
       ],
       "revId": "3bf6fb0eba473ef4a26d3808f87efdff4b9a0004",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f2d96f7d_f2416b0b",
+        "filename": "recipes/recipe_modules/gclient/config.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 526,
+      "author": {
+        "id": 1237795
+      },
+      "writtenOn": "2025-01-15T20:34:54Z",
+      "side": 1,
+      "message": "\u003e Though I wonder if there\u0027s some way to define the context in the website repo and have it be picked up by a recipe in a different repo?\n\nI\u0027m not aware of a way to do this.",
+      "parentUuid": "7c22ee87_f20cd666",
+      "revId": "3bf6fb0eba473ef4a26d3808f87efdff4b9a0004",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

@@ -16,6 +16,24 @@
       "message": "I\u0027d think it should never retry on a 4xx error. Am I missing something?  +@sokcevic",
       "revId": "14af093d832847a95c69126db88aaf4b8848a647",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8c2108a7_024c4b33",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 3578280
+      },
+      "writtenOn": "2025-01-15T16:14:03Z",
+      "side": 1,
+      "message": "As per [this comment](https://chromium.googlesource.com/chromium/tools/depot_tools/+/f5637e54399dbc534541579bb0fa8c7b09444065/gerrit_util.py#1130) we do retry the 409.",
+      "parentUuid": "c96e433f_33cbfc25",
+      "revId": "14af093d832847a95c69126db88aaf4b8848a647",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

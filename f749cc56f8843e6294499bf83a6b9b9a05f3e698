@@ -50,6 +50,30 @@
       ],
       "revId": "f749cc56f8843e6294499bf83a6b9b9a05f3e698",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "efb628da_fca975a4",
+        "filename": "gerrit_util.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 1707,
+      "author": {
+        "id": 1000768
+      },
+      "writtenOn": "2025-01-15T01:43:50Z",
+      "side": 1,
+      "message": "negative variable names are bad practice, so i don\u0027t want to propagate the existing bad \"ignore\" convention.  based on existing Python bindings we\u0027ve written, we don\u0027t force exact 1-to-1 naming between the Python API \u0026 the REST API.\n\nif we want to future proof for future additions (i agree that it seems likely/possible), i can add \"automatic\" to the name.  i.e. `automatic_attention_set_update`.  wdyt ?",
+      "parentUuid": "db61fefc_0e470c6b",
+      "range": {
+        "startLine": 1707,
+        "startChar": 14,
+        "endLine": 1707,
+        "endChar": 34
+      },
+      "revId": "f749cc56f8843e6294499bf83a6b9b9a05f3e698",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

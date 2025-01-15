@@ -52,6 +52,24 @@
       "parentUuid": "7c22ee87_f20cd666",
       "revId": "3bf6fb0eba473ef4a26d3808f87efdff4b9a0004",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "717e5151_4d29e98b",
+        "filename": "recipes/recipe_modules/gclient/config.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 526,
+      "author": {
+        "id": 1003232
+      },
+      "writtenOn": "2025-01-15T22:11:56Z",
+      "side": 1,
+      "message": "Yeah, it occurred to me after I wrote that that it wouldn\u0027t help anyway since the recipe is in the build repo, not the website repo.\n\nWe could refactor the website and presubmit recipes to use a shared list of configs from somewhere in the build repo, but maybe that\u0027s not worth it.\n\n(To me it is a layering violation that we have to modify something in depot_tools to make this work).",
+      "parentUuid": "f2d96f7d_f2416b0b",
+      "revId": "3bf6fb0eba473ef4a26d3808f87efdff4b9a0004",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

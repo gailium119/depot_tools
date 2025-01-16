@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "203bfc6b_6ecd2984",
+        "filename": "roll_dep.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 236,
+      "author": {
+        "id": 1378025
+      },
+      "writtenOn": "2025-01-16T00:15:36Z",
+      "side": 1,
+      "message": "You want to check output of update_readme_chromium function to print right?\n\nOr consider printing in both success / skip cases",
+      "range": {
+        "startLine": 236,
+        "startChar": 12,
+        "endLine": 236,
+        "endChar": 17
+      },
+      "revId": "f913a62a7e949755b65a22a70b5813b2d65f2cd1",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

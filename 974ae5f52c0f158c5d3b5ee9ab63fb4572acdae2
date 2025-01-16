@@ -290,6 +290,30 @@
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "57e4d4df_c6f9f523",
+        "filename": "metadata/fields/custom/license_allowlist.py",
+        "patchSetId": 11
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 3388142
+      },
+      "writtenOn": "2025-01-16T01:20:48Z",
+      "side": 1,
+      "message": "All good! It\u0027s been a journey working out what the process is, and how we can uplift the data and implement presubmits to keep it there. I\u0027ve updated it and also updated the OWNERS file.",
+      "parentUuid": "ce23f5ba_420f7948",
+      "range": {
+        "startLine": 21,
+        "startChar": 26,
+        "endLine": 21,
+        "endChar": 30
+      },
+      "revId": "974ae5f52c0f158c5d3b5ee9ab63fb4572acdae2",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "03e39c12_803b34c4",
@@ -357,6 +381,24 @@
       "side": 1,
       "message": "Note that this name is mentioned in documentation here: https://chromium.googlesource.com/chromium/src/+/main/docs/adding_to_third_party.md#Get-a-review. I don\u0027t have a strong opinion on whether the name should be more clear, but if we do change the name then please change the docs too.",
       "parentUuid": "b4970f28_8300b2e7",
+      "revId": "974ae5f52c0f158c5d3b5ee9ab63fb4572acdae2",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d4a6354f_8f2a3655",
+        "filename": "metadata/fields/custom/license_allowlist.py",
+        "patchSetId": 11
+      },
+      "lineNbr": 171,
+      "author": {
+        "id": 3388142
+      },
+      "writtenOn": "2025-01-16T01:20:48Z",
+      "side": 1,
+      "message": "We discussed this when comming up with the name. We wanted it to be clear that if you are using one of these then you need specific permission, which I think is clear in context (but evidently not as clear as I thought). \n\nAlso it is the superset of \u0027restricted\u0027 and \u0027by_exception_only\u0027 so this could be confusing if the list was one of these names.\n\nI\u0027m inclided to leave it as \u0027WITH_PERMISSION_ONLY\u0027.",
+      "parentUuid": "df7b981c_364bad92",
       "revId": "974ae5f52c0f158c5d3b5ee9ab63fb4572acdae2",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }

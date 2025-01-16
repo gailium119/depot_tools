@@ -52,6 +52,24 @@
       "parentUuid": "425a8834_084b427c",
       "revId": "fa80fd1e45ffa830d4a45d6e77facdfa354f28c8",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2f59c0d9_c2d0f4dd",
+        "filename": "git_auth.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 174,
+      "author": {
+        "id": 3355336
+      },
+      "writtenOn": "2025-01-16T23:31:41Z",
+      "side": 1,
+      "message": "This does not address the bug; in the bug, the user was set up to never use SSO, but had an SSO config from an unknown source, which is not recognized or managed by depot_tools.  The current CL would not fire because depot_tools treats the user as not using SSO (which is also why depot_tools didn\u0027t clean up the unrecognized SSO config).\n\n\u003e this patch address a hypotetical use case rather than a real one, doesn\u0027t it?\n\nIt\u0027s hypothetical in the sense that I have not explicitly identified a person who uses it, but this case was intended to be supported as part of the original design (users can use any mix of emails/auth methods across all repos/global).  The design was not to support only specific use cases of email usage across repos/global).",
+      "parentUuid": "320866f0_c5d16c02",
+      "revId": "fa80fd1e45ffa830d4a45d6e77facdfa354f28c8",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

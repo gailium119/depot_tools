@@ -296,9 +296,13 @@ def search_win_git_directory():
 
     # Log deprecation warning.
     logging.warning(
-        'depot_tools will soon stop bundling Git for Windows.\n'
+        'depot_tools will stop bundling Git for Windows on 2025-01-27.\n'
         'To prepare for this change, please install Git directly. See\n'
         'https://chromium.googlesource.com/chromium/src/+/main/docs/windows_build_instructions.md#Install-git\n'
+        '\n'
+        'Having issues and not ready for depot_tools to stop bundling\n'
+        'Git for Windows? File a bug at:\n'
+        'https://issues.chromium.org/issues/new?component=1456702&template=2045785\n'
     )
     return None
 
@@ -449,20 +453,7 @@ def _win_git_bootstrap_config():
             [git_bat_path, 'config', '--unset', '--global', postprocess_key])
 
 
-def git_postprocess(template, add_docs):
-    if add_docs:
-        # Update depot_tools files for "git help <command>".
-        mingw_dir = git_get_mingw_dir(template.GIT_BIN_ABSDIR)
-        if mingw_dir:
-            docsrc = os.path.join(ROOT_DIR, 'man', 'html')
-            git_docs_dir = os.path.join(mingw_dir, 'share', 'doc', 'git-doc')
-            for name in os.listdir(docsrc):
-                maybe_copy(os.path.join(docsrc, name),
-                           os.path.join(git_docs_dir, name))
-        else:
-            logging.info('Could not find mingw directory for %r.',
-                         template.GIT_BIN_ABSDIR)
-
+def git_postprocess(template):
     # Create Git templates and configure its base layout.
     for stub_name, relpath in WIN_GIT_STUBS.items():
         stub_template = template._replace(GIT_PROGRAM=relpath)
@@ -479,11 +470,6 @@ def main(argv):
     parser.add_argument('--bootstrap-name',
                         required=True,
                         help='The directory of the Python installation.')
-    parser.add_argument(
-        '--use-system-git',
-        action='store_true',
-        help='Whether to prefer a direct git installation over a depot_tools '
-        'bundled git.')
     args = parser.parse_args(argv)
 
     logging.basicConfig(level=logging.DEBUG if args.verbose else logging.WARN)
@@ -499,19 +485,14 @@ def main(argv):
     clean_up_old_installations(bootstrap_dir)
 
     if IS_WIN:
-        # Avoid messing with system git docs.
-        add_docs = False
-        git_dir = None
-        if args.use_system_git:
-            git_dir = search_win_git_directory()
+        git_dir = search_win_git_directory()
         if not git_dir:
             # Either using system git was not enabled
             # or git was not found in PATH.
             # Fall back to depot_tools bundled git.
             git_dir = os.path.join(bootstrap_dir, 'git')
-            add_docs = True
         template = template._replace(GIT_BIN_ABSDIR=git_dir)
-        git_postprocess(template, add_docs)
+        git_postprocess(template)
         templates = [
             ('git-bash.template.sh', 'git-bash', ROOT_DIR),
             ('python3.bat', 'python3.bat', ROOT_DIR),

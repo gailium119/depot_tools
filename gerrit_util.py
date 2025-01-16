@@ -1469,7 +1469,10 @@ def SubmitChange(host, change):
     """Submits a Gerrit change via Gerrit."""
     path = 'changes/%s/submit' % change
     conn = CreateHttpConn(host, path, reqtype='POST')
-    return ReadHttpJsonResponse(conn)
+    # If a submit fails due to a merge conflict, Gerrit returns 409. Retrying
+    # more than once probably won't help since the merge conflict will still
+    # exist.
+    return ReadHttpJsonResponse(conn, max_tries=2)
 
 
 def GetChangesSubmittedTogether(host, change):
@@ -1703,8 +1706,12 @@ def SetReview(host,
               msg=None,
               labels=None,
               notify=None,
-              ready=None):
-    """Sets labels and/or adds a message to a code review."""
+              ready=None,
+              automatic_attention_set_update: Optional[bool] = None):
+    """Sets labels and/or adds a message to a code review.
+
+    https://gerrit-review.googlesource.com/Documentation/rest-api-changes.html#set-review
+    """
     if not msg and not labels:
         return
     path = f'changes/{change}/revisions/{revision}/review'
@@ -1717,6 +1724,9 @@ def SetReview(host,
         body['notify'] = 'ALL' if notify else 'NONE'
     if ready:
         body['ready'] = True
+    if automatic_attention_set_update is not None:
+        body[
+            'ignore_automatic_attention_set_rules'] = not automatic_attention_set_update
     conn = CreateHttpConn(host, path, reqtype='POST', body=body)
     response = ReadHttpJsonResponse(conn)
     if labels:

@@ -34,6 +34,24 @@
       "parentUuid": "fdd1fe21_f123770d",
       "revId": "fa80fd1e45ffa830d4a45d6e77facdfa354f28c8",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "320866f0_c5d16c02",
+        "filename": "git_auth.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 174,
+      "author": {
+        "id": 1560543
+      },
+      "writtenOn": "2025-01-16T23:17:43Z",
+      "side": 1,
+      "message": "I think it is actually addressing the bug - with this patch, the user wouldn\u0027t have that problem. However, if they cloned any repository via Git directly, they would encounter such problem regardless of this patch. The problem is that the user never wanted to have sso in the first place (because sso doesn\u0027t work for them).\n\nSo, IMO, this patch address a hypotetical use case rather than a real one, doesn\u0027t it?\n\nIf user wants to use sso, they probably want to use it on all repositories for that host (i.e. use a single identify). If they can\u0027t use sso, or don\u0027t want to, they shouldn\u0027t have it globally configured. We could warn user if self.mode is set to NEW_AUTH, yet they want to push to sso. But we should stop there instead of (re-)overriding url.",
+      "parentUuid": "425a8834_084b427c",
+      "revId": "fa80fd1e45ffa830d4a45d6e77facdfa354f28c8",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

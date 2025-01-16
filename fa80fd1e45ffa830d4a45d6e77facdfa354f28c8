@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fdd1fe21_f123770d",
+        "filename": "git_auth.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 174,
+      "author": {
+        "id": 1560543
+      },
+      "writtenOn": "2025-01-16T17:28:58Z",
+      "side": 1,
+      "message": "I think this is going a bit too far trying to fix workspace. There could be legit cases where folks want to override URL and this could be preventing them from doing it.\n\nBased on the bug, it seems like a bad config - can we instead focus on how that got created? The reason for that is that using `git clone https://chromium.googlesource.com/...` won\u0027t work for them either.",
+      "revId": "fa80fd1e45ffa830d4a45d6e77facdfa354f28c8",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

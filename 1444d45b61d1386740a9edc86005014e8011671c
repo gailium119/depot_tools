@@ -16,6 +16,40 @@
       "message": "Looks great, thank you Jordan!",
       "revId": "1444d45b61d1386740a9edc86005014e8011671c",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b284fe77_12227e79",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 13
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1001629
+      },
+      "writtenOn": "2025-01-16T15:47:04Z",
+      "side": 1,
+      "message": "I\u0027d lg, but it looks like my chromium account can no longer +1 on the depot_tools repo. I\u0027ll try switching to my google account.",
+      "revId": "1444d45b61d1386740a9edc86005014e8011671c",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0a9caacc_68d7875e",
+        "filename": "metadata/fields/custom/license_allowlist.py",
+        "patchSetId": 13
+      },
+      "lineNbr": 171,
+      "author": {
+        "id": 1001629
+      },
+      "writtenOn": "2025-01-16T15:47:04Z",
+      "side": 1,
+      "message": "(i still find it confusing that we have `by_exception_only` and `restricted`, and the variable holding the `restricted` is called `WITH_PERMISSION_ONLY`, but /shruggie)",
+      "revId": "1444d45b61d1386740a9edc86005014e8011671c",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

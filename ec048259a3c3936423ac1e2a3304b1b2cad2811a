@@ -34,6 +34,24 @@
       "parentUuid": "991182f5_f03f4e8d",
       "revId": "ec048259a3c3936423ac1e2a3304b1b2cad2811a",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c510a866_3ca216bc",
+        "filename": "autoninja.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 481,
+      "author": {
+        "id": 1161379
+      },
+      "writtenOn": "2025-01-17T05:25:50Z",
+      "side": 1,
+      "message": "Is it fine to set this always then?",
+      "parentUuid": "ea3ede96_63aa923c",
+      "revId": "ec048259a3c3936423ac1e2a3304b1b2cad2811a",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

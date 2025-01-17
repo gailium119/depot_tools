@@ -70,6 +70,24 @@
       "parentUuid": "320866f0_c5d16c02",
       "revId": "fa80fd1e45ffa830d4a45d6e77facdfa354f28c8",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0004f63e_fef62039",
+        "filename": "git_auth.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 174,
+      "author": {
+        "id": 1560543
+      },
+      "writtenOn": "2025-01-17T03:11:38Z",
+      "side": 1,
+      "message": "Allen and I met to discuss this.\n\nI believe this patch needs a bump in ConfigChanger.VERSION to work properly, in order to apply these changes.\n\nI also believe this has effect only if modes are different between global and local config, and between sso vs regular auth. Given it\u0027s limited to Googlers, I\u0027m no longer concerned about modifing url.{repo}.insteadOf (my concern was mostly for external contributors who may use this to point to their own servers).\n\nWhat is not working well is updating email after initial git cl upload. That is, if user runs git cl upload, and then it modifies user.email, depot_tools won\u0027t make any changes since it checks gitAuthAutoConfigured first and short-circuts if it matches current version. But, I suppose that is a known limitation.\n\nSo, the only request here is to bump up config version.",
+      "parentUuid": "2f59c0d9_c2d0f4dd",
+      "revId": "fa80fd1e45ffa830d4a45d6e77facdfa354f28c8",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

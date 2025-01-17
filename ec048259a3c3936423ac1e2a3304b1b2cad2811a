@@ -88,6 +88,24 @@
       "parentUuid": "ad638d8f_92544e1f",
       "revId": "ec048259a3c3936423ac1e2a3304b1b2cad2811a",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c5320f7c_34f6c7af",
+        "filename": "autoninja.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 481,
+      "author": {
+        "id": 1001939
+      },
+      "writtenOn": "2025-01-17T05:31:50Z",
+      "side": 1,
+      "message": "ah, it\u0027s no problem to set it on Windows.",
+      "parentUuid": "ad638d8f_92544e1f",
+      "revId": "ec048259a3c3936423ac1e2a3304b1b2cad2811a",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

@@ -2187,15 +2187,6 @@ class Changelist(object):
 
         change_desc = self._GetDescriptionForUpload(options, git_diff_args,
                                                     files)
-        if not options.bypass_hooks:
-            hook_results = self.RunHook(committing=False,
-                                        may_prompt=not options.force,
-                                        verbose=options.verbose,
-                                        parallel=options.parallel,
-                                        upstream=base_branch,
-                                        description=change_desc.description,
-                                        all_files=False)
-            self.ExtendCC(hook_results['more_cc'])
 
         print_stats(git_diff_args)
         ret = self.CMDUploadChange(options, git_diff_args, custom_cl_base,

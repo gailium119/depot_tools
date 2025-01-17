@@ -70,6 +70,24 @@
       "parentUuid": "c510a866_3ca216bc",
       "revId": "ec048259a3c3936423ac1e2a3304b1b2cad2811a",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b80cbf2a_3de61578",
+        "filename": "autoninja.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 481,
+      "author": {
+        "id": 1366072
+      },
+      "writtenOn": "2025-01-17T05:30:59Z",
+      "side": 1,
+      "message": "The existence of this flag doesn\u0027t cause an error on Windows. So LGTM.\n\n```\nPS C:\\Users\\jwata\u003e python3 -c \"import subprocess; subprocess.Popen([\u0027ls\u0027], stdout\u003dsubprocess.DEVNULL, stderr\u003dsubprocess.DEVNULL, start_new_session\u003dTrue)\"\n```",
+      "parentUuid": "ad638d8f_92544e1f",
+      "revId": "ec048259a3c3936423ac1e2a3304b1b2cad2811a",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

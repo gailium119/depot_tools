@@ -22,6 +22,30 @@
       },
       "revId": "f913a62a7e949755b65a22a70b5813b2d65f2cd1",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "69a5d772_e7d2c80c",
+        "filename": "roll_dep.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 236,
+      "author": {
+        "id": 3388142
+      },
+      "writtenOn": "2025-01-17T08:06:25Z",
+      "side": 1,
+      "message": "It does check the output. It\u0027s used in the if statement. I\u0027m happy for it to stay quiet if it doesn\u0027t work I don\u0027t want to harrass people and make the rolling process more irritating than it absolutley has to be.",
+      "parentUuid": "203bfc6b_6ecd2984",
+      "range": {
+        "startLine": 236,
+        "startChar": 12,
+        "endLine": 236,
+        "endChar": 17
+      },
+      "revId": "f913a62a7e949755b65a22a70b5813b2d65f2cd1",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

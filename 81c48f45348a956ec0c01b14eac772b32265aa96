@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "81020d1d_20d46793",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1553262
+      },
+      "writtenOn": "2025-01-19T22:38:49Z",
+      "side": 1,
+      "message": "Is there a real benefit to having it flag guarded if it just tries its best and doesn\u0027t error?  I guess the actual question I have, is how are we going to track the rollout and opt in, and possible opt out status since we\u0027re neither going with the identifible `Autorolled[abcd]` nor default opt in?",
+      "revId": "81c48f45348a956ec0c01b14eac772b32265aa96",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d7795346_db711ac7",
+        "filename": "roll_dep.py",
+        "patchSetId": 6
+      },
+      "lineNbr": 263,
+      "author": {
+        "id": 1553262
+      },
+      "writtenOn": "2025-01-19T22:38:49Z",
+      "side": 1,
+      "message": "What about some of the revisions which are now `Revision: DEPS`",
+      "revId": "81c48f45348a956ec0c01b14eac772b32265aa96",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

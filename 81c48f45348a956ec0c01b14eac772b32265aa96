@@ -18,6 +18,24 @@
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "45316a4f_9e2f2c66",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 3388142
+      },
+      "writtenOn": "2025-01-19T23:59:33Z",
+      "side": 1,
+      "message": "I\u0027ve prepared a design doc https://docs.google.com/document/d/1sV6VR9gR4B12X79hswdzl2QDGsQJTq9POMBHCnOc6c8 (internal only) \n\nTLDR is to ask a few people to try it, then enable it by default, then add more capabilities like handling multiple deps in a single README.chromium.",
+      "parentUuid": "81020d1d_20d46793",
+      "revId": "81c48f45348a956ec0c01b14eac772b32265aa96",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "d7795346_db711ac7",
@@ -31,6 +49,24 @@
       "writtenOn": "2025-01-19T22:38:49Z",
       "side": 1,
       "message": "What about some of the revisions which are now `Revision: DEPS`",
+      "revId": "81c48f45348a956ec0c01b14eac772b32265aa96",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "24520203_959860e7",
+        "filename": "roll_dep.py",
+        "patchSetId": 6
+      },
+      "lineNbr": 263,
+      "author": {
+        "id": 3388142
+      },
+      "writtenOn": "2025-01-19T23:59:33Z",
+      "side": 1,
+      "message": "This will override those.",
+      "parentUuid": "d7795346_db711ac7",
       "revId": "81c48f45348a956ec0c01b14eac772b32265aa96",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }

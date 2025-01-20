@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d78bee14_d7409b91",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 9
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1553262
+      },
+      "writtenOn": "2025-01-20T21:23:06Z",
+      "side": 1,
+      "message": "LGTM % question I am curious about. But not a hill to die on since it\u0027s an edge case for now.",
+      "revId": "3ea734675a6625644baa532b17b0cca4b5d7b639",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

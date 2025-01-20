@@ -20,6 +20,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "ec40b9f1_43fa277d",
+        "filename": "metadata/fields/custom/license.py",
+        "patchSetId": 7
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1378025
+      },
+      "writtenOn": "2025-01-20T00:09:21Z",
+      "side": 1,
+      "message": "+1 I think it\u0027s easier to just mention in additional part \"only commas are allowed as delimiter\".\n\n// You won\u0027t be able to exhaust all bad delimiters",
+      "parentUuid": "f4550212_f3a82870",
+      "revId": "3465d67282b3488f18545e1fb859420b5e4a3f8d",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "ffee51c2_4a1eba6b",
         "filename": "metadata/fields/custom/license.py",
         "patchSetId": 7

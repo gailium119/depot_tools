@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b10956e3_7aac9088",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000680
+      },
+      "writtenOn": "2025-01-20T16:57:46Z",
+      "side": 1,
+      "message": "Mikel can you please take a look at this CL? I am adding you as a reviewer because according to \"git CL log\" you use \"git CL split\" and you might be able to provide feedback from the perspective of a \"git CL split\" user",
+      "revId": "e816ae425506046785666f11fd3e551b8d214db4",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e968da84_a08ef19a",
+        "filename": "split_cl.py",
+        "patchSetId": 7
+      },
+      "lineNbr": 249,
+      "author": {
+        "id": 1000680
+      },
+      "writtenOn": "2025-01-20T16:57:46Z",
+      "side": 1,
+      "message": "Shouldn\u0027t this be in the future tense given that the split operation has not yet occurred?\n\nHow about \"Will split into {num_cls}. Please quickly ...\"",
+      "revId": "e816ae425506046785666f11fd3e551b8d214db4",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

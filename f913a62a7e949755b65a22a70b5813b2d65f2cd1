@@ -46,6 +46,30 @@
       },
       "revId": "f913a62a7e949755b65a22a70b5813b2d65f2cd1",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6a7c2220_a16d9ace",
+        "filename": "roll_dep.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 236,
+      "author": {
+        "id": 1378025
+      },
+      "writtenOn": "2025-01-20T00:36:06Z",
+      "side": 1,
+      "message": "Oh. There\u0027s a line continuation. Please don\u0027t use it: https://google.github.io/styleguide/pyguide.html#:~:text\u003dDo%20not%20use%20a%20backslash%20for%20explicit%20line%20continuation.\n\nConsider adding brackets.",
+      "parentUuid": "69a5d772_e7d2c80c",
+      "range": {
+        "startLine": 236,
+        "startChar": 12,
+        "endLine": 236,
+        "endChar": 17
+      },
+      "revId": "f913a62a7e949755b65a22a70b5813b2d65f2cd1",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

@@ -1,0 +1,45 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8d5fa6b9_b7374a49",
+        "filename": "git_cl.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 5745,
+      "author": {
+        "id": 1367998
+      },
+      "writtenOn": "2025-01-21T22:45:07Z",
+      "side": 1,
+      "message": "I think we can make this a little more concise for users who just want to see a quick summary. WDYT about `Controls the granularity of CL splitting by limiting the depth at which the script searches for OWNERS files` + examples + `Lower values of --max-depth result in fewer, larger CLs. Higher values produce more, smaller CLs`?",
+      "range": {
+        "startLine": 5737,
+        "startChar": 14,
+        "endLine": 5745,
+        "endChar": 55
+      },
+      "fixSuggestions": [
+        {
+          "fixId": "3dca153c_8ddb2c2e",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "git_cl.py",
+              "range": {
+                "startLine": 5737,
+                "startChar": 0,
+                "endLine": 5746,
+                "endChar": 0
+              },
+              "replacement": "        help\u003d\u0027Controls the granularity of CL splitting by limiting the depth at \u0027\n        \u0027which the script searches for OWNERS files. For example, for file \u0027\n        \u0027a/b/c/d/e.cc, --max-depth\u003d2 will look at the file a/b/OWNERS, or, if \u0027\n        \u0027missing, a/OWNERS. If the flag is missing or its value is less than \u0027\n        \u0027one, the script looks at the OWNERS file as close as possible to the \u0027\n        \u0027modified files. For example, for the file a/b/c/d/e.cc, the script \u0027\n        \u0027will look at a/b/c/d/OWNERS, or if missing a/b/c/OWNERS, etc... \u0027\n        \u0027Hence, you can decrease --max-depth\\\u0027s value to decrease the number of \u0027\n        \u0027CL. This will increase the size of each CL.\u0027)\n"
+            }
+          ]
+        }
+      ],
+      "revId": "3a7195d3e772014d985fe5b4cb6cf3a814d09a80",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

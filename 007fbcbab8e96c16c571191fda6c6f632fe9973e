@@ -99,6 +99,24 @@
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "426212d0_2a66f69d",
+        "filename": "split_cl.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 304,
+      "author": {
+        "id": 1303432
+      },
+      "writtenOn": "2025-01-21T23:10:34Z",
+      "side": 1,
+      "message": "SG",
+      "parentUuid": "a3625263_9541a7f0",
+      "revId": "007fbcbab8e96c16c571191fda6c6f632fe9973e",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "d3fdcf3f_c59fb754",
@@ -166,6 +184,24 @@
       "side": 1,
       "message": "It seems like Mikel is in favor as auser",
       "parentUuid": "099d79c3_872cecd2",
+      "revId": "007fbcbab8e96c16c571191fda6c6f632fe9973e",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "65fb6229_097a8699",
+        "filename": "split_cl.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 305,
+      "author": {
+        "id": 1303432
+      },
+      "writtenOn": "2025-01-21T23:10:34Z",
+      "side": 1,
+      "message": "Yeah. I talked with the team. I think our stance has long been \"We don\u0027t really own git CL split and it\u0027s community maintained\" I think that is a weird stance to take and also be really strict on code reviews, though we should still you know, act as good reviewers for the basics of \"is this well written code\" even if we\u0027re not litigating features as much. I know you\u0027d like to do more, as long as you\u0027re responsive to user feedback/issues we (Source team) can review them faster. I think this is a very reasonable thing to try personally, and we have some signal that others like it too :).\n\nThanks for your patience.",
+      "parentUuid": "6ef6af1d_a85aca83",
       "revId": "007fbcbab8e96c16c571191fda6c6f632fe9973e",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }

@@ -16,6 +16,23 @@
       "message": "Tested with external account and AR service mapped",
       "revId": "35d252b4cd870f5f3be8c0bab4fd2c944c545718",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "90ac6136_ba094117",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 13
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1002539
+      },
+      "writtenOn": "2025-01-21T22:21:09Z",
+      "side": 1,
+      "message": "This will effectively \"log out\" all git users. Should this be accompanied with some sort of PSA?",
+      "revId": "35d252b4cd870f5f3be8c0bab4fd2c944c545718",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

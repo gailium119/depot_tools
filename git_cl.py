@@ -5730,14 +5730,19 @@ def CMDsplit(parser, args):
         help='Disables automatic sending of the changes to the CQ '
         'after approval. Note that auto-submit only works for '
         'repos that have the Auto-Submit label enabled.')
-    parser.add_option('--max-depth',
-                      type='int',
-                      default=0,
-                      help='The max depth to look for OWNERS files. Useful for '
-                      'controlling the granularity of the split CLs, e.g. '
-                      '--max-depth=1 will only split by top-level '
-                      'directory. Specifying a value less than 1 means no '
-                      'limit on max depth.')
+    parser.add_option(
+        '--max-depth',
+        type='int',
+        default=0,
+        help='The max depth to look for OWNERS files. '
+        'e.g. for file a/b/c/d/e.cc, --max-depth=2 will look at the file '
+        'a/b/OWNERS, or, if missing, a/OWNERS. '
+        'If the flag is missing or its value is less than one, the script '
+        'looks at the OWNERS file as close as possible to the modified files. '
+        'e.g. for the file a/b/c/d/e.cc, the script will look at '
+        'a/b/c/d/OWNERS, or if missing a/b/c/OWNERS, etc... '
+        'Hence, you can decrease --max-depth\'s value to decrease the number '
+        'of CL. This will increase the size of each CL.')
     parser.add_option('--topic',
                       default=None,
                       help='Topic to specify when uploading')

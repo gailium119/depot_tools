@@ -51,6 +51,24 @@
       "parentUuid": "90ac6136_ba094117",
       "revId": "35d252b4cd870f5f3be8c0bab4fd2c944c545718",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3ca66377_16f3df2d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 13
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 3355336
+      },
+      "writtenOn": "2025-01-21T23:06:24Z",
+      "side": 1,
+      "message": "Sent PSA.  For Cider G, I think the general PSA coupled with some of the \"fixes\" blocking unintended flows in depot_tools should be sufficient.",
+      "parentUuid": "208ee7b0_fdd0456c",
+      "revId": "35d252b4cd870f5f3be8c0bab4fd2c944c545718",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

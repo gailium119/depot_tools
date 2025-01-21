@@ -16,6 +16,24 @@
       "message": "Was this intentionally removed?",
       "revId": "ea75de4c3baba538f4758d507dd304136cfeab52",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4c8d87a7_36f2d103",
+        "filename": "split_cl.py",
+        "patchSetId": 7
+      },
+      "lineNbr": 287,
+      "author": {
+        "id": 3481761
+      },
+      "writtenOn": "2025-01-21T15:26:29Z",
+      "side": 0,
+      "message": "I\u0027m not sure what \"this\" refers to, but the block of code got moved to the PrintSummary function. If you\u0027re referring to the `refactor branch` part, I just added that back in because it doesn\u0027t hurt to give the user an extra chance to realize something\u0027s wrong if they run it on the wrong branch.",
+      "parentUuid": "2a39456a_5dc123f6",
+      "revId": "ea75de4c3baba538f4758d507dd304136cfeab52",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

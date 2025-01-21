@@ -150,6 +150,24 @@
       "parentUuid": "d3fdcf3f_c59fb754",
       "revId": "007fbcbab8e96c16c571191fda6c6f632fe9973e",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6ef6af1d_a85aca83",
+        "filename": "split_cl.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 305,
+      "author": {
+        "id": 3481761
+      },
+      "writtenOn": "2025-01-21T15:26:29Z",
+      "side": 1,
+      "message": "It seems like Mikel is in favor as auser",
+      "parentUuid": "099d79c3_872cecd2",
+      "revId": "007fbcbab8e96c16c571191fda6c6f632fe9973e",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

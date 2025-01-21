@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1fd08360_b3c65826",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 10
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1176649
+      },
+      "writtenOn": "2025-01-21T17:20:29Z",
+      "side": 1,
+      "message": "I don\u0027t have pemissions to +1 so moving myself to CC.",
+      "revId": "cb9ee4cc360902219d77521d9b41d5f1a95f6a8f",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

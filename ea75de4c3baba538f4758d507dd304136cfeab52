@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2a39456a_5dc123f6",
+        "filename": "split_cl.py",
+        "patchSetId": 7
+      },
+      "lineNbr": 287,
+      "author": {
+        "id": 1176649
+      },
+      "writtenOn": "2025-01-21T11:43:05Z",
+      "side": 0,
+      "message": "Was this intentionally removed?",
+      "revId": "ea75de4c3baba538f4758d507dd304136cfeab52",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

@@ -18,6 +18,41 @@
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "03156b74_80f1a3cc",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1176649
+      },
+      "writtenOn": "2025-01-21T11:43:05Z",
+      "side": 1,
+      "message": "I git cl split user myself, I couldn\u0027t care less about the additional friction. I think this is a good change to ask for confirmation.",
+      "parentUuid": "b10956e3_7aac9088",
+      "revId": "e816ae425506046785666f11fd3e551b8d214db4",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b6cfa7ea_82bc6e8a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1176649
+      },
+      "writtenOn": "2025-01-21T11:43:05Z",
+      "side": 1,
+      "message": "End-user LGTM :-)",
+      "revId": "e816ae425506046785666f11fd3e551b8d214db4",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "e968da84_a08ef19a",

@@ -72,6 +72,24 @@
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "970f3527_84b46537",
+        "filename": "metadata/fields/custom/license.py",
+        "patchSetId": 7
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 3388142
+      },
+      "writtenOn": "2025-01-21T00:06:42Z",
+      "side": 1,
+      "message": "The \u0027 and \u0027 has spaces. There aren\u0027t any license id\u0027s that use spaces and if there are then they can use underscores.",
+      "parentUuid": "d8b5d352_7c875426",
+      "revId": "3465d67282b3488f18545e1fb859420b5e4a3f8d",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "ffee51c2_4a1eba6b",

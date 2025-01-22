@@ -1565,7 +1565,6 @@ def GetFileContents(host, change, path):
     conn = CreateHttpConn(host, path, reqtype='GET')
     return base64.b64decode(ReadHttpResponse(conn).read())
 
-
 def SetCommitMessage(host, change, description, notify='ALL'):
     """Updates a commit message."""
     assert notify in ('ALL', 'NONE')

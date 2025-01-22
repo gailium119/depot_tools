@@ -72,6 +72,24 @@
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "e48a354f_856262cb",
+        "filename": "git_cl.py",
+        "patchSetId": 5
+      },
+      "lineNbr": 4588,
+      "author": {
+        "id": 3486876
+      },
+      "writtenOn": "2025-01-22T18:15:00Z",
+      "side": 1,
+      "message": "my bad, makes sense... added the try/except and additional raise to avoid duplicating print and return in case the result is empty without an error",
+      "parentUuid": "c106c1f4_da25dbe6",
+      "revId": "dd82d59df02fd9891480072bc33214aa9f806db0",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "7eafec7f_dae54d3c",

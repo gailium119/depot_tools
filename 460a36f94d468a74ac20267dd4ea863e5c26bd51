@@ -1,0 +1,107 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "70d1f416_0a93f263",
+        "filename": "metadata/fields/custom/license.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 1553262
+      },
+      "writtenOn": "2025-01-22T01:17:37Z",
+      "side": 1,
+      "message": "Probably put a more robust comment here about why this is the case or add all the info to b/388620886 which currently is a bit sparse.",
+      "revId": "460a36f94d468a74ac20267dd4ea863e5c26bd51",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "485c74b2_b7d2f74b",
+        "filename": "metadata/tests/data/README.chromium.test.restricted-license",
+        "patchSetId": 3
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1553262
+      },
+      "writtenOn": "2025-01-22T01:17:37Z",
+      "side": 1,
+      "message": "nit: Give this a more specific name so it aligns with what its used to test for",
+      "revId": "460a36f94d468a74ac20267dd4ea863e5c26bd51",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "955e7dc6_169892cf",
+        "filename": "metadata/tests/dependency_metadata_test.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 375,
+      "author": {
+        "id": 1553262
+      },
+      "writtenOn": "2025-01-22T01:17:37Z",
+      "side": 1,
+      "message": "Should this be moved elsewhere, to where there is actually a test for `MPL-2.0`",
+      "revId": "460a36f94d468a74ac20267dd4ea863e5c26bd51",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a0cff52f_7e8b991a",
+        "filename": "metadata/tests/dependency_metadata_test.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 385,
+      "author": {
+        "id": 1553262
+      },
+      "writtenOn": "2025-01-22T01:17:37Z",
+      "side": 1,
+      "message": "I think it would be clearer if this said \"Restricted licenses are treated the same as other license types, until the exception and enforcement is resourced\" or something.",
+      "fixSuggestions": [
+        {
+          "fixId": "e77b556f_29ee88b6",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "metadata/tests/dependency_metadata_test.py",
+              "range": {
+                "startLine": 385,
+                "startChar": 0,
+                "endLine": 386,
+                "endChar": 0
+              },
+              "replacement": "        # Restricted licenses are treated the same as other license types, until\n        # the exception and enforcement is resourced.\n"
+            }
+          ]
+        }
+      ],
+      "revId": "460a36f94d468a74ac20267dd4ea863e5c26bd51",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3c56b2dc_d93a8baa",
+        "filename": "metadata/tests/validate_test.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 267,
+      "author": {
+        "id": 1553262
+      },
+      "writtenOn": "2025-01-22T01:17:37Z",
+      "side": 1,
+      "message": "What\u0027s the reasoning behind it being allowed only in open source? Is it because all the restricted licenses have reciprocal conditions? Or is there no standard here? Can we just allow this group everywhere?",
+      "revId": "460a36f94d468a74ac20267dd4ea863e5c26bd51",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

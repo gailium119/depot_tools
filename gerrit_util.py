@@ -1565,6 +1565,11 @@ def GetFileContents(host, change, path):
     conn = CreateHttpConn(host, path, reqtype='GET')
     return base64.b64decode(ReadHttpResponse(conn).read())
 
+def GetCommitMessage(host, change):
+    """Returns the commit message of the change (from the current patch set)."""
+    path = 'changes/%s/message' % change
+    conn = CreateHttpConn(host, path, reqtype='GET')
+    return ReadHttpJsonResponse(conn, accept_statuses=[200])
 
 def SetCommitMessage(host, change, description, notify='ALL'):
     """Updates a commit message."""

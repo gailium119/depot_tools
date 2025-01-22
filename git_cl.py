@@ -4568,13 +4568,9 @@ def _create_commit_message(orig_message, bug=None):
 def CMDcherry_pick(parser, args):
     """Upload a chain of cherry picks to Gerrit.
 
-    This must be run inside the git repo you're trying to make changes to.
+    This should either be run inside the git repo you're trying to make changes
+    to or "--host" should be provided.
     """
-    if gclient_utils.IsEnvCog():
-        print('cherry-pick command is not supported in non-git environment',
-              file=sys.stderr)
-        return 1
-
     parser.add_option('--branch', help='Gerrit branch, e.g. refs/heads/main')
     parser.add_option('--bug',
                       help='Bug to add to the description of each change.')
@@ -4582,16 +4578,26 @@ def CMDcherry_pick(parser, args):
                       type='int',
                       help='The parent change of the first cherry-pick CL, '
                       'i.e. the start of the CL chain.')
+    parser.add_option('--host',
+                      default=None,
+                      help='Gerrit host, in case the command is used in a '
+                      'non-git environment.')
     options, args = parser.parse_args(args)
+
+    if host := options.host:
+        host = host.replace('https://', '').rstrip('/')
+    elif gclient_utils.IsEnvCog():
+        print('cherry-pick command is not supported in non-git environment '
+              'without "--host" provided',
+              file=sys.stderr)
+        return 1
 
     if not options.branch:
         parser.error('Branch is required.')
     if not args:
         parser.error('No revisions to cherry pick.')
-
-    # TODO(b/341792235): Consider using GetCommitMessage after b/362567930 is
-    # fixed so this command can be run outside of a git workspace.
-    host = Changelist().GetGerritHost()
+    if not host:
+        host = Changelist().GetGerritHost()
     change_ids_to_message = {}
     change_ids_to_commit = {}
 
@@ -4610,8 +4616,12 @@ def CMDcherry_pick(parser, args):
         change_id = changes[0]['id']
         change_ids_to_commit[change_id] = commit
 
-        message = git_common.run('show', '-s', '--format=%B', commit).strip()
-        change_ids_to_message[change_id] = message
+        message_data = gerrit_util.GetCommitMessage(host, change_id)
+        if not (commit_message := message_data.get('full_message')):
+            raise RuntimeError(
+                f'Failed to get commit message for change {change_id}.'
+            )
+        change_ids_to_message[change_id] = commit_message
 
     print(f'Creating chain of {len(change_ids_to_message)} cherry pick(s)...')
 

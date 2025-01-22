@@ -20,6 +20,24 @@
     {
       "unresolved": false,
       "key": {
+        "uuid": "b9b3a641_1e877baf",
+        "filename": "metadata/fields/custom/license.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 3388142
+      },
+      "writtenOn": "2025-01-22T03:29:34Z",
+      "side": 1,
+      "message": "I added a comment explaining the situation to the bug.",
+      "parentUuid": "70d1f416_0a93f263",
+      "revId": "460a36f94d468a74ac20267dd4ea863e5c26bd51",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
         "uuid": "485c74b2_b7d2f74b",
         "filename": "metadata/tests/data/README.chromium.test.restricted-license",
         "patchSetId": 3
@@ -31,6 +49,24 @@
       "writtenOn": "2025-01-22T01:17:37Z",
       "side": 1,
       "message": "nit: Give this a more specific name so it aligns with what its used to test for",
+      "revId": "460a36f94d468a74ac20267dd4ea863e5c26bd51",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "10f259b7_72139d34",
+        "filename": "metadata/tests/data/README.chromium.test.restricted-license",
+        "patchSetId": 3
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 3388142
+      },
+      "writtenOn": "2025-01-22T03:29:34Z",
+      "side": 1,
+      "message": "done.",
+      "parentUuid": "485c74b2_b7d2f74b",
       "revId": "460a36f94d468a74ac20267dd4ea863e5c26bd51",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
@@ -48,6 +84,24 @@
       "writtenOn": "2025-01-22T01:17:37Z",
       "side": 1,
       "message": "Should this be moved elsewhere, to where there is actually a test for `MPL-2.0`",
+      "revId": "460a36f94d468a74ac20267dd4ea863e5c26bd51",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "08410f9b_cbc6966f",
+        "filename": "metadata/tests/dependency_metadata_test.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 375,
+      "author": {
+        "id": 3388142
+      },
+      "writtenOn": "2025-01-22T03:29:34Z",
+      "side": 1,
+      "message": "There were tests using MPL hidden in this block, I have pulled them out and put them below and moved this comment there also.",
+      "parentUuid": "955e7dc6_169892cf",
       "revId": "460a36f94d468a74ac20267dd4ea863e5c26bd51",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
@@ -87,6 +141,24 @@
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "4efeca7b_464a7736",
+        "filename": "metadata/tests/dependency_metadata_test.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 385,
+      "author": {
+        "id": 3388142
+      },
+      "writtenOn": "2025-01-22T03:29:34Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "a0cff52f_7e8b991a",
+      "revId": "460a36f94d468a74ac20267dd4ea863e5c26bd51",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "3c56b2dc_d93a8baa",
@@ -100,6 +172,24 @@
       "writtenOn": "2025-01-22T01:17:37Z",
       "side": 1,
       "message": "What\u0027s the reasoning behind it being allowed only in open source? Is it because all the restricted licenses have reciprocal conditions? Or is there no standard here? Can we just allow this group everywhere?",
+      "revId": "460a36f94d468a74ac20267dd4ea863e5c26bd51",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f7777744_534b5876",
+        "filename": "metadata/tests/validate_test.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 267,
+      "author": {
+        "id": 3388142
+      },
+      "writtenOn": "2025-01-22T03:29:34Z",
+      "side": 1,
+      "message": "sorry ... bad copy pasta..",
+      "parentUuid": "3c56b2dc_d93a8baa",
       "revId": "460a36f94d468a74ac20267dd4ea863e5c26bd51",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }

@@ -64,6 +64,30 @@
       },
       "revId": "3a7195d3e772014d985fe5b4cb6cf3a814d09a80",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "af9a2b8c_82918cb2",
+        "filename": "git_cl.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 5745,
+      "author": {
+        "id": 1367998
+      },
+      "writtenOn": "2025-01-22T18:44:19Z",
+      "side": 1,
+      "message": "Oops, didn\u0027t mean to attach that fix. LGTM",
+      "parentUuid": "85404a29_547cd8a1",
+      "range": {
+        "startLine": 5737,
+        "startChar": 14,
+        "endLine": 5745,
+        "endChar": 55
+      },
+      "revId": "3a7195d3e772014d985fe5b4cb6cf3a814d09a80",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

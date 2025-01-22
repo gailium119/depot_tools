@@ -90,6 +90,24 @@
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "7db5ef36_7ccfa2d9",
+        "filename": "git_cl.py",
+        "patchSetId": 5
+      },
+      "lineNbr": 4588,
+      "author": {
+        "id": 3486876
+      },
+      "writtenOn": "2025-01-22T18:19:16Z",
+      "side": 1,
+      "message": "replaced additional raise, added setting host to None and one additional \"if\", cause it looked pretty bad, sorry :)",
+      "parentUuid": "e48a354f_856262cb",
+      "revId": "dd82d59df02fd9891480072bc33214aa9f806db0",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "7eafec7f_dae54d3c",

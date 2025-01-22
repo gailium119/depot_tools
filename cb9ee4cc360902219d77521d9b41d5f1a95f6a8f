@@ -139,6 +139,24 @@
       "message": "LGTM\n\nI would prefer if you refactored SplitCl() into multiple methods so that you don\u0027t have to mock out so much in the test. You could definitely have a version of SplitCl() which has the `description` and `comment` passed in as arguments instead of computed.\n\nIn terms of who to ask for a code review I would suggest tools/depot_tools/OWNERS (of which I am not part of and shouldn\u0027t be part of) I am quite familiar with the script but don\u0027t personally use split cl.",
       "revId": "cb9ee4cc360902219d77521d9b41d5f1a95f6a8f",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d575b659_7f49fa77",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 10
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 3481761
+      },
+      "writtenOn": "2025-01-22T19:54:18Z",
+      "side": 1,
+      "message": "Got it, I\u0027ll keep that in mind for future changes. Thanks.",
+      "parentUuid": "a31e0ae8_e4d42d55",
+      "revId": "cb9ee4cc360902219d77521d9b41d5f1a95f6a8f",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

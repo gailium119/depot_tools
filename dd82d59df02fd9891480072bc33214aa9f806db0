@@ -36,6 +36,24 @@
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "e607cf5f_3d49098b",
+        "filename": "git_cl.py",
+        "patchSetId": 5
+      },
+      "lineNbr": 4588,
+      "author": {
+        "id": 3486876
+      },
+      "writtenOn": "2025-01-22T17:50:22Z",
+      "side": 1,
+      "message": "replaced with urlparse but skipped try/except since it does not raise an exception",
+      "parentUuid": "7e911690_95c54f4f",
+      "revId": "dd82d59df02fd9891480072bc33214aa9f806db0",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "7eafec7f_dae54d3c",
@@ -81,6 +99,24 @@
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "fa23b765_1e936a87",
+        "filename": "git_cl.py",
+        "patchSetId": 5
+      },
+      "lineNbr": 4600,
+      "author": {
+        "id": 3486876
+      },
+      "writtenOn": "2025-01-22T17:50:22Z",
+      "side": 1,
+      "message": "oh yeah.. nice catch, thanks!",
+      "parentUuid": "7eafec7f_dae54d3c",
+      "revId": "dd82d59df02fd9891480072bc33214aa9f806db0",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "ce0875e0_e64498bc",
@@ -122,6 +158,24 @@
           ]
         }
       ],
+      "revId": "dd82d59df02fd9891480072bc33214aa9f806db0",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0f4d6ad3_9988fb47",
+        "filename": "git_cl.py",
+        "patchSetId": 5
+      },
+      "lineNbr": 4620,
+      "author": {
+        "id": 3486876
+      },
+      "writtenOn": "2025-01-22T17:50:22Z",
+      "side": 1,
+      "message": "thanks for the tip! removed the function from gerrit_util",
+      "parentUuid": "ce0875e0_e64498bc",
       "revId": "dd82d59df02fd9891480072bc33214aa9f806db0",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }

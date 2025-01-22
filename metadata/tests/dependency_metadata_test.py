@@ -374,6 +374,7 @@ class DependencyValidationTest(unittest.TestCase):
         dependency = dm.DependencyMetadata()
         # "MPL-2.0" is a reciprocal license, i.e. only allowed in open source projects.
         self.assertTrue(dependency.all_licenses_allowlisted("MIT", False))
+        self.assertTrue(dependency.all_licenses_allowlisted("MIT, GPL-2.0", False))
         self.assertTrue(dependency.all_licenses_allowlisted("MIT, Apache-2.0", False))
         self.assertTrue(dependency.all_licenses_allowlisted("MPL-2.0", True))
         self.assertFalse(dependency.all_licenses_allowlisted("InvalidLicense", False))
@@ -381,12 +382,18 @@ class DependencyValidationTest(unittest.TestCase):
         self.assertFalse(dependency.all_licenses_allowlisted("", False))
         self.assertFalse(dependency.all_licenses_allowlisted("MPL-2.0", False))
 
+        # Restricted licenses are not enforced by presubmits.
+        self.assertTrue(dependency.all_licenses_allowlisted("GPL-2.0", False))
+        self.assertTrue(dependency.all_licenses_allowlisted("GPL-2.0", True))
+        self.assertFalse(dependency.all_licenses_allowlisted("MPL-2.0, GPL-2.0", False))
+
 
     def test_only_open_source_licenses(self):
         """Test that only open source licenses are returned."""
         dependency = dm.DependencyMetadata()
         self.assertEqual(dependency.only_open_source_licenses(""), [])
         self.assertEqual(dependency.only_open_source_licenses("MIT"), [])
+        self.assertEqual(dependency.only_open_source_licenses("GPL-2.0"), [])
         self.assertEqual(dependency.only_open_source_licenses("MPL-2.0"), ["MPL-2.0"])
         result = dependency.only_open_source_licenses("MIT, MPL-2.0")
         self.assertEqual(result, ["MPL-2.0"])

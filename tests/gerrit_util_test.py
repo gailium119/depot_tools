@@ -592,6 +592,15 @@ class GerritUtilTest(unittest.TestCase):
 
     @mock.patch('gerrit_util.CreateHttpConn')
     @mock.patch('gerrit_util.ReadHttpJsonResponse')
+    def testGetCommitMessage(self, mockJsonResponse, mockCreateHttpConn):
+        host, change = 'host.test', '12345'
+        gerrit_util.GetCommitMessage(host, change)
+
+        path = f'changes/{change}/message'
+        mockCreateHttpConn.assert_called_once_with(host, path, reqtype='GET')
+
+    @mock.patch('gerrit_util.CreateHttpConn')
+    @mock.patch('gerrit_util.ReadHttpJsonResponse')
     def testIsCodeOwnersEnabledOnRepo_Disabled(self, mockJsonResponse,
                                                mockCreateHttpConn):
         mockJsonResponse.return_value = {'status': {'disabled': True}}

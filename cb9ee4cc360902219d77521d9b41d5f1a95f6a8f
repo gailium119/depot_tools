@@ -104,6 +104,24 @@
       "parentUuid": "3d952ab1_be931075",
       "revId": "cb9ee4cc360902219d77521d9b41d5f1a95f6a8f",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ab4a67b1_81f6fc23",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 10
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1303432
+      },
+      "writtenOn": "2025-01-22T17:11:40Z",
+      "side": 1,
+      "message": "I\u0027d start with bryner@ (and told him the same) just for timezone / office co-location. But you can send them to any depot_tools OWNER if needed. I\u0027m probably the least qualified but was still happy to do these :P",
+      "parentUuid": "0ace0624_c3530840",
+      "revId": "cb9ee4cc360902219d77521d9b41d5f1a95f6a8f",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

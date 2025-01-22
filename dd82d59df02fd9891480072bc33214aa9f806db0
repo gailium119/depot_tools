@@ -54,6 +54,24 @@
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "c106c1f4_da25dbe6",
+        "filename": "git_cl.py",
+        "patchSetId": 5
+      },
+      "lineNbr": 4588,
+      "author": {
+        "id": 1560543
+      },
+      "writtenOn": "2025-01-22T17:59:43Z",
+      "side": 1,
+      "message": "It can raise in some cases, see https://docs.python.org/3/library/urllib.parse.html#urllib.parse.urlparse\n\nIt\u0027s better to handle it than letting stack trace be printed.",
+      "parentUuid": "e607cf5f_3d49098b",
+      "revId": "dd82d59df02fd9891480072bc33214aa9f806db0",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "7eafec7f_dae54d3c",

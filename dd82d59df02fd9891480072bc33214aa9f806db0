@@ -1,0 +1,129 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7e911690_95c54f4f",
+        "filename": "git_cl.py",
+        "patchSetId": 5
+      },
+      "lineNbr": 4588,
+      "author": {
+        "id": 1560543
+      },
+      "writtenOn": "2025-01-22T17:09:02Z",
+      "side": 1,
+      "message": "use urllib.parse.urlparse instead, wrap in try/except",
+      "fixSuggestions": [
+        {
+          "fixId": "2160c9cc_399ef7b1",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "git_cl.py",
+              "range": {
+                "startLine": 4588,
+                "startChar": 0,
+                "endLine": 4589,
+                "endChar": 0
+              },
+              "replacement": "        try:\n            host \u003d urllib.parse.urlparse(host).hostname\n        except ValueError:\n            parser.error(\u0027Invalid host URL.\u0027)\n"
+            }
+          ]
+        }
+      ],
+      "revId": "dd82d59df02fd9891480072bc33214aa9f806db0",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7eafec7f_dae54d3c",
+        "filename": "git_cl.py",
+        "patchSetId": 5
+      },
+      "lineNbr": 4600,
+      "author": {
+        "id": 1560543
+      },
+      "writtenOn": "2025-01-22T17:09:02Z",
+      "side": 1,
+      "message": "move this to else statement of if host :\u003d options.host",
+      "fixSuggestions": [
+        {
+          "fixId": "cdc17a4f_13aecc69",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "git_cl.py",
+              "range": {
+                "startLine": 4589,
+                "startChar": 0,
+                "endLine": 4589,
+                "endChar": 0
+              },
+              "replacement": "    else:\n        host \u003d Changelist().GetGerritHost()\n"
+            },
+            {
+              "path": "git_cl.py",
+              "range": {
+                "startLine": 4599,
+                "startChar": 0,
+                "endLine": 4601,
+                "endChar": 0
+              },
+              "replacement": ""
+            }
+          ]
+        }
+      ],
+      "revId": "dd82d59df02fd9891480072bc33214aa9f806db0",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ce0875e0_e64498bc",
+        "filename": "git_cl.py",
+        "patchSetId": 5
+      },
+      "lineNbr": 4620,
+      "author": {
+        "id": 1560543
+      },
+      "writtenOn": "2025-01-22T17:09:02Z",
+      "side": 1,
+      "message": "It\u0027s possible to retrieve a commit message from the Query Changes endpoint - you need to specify o_params\u003d[CURRENT_REVISION\u0026o\u003dCURRENT_COMMIT]",
+      "fixSuggestions": [
+        {
+          "fixId": "a52806ea_b7a9cc69",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "git_cl.py",
+              "range": {
+                "startLine": 4611,
+                "startChar": 0,
+                "endLine": 4612,
+                "endChar": 0
+              },
+              "replacement": "        changes \u003d gerrit_util.QueryChanges(host, [(\u0027commit\u0027, commit)],\n                                           o_params\u003d[\u0027CURRENT_REVISION\u0026o\u003dCURRENT_COMMIT\u0027])\n"
+            },
+            {
+              "path": "git_cl.py",
+              "range": {
+                "startLine": 4620,
+                "startChar": 0,
+                "endLine": 4622,
+                "endChar": 0
+              },
+              "replacement": "        if not (commit_message :\u003d changes[0].get(\u0027message\u0027)):\n"
+            }
+          ]
+        }
+      ],
+      "revId": "dd82d59df02fd9891480072bc33214aa9f806db0",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

@@ -40,6 +40,30 @@
       ],
       "revId": "3a7195d3e772014d985fe5b4cb6cf3a814d09a80",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "85404a29_547cd8a1",
+        "filename": "git_cl.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 5745,
+      "author": {
+        "id": 1545727
+      },
+      "writtenOn": "2025-01-22T14:36:31Z",
+      "side": 1,
+      "message": "I assume the AI suggested fix was not to use by itself, and simply not deleted.\n\nI rephrase it with your sentences, and reduced the size of the example. I believe this new version would still be more helpful both to people who need to understand it to do LSC and people who just want to see which extra options are available.",
+      "parentUuid": "8d5fa6b9_b7374a49",
+      "range": {
+        "startLine": 5737,
+        "startChar": 14,
+        "endLine": 5745,
+        "endChar": 55
+      },
+      "revId": "3a7195d3e772014d985fe5b4cb6cf3a814d09a80",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

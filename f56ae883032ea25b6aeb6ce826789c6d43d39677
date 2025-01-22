@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1fe274b9_4b7a6d99",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 11
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1560543
+      },
+      "writtenOn": "2025-01-22T18:27:34Z",
+      "side": 1,
+      "message": "still lgtm",
+      "revId": "f56ae883032ea25b6aeb6ce826789c6d43d39677",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0fd7df17_1f22ef2b",
+        "filename": "git_cl.py",
+        "patchSetId": 11
+      },
+      "lineNbr": 4601,
+      "author": {
+        "id": 1560543
+      },
+      "writtenOn": "2025-01-22T18:27:34Z",
+      "side": 1,
+      "message": "nit: suggestion\n\n```suggestion\n    host \u003d None\n    if options.host:\n        try:\n            host \u003d urllib.parse.urlparse(host).hostname\n        except ValueError as e:\n            print(Unable to parse host: {host}. Error: {e}\u0027, file\u003dsys.stderr)\n            return 1\n    else:\n        host \u003d Changelist().GetGerritHost() # do we need try/except: pass here?\n\n    if not host:\n        print(\u0027Unable to determine host. cherry-pick command is not supported\\n\u0027\n              \u0027in non-git environment without \"--host\" provided\u0027,\n              file\u003dsys.stderr)\n        return 1\n```",
+      "range": {
+        "startLine": 4587,
+        "startChar": 0,
+        "endLine": 4601,
+        "endChar": 43
+      },
+      "revId": "f56ae883032ea25b6aeb6ce826789c6d43d39677",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

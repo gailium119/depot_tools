@@ -255,6 +255,24 @@
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "b5021a9d_f5331185",
+        "filename": "split_cl.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 3481761
+      },
+      "writtenOn": "2025-01-23T20:27:05Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "fbe503b6_8383726d",
+      "revId": "d5e9cd7ec37befce8fac383b6b3f567db853d865",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "ae599b65_d4ca4fd0",
@@ -336,6 +354,30 @@
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "b5f58336_f1f44533",
+        "filename": "split_cl.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 3481761
+      },
+      "writtenOn": "2025-01-23T20:27:05Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ae599b65_d4ca4fd0",
+      "range": {
+        "startLine": 41,
+        "startChar": 0,
+        "endLine": 44,
+        "endChar": 59
+      },
+      "revId": "d5e9cd7ec37befce8fac383b6b3f567db853d865",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "539e0658_8508be59",
@@ -373,6 +415,30 @@
           ]
         }
       ],
+      "revId": "d5e9cd7ec37befce8fac383b6b3f567db853d865",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "22601bdc_c0794461",
+        "filename": "split_cl.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 3481761
+      },
+      "writtenOn": "2025-01-23T20:27:05Z",
+      "side": 1,
+      "message": "I deliberately didn\u0027t use __str__ because the nicely formatted version is good for saving to a file, but personally I\u0027d prefer to get the default printing when I\u0027m doing debugging; I think it\u0027s better to see what\u0027s going on under the hood as explicitly as possible. Renamed the function to make this a bit clearer.",
+      "parentUuid": "539e0658_8508be59",
+      "range": {
+        "startLine": 53,
+        "startChar": 8,
+        "endLine": 53,
+        "endChar": 16
+      },
       "revId": "d5e9cd7ec37befce8fac383b6b3f567db853d865",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
@@ -434,6 +500,30 @@
           ]
         }
       ],
+      "revId": "d5e9cd7ec37befce8fac383b6b3f567db853d865",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "99283ba9_62ba9ea6",
+        "filename": "split_cl.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 3481761
+      },
+      "writtenOn": "2025-01-23T20:27:05Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8c004154_6158970e",
+      "range": {
+        "startLine": 64,
+        "startChar": 4,
+        "endLine": 64,
+        "endChar": 21
+      },
       "revId": "d5e9cd7ec37befce8fac383b6b3f567db853d865",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }

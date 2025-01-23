@@ -51,6 +51,391 @@
       "parentUuid": "0e57fc88_8f303a04",
       "revId": "d5e9cd7ec37befce8fac383b6b3f567db853d865",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "02eaa4ec_b1162488",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1560543
+      },
+      "writtenOn": "2025-01-23T16:41:21Z",
+      "side": 1,
+      "message": "adding python specific nits first.\n\nAs for the logic, it\u0027s indeed hard to know where this is heading, even with follow up comments. I think a lightweight design document would be useful  - especially if you plan to modify the current split algorighm. And since git_split_cl is public, we should open it up.",
+      "revId": "d5e9cd7ec37befce8fac383b6b3f567db853d865",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fbe503b6_8383726d",
+        "filename": "split_cl.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 1560543
+      },
+      "writtenOn": "2025-01-23T16:41:21Z",
+      "side": 1,
+      "message": "use type hints for new functions.",
+      "fixSuggestions": [
+        {
+          "fixId": "9e1afb5b_a2979dc8",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "split_cl.py",
+              "range": {
+                "startLine": 33,
+                "startChar": 0,
+                "endLine": 34,
+                "endChar": 0
+              },
+              "replacement": "def EmitWarning(msg: str):\n"
+            },
+            {
+              "path": "split_cl.py",
+              "range": {
+                "startLine": 53,
+                "startChar": 0,
+                "endLine": 54,
+                "endChar": 0
+              },
+              "replacement": "    def ToString(self) -\u003e str:\n"
+            },
+            {
+              "path": "split_cl.py",
+              "range": {
+                "startLine": 64,
+                "startChar": 0,
+                "endLine": 65,
+                "endChar": 0
+              },
+              "replacement": "def CLInfoFromFODDict(d: dict[Tuple[str], FilesAndOwnersDirectory]) -\u003e List[CLInfo]:\n"
+            },
+            {
+              "path": "split_cl.py",
+              "range": {
+                "startLine": 72,
+                "startChar": 0,
+                "endLine": 73,
+                "endChar": 0
+              },
+              "replacement": "def EnsureInGitRepository() -\u003e None:\n"
+            },
+            {
+              "path": "split_cl.py",
+              "range": {
+                "startLine": 77,
+                "startChar": 0,
+                "endLine": 78,
+                "endChar": 0
+              },
+              "replacement": "def CreateBranchForDirectories(prefix: str, directories: List[str], upstream: str) -\u003e bool:\n"
+            },
+            {
+              "path": "split_cl.py",
+              "range": {
+                "startLine": 91,
+                "startChar": 0,
+                "endLine": 92,
+                "endChar": 0
+              },
+              "replacement": "def FormatDirectoriesForPrinting(directories: List[str], prefix: str \u003d None) -\u003e str:\n"
+            },
+            {
+              "path": "split_cl.py",
+              "range": {
+                "startLine": 103,
+                "startChar": 0,
+                "endLine": 104,
+                "endChar": 0
+              },
+              "replacement": "def FormatDescriptionOrComment(txt: str, directories: List[str]) -\u003e str:\n"
+            },
+            {
+              "path": "split_cl.py",
+              "range": {
+                "startLine": 109,
+                "startChar": 0,
+                "endLine": 110,
+                "endChar": 0
+              },
+              "replacement": "def AddUploadedByGitClSplitToDescription(description: str) -\u003e str:\n"
+            },
+            {
+              "path": "split_cl.py",
+              "range": {
+                "startLine": 125,
+                "startChar": 0,
+                "endLine": 128,
+                "endChar": 0
+              },
+              "replacement": "def UploadCl(refactor_branch: str, refactor_branch_upstream: str, directories: List[str], files: List[Tuple[str, str]],\n             description: str, comment: str, reviewers: Set[str], changelist: Any, cmd_upload: Any,\n             cq_dry_run: bool, enable_auto_submit: bool, topic: str, repository_root: str) -\u003e None:\n"
+            },
+            {
+              "path": "split_cl.py",
+              "range": {
+                "startLine": 203,
+                "startChar": 0,
+                "endLine": 204,
+                "endChar": 0
+              },
+              "replacement": "def GetFilesSplitByOwners(files: List[Tuple[str, str]], max_depth: int) -\u003e dict[str, List[Tuple[str, str]]]:\n"
+            },
+            {
+              "path": "split_cl.py",
+              "range": {
+                "startLine": 228,
+                "startChar": 0,
+                "endLine": 230,
+                "endChar": 0
+              },
+              "replacement": "def PrintClInfo(cl_index: int, num_cls: int, directories: List[str], file_paths: List[str], description: str,\n                reviewers: Set[str], cq_dry_run: bool, enable_auto_submit: bool, topic: str) -\u003e None:\n"
+            },
+            {
+              "path": "split_cl.py",
+              "range": {
+                "startLine": 259,
+                "startChar": 0,
+                "endLine": 260,
+                "endChar": 0
+              },
+              "replacement": "def LoadDescription(description_file: str, dry_run: bool) -\u003e str:\n"
+            },
+            {
+              "path": "split_cl.py",
+              "range": {
+                "startLine": 271,
+                "startChar": 0,
+                "endLine": 272,
+                "endChar": 0
+              },
+              "replacement": "def PrintSummary(cl_infos: List[CLInfo], refactor_branch: str) -\u003e None:\n"
+            },
+            {
+              "path": "split_cl.py",
+              "range": {
+                "startLine": 302,
+                "startChar": 0,
+                "endLine": 304,
+                "endChar": 0
+              },
+              "replacement": "def SplitCl(description_file: str, comment_file: str, changelist: Any, cmd_upload: Any, dry_run: bool,\n            cq_dry_run: bool, enable_auto_submit: bool, max_depth: int, topic: str, repository_root: str) -\u003e int:\n"
+            },
+            {
+              "path": "split_cl.py",
+              "range": {
+                "startLine": 396,
+                "startChar": 0,
+                "endLine": 397,
+                "endChar": 0
+              },
+              "replacement": "def CheckDescriptionBugLink(description: str) -\u003e bool:\n"
+            },
+            {
+              "path": "split_cl.py",
+              "range": {
+                "startLine": 414,
+                "startChar": 0,
+                "endLine": 415,
+                "endChar": 0
+              },
+              "replacement": "def SelectReviewersForFiles(cl: Any, author: str, files: List[Tuple[str, str]], max_depth: int) -\u003e dict[Tuple[str], FilesAndOwnersDirectory]:\n"
+            }
+          ]
+        }
+      ],
+      "revId": "d5e9cd7ec37befce8fac383b6b3f567db853d865",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ae599b65_d4ca4fd0",
+        "filename": "split_cl.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 1560543
+      },
+      "writtenOn": "2025-01-23T16:41:21Z",
+      "side": 1,
+      "message": "use \"\"\" to describe what function does.",
+      "range": {
+        "startLine": 41,
+        "startChar": 0,
+        "endLine": 44,
+        "endChar": 59
+      },
+      "fixSuggestions": [
+        {
+          "fixId": "268f63cf_52ef1042",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "split_cl.py",
+              "range": {
+                "startLine": 41,
+                "startChar": 0,
+                "endLine": 42,
+                "endChar": 0
+              },
+              "replacement": ""
+            },
+            {
+              "path": "split_cl.py",
+              "range": {
+                "startLine": 44,
+                "startChar": 0,
+                "endLine": 44,
+                "endChar": 0
+              },
+              "replacement": "    \"\"\"Information representing one CL.\n\n    Attributes:\n        reviewers: A set of reviewers for the CL.\n        files: A list of tuples of the form (action, file), where action is\n            either \u0027A\u0027 or \u0027D\u0027 and file is the path to the file.\n        directories: A string representing the directories that contain the\n            OWNERS files for which to upload a CL.\n    \"\"\"\n"
+            },
+            {
+              "path": "split_cl.py",
+              "range": {
+                "startLine": 48,
+                "startChar": 0,
+                "endLine": 50,
+                "endChar": 0
+              },
+              "replacement": ""
+            },
+            {
+              "path": "split_cl.py",
+              "range": {
+                "startLine": 52,
+                "startChar": 0,
+                "endLine": 53,
+                "endChar": 0
+              },
+              "replacement": ""
+            },
+            {
+              "path": "split_cl.py",
+              "range": {
+                "startLine": 54,
+                "startChar": 0,
+                "endLine": 54,
+                "endChar": 0
+              },
+              "replacement": "        \"\"\"Print a nicely formatted version of the dataclass to a string.\"\"\"\n"
+            }
+          ]
+        }
+      ],
+      "revId": "d5e9cd7ec37befce8fac383b6b3f567db853d865",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "539e0658_8508be59",
+        "filename": "split_cl.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 1560543
+      },
+      "writtenOn": "2025-01-23T16:41:21Z",
+      "side": 1,
+      "message": "nit: use __str__, so that `print(f\u0027{clinfo_object}\u0027)` works.",
+      "range": {
+        "startLine": 53,
+        "startChar": 8,
+        "endLine": 53,
+        "endChar": 16
+      },
+      "fixSuggestions": [
+        {
+          "fixId": "905383f8_5a57791b",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "split_cl.py",
+              "range": {
+                "startLine": 53,
+                "startChar": 0,
+                "endLine": 54,
+                "endChar": 0
+              },
+              "replacement": "    def __str__(self):\n"
+            }
+          ]
+        }
+      ],
+      "revId": "d5e9cd7ec37befce8fac383b6b3f567db853d865",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8c004154_6158970e",
+        "filename": "split_cl.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 1560543
+      },
+      "writtenOn": "2025-01-23T16:41:21Z",
+      "side": 1,
+      "message": "nit: naming could be improved, maybe expand it completely, or use something like GenererateCLInfoList, and add details in the description using \"\"\"",
+      "range": {
+        "startLine": 64,
+        "startChar": 4,
+        "endLine": 64,
+        "endChar": 21
+      },
+      "fixSuggestions": [
+        {
+          "fixId": "8689fedd_908ec2eb",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "split_cl.py",
+              "range": {
+                "startLine": 62,
+                "startChar": 0,
+                "endLine": 65,
+                "endChar": 0
+              },
+              "replacement": "def GenerateCLInfoList(reviewers_to_files_and_owners_directories):\n    \"\"\"Given a dictionary mapping reviewers to FilesAndOwnersDirectories,\n    produce a list of CLInfo objects.\n\n    Args:\n        reviewers_to_files_and_owners_directories: A dictionary mapping\n            reviewers to FilesAndOwnersDirectories.\n\n    Returns:\n        A list of CLInfo objects.\n    \"\"\"\n"
+            },
+            {
+              "path": "split_cl.py",
+              "range": {
+                "startLine": 66,
+                "startChar": 0,
+                "endLine": 67,
+                "endChar": 0
+              },
+              "replacement": "    for (reviewers, fod) in reviewers_to_files_and_owners_directories.items():\n"
+            },
+            {
+              "path": "split_cl.py",
+              "range": {
+                "startLine": 353,
+                "startChar": 0,
+                "endLine": 354,
+                "endChar": 0
+              },
+              "replacement": "        cl_infos \u003d GenerateCLInfoList(files_split_by_reviewers)\n"
+            }
+          ]
+        }
+      ],
+      "revId": "d5e9cd7ec37befce8fac383b6b3f567db853d865",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

@@ -80,6 +80,30 @@
       },
       "revId": "f56ae883032ea25b6aeb6ce826789c6d43d39677",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e14c56e7_3d607324",
+        "filename": "git_cl.py",
+        "patchSetId": 11
+      },
+      "lineNbr": 4601,
+      "author": {
+        "id": 3486876
+      },
+      "writtenOn": "2025-01-23T09:02:32Z",
+      "side": 1,
+      "message": "Applied try/except pass to GetGerritHost() since it raises exception in a non-git env.\nSubmitting, thanks folks!",
+      "parentUuid": "b4db04ed_e9210a8e",
+      "range": {
+        "startLine": 4587,
+        "startChar": 0,
+        "endLine": 4601,
+        "endChar": 43
+      },
+      "revId": "f56ae883032ea25b6aeb6ce826789c6d43d39677",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

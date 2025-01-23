@@ -33,6 +33,24 @@
       "message": "+@sokcevic\n\nDo you have follow-up CLs I could look at to see how this will be used, or just a description of the overall plan?",
       "revId": "d5e9cd7ec37befce8fac383b6b3f567db853d865",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8ae9c181_38391282",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 3481761
+      },
+      "writtenOn": "2025-01-23T15:17:55Z",
+      "side": 1,
+      "message": "Yes, but I\u0027ve found that things get very confusing when chains of dependent CLS are in the mix. I can upload them in a bit; the general description is that I have a patch to enable saving/loading the generated splittings to files. This lets people ensure that the real run does the same thing as the dry run, or to tweak a splitting that\u0027s reasonable but not quite right.\n\nIn the longer term, I also want to write a better splitting algorithm. Both changes will change how we get our splittings, so the reviewer-dict datastructure isn\u0027t really appropriate in general.",
+      "parentUuid": "0e57fc88_8f303a04",
+      "revId": "d5e9cd7ec37befce8fac383b6b3f567db853d865",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

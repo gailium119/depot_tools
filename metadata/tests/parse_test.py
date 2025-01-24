@@ -224,5 +224,35 @@ lowlist.py). Licenses not allowlisted: 'Custom license'."""),
         self.assertEqual(dm.get_field_line_numbers(metadata.fields.known.NAME),
                          [1])
 
+    def test_parse_mitigated(self):
+        """Check parsing works for mitigated CVE entries."""
+        filepath = os.path.join(_THIS_DIR, "data", "README.chromium.test.mitigated")
+        content = gclient_utils.FileRead(filepath)
+        all_metadata = metadata.parse.parse_content(content)
+
+        self.assertEqual(len(all_metadata), 1)
+
+        # Check that the CVEs are properly parsed
+        self.assertListEqual(
+            all_metadata[0].mitigated,
+            ["CVE-2011-4061", "CVE-2024-7255", "CVE-2024-7256"]
+        )
+
+    def test_invalid_mitigated(self):
+        """Check validation fails for invalid CVE IDs."""
+        content = """Name: Test Package
+Mitigated: CVE-2024-123, NOT-A-CVE
+Description: Test package with invalid CVEs.
+"""
+        all_metadata = metadata.parse.parse_content(content)
+        self.assertEqual(len(all_metadata), 1)
+
+        validation_results = all_metadata[0].validate("", "", False)
+        self.assertTrue(any(
+            result.get_tag("field") == "Mitigated" and
+            isinstance(result, metadata.validation_result.ValidationWarning)
+            for result in validation_results
+        ))
+
 if __name__ == "__main__":
     unittest.main()

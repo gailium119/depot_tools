@@ -1793,6 +1793,8 @@ class Changelist(object):
                       description: str,
                       resultdb: bool = False,
                       realm: Optional[str] = None) -> Mapping[str, Any]:
+        if branch := self.GetBranch():
+            print(f'Running presubmit on branch {branch}')
         args = list(args)
 
         with gclient_utils.temporary_file() as description_file:

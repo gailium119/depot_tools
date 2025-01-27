@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e75fadee_319cc4e2",
+        "filename": "metadata/fields/custom/mitigated.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1553262
+      },
+      "writtenOn": "2025-01-27T23:05:41Z",
+      "side": 1,
+      "message": "This can be multi line - there\u0027s no reason that we can\u0027t support breaking many of these over many lines and in go/autovm-chromium#applying-mitigated-security-patches it shows them as broken across multiple lines",
+      "revId": "255b12a77600f805c7908773f92377c45f4f7b5a",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "02b2bd95_7288f302",
+        "filename": "metadata/fields/known.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 1553262
+      },
+      "writtenOn": "2025-01-27T23:05:41Z",
+      "side": 1,
+      "message": "We also really want the data which shows the contextual comments, so we can match the CVE with the \"reason\" why we\u0027ve excluded it.\n\nC: https://source.chromium.org/chromium/chromium/src/+/main:third_party/protobuf/README.chromium;l\u003d12\n\nWere you thinking to do that in a different CL?",
+      "revId": "255b12a77600f805c7908773f92377c45f4f7b5a",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "95567d3f_afd24dee",
+        "filename": "metadata/tests/data/README.chromium.test.mitigated",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1553262
+      },
+      "writtenOn": "2025-01-27T23:05:41Z",
+      "side": 1,
+      "message": "I think it\u0027s probably worth testing that breaking many CVEs across many lines here extracts as expected.\n\n```\nMitigated: CVE-2023-1010, CVE-2022-1111, CVE-2023-0001, \n           CVE-2023-0002\n```",
+      "revId": "255b12a77600f805c7908773f92377c45f4f7b5a",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

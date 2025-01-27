@@ -70,6 +70,24 @@
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "26f71665_7a8aebc1",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 3481761
+      },
+      "writtenOn": "2025-01-27T19:34:04Z",
+      "side": 1,
+      "message": "I wrote up a public [design doc](https://docs.google.com/document/d/1sBQYOb7Uly2KC-3o5Aum8Xe3nXBey5aCWQLk7wDeorI/edit?usp\u003dsharing) as requested. Discussion should probably continue there.",
+      "parentUuid": "8ae9c181_38391282",
+      "revId": "d5e9cd7ec37befce8fac383b6b3f567db853d865",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "fbe503b6_8383726d",

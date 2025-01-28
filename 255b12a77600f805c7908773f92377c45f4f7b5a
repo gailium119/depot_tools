@@ -89,6 +89,24 @@
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "5129e359_cc28fd2d",
+        "filename": "metadata/fields/known.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 3388142
+      },
+      "writtenOn": "2025-01-28T05:13:12Z",
+      "side": 1,
+      "message": "I update the bug http://b/392026683",
+      "parentUuid": "b69473e6_84e62833",
+      "revId": "255b12a77600f805c7908773f92377c45f4f7b5a",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "95567d3f_afd24dee",

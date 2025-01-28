@@ -22,6 +22,30 @@
       },
       "revId": "abeb1edf65b4bb58de73b897739ab311267af791",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "45761684_196e7139",
+        "filename": "presubmit_canned_checks.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 1855,
+      "author": {
+        "id": 1147264
+      },
+      "writtenOn": "2025-01-28T23:56:20Z",
+      "side": 1,
+      "message": "According to the bug description, the presubmit check catches the format error if the check is run by `git cl upload` whereas it doesn\u0027t if it is run by the Chromium extension.\n\ndo you know how the difference is made w/o the patch in https://crrev.com/c/6210017?",
+      "parentUuid": "ab1029ab_c0e0e599",
+      "range": {
+        "startLine": 1855,
+        "startChar": 30,
+        "endLine": 1855,
+        "endChar": 49
+      },
+      "revId": "abeb1edf65b4bb58de73b897739ab311267af791",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

@@ -6,6 +6,7 @@
 import collections
 import contextlib
 import errno
+import functools
 import glob
 import json
 import logging
@@ -30,6 +31,47 @@ import subprocess2
 
 # TODO: Should fix these warnings.
 # pylint: disable=line-too-long
+
+# Mutex used to synchronize Git operations in gclient threads.
+#
+# On Windows, running many Git commands in parallel, with some of them
+# modifying Git config files, causes unknown issues (likely incomplete
+# reads due to renames not gating read/write).
+#
+# See https://issues.chromium.org/issues/328682976
+#
+# This is non-trivial to debug and fix since it requires understanding
+# the subtleties of Windows API, and should be fixed upstream in Git to
+# make it match POSIX semantics on Windows.
+#
+# This should be used carefully to preserve performance whilst making the
+# above unlikely to happen.
+_git_lock = contextlib.nullcontext()
+if os.name == 'nt':
+    _git_lock = threading.RLock()
+
+
+def _with_git_lock(f):
+
+    @functools.wraps(f)
+    def wrapper(*args, **kwargs):
+        with _git_lock:
+            return f(*args, **kwargs)
+
+    return wrapper
+
+
+@contextlib.contextmanager
+def _release_git_lock():
+    """Release lock, for sections that need to run in parallel for performance.
+
+    Must be used while current thread already has the lock.
+    """
+    _git_lock.release()
+    try:
+        yield _git_lock
+    finally:
+        _git_lock.acquire()
 
 
 class NoUsableRevError(gclient_utils.Error):
@@ -1341,6 +1383,7 @@ class GitWrapper(SCMWrapper):
                         depth=depth,
                         lock_timeout=getattr(options, 'lock_timeout', 0))
 
+    @_with_git_lock
     def _Clone(self, revision, url, options):
         """Clone a git repository from the given URL.
 
@@ -1378,9 +1421,12 @@ class GitWrapper(SCMWrapper):
         if hasattr(options, 'no_history') and options.no_history:
             self._Run(['init', self.checkout_path], options, cwd=self._root_dir)
             self._Run(['remote', 'add', 'origin', url], options)
-            revision = self._AutoFetchRef(options, revision, depth=1)
-            remote_ref = scm.GIT.RefToRemoteRef(revision, self.remote)
-            self._Checkout(options, ''.join(remote_ref or revision), quiet=True)
+            with _release_git_lock():
+                revision = self._AutoFetchRef(options, revision, depth=1)
+                remote_ref = scm.GIT.RefToRemoteRef(revision, self.remote)
+                self._Checkout(options,
+                               ''.join(remote_ref or revision),
+                               quiet=True)
         else:
             cfg = gclient_utils.DefaultIndexPackConfig(url)
             clone_cmd = cfg + ['clone', '--no-checkout', '--progress']
@@ -1394,32 +1440,36 @@ class GitWrapper(SCMWrapper):
                                        dir=parent_dir)
             clone_cmd.append(tmp_dir)
 
-            try:
-                self._Run(clone_cmd,
-                          options,
-                          cwd=self._root_dir,
-                          retry=True,
-                          print_stdout=print_stdout,
-                          filter_fn=filter_fn)
-                logging.debug(
-                    'Cloned into temporary dir, moving to checkout_path')
-                gclient_utils.safe_makedirs(self.checkout_path)
-                gclient_utils.safe_rename(
-                    os.path.join(tmp_dir, '.git'),
-                    os.path.join(self.checkout_path, '.git'))
-            except:
-                traceback.print_exc(file=self.out_fh)
-                raise
-            finally:
-                if os.listdir(tmp_dir):
-                    self.Print('_____ removing non-empty tmp dir %s' % tmp_dir)
-                gclient_utils.rmtree(tmp_dir)
+            with _release_git_lock():
+                try:
+                    self._Run(clone_cmd,
+                              options,
+                              cwd=self._root_dir,
+                              retry=True,
+                              print_stdout=print_stdout,
+                              filter_fn=filter_fn)
+                    logging.debug(
+                        'Cloned into temporary dir, moving to checkout_path')
+                    gclient_utils.safe_makedirs(self.checkout_path)
+                    gclient_utils.safe_rename(
+                        os.path.join(tmp_dir, '.git'),
+                        os.path.join(self.checkout_path, '.git'))
+                except:
+                    traceback.print_exc(file=self.out_fh)
+                    raise
+                finally:
+                    if os.listdir(tmp_dir):
+                        self.Print('_____ removing non-empty tmp dir %s' %
+                                   tmp_dir)
+                    gclient_utils.rmtree(tmp_dir)
 
-            self._SetFetchConfig(options)
-            self._Fetch(options, prune=options.force)
-            revision = self._AutoFetchRef(options, revision)
-            remote_ref = scm.GIT.RefToRemoteRef(revision, self.remote)
-            self._Checkout(options, ''.join(remote_ref or revision), quiet=True)
+                self._SetFetchConfig(options)
+                self._Fetch(options, prune=options.force)
+                revision = self._AutoFetchRef(options, revision)
+                remote_ref = scm.GIT.RefToRemoteRef(revision, self.remote)
+                self._Checkout(options,
+                               ''.join(remote_ref or revision),
+                               quiet=True)
 
         if self._GetCurrentBranch() is None:
             # Squelch git's very verbose detached HEAD warning and use our own

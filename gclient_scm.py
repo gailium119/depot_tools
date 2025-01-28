@@ -1373,7 +1373,7 @@ class GitWrapper(SCMWrapper):
             # The url parameter might have been re-written to a local
             # cache directory, so we need self.url, which contains the
             # original remote URL.
-            git_auth.ConfigureGlobal('/', self.url)
+            _git_auth_configer.configure(self.url)
 
         if hasattr(options, 'no_history') and options.no_history:
             self._Run(['init', self.checkout_path], options, cwd=self._root_dir)
@@ -2278,3 +2278,22 @@ class CogWrapper(SCMWrapper):
 
     def update(self, options, args, file_list):
         pass
+
+
+class _GitAuthConfiger(object):
+    """Syncs git auth config modification among gclient threads."""
+
+    def __init__(self):
+        self._lock = threading.Lock()
+        self._done = set()
+
+    def configure(host_url: str):
+        with self._lock:
+            if host_url in self._done:
+                return
+            git_auth.ConfigureGlobal('/', host_url)
+            self._done.add(host_url)
+
+
+# Singleton with mutex for modifying global git config among gclient threads.
+_git_auth_configer = _GitAuthConfiger()

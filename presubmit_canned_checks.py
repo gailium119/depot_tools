@@ -9,6 +9,7 @@ import io as _io
 import os as _os
 import time
 
+import gclient_utils
 import metadata.discover
 import metadata.validate
 
@@ -1857,11 +1858,13 @@ def CheckPatchFormatted(input_api,
         else:
             short_path = input_api.basename(input_api.change.RepositoryRoot())
         display_args.append(presubmit_subdir)
-        return [
-            result_factory('The %s directory requires source formatting. '
-                           'Please run: git cl format %s' %
-                           (short_path, ' '.join(display_args)))
-        ]
+        msg = f'The {short_path} directory requires source formatting. '
+        if gclient_utils.IsEnvCog():
+            msg += ('Please use the "Format Modified Lines in All Files" '
+                    'command from the command palette.')
+        else:
+            msg += f"Please run: git cl format {' '.join(display_args)}"
+        return [result_factory(msg)]
     return []
 
 

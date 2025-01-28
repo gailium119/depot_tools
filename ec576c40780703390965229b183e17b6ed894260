@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "73aa3629_9518e61a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 3355336
+      },
+      "writtenOn": "2025-01-28T23:03:42Z",
+      "side": 1,
+      "message": "Tested that it doesn\u0027t break fetch/gclient sync on linux.  Currently running on Windows",
+      "revId": "ec576c40780703390965229b183e17b6ed894260",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

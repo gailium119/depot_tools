@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ab1029ab_c0e0e599",
+        "filename": "presubmit_canned_checks.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 1855,
+      "author": {
+        "id": 1367998
+      },
+      "writtenOn": "2025-01-28T23:49:12Z",
+      "side": 1,
+      "message": "this CL + https://crrev.com/c/6210017 should fix b/386840832",
+      "range": {
+        "startLine": 1855,
+        "startChar": 30,
+        "endLine": 1855,
+        "endChar": 49
+      },
+      "revId": "abeb1edf65b4bb58de73b897739ab311267af791",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

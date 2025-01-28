@@ -69,6 +69,46 @@
       "message": "The better option is probably to create a new field type like MultiLine list or similar in metadata/fields/field_types.py. Freeform is expected to be a single blob, not contain multiple structured entries.\n\nCreating a new field type would make something very useful reusable. Most other single line fields should probably then be moved over to use that eventually. \n\nThat new method can be cargo culted heavily from SingleLineTextField but without the new line split. The base class already handles the structured text arg which will terminate the field on the next `key:value` and stop parsing.\n\nThen only the regex checking / actual validation is required here.",
       "revId": "6f03581525718ff06fcb7be7a74ae0174d61a43b",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "747b0647_56f43246",
+        "filename": "metadata/fields/custom/mitigated.py",
+        "patchSetId": 5
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 1378025
+      },
+      "writtenOn": "2025-01-28T06:08:43Z",
+      "side": 1,
+      "message": "You should exclude invalid CVEs here.\n\n// validate and narrow_type should probably call a function to determine if a given entry is valid, then either return error message, or include it in a list.",
+      "range": {
+        "startLine": 49,
+        "startChar": 8,
+        "endLine": 49,
+        "endChar": 19
+      },
+      "revId": "6f03581525718ff06fcb7be7a74ae0174d61a43b",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b5f65cae_9d722e8c",
+        "filename": "metadata/tests/data/README.chromium.test.mitigated",
+        "patchSetId": 5
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1378025
+      },
+      "writtenOn": "2025-01-28T06:08:43Z",
+      "side": 1,
+      "message": "Would this format work?\n\n```\nMitigated: CVE-NNN, details\nMitigated: CVE-MMM, details\nMitigated: CVE-LLL, details\n```\n\nI feel this is cleaner than Mitigated: List_Of_CVEs, then define some syntax for mitigation detail, then map each mitigation detail back to a CVE number?\n\n// I\u0027m asking because I see a mitigation details in partybot proto change\n\nOn depot_tools side, you can read directly from DependencyMetadata._entries directly (and not use __return_as_property, which reads from self._metadata, which records the last occurrance of a field)",
+      "revId": "6f03581525718ff06fcb7be7a74ae0174d61a43b",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

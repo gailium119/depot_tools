@@ -36,6 +36,24 @@
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "3f69a8a2_9a85ed00",
+        "filename": "metadata/fields/custom/mitigated.py",
+        "patchSetId": 5
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 3388142
+      },
+      "writtenOn": "2025-01-28T06:07:55Z",
+      "side": 1,
+      "message": "Fix applied.",
+      "parentUuid": "66a891eb_b7f5e07e",
+      "revId": "6f03581525718ff06fcb7be7a74ae0174d61a43b",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "2f9fdf5a_c73ae53d",

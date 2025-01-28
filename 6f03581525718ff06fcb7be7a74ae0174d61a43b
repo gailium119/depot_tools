@@ -1,0 +1,56 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "66a891eb_b7f5e07e",
+        "filename": "metadata/fields/custom/mitigated.py",
+        "patchSetId": 5
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1553262
+      },
+      "writtenOn": "2025-01-28T05:34:17Z",
+      "side": 1,
+      "message": "2025",
+      "fixSuggestions": [
+        {
+          "fixId": "59e3004a_594cc77a",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "metadata/fields/custom/mitigated.py",
+              "range": {
+                "startLine": 2,
+                "startChar": 0,
+                "endLine": 3,
+                "endChar": 0
+              },
+              "replacement": "# Copyright 2025 The Chromium Authors. All rights reserved.\n"
+            }
+          ]
+        }
+      ],
+      "revId": "6f03581525718ff06fcb7be7a74ae0174d61a43b",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2f9fdf5a_c73ae53d",
+        "filename": "metadata/fields/custom/mitigated.py",
+        "patchSetId": 5
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1553262
+      },
+      "writtenOn": "2025-01-28T05:34:17Z",
+      "side": 1,
+      "message": "The better option is probably to create a new field type like MultiLine list or similar in metadata/fields/field_types.py. Freeform is expected to be a single blob, not contain multiple structured entries.\n\nCreating a new field type would make something very useful reusable. Most other single line fields should probably then be moved over to use that eventually. \n\nThat new method can be cargo culted heavily from SingleLineTextField but without the new line split. The base class already handles the structured text arg which will terminate the field on the next `key:value` and stop parsing.\n\nThen only the regex checking / actual validation is required here.",
+      "revId": "6f03581525718ff06fcb7be7a74ae0174d61a43b",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

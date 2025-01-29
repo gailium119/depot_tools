@@ -46,6 +46,30 @@
       },
       "revId": "abeb1edf65b4bb58de73b897739ab311267af791",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2e291a77_c64c2a9f",
+        "filename": "presubmit_canned_checks.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 1855,
+      "author": {
+        "id": 1367998
+      },
+      "writtenOn": "2025-01-29T00:00:43Z",
+      "side": 1,
+      "message": "with that patch, the same change (in repro steps) gets this on cog:\n```\n** Presubmit Warnings: 1 **\nThe chromium directory requires source formatting. Please use the \"Format Modified Lines in All Files\" command from the command palette.\n```\n\nAnd this on git:\n````\n** Presubmit Warnings: 2 **\n...\nThe src directory requires source formatting. Please run: git cl format\n```\n(2 because the changed .cc file + the change PRESUBMIT.py)",
+      "parentUuid": "45761684_196e7139",
+      "range": {
+        "startLine": 1855,
+        "startChar": 30,
+        "endLine": 1855,
+        "endChar": 49
+      },
+      "revId": "abeb1edf65b4bb58de73b897739ab311267af791",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

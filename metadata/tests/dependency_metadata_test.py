@@ -405,5 +405,38 @@ class DependencyValidationTest(unittest.TestCase):
         result = dependency.only_open_source_licenses("InvalidLicense, MPL-2.0")
         self.assertEqual(result, ["MPL-2.0"])
 
+    def test_mitigated_validation(self):
+        """Tests validation of Mitigated field and corresponding CVE descriptions."""
+        dependency = dm.DependencyMetadata()
+        dependency.add_entry(known_fields.NAME.get_name(), "Test Dependency")
+        dependency.add_entry(known_fields.URL.get_name(), "http://example.com")
+        dependency.add_entry(known_fields.VERSION.get_name(), "1.0")
+        dependency.add_entry(known_fields.LICENSE.get_name(), "MIT")
+        dependency.add_entry(known_fields.LICENSE_FILE.get_name(), "LICENSE")
+        dependency.add_entry(known_fields.SECURITY_CRITICAL.get_name(), "yes")
+        dependency.add_entry(known_fields.SHIPPED.get_name(), "yes")
+
+        # Add Mitigated field with two CVEs
+        dependency.add_entry(known_fields.MITIGATED.get_name(),
+                            "CVE-2024-1234, CVE-2024-5678")
+
+        # Add description for one CVE and an extra one
+        dependency.add_entry("CVE-2024-1234", "Fixed in this version")
+        dependency.add_entry("CVE-2024-9999", "This shouldn't be here")
+
+        results = dependency.validate(
+            source_file_dir=os.path.join(_THIS_DIR, "data"),
+            repo_root_dir=_THIS_DIR,
+        )
+
+        # Should get two warnings:
+        # 1. Missing description for CVE-2024-5678
+        # 2. Extra description for CVE-2024-9999
+        self.assertEqual(len(results), 2)
+        self.assertTrue(isinstance(results[0], vr.ValidationWarning))
+        self.assertEqual(results[0].get_reason(), "Missing descriptions for vulnerability IDs")
+        self.assertTrue(isinstance(results[1], vr.ValidationWarning))
+        self.assertEqual(results[1].get_reason(), "Found descriptions for unlisted vulnerability IDs")
+
 if __name__ == "__main__":
     unittest.main()

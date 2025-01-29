@@ -33,6 +33,24 @@
       "message": "This feels off - the lock should be part of git_auth.ConfigureGlobal and not here. That way, any other use case can depend on it.\n\nBut stepping back, I\u0027m not convienced this will fully solve the problem. Afaict, the issue is that there are at least two concurrent operations operating on the global .gitconfig.\n\nFrom the linked bug, the failure was reported on `git rev-parse`, and not `git config`. I believe this only solves if there are concurrent \"git config\" processes and perhaps this code shifts timing so it\u0027s less reproducible.\n\nWe may need to shift newauth.Enabled check to be in sequential part of codebase and any write to global config from multithreading should be rejected / prevented.",
       "revId": "ec576c40780703390965229b183e17b6ed894260",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "af21ceb9_8e77884d",
+        "filename": "gclient_scm.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 2294,
+      "author": {
+        "id": 3355336
+      },
+      "writtenOn": "2025-01-29T00:11:35Z",
+      "side": 1,
+      "message": "Re: the lock should be part of git_auth.ConfigureGlobal, I disagree because is generally no expectation of significant parallelism in either Git itself or any of the Git code in depot_tools.  If we were to move the logic down, it should go in scm.py IMO which mediates git config in depot_tools.  Also, we\u0027d probaby want to synchronize reads AND writes.\n\nI decided against putting it in scm.py because most users don\u0027t need it, so adding it represents both significant implementation overhead and performance overhead.  Also, process local locking (for the threading case) doesn\u0027t work across processes, and cross-process locking adds even more implementation and performance overhead and probably will have a couple of bugs.\n\nSo I decided on a more focused approach, where users handle concurrency issues; since gclient is heavily threaded, we implement process local threading for `git_auth.ConfigureGlobal` specifically.\n\nRe: I\u0027m not convienced this will fully solve the problem, I hear you.  tbh, I\u0027m not fully sure since both debugging races and debugging on Windows and debugging slow fetch operations makes this really unpleasant, though I suspect this is issue is due to some subtle/weird behavior in Windows renames, since it shouldn\u0027t be possible to see a permission denied in `git rev-parse` with POSIX/\"sane\" semantics.  You\u0027d expect renames to be atomic, right?  But I suspect there\u0027s something sus about the `create config.lock, write changes into config.lock, remove config, rename config.lock to config` dance.  In any case, I\u0027m not aiming for \"provably correct\" and instead reliably works in practice.\n\nRe: We may need to shift newauth.Enabled check to be in sequential part of codebase\n\nThis is the ideal solution IMO but it\u0027s really hard due to the way gclient works.  We need to clone dependencies (concurrently) to recursively figure out all of the hosts to configure.",
+      "parentUuid": "67a3c8e5_b510c8ec",
+      "revId": "ec576c40780703390965229b183e17b6ed894260",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

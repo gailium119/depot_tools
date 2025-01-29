@@ -51,6 +51,24 @@
       "parentUuid": "67a3c8e5_b510c8ec",
       "revId": "ec576c40780703390965229b183e17b6ed894260",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9d0ed767_16cf70d8",
+        "filename": "gclient_scm.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 2294,
+      "author": {
+        "id": 3355336
+      },
+      "writtenOn": "2025-01-29T01:35:45Z",
+      "side": 1,
+      "message": "Ergh, this doesn\u0027t work completely because gclient also does ad hoc calls to edit git config which aren\u0027t covered by this.",
+      "parentUuid": "af21ceb9_8e77884d",
+      "revId": "ec576c40780703390965229b183e17b6ed894260",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

@@ -118,6 +118,30 @@
       },
       "revId": "abeb1edf65b4bb58de73b897739ab311267af791",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d2fb6918_611003e7",
+        "filename": "presubmit_canned_checks.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 1855,
+      "author": {
+        "id": 1367998
+      },
+      "writtenOn": "2025-01-29T00:31:15Z",
+      "side": 1,
+      "message": "(feel free to continue discussion at http://b/386840832#comment5)",
+      "parentUuid": "805da6cc_06b63386",
+      "range": {
+        "startLine": 1855,
+        "startChar": 30,
+        "endLine": 1855,
+        "endChar": 49
+      },
+      "revId": "abeb1edf65b4bb58de73b897739ab311267af791",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

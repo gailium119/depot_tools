@@ -20,6 +20,70 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "b50aa27b_171f42ce",
+        "filename": "metadata/fields/custom/mitigated.py",
+        "patchSetId": 9
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1378025
+      },
+      "writtenOn": "2025-01-29T23:37:27Z",
+      "side": 1,
+      "message": "put a period to end sentence",
+      "range": {
+        "startLine": 13,
+        "startChar": 37,
+        "endLine": 13,
+        "endChar": 45
+      },
+      "fixSuggestions": [
+        {
+          "fixId": "8113391e_b1d0270e",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "metadata/fields/custom/mitigated.py",
+              "range": {
+                "startLine": 13,
+                "startChar": 0,
+                "endLine": 14,
+                "endChar": 0
+              },
+              "replacement": "# List of supported vulnerability ID prefixes.\n"
+            }
+          ]
+        }
+      ],
+      "revId": "18e054aa072d4c5017db7b5a229ac7f8a42eca76",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "dcd34628_4341fdad",
+        "filename": "metadata/fields/custom/mitigated.py",
+        "patchSetId": 9
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1378025
+      },
+      "writtenOn": "2025-01-29T23:37:27Z",
+      "side": 1,
+      "message": "cves is a subset of what you\u0027re validating?\n\nvulnerability_ids seems more accurate?",
+      "range": {
+        "startLine": 25,
+        "startChar": 13,
+        "endLine": 25,
+        "endChar": 17
+      },
+      "revId": "18e054aa072d4c5017db7b5a229ac7f8a42eca76",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "b50496b7_35724b18",
         "filename": "metadata/fields/custom/mitigated.py",
         "patchSetId": 9
@@ -31,6 +95,98 @@
       "writtenOn": "2025-01-29T22:00:11Z",
       "side": 1,
       "message": "The `bool()` should be unnecessary here. The match method returns a match object if there\u0027s a match, which in a bool context is already `True` or `None` which will be treated as `False`.",
+      "revId": "18e054aa072d4c5017db7b5a229ac7f8a42eca76",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5d5d19a9_633d269f",
+        "filename": "metadata/fields/custom/mitigated.py",
+        "patchSetId": 9
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 1378025
+      },
+      "writtenOn": "2025-01-29T23:37:27Z",
+      "side": 1,
+      "message": "Please add a test if this supports single and multi-line",
+      "range": {
+        "startLine": 55,
+        "startChar": 42,
+        "endLine": 55,
+        "endChar": 68
+      },
+      "revId": "18e054aa072d4c5017db7b5a229ac7f8a42eca76",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2b75be40_8d955a79",
+        "filename": "metadata/fields/custom/mitigated.py",
+        "patchSetId": 9
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 1378025
+      },
+      "writtenOn": "2025-01-29T23:37:27Z",
+      "side": 1,
+      "message": "vulnerability identifiers",
+      "range": {
+        "startLine": 55,
+        "startChar": 32,
+        "endLine": 55,
+        "endChar": 40
+      },
+      "revId": "18e054aa072d4c5017db7b5a229ac7f8a42eca76",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4e240a44_15ffcefe",
+        "filename": "metadata/fields/custom/mitigated.py",
+        "patchSetId": 9
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 1378025
+      },
+      "writtenOn": "2025-01-29T23:37:27Z",
+      "side": 1,
+      "message": "vulnerability id (the \"must match\" message needs tweaking as well",
+      "range": {
+        "startLine": 70,
+        "startChar": 30,
+        "endLine": 70,
+        "endChar": 37
+      },
+      "revId": "18e054aa072d4c5017db7b5a229ac7f8a42eca76",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a2ee3772_67287fe8",
+        "filename": "metadata/tests/parse_test.py",
+        "patchSetId": 9
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1378025
+      },
+      "writtenOn": "2025-01-29T23:37:27Z",
+      "side": 1,
+      "message": "Remove this.\n\nMieigated is importble from metadata.fields.known above.",
+      "range": {
+        "startLine": 20,
+        "startChar": 0,
+        "endLine": 20,
+        "endChar": 39
+      },
       "revId": "18e054aa072d4c5017db7b5a229ac7f8a42eca76",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
@@ -48,6 +204,41 @@
       "writtenOn": "2025-01-29T22:00:11Z",
       "side": 1,
       "message": "nit: This is just a nit for consistency, but the all the other tests seem to read directly from a metadata file. Should this one be the same, instead of mocking the data here directly? It\u0027s just nice to standardise.",
+      "revId": "18e054aa072d4c5017db7b5a229ac7f8a42eca76",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e9e0c52d_b6787080",
+        "filename": "metadata/tests/parse_test.py",
+        "patchSetId": 9
+      },
+      "lineNbr": 244,
+      "author": {
+        "id": 1378025
+      },
+      "writtenOn": "2025-01-29T23:37:27Z",
+      "side": 1,
+      "message": "We put:\n\n- The actual parsing of field values (i.e. not the entire file) / validation failures  in fields_test.py.\n- Type narrowing / property getters are tested in type_narrowing_test.py\n\n---\n\nThis file (parse_test) was intended for the parsing (field delimination, dependency metadata chunk delimination).\n\nI don\u0027t think this CL changes the above, so you don\u0027t need to touch this file.",
+      "parentUuid": "464e2778_b39c9f99",
+      "revId": "18e054aa072d4c5017db7b5a229ac7f8a42eca76",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8c179687_991ad9ba",
+        "filename": "metadata/tests/parse_test.py",
+        "patchSetId": 9
+      },
+      "lineNbr": 259,
+      "author": {
+        "id": 1378025
+      },
+      "writtenOn": "2025-01-29T23:37:27Z",
+      "side": 1,
+      "message": "This should be in fields_test.",
       "revId": "18e054aa072d4c5017db7b5a229ac7f8a42eca76",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },

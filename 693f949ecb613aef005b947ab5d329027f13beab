@@ -93,6 +93,41 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "6d376c2a_13c1bf08",
+        "filename": "metadata/dependency_metadata.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 333,
+      "author": {
+        "id": 1553262
+      },
+      "writtenOn": "2025-01-29T23:42:28Z",
+      "side": 1,
+      "message": "This is double commented.",
+      "fixSuggestions": [
+        {
+          "fixId": "50866eb8_25c171b8",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "metadata/dependency_metadata.py",
+              "range": {
+                "startLine": 333,
+                "startChar": 0,
+                "endLine": 334,
+                "endChar": 0
+              },
+              "replacement": "        \"\"\"Returns mapping of vulnerability IDs to their descriptions.\"\"\"\n"
+            }
+          ]
+        }
+      ],
+      "revId": "693f949ecb613aef005b947ab5d329027f13beab",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "11819a9b_8e4051d4",
         "filename": "metadata/tests/data/README.chromium.test.mitigated",
         "patchSetId": 2

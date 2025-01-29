@@ -94,6 +94,30 @@
       },
       "revId": "abeb1edf65b4bb58de73b897739ab311267af791",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "805da6cc_06b63386",
+        "filename": "presubmit_canned_checks.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 1855,
+      "author": {
+        "id": 1367998
+      },
+      "writtenOn": "2025-01-29T00:14:34Z",
+      "side": 1,
+      "message": "yeah on second thought this CL might not be the best solution. git_cl returns 1 here[1], and FWIU there isn\u0027t any way to check for git cl format issues in cog? in which case the best solution might just be to auto-format (from the extension) on upload? (unless you have any plans of supporting `git cl format` on cog directly). WDYT?\n\n[1]https://source.chromium.org/chromium/chromium/tools/depot_tools/+/main:git_cl.py;l\u003d6855-6861;drc\u003dd3717ed04d7761c754b0d47257665e1e219c4ad5",
+      "parentUuid": "7fe83f34_51f294ce",
+      "range": {
+        "startLine": 1855,
+        "startChar": 30,
+        "endLine": 1855,
+        "endChar": 49
+      },
+      "revId": "abeb1edf65b4bb58de73b897739ab311267af791",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

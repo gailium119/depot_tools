@@ -1,0 +1,134 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "35debe10_6cfd625b",
+        "filename": "metadata/dependency_metadata.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 290,
+      "author": {
+        "id": 1553262
+      },
+      "writtenOn": "2025-01-29T22:16:53Z",
+      "side": 1,
+      "message": "description",
+      "fixSuggestions": [
+        {
+          "fixId": "9ab190ad_23b6401a",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "metadata/dependency_metadata.py",
+              "range": {
+                "startLine": 290,
+                "startChar": 0,
+                "endLine": 291,
+                "endChar": 0
+              },
+              "replacement": "        # fields e.g. \u0027CVE-2024-12345: description\u0027.\n"
+            },
+            {
+              "path": "metadata/dependency_metadata.py",
+              "range": {
+                "startLine": 294,
+                "startChar": 0,
+                "endLine": 295,
+                "endChar": 0
+              },
+              "replacement": "            # Reported as their own field e.g. \u0027CVE-2024-12345: description\u0027.\n"
+            }
+          ]
+        }
+      ],
+      "revId": "693f949ecb613aef005b947ab5d329027f13beab",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4fc28a83_6aa6fa65",
+        "filename": "metadata/dependency_metadata.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 294,
+      "author": {
+        "id": 1553262
+      },
+      "writtenOn": "2025-01-29T22:16:53Z",
+      "side": 1,
+      "message": "description",
+      "fixSuggestions": [
+        {
+          "fixId": "9908f030_85a48c0c",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "metadata/dependency_metadata.py",
+              "range": {
+                "startLine": 290,
+                "startChar": 0,
+                "endLine": 291,
+                "endChar": 0
+              },
+              "replacement": "        # fields e.g. \u0027CVE-2024-12345: description\u0027.\n"
+            },
+            {
+              "path": "metadata/dependency_metadata.py",
+              "range": {
+                "startLine": 294,
+                "startChar": 0,
+                "endLine": 295,
+                "endChar": 0
+              },
+              "replacement": "            # Reported as their own field e.g. \u0027CVE-2024-12345: description\u0027.\n"
+            }
+          ]
+        }
+      ],
+      "revId": "693f949ecb613aef005b947ab5d329027f13beab",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "11819a9b_8e4051d4",
+        "filename": "metadata/tests/data/README.chromium.test.mitigated",
+        "patchSetId": 2
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1553262
+      },
+      "writtenOn": "2025-01-29T22:16:53Z",
+      "side": 1,
+      "message": "Are we able to handle these CVE descriptions running over multiple lines?\nCan we add a test for that?\n\nIn previous times where we\u0027ve had mitigated entries, this use case has existed.",
+      "revId": "693f949ecb613aef005b947ab5d329027f13beab",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3f7ad471_eb07da1f",
+        "filename": "metadata/tests/dependency_metadata_test.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 425,
+      "author": {
+        "id": 1553262
+      },
+      "writtenOn": "2025-01-29T22:16:53Z",
+      "side": 1,
+      "message": "nit: Consider loading this data from a file since that\u0027s the pattern we\u0027ve already established with the rest of the tests.",
+      "range": {
+        "startLine": 411,
+        "startChar": 0,
+        "endLine": 425,
+        "endChar": 71
+      },
+      "revId": "693f949ecb613aef005b947ab5d329027f13beab",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

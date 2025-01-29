@@ -70,6 +70,30 @@
       },
       "revId": "abeb1edf65b4bb58de73b897739ab311267af791",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7fe83f34_51f294ce",
+        "filename": "presubmit_canned_checks.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 1855,
+      "author": {
+        "id": 1367998
+      },
+      "writtenOn": "2025-01-29T00:05:33Z",
+      "side": 1,
+      "message": "sorry, I misread your comment. bypass_warnings is True by default, and `code` \u003d 1 here. let me take another look at git cl format in a bit and i\u0027ll follow up this thread in a bit",
+      "parentUuid": "2e291a77_c64c2a9f",
+      "range": {
+        "startLine": 1855,
+        "startChar": 30,
+        "endLine": 1855,
+        "endChar": 49
+      },
+      "revId": "abeb1edf65b4bb58de73b897739ab311267af791",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

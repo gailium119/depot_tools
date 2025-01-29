@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b50496b7_35724b18",
+        "filename": "metadata/fields/custom/mitigated.py",
+        "patchSetId": 9
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 1553262
+      },
+      "writtenOn": "2025-01-29T22:00:11Z",
+      "side": 1,
+      "message": "The `bool()` should be unnecessary here. The match method returns a match object if there\u0027s a match, which in a bool context is already `True` or `None` which will be treated as `False`.",
+      "revId": "18e054aa072d4c5017db7b5a229ac7f8a42eca76",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "464e2778_b39c9f99",
+        "filename": "metadata/tests/parse_test.py",
+        "patchSetId": 9
+      },
+      "lineNbr": 244,
+      "author": {
+        "id": 1553262
+      },
+      "writtenOn": "2025-01-29T22:00:11Z",
+      "side": 1,
+      "message": "nit: This is just a nit for consistency, but the all the other tests seem to read directly from a metadata file. Should this one be the same, instead of mocking the data here directly? It\u0027s just nice to standardise.",
+      "revId": "18e054aa072d4c5017db7b5a229ac7f8a42eca76",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d252fbe8_c44d2b6e",
+        "filename": "metadata/tests/parse_test.py",
+        "patchSetId": 9
+      },
+      "lineNbr": 287,
+      "author": {
+        "id": 1553262
+      },
+      "writtenOn": "2025-01-29T22:00:11Z",
+      "side": 1,
+      "message": "Duplicated `if __name__ \u003d\u003d \u0027__main__\u0027:` entry, delete.",
+      "fixSuggestions": [
+        {
+          "fixId": "5ee703ba_3b6fd9b2",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "metadata/tests/parse_test.py",
+              "range": {
+                "startLine": 287,
+                "startChar": 0,
+                "endLine": 290,
+                "endChar": 0
+              },
+              "replacement": ""
+            }
+          ]
+        }
+      ],
+      "revId": "18e054aa072d4c5017db7b5a229ac7f8a42eca76",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

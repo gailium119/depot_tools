@@ -112,6 +112,30 @@
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "5b958532_b5caf37c",
+        "filename": "metadata/fields/custom/mitigated.py",
+        "patchSetId": 5
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 3388142
+      },
+      "writtenOn": "2025-01-29T04:46:46Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "747b0647_56f43246",
+      "range": {
+        "startLine": 49,
+        "startChar": 8,
+        "endLine": 49,
+        "endChar": 19
+      },
+      "revId": "6f03581525718ff06fcb7be7a74ae0174d61a43b",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "b5f65cae_9d722e8c",

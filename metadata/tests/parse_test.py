@@ -225,5 +225,71 @@ lowlist.py). Licenses not allowlisted: 'Custom license'."""),
         self.assertEqual(dm.get_field_line_numbers(metadata.fields.known.NAME),
                          [1])
 
+<<<<<<< PATCH SET (f44d59 [dependency_metadata] Allow descriptions for CVEs)
+    def test_parse_mitigated(self):
+        """Check parsing works for mitigated CVE entries."""
+        filepath = os.path.join(_THIS_DIR, "data", "README.chromium.test.mitigated")
+        content = gclient_utils.FileRead(filepath)
+        all_metadata = metadata.parse.parse_content(content)
+
+        self.assertEqual(len(all_metadata), 1)
+
+        # Check that the CVEs are properly parsed
+        self.assertDictEqual(
+            all_metadata[0].mitigated,
+            {
+                "CVE-2011-4061": "This copy of DependencyA only includes rainbows",
+                "CVE-2024-7255": "This copy of DependencyA only includes unicorns",
+                "CVE-2024-7256": "This also doesn't apply because of good reasons",
+            },
+        )
+
+    def test_invalid_mitigated(self):
+        """Check validation fails for invalid CVE IDs."""
+        content = """Name: Test Package
+Mitigated: CVE-2024-123, NOT-A-CVE
+Description: Test package with invalid CVEs.
+"""
+        all_metadata = metadata.parse.parse_content(content)
+        self.assertEqual(len(all_metadata), 1)
+
+        validation_results = all_metadata[0].validate("", "", False)
+        self.assertTrue(any(
+            result.get_tag("field") == "Mitigated" and
+            isinstance(result, metadata.validation_result.ValidationWarning)
+            for result in validation_results
+        ))
+
+
+    def test_vulnerability_ids(self):
+        # Valid IDs
+        valid_ids = [
+            "CVE-2024-12345",
+            "CVE-2024-1234567",
+            "PYSEC-2024-1234",
+            "OSV-2024-1234",
+            "DSA-1234-1",
+            "GHSA-1234-5678-90ab",
+        ]
+
+        # Invalid IDs
+        invalid_ids = [
+            "CVE-123-456",
+            "GHSA-123-456",
+            "PYSEC-2024",           # Missing ID part.
+            "NOT-A-VALID-ID",       # Bad prefix.
+            "CVE_2024_12345",       # Wrong separator.
+            "",                     # Empty.
+            " ",                    # Just space.
+        ]
+
+        test_ids = valid_ids + invalid_ids
+        valid_result, invalid_result = metadata.fields.custom.mitigated.validate_cves(",".join(test_ids))
+
+        self.assertListEqual(sorted(valid_result), sorted(valid_ids))
+        self.assertListEqual(sorted(invalid_result), sorted(invalid_ids))
+
+=======
+>>>>>>> BASE      (482894 Add custom Mitigated field)
 if __name__ == '__main__':
     unittest.main()

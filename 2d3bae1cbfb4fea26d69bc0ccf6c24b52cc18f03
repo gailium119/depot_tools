@@ -1,0 +1,62 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2de76d60_450da462",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1003232
+      },
+      "writtenOn": "2025-01-30T02:27:21Z",
+      "side": 1,
+      "message": "lgtm w/ typo fixed.",
+      "revId": "2d3bae1cbfb4fea26d69bc0ccf6c24b52cc18f03",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "29a272b5_f4192ba3",
+        "filename": "gn_helper.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 1003232
+      },
+      "writtenOn": "2025-01-30T02:27:21Z",
+      "side": 1,
+      "message": "typo: raw_import_path.",
+      "range": {
+        "startLine": 39,
+        "startChar": 38,
+        "endLine": 39,
+        "endChar": 52
+      },
+      "fixSuggestions": [
+        {
+          "fixId": "306ebabf_98a86092",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "gn_helper.py",
+              "range": {
+                "startLine": 39,
+                "startChar": 0,
+                "endLine": 40,
+                "endChar": 0
+              },
+              "replacement": "                        import_path \u003d raw_import_path[1:]\n"
+            }
+          ]
+        }
+      ],
+      "revId": "2d3bae1cbfb4fea26d69bc0ccf6c24b52cc18f03",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

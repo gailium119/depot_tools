@@ -245,13 +245,25 @@ class FieldValidationTest(unittest.TestCase):
         self.assertEqual(len(all_metadata), 1)
 
         # Check that the CVEs are properly parsed.
+<<<<<<< PATCH SET (45c11a [dependency_metadata] Allow descriptions for CVEs)
+        self.assertDictEqual(
+            all_metadata[0].mitigations,
+            {
+                "CVE-2011-4061":
+                "This copy of DependencyA only includes rainbows\nthat spill beautifully over multiple lines and are handled\n ~~ Perfectly ~~\nEven: this line with colons that mentions CVE-2000-2000: an unrelated cve.",
+                "CVE-2024-7255":
+                "This copy of DependencyA only includes unicorns",
+                "CVE-2024-7256":
+                "This also doesn't apply because of good reasons"
+            },
+=======
         self.assertListEqual(
             all_metadata[0].mitigated,
             ["CVE-2011-4061", "CVE-2024-7255", "CVE-2024-7256"],
+>>>>>>> BASE      (153f90 Add custom Mitigated field)
         )
 
     def test_vulnerability_ids(self):
-        # Valid IDs
         valid_ids = [
             "CVE-2024-12345",
             "CVE-2024-1234567",
@@ -261,7 +273,6 @@ class FieldValidationTest(unittest.TestCase):
             "GHSA-1234-5678-90ab",
         ]
 
-        # Invalid IDs
         invalid_ids = [
             "CVE-123-456",
             "GHSA-123-456",

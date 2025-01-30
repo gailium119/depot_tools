@@ -20,8 +20,9 @@ _VULN_PREFIXES = [
 ]
 
 _PREFIX_PATTERN = "|".join(_VULN_PREFIXES)
-_VULN_ID_PATTERN = re.compile(
-    rf"^({_PREFIX_PATTERN})-[a-zA-Z0-9]{{4}}-[a-zA-Z0-9:-]+$")
+VULN_ID_PATTERN = re.compile(
+    rf"({_PREFIX_PATTERN})-[a-zA-Z0-9]{{4}}-[a-zA-Z0-9:-]+")
+VULN_ID_PATTERN_WITH_ANCHORS = re.compile(f"^{VULN_ID_PATTERN.pattern}$")
 
 
 def validate_vuln_ids(cves: str) -> Tuple[List[str], List[str]]:
@@ -46,8 +47,13 @@ def validate_vuln_ids(cves: str) -> Tuple[List[str], List[str]]:
 
     for cve in vuln_ids.split(","):
         cve_stripped = cve.strip()
+<<<<<<< PATCH SET (45c11a [dependency_metadata] Allow descriptions for CVEs)
+        if VULN_ID_PATTERN_WITH_ANCHORS.match(cve_stripped):
+            valid_cves.append(cve_stripped)
+=======
         if _VULN_ID_PATTERN.match(cve_stripped):
             valid_vuln_ids.append(cve_stripped)
+>>>>>>> BASE      (153f90 Add custom Mitigated field)
         else:
             invalid_vuln_ids.append(cve)
 
@@ -70,11 +76,18 @@ class MitigatedField(field_types.SingleLineTextField):
             return vr.ValidationWarning(
                 reason=f"{self._name} contains invalid vulnerability IDs.",
                 additional=[
+<<<<<<< PATCH SET (45c11a [dependency_metadata] Allow descriptions for CVEs)
+                    f"Invalid Vulnerability IDs: {util.quoted(invalid_cves)}",
+                    "The following identifiers are supported:\n * " +
+                    "\n * ".join(_VULN_PREFIXES)
+                ])
+=======
                     f"Invalid Vulnerability IDs: {util.quoted(invalid_vuln_ids)}",
                     "The following identifiers are supported: " +
                     ", ".join(_VULN_PREFIXES),
                 ],
             )
+>>>>>>> BASE      (153f90 Add custom Mitigated field)
 
         return None
 

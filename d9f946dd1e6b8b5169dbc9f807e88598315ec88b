@@ -24,6 +24,30 @@
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "bd610654_d55a1b73",
+        "filename": "presubmit_canned_checks.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 2066,
+      "author": {
+        "id": 1560543
+      },
+      "writtenOn": "2025-01-30T21:35:11Z",
+      "side": 1,
+      "message": "\u003e Attempt to read and parse an iterable of filenames, returning a list of filenames which were successfully parsed.\n\u003e \n\u003e If filenames is a string, a bytes object or a path-like object, it is treated as a single filename. \n\nSo, we should be good. Happy to use a list if you insist.",
+      "parentUuid": "323d19e4_e676f15a",
+      "range": {
+        "startLine": 2066,
+        "startChar": 11,
+        "endLine": 2066,
+        "endChar": 15
+      },
+      "revId": "d9f946dd1e6b8b5169dbc9f807e88598315ec88b",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "0dd9a0d5_b040b9f2",
@@ -37,6 +61,30 @@
       "writtenOn": "2025-01-30T20:05:57Z",
       "side": 1,
       "message": "nit; config.items() may make the conditions more readable.\n\n```\nfor name, section in config.items():\n   if not name.startswith(\u0027submodule \u0027):\n       continue\n   if \u0027path\u0027 not in section:\n       continue\n   git_module_paths.add(secion[\u0027path\u0027])\n```",
+      "range": {
+        "startLine": 2068,
+        "startChar": 4,
+        "endLine": 2073,
+        "endChar": 52
+      },
+      "revId": "d9f946dd1e6b8b5169dbc9f807e88598315ec88b",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "aa9019a0_d6beee03",
+        "filename": "presubmit_canned_checks.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 2073,
+      "author": {
+        "id": 1560543
+      },
+      "writtenOn": "2025-01-30T21:35:11Z",
+      "side": 1,
+      "message": "great suggestion, done",
+      "parentUuid": "0dd9a0d5_b040b9f2",
       "range": {
         "startLine": 2068,
         "startChar": 4,

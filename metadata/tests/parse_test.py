@@ -17,6 +17,7 @@ sys.path.insert(0, _ROOT_DIR)
 import gclient_utils
 import metadata.parse
 import metadata.fields.known
+import metadata.fields.custom.mitigated
 
 class ParseTest(unittest.TestCase):
     def test_parse_single(self):
@@ -223,6 +224,7 @@ lowlist.py). Licenses not allowlisted: 'Custom license'."""),
         }
         self.assertEqual(dm.get_field_line_numbers(metadata.fields.known.NAME),
                          [1])
+
 
 if __name__ == "__main__":
     unittest.main()

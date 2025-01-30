@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "10881f3c_73b878e3",
+        "filename": "metadata/fields/custom/mitigated.py",
+        "patchSetId": 18
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1378025
+      },
+      "writtenOn": "2025-01-30T06:22:38Z",
+      "side": 0,
+      "message": "Consider names:\n\nPATTERN_STARTS_WITH_VULN_ID\nPATTERN_VULN_ID",
+      "revId": "4f103953ed455caea7ee62110a79c19ea93dd23a",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

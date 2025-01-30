@@ -1,0 +1,113 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bd3882a2_6ee953c3",
+        "filename": "metadata/dependency_metadata.py",
+        "patchSetId": 18
+      },
+      "lineNbr": 289,
+      "author": {
+        "id": 1378025
+      },
+      "writtenOn": "2025-01-30T06:22:38Z",
+      "side": 1,
+      "message": "nit: Match values ... with",
+      "range": {
+        "startLine": 289,
+        "startChar": 10,
+        "endLine": 289,
+        "endChar": 17
+      },
+      "revId": "32d4829dc7db8bc822595b10f608c88597447f3b",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5b14e062_9c2464c7",
+        "filename": "metadata/dependency_metadata.py",
+        "patchSetId": 18
+      },
+      "lineNbr": 337,
+      "author": {
+        "id": 1378025
+      },
+      "writtenOn": "2025-01-30T06:22:38Z",
+      "side": 1,
+      "message": "The original `def mitigated()` is fine here\n\nwhy mitigations_from_entries?\n\nIf you only ever intend to return Dict[str,str] (i.e. don\u0027t need to expose mitigated field), remove this property.",
+      "range": {
+        "startLine": 337,
+        "startChar": 8,
+        "endLine": 337,
+        "endChar": 32
+      },
+      "revId": "32d4829dc7db8bc822595b10f608c88597447f3b",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7c77a0b3_f62693a8",
+        "filename": "metadata/dependency_metadata.py",
+        "patchSetId": 18
+      },
+      "lineNbr": 348,
+      "author": {
+        "id": 1378025
+      },
+      "writtenOn": "2025-01-30T06:22:38Z",
+      "side": 1,
+      "message": "you can `self.mitigated` here directly (relates to the comment above)",
+      "range": {
+        "startLine": 348,
+        "startChar": 27,
+        "endLine": 348,
+        "endChar": 75
+      },
+      "revId": "32d4829dc7db8bc822595b10f608c88597447f3b",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fc52d111_ad2e48bd",
+        "filename": "metadata/fields/custom/mitigated.py",
+        "patchSetId": 18
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 1378025
+      },
+      "writtenOn": "2025-01-30T06:22:38Z",
+      "side": 1,
+      "message": "Is this auto format?\n\nIf so should happen in previous CL",
+      "revId": "32d4829dc7db8bc822595b10f608c88597447f3b",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "787425de_8355484b",
+        "filename": "metadata/tests/data/README.chromium.test.mitigated",
+        "patchSetId": 18
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1378025
+      },
+      "writtenOn": "2025-01-30T06:22:38Z",
+      "side": 1,
+      "message": "Can you add a parsing test to check these two are extracted properly?\n\na e2e parse from this test file -\u003e dependency_metadata.mitigations dict will be sufficient",
+      "range": {
+        "startLine": 16,
+        "startChar": 0,
+        "endLine": 17,
+        "endChar": 62
+      },
+      "revId": "32d4829dc7db8bc822595b10f608c88597447f3b",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

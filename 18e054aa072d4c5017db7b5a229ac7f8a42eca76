@@ -59,6 +59,30 @@
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "b2a8a4f6_0fa94fcc",
+        "filename": "metadata/fields/custom/mitigated.py",
+        "patchSetId": 9
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 3388142
+      },
+      "writtenOn": "2025-01-30T04:42:59Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "b50aa27b_171f42ce",
+      "range": {
+        "startLine": 13,
+        "startChar": 37,
+        "endLine": 13,
+        "endChar": 45
+      },
+      "revId": "18e054aa072d4c5017db7b5a229ac7f8a42eca76",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "dcd34628_4341fdad",
@@ -82,6 +106,30 @@
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "489c2310_33b43b43",
+        "filename": "metadata/fields/custom/mitigated.py",
+        "patchSetId": 9
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 3388142
+      },
+      "writtenOn": "2025-01-30T04:42:59Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "dcd34628_4341fdad",
+      "range": {
+        "startLine": 25,
+        "startChar": 13,
+        "endLine": 25,
+        "endChar": 17
+      },
+      "revId": "18e054aa072d4c5017db7b5a229ac7f8a42eca76",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "b50496b7_35724b18",
@@ -95,6 +143,24 @@
       "writtenOn": "2025-01-29T22:00:11Z",
       "side": 1,
       "message": "The `bool()` should be unnecessary here. The match method returns a match object if there\u0027s a match, which in a bool context is already `True` or `None` which will be treated as `False`.",
+      "revId": "18e054aa072d4c5017db7b5a229ac7f8a42eca76",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d2a2505d_ecdb3946",
+        "filename": "metadata/fields/custom/mitigated.py",
+        "patchSetId": 9
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 3388142
+      },
+      "writtenOn": "2025-01-30T04:42:59Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "b50496b7_35724b18",
       "revId": "18e054aa072d4c5017db7b5a229ac7f8a42eca76",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
@@ -145,6 +211,54 @@
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "0a5159a7_d6f2ec04",
+        "filename": "metadata/fields/custom/mitigated.py",
+        "patchSetId": 9
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 3388142
+      },
+      "writtenOn": "2025-01-30T04:42:59Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2b75be40_8d955a79",
+      "range": {
+        "startLine": 55,
+        "startChar": 32,
+        "endLine": 55,
+        "endChar": 40
+      },
+      "revId": "18e054aa072d4c5017db7b5a229ac7f8a42eca76",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "01d468e4_ce282689",
+        "filename": "metadata/fields/custom/mitigated.py",
+        "patchSetId": 9
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 3388142
+      },
+      "writtenOn": "2025-01-30T04:42:59Z",
+      "side": 1,
+      "message": "SingleLine only",
+      "parentUuid": "5d5d19a9_633d269f",
+      "range": {
+        "startLine": 55,
+        "startChar": 42,
+        "endLine": 55,
+        "endChar": 68
+      },
+      "revId": "18e054aa072d4c5017db7b5a229ac7f8a42eca76",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "4e240a44_15ffcefe",
@@ -168,6 +282,30 @@
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "132cf9e3_81e45ba4",
+        "filename": "metadata/fields/custom/mitigated.py",
+        "patchSetId": 9
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 3388142
+      },
+      "writtenOn": "2025-01-30T04:42:59Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4e240a44_15ffcefe",
+      "range": {
+        "startLine": 70,
+        "startChar": 30,
+        "endLine": 70,
+        "endChar": 37
+      },
+      "revId": "18e054aa072d4c5017db7b5a229ac7f8a42eca76",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "a2ee3772_67287fe8",
@@ -181,6 +319,30 @@
       "writtenOn": "2025-01-29T23:37:27Z",
       "side": 1,
       "message": "Remove this.\n\nMieigated is importble from metadata.fields.known above.",
+      "range": {
+        "startLine": 20,
+        "startChar": 0,
+        "endLine": 20,
+        "endChar": 39
+      },
+      "revId": "18e054aa072d4c5017db7b5a229ac7f8a42eca76",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "48034c77_911c191c",
+        "filename": "metadata/tests/parse_test.py",
+        "patchSetId": 9
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 3388142
+      },
+      "writtenOn": "2025-01-30T04:42:59Z",
+      "side": 1,
+      "message": "That\u0027s only for the MITIGATED value, this is using a function in that package.",
+      "parentUuid": "a2ee3772_67287fe8",
       "range": {
         "startLine": 20,
         "startChar": 0,
@@ -226,6 +388,42 @@
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "0f814c38_045d4c41",
+        "filename": "metadata/tests/parse_test.py",
+        "patchSetId": 9
+      },
+      "lineNbr": 244,
+      "author": {
+        "id": 3388142
+      },
+      "writtenOn": "2025-01-30T04:42:59Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e9e0c52d_b6787080",
+      "revId": "18e054aa072d4c5017db7b5a229ac7f8a42eca76",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e54c0adc_01e61b53",
+        "filename": "metadata/tests/parse_test.py",
+        "patchSetId": 9
+      },
+      "lineNbr": 244,
+      "author": {
+        "id": 3388142
+      },
+      "writtenOn": "2025-01-30T04:42:59Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e9e0c52d_b6787080",
+      "revId": "18e054aa072d4c5017db7b5a229ac7f8a42eca76",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "8c179687_991ad9ba",
@@ -239,6 +437,24 @@
       "writtenOn": "2025-01-29T23:37:27Z",
       "side": 1,
       "message": "This should be in fields_test.",
+      "revId": "18e054aa072d4c5017db7b5a229ac7f8a42eca76",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0defe516_ceb80649",
+        "filename": "metadata/tests/parse_test.py",
+        "patchSetId": 9
+      },
+      "lineNbr": 259,
+      "author": {
+        "id": 3388142
+      },
+      "writtenOn": "2025-01-30T04:42:59Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8c179687_991ad9ba",
       "revId": "18e054aa072d4c5017db7b5a229ac7f8a42eca76",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
@@ -274,6 +490,24 @@
           ]
         }
       ],
+      "revId": "18e054aa072d4c5017db7b5a229ac7f8a42eca76",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ce7dfff3_e4d5bd40",
+        "filename": "metadata/tests/parse_test.py",
+        "patchSetId": 9
+      },
+      "lineNbr": 287,
+      "author": {
+        "id": 3388142
+      },
+      "writtenOn": "2025-01-30T04:42:59Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "d252fbe8_c44d2b6e",
       "revId": "18e054aa072d4c5017db7b5a229ac7f8a42eca76",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }

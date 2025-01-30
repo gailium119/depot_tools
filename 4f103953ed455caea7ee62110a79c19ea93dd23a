@@ -26,6 +26,30 @@
     {
       "unresolved": false,
       "key": {
+        "uuid": "b414142e_338119ba",
+        "filename": "metadata/fields/custom/mitigated.py",
+        "patchSetId": 21
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 3388142
+      },
+      "writtenOn": "2025-01-30T06:41:31Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "da4c664d_0a95a56b",
+      "range": {
+        "startLine": 54,
+        "startChar": 16,
+        "endLine": 54,
+        "endChar": 21
+      },
+      "revId": "4f103953ed455caea7ee62110a79c19ea93dd23a",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
         "uuid": "9fb17196_9f5b363f",
         "filename": "metadata/fields/custom/mitigated.py",
         "patchSetId": 21
@@ -37,6 +61,30 @@
       "writtenOn": "2025-01-30T06:10:28Z",
       "side": 1,
       "message": "Non blocking: Should this be ValidationError?",
+      "range": {
+        "startLine": 70,
+        "startChar": 22,
+        "endLine": 70,
+        "endChar": 39
+      },
+      "revId": "4f103953ed455caea7ee62110a79c19ea93dd23a",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9eef573d_6123f37b",
+        "filename": "metadata/fields/custom/mitigated.py",
+        "patchSetId": 21
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 3388142
+      },
+      "writtenOn": "2025-01-30T06:41:31Z",
+      "side": 1,
+      "message": "I\u0027m happy to only warn about it now and we can set it to error later if the need arises.",
+      "parentUuid": "9fb17196_9f5b363f",
       "range": {
         "startLine": 70,
         "startChar": 22,
@@ -88,6 +136,30 @@
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "e52f36c0_0ad9b8a9",
+        "filename": "metadata/fields/custom/mitigated.py",
+        "patchSetId": 21
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 3388142
+      },
+      "writtenOn": "2025-01-30T06:41:31Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "a50a439c_bb94865c",
+      "range": {
+        "startLine": 74,
+        "startChar": 61,
+        "endLine": 74,
+        "endChar": 63
+      },
+      "revId": "4f103953ed455caea7ee62110a79c19ea93dd23a",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "fd803dda_cac5612f",
@@ -101,6 +173,30 @@
       "writtenOn": "2025-01-30T06:10:28Z",
       "side": 1,
       "message": "vuln_ids",
+      "range": {
+        "startLine": 84,
+        "startChar": 8,
+        "endLine": 84,
+        "endChar": 12
+      },
+      "revId": "4f103953ed455caea7ee62110a79c19ea93dd23a",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "40e6f20f_e31af3bd",
+        "filename": "metadata/fields/custom/mitigated.py",
+        "patchSetId": 21
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 3388142
+      },
+      "writtenOn": "2025-01-30T06:41:31Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "fd803dda_cac5612f",
       "range": {
         "startLine": 84,
         "startChar": 8,
@@ -134,6 +230,30 @@
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "f03766e6_dfc71865",
+        "filename": "metadata/fields/known.py",
+        "patchSetId": 21
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 3388142
+      },
+      "writtenOn": "2025-01-30T06:41:31Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8930f8eb_8ccac1d7",
+      "range": {
+        "startLine": 26,
+        "startChar": 0,
+        "endLine": 26,
+        "endChar": 39
+      },
+      "revId": "4f103953ed455caea7ee62110a79c19ea93dd23a",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "92c04f1f_5295a135",
@@ -157,6 +277,30 @@
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "565912e8_8cc429a7",
+        "filename": "metadata/tests/fields_test.py",
+        "patchSetId": 21
+      },
+      "lineNbr": 243,
+      "author": {
+        "id": 3388142
+      },
+      "writtenOn": "2025-01-30T06:41:31Z",
+      "side": 1,
+      "message": "I removed test_invalid_mitigated since that test case is covered by test_vulnerability_ids. In the next CL this test is updated to test the validation logic in dependency_metadata which would not be covered.",
+      "parentUuid": "92c04f1f_5295a135",
+      "range": {
+        "startLine": 242,
+        "startChar": 0,
+        "endLine": 243,
+        "endChar": 60
+      },
+      "revId": "4f103953ed455caea7ee62110a79c19ea93dd23a",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "5dd3304f_bd4b1048",
@@ -170,6 +314,24 @@
       "writtenOn": "2025-01-30T06:10:28Z",
       "side": 1,
       "message": "put a period at the end",
+      "revId": "4f103953ed455caea7ee62110a79c19ea93dd23a",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ac231dcf_d708ee9f",
+        "filename": "metadata/tests/fields_test.py",
+        "patchSetId": 21
+      },
+      "lineNbr": 247,
+      "author": {
+        "id": 3388142
+      },
+      "writtenOn": "2025-01-30T06:41:31Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5dd3304f_bd4b1048",
       "revId": "4f103953ed455caea7ee62110a79c19ea93dd23a",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }

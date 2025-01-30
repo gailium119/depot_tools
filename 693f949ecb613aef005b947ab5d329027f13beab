@@ -244,6 +244,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "73ae8c1f_ab63d61d",
+        "filename": "metadata/parse.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1378025
+      },
+      "writtenOn": "2025-01-30T01:34:20Z",
+      "side": 1,
+      "message": "I think we should `git cl format --python` since this is Chromium :)\n\nBlack\u0027s style probably differs. I generally do a manual line break because Python style isn\u0027t very opininated on where to split expressions, and if `git cl format` didn\u0027t change it back, then it\u0027s good to go.",
+      "parentUuid": "5d267d6e_eb04cc92",
+      "range": {
+        "startLine": 38,
+        "startChar": 30,
+        "endLine": 38,
+        "endChar": 34
+      },
+      "revId": "693f949ecb613aef005b947ab5d329027f13beab",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "11819a9b_8e4051d4",
         "filename": "metadata/tests/data/README.chromium.test.mitigated",
         "patchSetId": 2

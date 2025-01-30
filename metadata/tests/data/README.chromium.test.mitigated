@@ -8,7 +8,14 @@ License File: LICENSE
 Security Critical: yes
 Shipped: yes
 CPEPrefix: unknown
+<<<<<<< PATCH SET (f44d59 [dependency_metadata] Allow descriptions for CVEs)
+Mitigated: CVE-2011-4061, CVE-2024-7255 ,CVE-2024-7256
+CVE-2011-4061: This copy of DependencyA only includes rainbows
+CVE-2024-7255: This copy of DependencyA only includes unicorns
+CVE-2024-7256: This also doesn't apply because of good reasons
+=======
 Mitigated: CVE-2011-4061, CVE-2024-7255, CVE-2024-7256
+>>>>>>> BASE      (482894 Add custom Mitigated field)
 Description: A test dependency with mitigated CVE entries.
 
 Local Modifications:

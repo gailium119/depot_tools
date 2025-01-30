@@ -46,6 +46,24 @@
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "8b43f23a_d0d467ac",
+        "filename": "metadata/dependency_metadata.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 290,
+      "author": {
+        "id": 3388142
+      },
+      "writtenOn": "2025-01-30T05:47:49Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "35debe10_6cfd625b",
+      "revId": "693f949ecb613aef005b947ab5d329027f13beab",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "4fc28a83_6aa6fa65",
@@ -91,6 +109,24 @@
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "d2e5e292_37ba839a",
+        "filename": "metadata/dependency_metadata.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 294,
+      "author": {
+        "id": 3388142
+      },
+      "writtenOn": "2025-01-30T05:47:49Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4fc28a83_6aa6fa65",
+      "revId": "693f949ecb613aef005b947ab5d329027f13beab",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "b6f26dd5_4fa07f24",
@@ -104,6 +140,30 @@
       "writtenOn": "2025-01-30T00:02:39Z",
       "side": 1,
       "message": "Consider adding / changing this to `mitigations` property that always return an array.\n\nIs there a reason to distinguish between: \"Field not provided\" vs \"Field provided, no mitigations\"?\n\nThe properties whose name is the same as a field name generally refers directly a field, what you\u0027re doing here is inferring data from fields (like is_canonical, revision_in_deps)",
+      "range": {
+        "startLine": 332,
+        "startChar": 8,
+        "endLine": 332,
+        "endChar": 17
+      },
+      "revId": "693f949ecb613aef005b947ab5d329027f13beab",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b9c44cde_6b18fb16",
+        "filename": "metadata/dependency_metadata.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 332,
+      "author": {
+        "id": 3388142
+      },
+      "writtenOn": "2025-01-30T05:47:49Z",
+      "side": 1,
+      "message": "1) Done.\n2) It makes it a lot clearer for users.\n3) Done (by means of 1)).",
+      "parentUuid": "b6f26dd5_4fa07f24",
       "range": {
         "startLine": 332,
         "startChar": 8,
@@ -168,6 +228,48 @@
         "endLine": 333,
         "endChar": 10
       },
+      "revId": "693f949ecb613aef005b947ab5d329027f13beab",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "76abc706_c40341e5",
+        "filename": "metadata/dependency_metadata.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 333,
+      "author": {
+        "id": 3388142
+      },
+      "writtenOn": "2025-01-30T05:47:49Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "b616984e_1183ebad",
+      "range": {
+        "startLine": 333,
+        "startChar": 8,
+        "endLine": 333,
+        "endChar": 10
+      },
+      "revId": "693f949ecb613aef005b947ab5d329027f13beab",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e4275571_26467145",
+        "filename": "metadata/dependency_metadata.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 333,
+      "author": {
+        "id": 3388142
+      },
+      "writtenOn": "2025-01-30T05:47:49Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6d376c2a_13c1bf08",
       "revId": "693f949ecb613aef005b947ab5d329027f13beab",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
@@ -290,6 +392,30 @@
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "7d2c4c59_48dff804",
+        "filename": "metadata/parse.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 3388142
+      },
+      "writtenOn": "2025-01-30T05:47:49Z",
+      "side": 1,
+      "message": "ALL_FIELD_NAMES is a set, \nsorry for the poorly formatted cl.\nFormatters and merge conflits are painful, \nand cider-g is doing \nits\nbest. Sorry.. 😐",
+      "parentUuid": "e7728128_260995af",
+      "range": {
+        "startLine": 38,
+        "startChar": 30,
+        "endLine": 38,
+        "endChar": 34
+      },
+      "revId": "693f949ecb613aef005b947ab5d329027f13beab",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "11819a9b_8e4051d4",
@@ -303,6 +429,42 @@
       "writtenOn": "2025-01-29T22:16:53Z",
       "side": 1,
       "message": "Are we able to handle these CVE descriptions running over multiple lines?\nCan we add a test for that?\n\nIn previous times where we\u0027ve had mitigated entries, this use case has existed.",
+      "revId": "693f949ecb613aef005b947ab5d329027f13beab",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ecf77f9f_25eb30c5",
+        "filename": "metadata/tests/data/README.chromium.test.mitigated",
+        "patchSetId": 2
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 3388142
+      },
+      "writtenOn": "2025-01-30T05:47:49Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "11819a9b_8e4051d4",
+      "revId": "693f949ecb613aef005b947ab5d329027f13beab",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5cbd0999_3a29069a",
+        "filename": "metadata/tests/data/README.chromium.test.mitigated",
+        "patchSetId": 2
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 3388142
+      },
+      "writtenOn": "2025-01-30T05:47:49Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "11819a9b_8e4051d4",
       "revId": "693f949ecb613aef005b947ab5d329027f13beab",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },

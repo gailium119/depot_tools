@@ -93,6 +93,29 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "b6f26dd5_4fa07f24",
+        "filename": "metadata/dependency_metadata.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 332,
+      "author": {
+        "id": 1378025
+      },
+      "writtenOn": "2025-01-30T00:02:39Z",
+      "side": 1,
+      "message": "Consider adding / changing this to `mitigations` property that always return an array.\n\nIs there a reason to distinguish between: \"Field not provided\" vs \"Field provided, no mitigations\"?\n\nThe properties whose name is the same as a field name generally refers directly a field, what you\u0027re doing here is inferring data from fields (like is_canonical, revision_in_deps)",
+      "range": {
+        "startLine": 332,
+        "startChar": 8,
+        "endLine": 332,
+        "endChar": 17
+      },
+      "revId": "693f949ecb613aef005b947ab5d329027f13beab",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "6d376c2a_13c1bf08",
         "filename": "metadata/dependency_metadata.py",
         "patchSetId": 2
@@ -122,6 +145,75 @@
           ]
         }
       ],
+      "revId": "693f949ecb613aef005b947ab5d329027f13beab",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b616984e_1183ebad",
+        "filename": "metadata/dependency_metadata.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 333,
+      "author": {
+        "id": 1378025
+      },
+      "writtenOn": "2025-01-30T00:02:39Z",
+      "side": 1,
+      "message": "If it\u0027s a docstring, remove #",
+      "range": {
+        "startLine": 333,
+        "startChar": 8,
+        "endLine": 333,
+        "endChar": 10
+      },
+      "revId": "693f949ecb613aef005b947ab5d329027f13beab",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e4c353cf_49900567",
+        "filename": "metadata/dependency_metadata.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 337,
+      "author": {
+        "id": 1378025
+      },
+      "writtenOn": "2025-01-30T00:02:39Z",
+      "side": 1,
+      "message": "This drops ids that are only present in \"Mitigated\" field, is this the intention?\n\nIf you want to enforce consistency of the readme files, consider emitting ValidationError if Mitigated field contains more ids than what\u0027s included in mitigation description",
+      "range": {
+        "startLine": 335,
+        "startChar": 8,
+        "endLine": 337,
+        "endChar": 43
+      },
+      "revId": "693f949ecb613aef005b947ab5d329027f13beab",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "10204137_c40e94c1",
+        "filename": "metadata/parse.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1378025
+      },
+      "writtenOn": "2025-01-30T00:02:39Z",
+      "side": 1,
+      "message": "ALL_FIELD_NAMES is already a list afaik.\n\nAnd, please break the line so they respect 80 char limit, You might need to put additional brackets so things fit / indents nicely\n\nhttps://chromium.googlesource.com/chromium/src/+/main/styleguide/python/python.md",
+      "range": {
+        "startLine": 38,
+        "startChar": 30,
+        "endLine": 38,
+        "endChar": 34
+      },
       "revId": "693f949ecb613aef005b947ab5d329027f13beab",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },

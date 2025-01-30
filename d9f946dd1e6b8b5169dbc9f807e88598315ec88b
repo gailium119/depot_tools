@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "323d19e4_e676f15a",
+        "filename": "presubmit_canned_checks.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 2066,
+      "author": {
+        "id": 1147264
+      },
+      "writtenOn": "2025-01-30T20:05:57Z",
+      "side": 1,
+      "message": "https://docs.python.org/3/library/configparser.html#configparser.ConfigParser.read shows that it takes a list of filenames, but `gitmodules_file` seems to be a string.",
+      "range": {
+        "startLine": 2066,
+        "startChar": 11,
+        "endLine": 2066,
+        "endChar": 15
+      },
+      "revId": "d9f946dd1e6b8b5169dbc9f807e88598315ec88b",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0dd9a0d5_b040b9f2",
+        "filename": "presubmit_canned_checks.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 2073,
+      "author": {
+        "id": 1147264
+      },
+      "writtenOn": "2025-01-30T20:05:57Z",
+      "side": 1,
+      "message": "nit; config.items() may make the conditions more readable.\n\n```\nfor name, section in config.items():\n   if not name.startswith(\u0027submodule \u0027):\n       continue\n   if \u0027path\u0027 not in section:\n       continue\n   git_module_paths.add(secion[\u0027path\u0027])\n```",
+      "range": {
+        "startLine": 2068,
+        "startChar": 4,
+        "endLine": 2073,
+        "endChar": 52
+      },
+      "revId": "d9f946dd1e6b8b5169dbc9f807e88598315ec88b",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

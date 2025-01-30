@@ -268,6 +268,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "e7728128_260995af",
+        "filename": "metadata/parse.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1553262
+      },
+      "writtenOn": "2025-01-30T01:43:27Z",
+      "side": 1,
+      "message": "True. `s/black/pep8`. The yapf file for the whole of depot_tools uses PEP8 now. It looks like vapier has come along and changed the formatting everywhere in depot_tools, not just this dir, which was originally different.\nhttps://chromium-review.googlesource.com/c/chromium/tools/depot_tools/+/4836379\n\nLooks like Jordan will have to use their own eyes to break lines instead of using the easy opinionated thing then. RIP",
+      "parentUuid": "73ae8c1f_ab63d61d",
+      "range": {
+        "startLine": 38,
+        "startChar": 30,
+        "endLine": 38,
+        "endChar": 34
+      },
+      "revId": "693f949ecb613aef005b947ab5d329027f13beab",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "11819a9b_8e4051d4",
         "filename": "metadata/tests/data/README.chromium.test.mitigated",
         "patchSetId": 2

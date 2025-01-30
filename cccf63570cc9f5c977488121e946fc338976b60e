@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7fad3e83_2414e0ea",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 5
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1366072
+      },
+      "writtenOn": "2025-01-30T00:32:06Z",
+      "side": 1,
+      "message": "Pleaes add `Bug: 393209062`.",
+      "revId": "cccf63570cc9f5c977488121e946fc338976b60e",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

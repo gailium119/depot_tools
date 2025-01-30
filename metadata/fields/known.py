@@ -23,6 +23,7 @@ import metadata.fields.custom.url
 import metadata.fields.custom.version
 import metadata.fields.custom.revision
 import metadata.fields.field_types as field_types
+import metadata.fields.custom.mitigated
 
 # Freeform text fields.
 NAME = field_types.SingleLineTextField("Name")
@@ -46,6 +47,7 @@ VERSION = metadata.fields.custom.version.VersionField()
 REVISION = metadata.fields.custom.revision.RevisionField()
 LOCAL_MODIFICATIONS = metadata.fields.custom.local_modifications.LocalModificationsField(
 )
+MITIGATED = metadata.fields.custom.mitigated.MitigatedField()
 
 ALL_FIELDS = (
     NAME,
@@ -61,6 +63,7 @@ ALL_FIELDS = (
     SHIPPED_IN_CHROMIUM,
     LICENSE_ANDROID_COMPATIBLE,
     CPE_PREFIX,
+    MITIGATED,
     DESCRIPTION,
     LOCAL_MODIFICATIONS,
 )

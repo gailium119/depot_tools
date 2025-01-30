@@ -224,6 +224,5 @@ lowlist.py). Licenses not allowlisted: 'Custom license'."""),
         self.assertEqual(dm.get_field_line_numbers(metadata.fields.known.NAME),
                          [1])
 
-
 if __name__ == "__main__":
     unittest.main()

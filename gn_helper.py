@@ -34,7 +34,18 @@ def _gn_lines(output_dir, path):
                     import_path = os.path.normpath(
                         os.path.join(_find_root(output_dir),
                                      raw_import_path[2:]))
+                elif raw_import_path.startswith('/'):
+                    if sys.platform.startswith('win32'):
+                        import_path = raw_import_path[1:]
+                    else:
+                        import_path = raw_import_path
+                    if not os.path.isabs(import_path):
+                        raise Exception('Wrong absolute path for import %s' %
+                                        raw_import_path)
                 else:
+                    if os.path.isabs(raw_import_path):
+                        raise Execption('Wrong relative path for import %s' %
+                                        raw_import_path)
                     import_path = os.path.normpath(
                         os.path.join(os.path.dirname(path), raw_import_path))
                 yield from _gn_lines(output_dir, import_path)

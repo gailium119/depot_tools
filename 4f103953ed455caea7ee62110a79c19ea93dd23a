@@ -1,0 +1,177 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "da4c664d_0a95a56b",
+        "filename": "metadata/fields/custom/mitigated.py",
+        "patchSetId": 21
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 1378025
+      },
+      "writtenOn": "2025-01-30T06:10:28Z",
+      "side": 1,
+      "message": "nit: vuln_ids ,\n\n// ditto",
+      "range": {
+        "startLine": 54,
+        "startChar": 16,
+        "endLine": 54,
+        "endChar": 21
+      },
+      "revId": "4f103953ed455caea7ee62110a79c19ea93dd23a",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9fb17196_9f5b363f",
+        "filename": "metadata/fields/custom/mitigated.py",
+        "patchSetId": 21
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 1378025
+      },
+      "writtenOn": "2025-01-30T06:10:28Z",
+      "side": 1,
+      "message": "Non blocking: Should this be ValidationError?",
+      "range": {
+        "startLine": 70,
+        "startChar": 22,
+        "endLine": 70,
+        "endChar": 39
+      },
+      "revId": "4f103953ed455caea7ee62110a79c19ea93dd23a",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a50a439c_bb94865c",
+        "filename": "metadata/fields/custom/mitigated.py",
+        "patchSetId": 21
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 1378025
+      },
+      "writtenOn": "2025-01-30T06:10:28Z",
+      "side": 1,
+      "message": "I think we don\u0027t use newlines elsewhere.\n\nThe \"additional\" text sometimes indented / reprocessed, i\u0027m not sure if newline will cause problems.\n\nI think it\u0027s better to just `\u0027, \u0027.join(_VULN_PREFIXES)` here",
+      "range": {
+        "startLine": 74,
+        "startChar": 61,
+        "endLine": 74,
+        "endChar": 63
+      },
+      "fixSuggestions": [
+        {
+          "fixId": "8ecaa601_40512ba6",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "metadata/fields/custom/mitigated.py",
+              "range": {
+                "startLine": 74,
+                "startChar": 0,
+                "endLine": 76,
+                "endChar": 0
+              },
+              "replacement": "                    \"The following identifiers are supported: \" +\n                    \", \".join(_VULN_PREFIXES),\n"
+            }
+          ]
+        }
+      ],
+      "revId": "4f103953ed455caea7ee62110a79c19ea93dd23a",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fd803dda_cac5612f",
+        "filename": "metadata/fields/custom/mitigated.py",
+        "patchSetId": 21
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 1378025
+      },
+      "writtenOn": "2025-01-30T06:10:28Z",
+      "side": 1,
+      "message": "vuln_ids",
+      "range": {
+        "startLine": 84,
+        "startChar": 8,
+        "endLine": 84,
+        "endChar": 12
+      },
+      "revId": "4f103953ed455caea7ee62110a79c19ea93dd23a",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8930f8eb_8ccac1d7",
+        "filename": "metadata/fields/known.py",
+        "patchSetId": 21
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 1378025
+      },
+      "writtenOn": "2025-01-30T06:10:28Z",
+      "side": 1,
+      "message": "move this above field_types import",
+      "range": {
+        "startLine": 26,
+        "startChar": 0,
+        "endLine": 26,
+        "endChar": 39
+      },
+      "revId": "4f103953ed455caea7ee62110a79c19ea93dd23a",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "92c04f1f_5295a135",
+        "filename": "metadata/tests/fields_test.py",
+        "patchSetId": 21
+      },
+      "lineNbr": 243,
+      "author": {
+        "id": 1378025
+      },
+      "writtenOn": "2025-01-30T06:10:28Z",
+      "side": 1,
+      "message": "why not `_run_field_validation` (like other tests are doing)?\n\ntest_parse_mitigated and test_invalid_mitigated and test_vulnerability_ids should probably be merged into one",
+      "range": {
+        "startLine": 242,
+        "startChar": 0,
+        "endLine": 243,
+        "endChar": 60
+      },
+      "revId": "4f103953ed455caea7ee62110a79c19ea93dd23a",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5dd3304f_bd4b1048",
+        "filename": "metadata/tests/fields_test.py",
+        "patchSetId": 21
+      },
+      "lineNbr": 247,
+      "author": {
+        "id": 1378025
+      },
+      "writtenOn": "2025-01-30T06:10:28Z",
+      "side": 1,
+      "message": "put a period at the end",
+      "revId": "4f103953ed455caea7ee62110a79c19ea93dd23a",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

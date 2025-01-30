@@ -48,6 +48,30 @@
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "7f4be951_c4d92d98",
+        "filename": "presubmit_canned_checks.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 2066,
+      "author": {
+        "id": 1147264
+      },
+      "writtenOn": "2025-01-30T21:43:15Z",
+      "side": 1,
+      "message": "oh missed the statement. 😊 let\u0027s keep it as it is then;",
+      "parentUuid": "bd610654_d55a1b73",
+      "range": {
+        "startLine": 2066,
+        "startChar": 11,
+        "endLine": 2066,
+        "endChar": 15
+      },
+      "revId": "d9f946dd1e6b8b5169dbc9f807e88598315ec88b",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "0dd9a0d5_b040b9f2",

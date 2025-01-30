@@ -1,0 +1,45 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6f6fae2e_d82bbf82",
+        "filename": "gn_helper.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 1161379
+      },
+      "writtenOn": "2025-01-30T04:48:04Z",
+      "side": 1,
+      "message": "absolute?",
+      "range": {
+        "startLine": 47,
+        "startChar": 47,
+        "endLine": 47,
+        "endChar": 55
+      },
+      "fixSuggestions": [
+        {
+          "fixId": "b861f81e_067fa545",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "gn_helper.py",
+              "range": {
+                "startLine": 47,
+                "startChar": 0,
+                "endLine": 48,
+                "endChar": 0
+              },
+              "replacement": "                        raise Execption(\u0027Wrong absolute path for import %s\u0027 %\n"
+            }
+          ]
+        }
+      ],
+      "revId": "8aaf477a7e6f48913cbb1869e84730369ecd6a19",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

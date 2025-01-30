@@ -20,11 +20,12 @@ _VULN_PREFIXES = [
 ]
 
 _PREFIX_PATTERN = "|".join(_VULN_PREFIXES)
-_VULN_ID_PATTERN = re.compile(
-    rf"^({_PREFIX_PATTERN})-[a-zA-Z0-9]{{4}}-[a-zA-Z0-9:-]+$")
+VULN_ID_PATTERN = re.compile(
+    rf"({_PREFIX_PATTERN})-[a-zA-Z0-9]{{4}}-[a-zA-Z0-9:-]+")
+VULN_ID_PATTERN_WITH_ANCHORS = re.compile(f"^{VULN_ID_PATTERN.pattern}$")
 
 
-def validate_vuln_ids(cves: str) -> Tuple[List[str], List[str]]:
+def validate_vuln_ids(vuln_ids: str) -> Tuple[List[str], List[str]]:
     """
     Validates a list of vulnerability identifiers and returns valid and invalid IDs.
 
@@ -46,7 +47,7 @@ def validate_vuln_ids(cves: str) -> Tuple[List[str], List[str]]:
 
     for cve in vuln_ids.split(","):
         cve_stripped = cve.strip()
-        if _VULN_ID_PATTERN.match(cve_stripped):
+        if VULN_ID_PATTERN_WITH_ANCHORS.match(cve_stripped):
             valid_vuln_ids.append(cve_stripped)
         else:
             invalid_vuln_ids.append(cve)

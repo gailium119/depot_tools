@@ -19,6 +19,7 @@ sys.path.insert(0, _ROOT_DIR)
 import metadata.fields.field_types as field_types
 import metadata.fields.custom.license as license_util
 import metadata.fields.custom.version as version_util
+import metadata.fields.custom.mitigated as mitigated_util
 import metadata.fields.known as known_fields
 import metadata.fields.util as util
 import metadata.validation_result as vr
@@ -285,6 +286,33 @@ class DependencyMetadata:
                         self.get_field_line_numbers(known_fields.LICENSE))
                     results.append(license_result)
 
+        # Compare values reported in the 'Mitigated:' field vs the supplementry
+        # fields e.g. 'CVE-2024-12345: description'.
+        mitigated_values = self._return_as_property(known_fields.MITIGATED)
+        if mitigated_values is not None:
+            mitigated_ids = set(mitigated_values)
+            # Reported as their own field e.g. 'CVE-2024-12345: description'.
+            mitigated_entries = set(self.mitigations_from_entries.keys())
+
+            missing_descriptions = mitigated_ids - mitigated_entries
+            if missing_descriptions:
+                results.append(
+                    vr.ValidationWarning(
+                        reason="Missing descriptions for vulnerability IDs",
+                        additional=[
+                            f"Add descriptions for: {util.quoted(missing_descriptions)}"
+                        ]))
+
+            extra_descriptions = mitigated_entries - mitigated_ids
+            if extra_descriptions:
+                results.append(
+                    vr.ValidationWarning(
+                        reason=
+                        "Found descriptions for unlisted vulnerability IDs",
+                        additional=[
+                            f"List these IDs in the 'Mitigated:' field: {util.quoted(extra_descriptions)}"
+                        ]))
+
         return results
 
     def _return_as_property(self, field: field_types.MetadataField) -> Any:
@@ -306,8 +334,26 @@ class DependencyMetadata:
         return self._return_as_property(known_fields.NAME)
 
     @property
-    def mitigated(self) -> Optional[List[str]]:
-        return self._return_as_property(known_fields.MITIGATED)
+    def mitigations_from_entries(self) -> Optional[Dict[str, str]]:
+        result = {}
+        for key, value in self._entries:
+            if mitigated_util.VULN_ID_PATTERN_WITH_ANCHORS.match(key):
+                result[key] = value.strip()
+        return result
+
+    @property
+    def mitigations(self) -> Optional[Dict[str, str]]:
+        """Returns mapping of vulnerability IDs to their descriptions."""
+        result = self.mitigations_from_entries
+        mitigated_values = self._return_as_property(known_fields.MITIGATED)
+        # Update the dictionary with empty descriptions for any IDs that are
+        # listed in the 'Mitigated:' field but don't have a supplemental
+        # description.
+        if mitigated_values is not None:
+            for id in mitigated_values:
+                if id not in result:
+                    result[id] = ""
+        return result
 
     @property
     def short_name(self) -> Optional[str]:

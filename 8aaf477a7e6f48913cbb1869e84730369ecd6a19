@@ -40,6 +40,30 @@
       ],
       "revId": "8aaf477a7e6f48913cbb1869e84730369ecd6a19",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7b8f3e30_b8f451f5",
+        "filename": "gn_helper.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 1001939
+      },
+      "writtenOn": "2025-01-30T05:06:58Z",
+      "side": 1,
+      "message": "relative path in gn semantics?",
+      "parentUuid": "6f6fae2e_d82bbf82",
+      "range": {
+        "startLine": 47,
+        "startChar": 47,
+        "endLine": 47,
+        "endChar": 55
+      },
+      "revId": "8aaf477a7e6f48913cbb1869e84730369ecd6a19",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

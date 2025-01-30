@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3d62e607_bcda878b",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1366072
+      },
+      "writtenOn": "2025-01-30T01:27:29Z",
+      "side": 1,
+      "message": "Please add https://crrev.com/c/6217339 for the chromium/src side change.",
+      "revId": "b1bb48dad86d3780159703011d7ad1a8dc1b2d7e",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

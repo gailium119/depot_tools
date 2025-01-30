@@ -20,8 +20,9 @@ _VULN_PREFIXES = [
 ]
 
 _PREFIX_PATTERN = "|".join(_VULN_PREFIXES)
-_VULN_ID_PATTERN = re.compile(
-    rf"^({_PREFIX_PATTERN})-[a-zA-Z0-9]{{4}}-[a-zA-Z0-9:-]+$")
+VULN_ID_PATTERN = re.compile(
+    rf"({_PREFIX_PATTERN})-[a-zA-Z0-9]{{4}}-[a-zA-Z0-9:-]+")
+VULN_ID_PATTERN_WITH_ANCHORS = re.compile(f"^{VULN_ID_PATTERN.pattern}$")
 
 
 def validate_vuln_ids(cves: str) -> Tuple[List[str], List[str]]:
@@ -46,7 +47,7 @@ def validate_vuln_ids(cves: str) -> Tuple[List[str], List[str]]:
 
     for cve in cves.split(","):
         cve_stripped = cve.strip()
-        if _VULN_ID_PATTERN.match(cve_stripped):
+        if VULN_ID_PATTERN_WITH_ANCHORS.match(cve_stripped):
             valid_cves.append(cve_stripped)
         else:
             invalid_cves.append(cve)
@@ -72,9 +73,8 @@ class MitigatedField(field_types.SingleLineTextField):
                 additional=[
                     f"Invalid Vulnerability IDs: {util.quoted(invalid_cves)}",
                     "The following identifiers are supported:\n * " +
-                    "\n * ".join(_VULN_PREFIXES),
-                ],
-            )
+                    "\n * ".join(_VULN_PREFIXES)
+                ])
 
         return None
 

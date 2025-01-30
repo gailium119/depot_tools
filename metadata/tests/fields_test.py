@@ -245,9 +245,16 @@ class FieldValidationTest(unittest.TestCase):
         self.assertEqual(len(all_metadata), 1)
 
         # Check that the CVEs are properly parsed
-        self.assertListEqual(
-            all_metadata[0].mitigated,
-            ["CVE-2011-4061", "CVE-2024-7255", "CVE-2024-7256"],
+        self.assertDictEqual(
+            all_metadata[0].mitigations,
+            {
+                'CVE-2011-4061':
+                'This copy of DependencyA only includes rainbows\nthat spill beautifully over multiple lines and are handled\n ~~ Perfectly ~~\nEven: this line with colons that mentions CVE-2000-2000: an unrelated cve.',
+                'CVE-2024-7255':
+                'This copy of DependencyA only includes unicorns',
+                'CVE-2024-7256':
+                "This also doesn't apply because of good reasons"
+            },
         )
 
     def test_invalid_mitigated(self):

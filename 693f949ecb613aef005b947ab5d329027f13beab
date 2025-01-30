@@ -220,6 +220,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "5d267d6e_eb04cc92",
+        "filename": "metadata/parse.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1553262
+      },
+      "writtenOn": "2025-01-30T00:31:44Z",
+      "side": 1,
+      "message": "This whole module should be formatted with black. @rop@google.com I remember some issue with CiderG and black, does that work? We should add a formatting check to the PRESUBMIT for this directory if it doesn\u0027t already exist. We chose black so we could never really have to think about formatting again.",
+      "parentUuid": "10204137_c40e94c1",
+      "range": {
+        "startLine": 38,
+        "startChar": 30,
+        "endLine": 38,
+        "endChar": 34
+      },
+      "revId": "693f949ecb613aef005b947ab5d329027f13beab",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "11819a9b_8e4051d4",
         "filename": "metadata/tests/data/README.chromium.test.mitigated",
         "patchSetId": 2

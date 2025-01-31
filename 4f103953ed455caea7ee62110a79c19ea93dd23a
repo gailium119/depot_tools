@@ -34,6 +34,24 @@
       "parentUuid": "10881f3c_73b878e3",
       "revId": "4f103953ed455caea7ee62110a79c19ea93dd23a",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2a37d4bd_9e33484a",
+        "filename": "metadata/fields/custom/mitigated.py",
+        "patchSetId": 18
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1378025
+      },
+      "writtenOn": "2025-01-31T00:12:14Z",
+      "side": 0,
+      "message": ":) maybe have a look at other PATTERN_ constants in other files",
+      "parentUuid": "41b906cb_35062e8d",
+      "revId": "4f103953ed455caea7ee62110a79c19ea93dd23a",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

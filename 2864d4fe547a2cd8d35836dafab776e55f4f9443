@@ -1,0 +1,96 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "06e7df25_011c6251",
+        "filename": "metadata/dependency_metadata.py",
+        "patchSetId": 25
+      },
+      "lineNbr": 318,
+      "author": {
+        "id": 1378025
+      },
+      "writtenOn": "2025-01-31T00:12:14Z",
+      "side": 1,
+      "message": "Drop the optional. this always return a dict",
+      "range": {
+        "startLine": 318,
+        "startChar": 43,
+        "endLine": 318,
+        "endChar": 51
+      },
+      "revId": "2864d4fe547a2cd8d35836dafab776e55f4f9443",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "69371712_060e4291",
+        "filename": "metadata/dependency_metadata.py",
+        "patchSetId": 25
+      },
+      "lineNbr": 344,
+      "author": {
+        "id": 1378025
+      },
+      "writtenOn": "2025-01-31T00:12:14Z",
+      "side": 1,
+      "message": "Drop the optional, this always return a dict",
+      "range": {
+        "startLine": 344,
+        "startChar": 29,
+        "endLine": 344,
+        "endChar": 37
+      },
+      "revId": "2864d4fe547a2cd8d35836dafab776e55f4f9443",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c5749242_a0d29d9d",
+        "filename": "metadata/dependency_metadata.py",
+        "patchSetId": 25
+      },
+      "lineNbr": 346,
+      "author": {
+        "id": 1378025
+      },
+      "writtenOn": "2025-01-31T00:12:14Z",
+      "side": 1,
+      "message": "this is a function right? You should call it\n\n// Also, please CQ+1 (and check it passes) before requesting a review.",
+      "range": {
+        "startLine": 346,
+        "startChar": 22,
+        "endLine": 346,
+        "endChar": 47
+      },
+      "revId": "2864d4fe547a2cd8d35836dafab776e55f4f9443",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "01852187_516329ff",
+        "filename": "metadata/dependency_metadata.py",
+        "patchSetId": 25
+      },
+      "lineNbr": 347,
+      "author": {
+        "id": 1378025
+      },
+      "writtenOn": "2025-01-31T00:12:14Z",
+      "side": 1,
+      "message": "you can `_return_as_property() or []` to avoid the if check below (I don\u0027t think there\u0027s distinction between None and [] in this case",
+      "range": {
+        "startLine": 347,
+        "startChar": 27,
+        "endLine": 347,
+        "endChar": 75
+      },
+      "revId": "2864d4fe547a2cd8d35836dafab776e55f4f9443",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

@@ -52,6 +52,24 @@
       "parentUuid": "41b906cb_35062e8d",
       "revId": "4f103953ed455caea7ee62110a79c19ea93dd23a",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "833a5923_d1c1da5e",
+        "filename": "metadata/fields/custom/mitigated.py",
+        "patchSetId": 18
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 3388142
+      },
+      "writtenOn": "2025-01-31T06:37:44Z",
+      "side": 0,
+      "message": "We have:\n```\n_PATTERN_CPE_URN\n_PATTERN_CPE_FORMATTED_STRING\nBAD_DELIMITERS_REGEX\n_PATTERN_PATH_BACKWARD\n_PATTERNS_NOT_MODIFIED\nHEX_PATTERN\nDEPS_PATTERN\n_PATTERN_URL_CANONICAL_REPO\n_PATTERN_URL_DELIMITER\n_PATTERN_YES_OR_NO\n_PATTERN_STARTS_WITH_YES_OR_NO\n```\nYou win 8 to 3, though there is an argument to be made about exported constants not conforming to this pattern, I\u0027ll update it anyway.",
+      "parentUuid": "2a37d4bd_9e33484a",
+      "revId": "4f103953ed455caea7ee62110a79c19ea93dd23a",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

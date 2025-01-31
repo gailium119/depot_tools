@@ -24,6 +24,30 @@
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "ca514999_c82af20a",
+        "filename": "metadata/dependency_metadata.py",
+        "patchSetId": 25
+      },
+      "lineNbr": 318,
+      "author": {
+        "id": 3388142
+      },
+      "writtenOn": "2025-01-31T06:37:44Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "06e7df25_011c6251",
+      "range": {
+        "startLine": 318,
+        "startChar": 43,
+        "endLine": 318,
+        "endChar": 51
+      },
+      "revId": "2864d4fe547a2cd8d35836dafab776e55f4f9443",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "69371712_060e4291",
@@ -37,6 +61,30 @@
       "writtenOn": "2025-01-31T00:12:14Z",
       "side": 1,
       "message": "Drop the optional, this always return a dict",
+      "range": {
+        "startLine": 344,
+        "startChar": 29,
+        "endLine": 344,
+        "endChar": 37
+      },
+      "revId": "2864d4fe547a2cd8d35836dafab776e55f4f9443",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4dd26e37_e861363f",
+        "filename": "metadata/dependency_metadata.py",
+        "patchSetId": 25
+      },
+      "lineNbr": 344,
+      "author": {
+        "id": 3388142
+      },
+      "writtenOn": "2025-01-31T06:37:44Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "69371712_060e4291",
       "range": {
         "startLine": 344,
         "startChar": 29,
@@ -70,6 +118,30 @@
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "8c285954_f90fd295",
+        "filename": "metadata/dependency_metadata.py",
+        "patchSetId": 25
+      },
+      "lineNbr": 346,
+      "author": {
+        "id": 3388142
+      },
+      "writtenOn": "2025-01-31T06:37:44Z",
+      "side": 1,
+      "message": "My bad! This was from when it was a method. I\u0027m still stuck in my g3 habbits sometimes (won\u0027t send without presubmits passing), sorry!",
+      "parentUuid": "c5749242_a0d29d9d",
+      "range": {
+        "startLine": 346,
+        "startChar": 22,
+        "endLine": 346,
+        "endChar": 47
+      },
+      "revId": "2864d4fe547a2cd8d35836dafab776e55f4f9443",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "01852187_516329ff",
@@ -83,6 +155,30 @@
       "writtenOn": "2025-01-31T00:12:14Z",
       "side": 1,
       "message": "you can `_return_as_property() or []` to avoid the if check below (I don\u0027t think there\u0027s distinction between None and [] in this case",
+      "range": {
+        "startLine": 347,
+        "startChar": 27,
+        "endLine": 347,
+        "endChar": 75
+      },
+      "revId": "2864d4fe547a2cd8d35836dafab776e55f4f9443",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a15cfcdd_ea8e114c",
+        "filename": "metadata/dependency_metadata.py",
+        "patchSetId": 25
+      },
+      "lineNbr": 347,
+      "author": {
+        "id": 3388142
+      },
+      "writtenOn": "2025-01-31T06:37:44Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "01852187_516329ff",
       "range": {
         "startLine": 347,
         "startChar": 27,

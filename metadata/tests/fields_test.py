@@ -235,6 +235,28 @@ class FieldValidationTest(unittest.TestCase):
             self.assertFalse(
                 known_fields.LOCAL_MODIFICATIONS.should_terminate_field(value))
 
+    def test_parse_mitigated(self):
+        """Check parsing works for mitigated CVE entries."""
+        filepath = os.path.join(_THIS_DIR, "data",
+                                "README.chromium.test.mitigated")
+        content = gclient_utils.FileRead(filepath)
+        all_metadata = metadata.parse.parse_content(content)
+
+        self.assertEqual(len(all_metadata), 1)
+
+        # Check that the CVEs are properly parsed.
+        self.assertDictEqual(
+            all_metadata[0].mitigations,
+            {
+                "CVE-2011-4061":
+                "This copy of DependencyA only includes rainbows\nthat spill beautifully over multiple lines and are handled\n ~~ Perfectly ~~\nEven: this line with colons that mentions CVE-2000-2000: an unrelated cve.",
+                "CVE-2024-7255":
+                "This copy of DependencyA only includes unicorns",
+                "CVE-2024-7256":
+                "This also doesn't apply because of good reasons"
+            },
+        )
+
     def test_vulnerability_ids(self):
         valid_ids = [
             "CVE-2024-12345",

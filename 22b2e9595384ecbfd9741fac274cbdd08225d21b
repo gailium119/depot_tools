@@ -16,6 +16,46 @@
       "message": "Moving myself to CC as Jiewei is primary reviewer.",
       "revId": "22b2e9595384ecbfd9741fac274cbdd08225d21b",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2da40d59_ad688907",
+        "filename": "metadata/tests/data/README.chromium.test.mitigated",
+        "patchSetId": 26
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1378025
+      },
+      "writtenOn": "2025-02-02T23:46:27Z",
+      "side": 1,
+      "message": "Remove this file, it\u0027s unused",
+      "revId": "22b2e9595384ecbfd9741fac274cbdd08225d21b",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0262834f_b54ff6f9",
+        "filename": "metadata/tests/fields_test.py",
+        "patchSetId": 26
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1378025
+      },
+      "writtenOn": "2025-02-02T23:46:27Z",
+      "side": 1,
+      "message": "Remove these, they\u0027re unused.",
+      "range": {
+        "startLine": 18,
+        "startChar": 0,
+        "endLine": 19,
+        "endChar": 21
+      },
+      "revId": "22b2e9595384ecbfd9741fac274cbdd08225d21b",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

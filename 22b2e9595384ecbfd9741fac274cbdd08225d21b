@@ -37,6 +37,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "b6ce3527_efc116af",
+        "filename": "metadata/tests/data/README.chromium.test.mitigated",
+        "patchSetId": 26
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1553262
+      },
+      "writtenOn": "2025-02-02T23:54:58Z",
+      "side": 1,
+      "message": "We do want a test which reads directly from a file for these mitigated fields. Did that test get removed or become dynamically specified? I recomment we do keep this file and have a test use it. That\u0027s the existing pattern for other fields and is a good test.",
+      "parentUuid": "2da40d59_ad688907",
+      "revId": "22b2e9595384ecbfd9741fac274cbdd08225d21b",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "0262834f_b54ff6f9",
         "filename": "metadata/tests/fields_test.py",
         "patchSetId": 26

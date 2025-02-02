@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "42c23a38_2660da1c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 26
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1553262
+      },
+      "writtenOn": "2025-02-02T21:58:12Z",
+      "side": 1,
+      "message": "Moving myself to CC as Jiewei is primary reviewer.",
+      "revId": "22b2e9595384ecbfd9741fac274cbdd08225d21b",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

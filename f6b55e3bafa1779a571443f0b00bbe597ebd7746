@@ -16,6 +16,29 @@
       "message": "Will leave review to Jiewei because I am pretty swamped today, but it looks like you need to rebase this change, all the downstream roll tests failed.",
       "revId": "f6b55e3bafa1779a571443f0b00bbe597ebd7746",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e068435b_c556648d",
+        "filename": "metadata/dependency_metadata.py",
+        "patchSetId": 31
+      },
+      "lineNbr": 292,
+      "author": {
+        "id": 1378025
+      },
+      "writtenOn": "2025-02-02T23:52:31Z",
+      "side": 1,
+      "message": "If `Mitigated` field isn\u0027t specified at all, this check won\u0027t trigger.\n\nIs this the intention?\n\n\n```\nName: Test\nCVE-2025-0001: because ...\nCVE-2025-0002: because ... \n```\n\n^ The above won\u0027t trigger warnings.",
+      "range": {
+        "startLine": 292,
+        "startChar": 8,
+        "endLine": 292,
+        "endChar": 40
+      },
+      "revId": "f6b55e3bafa1779a571443f0b00bbe597ebd7746",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

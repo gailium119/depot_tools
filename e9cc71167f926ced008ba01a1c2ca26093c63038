@@ -47,6 +47,30 @@
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "a2c29a52_d64b0802",
+        "filename": "metadata/dependency_metadata.py",
+        "patchSetId": 36
+      },
+      "lineNbr": 312,
+      "author": {
+        "id": 3388142
+      },
+      "writtenOn": "2025-02-03T06:48:20Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "b0b05a40_0fcb9bd4",
+      "range": {
+        "startLine": 311,
+        "startChar": 19,
+        "endLine": 312,
+        "endChar": 72
+      },
+      "revId": "e9cc71167f926ced008ba01a1c2ca26093c63038",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "f9ddc7ad_0eb2661f",
@@ -70,6 +94,30 @@
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "5616a913_9c4b6ac6",
+        "filename": "metadata/dependency_metadata.py",
+        "patchSetId": 36
+      },
+      "lineNbr": 351,
+      "author": {
+        "id": 3388142
+      },
+      "writtenOn": "2025-02-03T06:48:20Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "f9ddc7ad_0eb2661f",
+      "range": {
+        "startLine": 349,
+        "startChar": 8,
+        "endLine": 351,
+        "endChar": 22
+      },
+      "revId": "e9cc71167f926ced008ba01a1c2ca26093c63038",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "25dec22e_8d09cbaf",
@@ -83,6 +131,30 @@
       "writtenOn": "2025-02-03T06:30:04Z",
       "side": 1,
       "message": "Can you add an assertion that this CVE ID indeed matches to Missing description warning?\n\n// Similarly for the Extra description one\n\nYou probably need to find the ValidationWarning with missing description text, then look for the CVE ID (to avoid dependence on list ordering)",
+      "range": {
+        "startLine": 432,
+        "startChar": 13,
+        "endLine": 432,
+        "endChar": 50
+      },
+      "revId": "e9cc71167f926ced008ba01a1c2ca26093c63038",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "90bb01e8_67628128",
+        "filename": "metadata/tests/dependency_metadata_test.py",
+        "patchSetId": 36
+      },
+      "lineNbr": 432,
+      "author": {
+        "id": 3388142
+      },
+      "writtenOn": "2025-02-03T06:48:20Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "25dec22e_8d09cbaf",
       "range": {
         "startLine": 432,
         "startChar": 13,

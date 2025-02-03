@@ -39,6 +39,30 @@
       },
       "revId": "f6b55e3bafa1779a571443f0b00bbe597ebd7746",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a8c6c2fd_5b25bcfc",
+        "filename": "metadata/dependency_metadata.py",
+        "patchSetId": 31
+      },
+      "lineNbr": 292,
+      "author": {
+        "id": 3388142
+      },
+      "writtenOn": "2025-02-03T00:11:22Z",
+      "side": 1,
+      "message": "In this case they will still get bugs/vulns filed for these cves from TPMonster. \nThis is still undesirable so I modifed the code to handle this case.",
+      "parentUuid": "e068435b_c556648d",
+      "range": {
+        "startLine": 292,
+        "startChar": 8,
+        "endLine": 292,
+        "endChar": 40
+      },
+      "revId": "f6b55e3bafa1779a571443f0b00bbe597ebd7746",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

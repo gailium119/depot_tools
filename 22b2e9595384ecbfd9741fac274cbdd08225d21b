@@ -55,6 +55,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "8eb6b88e_6e2886b9",
+        "filename": "metadata/tests/data/README.chromium.test.mitigated",
+        "patchSetId": 26
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 3388142
+      },
+      "writtenOn": "2025-02-03T00:01:55Z",
+      "side": 1,
+      "message": "It gets added back immediatly in the next CL with a test in parse_test.py. I could add the file back in this CL, create a modified version of the test in parse_test.py and put it in a different test file, and then move it back to parse_test.py for the next CL (or keep both).\n\nMaybe it would be easier to just put both changes in 1 CL?",
+      "parentUuid": "b6ce3527_efc116af",
+      "revId": "22b2e9595384ecbfd9741fac274cbdd08225d21b",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "0262834f_b54ff6f9",
         "filename": "metadata/tests/fields_test.py",
         "patchSetId": 26
@@ -66,6 +84,30 @@
       "writtenOn": "2025-02-02T23:46:27Z",
       "side": 1,
       "message": "Remove these, they\u0027re unused.",
+      "range": {
+        "startLine": 18,
+        "startChar": 0,
+        "endLine": 19,
+        "endChar": 21
+      },
+      "revId": "22b2e9595384ecbfd9741fac274cbdd08225d21b",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "abb6f5c1_5c947d65",
+        "filename": "metadata/tests/fields_test.py",
+        "patchSetId": 26
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 3388142
+      },
+      "writtenOn": "2025-02-03T00:01:55Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0262834f_b54ff6f9",
       "range": {
         "startLine": 18,
         "startChar": 0,

@@ -1,0 +1,96 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f09417da_b015434f",
+        "filename": "metadata/dependency_metadata.py",
+        "patchSetId": 36
+      },
+      "lineNbr": 294,
+      "author": {
+        "id": 1378025
+      },
+      "writtenOn": "2025-02-03T06:30:04Z",
+      "side": 1,
+      "message": "nit: you can mitigated_ids \u003d set(mitigated_values or []) to simplify this part.\n\nIt\u0027s not uncommon btw: https://source.chromium.org/search?q\u003d-f:weblayer%2F%20-f:aosp%2F%20-f:%5C.*.java%20%20%20%20%22or%20%5B%5D%22%20f:%5C.py\u0026ss\u003dchromium",
+      "range": {
+        "startLine": 292,
+        "startChar": 0,
+        "endLine": 294,
+        "endChar": 49
+      },
+      "revId": "e9cc71167f926ced008ba01a1c2ca26093c63038",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b0b05a40_0fcb9bd4",
+        "filename": "metadata/dependency_metadata.py",
+        "patchSetId": 36
+      },
+      "lineNbr": 312,
+      "author": {
+        "id": 1378025
+      },
+      "writtenOn": "2025-02-03T06:30:04Z",
+      "side": 1,
+      "message": "This indent / newline doesn\u0027t look right",
+      "range": {
+        "startLine": 311,
+        "startChar": 19,
+        "endLine": 312,
+        "endChar": 72
+      },
+      "revId": "e9cc71167f926ced008ba01a1c2ca26093c63038",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f9ddc7ad_0eb2661f",
+        "filename": "metadata/dependency_metadata.py",
+        "patchSetId": 36
+      },
+      "lineNbr": 351,
+      "author": {
+        "id": 1378025
+      },
+      "writtenOn": "2025-02-03T06:30:04Z",
+      "side": 1,
+      "message": "nit: \"Add entries listed in Mitigated field but without a supplement mitigation description line\"",
+      "range": {
+        "startLine": 349,
+        "startChar": 8,
+        "endLine": 351,
+        "endChar": 22
+      },
+      "revId": "e9cc71167f926ced008ba01a1c2ca26093c63038",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "25dec22e_8d09cbaf",
+        "filename": "metadata/tests/dependency_metadata_test.py",
+        "patchSetId": 36
+      },
+      "lineNbr": 432,
+      "author": {
+        "id": 1378025
+      },
+      "writtenOn": "2025-02-03T06:30:04Z",
+      "side": 1,
+      "message": "Can you add an assertion that this CVE ID indeed matches to Missing description warning?\n\n// Similarly for the Extra description one\n\nYou probably need to find the ValidationWarning with missing description text, then look for the CVE ID (to avoid dependence on list ordering)",
+      "range": {
+        "startLine": 432,
+        "startChar": 13,
+        "endLine": 432,
+        "endChar": 50
+      },
+      "revId": "e9cc71167f926ced008ba01a1c2ca26093c63038",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

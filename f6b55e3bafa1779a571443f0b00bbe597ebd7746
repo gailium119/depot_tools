@@ -63,6 +63,30 @@
       },
       "revId": "f6b55e3bafa1779a571443f0b00bbe597ebd7746",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8a4858ed_9ed9ee81",
+        "filename": "metadata/dependency_metadata.py",
+        "patchSetId": 31
+      },
+      "lineNbr": 292,
+      "author": {
+        "id": 1378025
+      },
+      "writtenOn": "2025-02-03T06:30:04Z",
+      "side": 1,
+      "message": "Can you add a test case for this?\n\ndependency_metadata_test.py looks like a suitable place.",
+      "parentUuid": "a8c6c2fd_5b25bcfc",
+      "range": {
+        "startLine": 292,
+        "startChar": 8,
+        "endLine": 292,
+        "endChar": 40
+      },
+      "revId": "f6b55e3bafa1779a571443f0b00bbe597ebd7746",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

@@ -751,6 +751,32 @@ class GitMutableStructuredTest(git_test_utils.GitRepoReadWriteTestBase,
             ('root_A', 'root_X'),
         ])
 
+    def testGetHashes(self):
+        hashes = self.repo.run(self.gc.get_hashes)
+        for branch, branch_hash in hashes.items():
+            self.assertEqual(self.repo.run(self.gc.hash_one, branch),
+                             branch_hash)
+
+    def testGetDownstreamBranches(self):
+        downstream_branches = self.repo.run(self.gc.get_downstream_branches)
+        self.assertEqual(
+            downstream_branches, {
+                'root_X': ['root_A', 'branch_Z'],
+                'root_A': ['branch_G'],
+                'branch_G': ['branch_K'],
+                'branch_K': ['branch_L'],
+            })
+
+    def testGetDivergedBranches(self):
+        self.repo.git('checkout', 'branch_K')
+        with self.repo.open('foobar1', 'w') as f:
+            f.write('hello')
+        self.repo.git('add', 'foobar1')
+        self.repo.git_commit('commit1')
+        diverged_branches = self.repo.run(self.gc.get_diverged_branches)
+        self.assertEqual(diverged_branches, ['branch_L'])
+
+
     def testIsGitTreeDirty(self):
         retval = []
         self.repo.capture_stdio(lambda: retval.append(

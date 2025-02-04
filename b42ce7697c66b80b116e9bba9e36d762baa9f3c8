@@ -206,6 +206,30 @@
       },
       "revId": "b42ce7697c66b80b116e9bba9e36d762baa9f3c8",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "af0e7529_68cba2a9",
+        "filename": "tests/git_squash_branch_test.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 1560543
+      },
+      "writtenOn": "2025-02-04T19:34:30Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "d1908c59_66f1270d",
+      "range": {
+        "startLine": 76,
+        "startChar": 0,
+        "endLine": 78,
+        "endChar": 60
+      },
+      "revId": "b42ce7697c66b80b116e9bba9e36d762baa9f3c8",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

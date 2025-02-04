@@ -24,6 +24,30 @@
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "531262f8_4abd77c5",
+        "filename": "metadata/dependency_metadata.py",
+        "patchSetId": 37
+      },
+      "lineNbr": 312,
+      "author": {
+        "id": 3388142
+      },
+      "writtenOn": "2025-02-04T00:15:03Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5c12f9ca_7125b0fe",
+      "range": {
+        "startLine": 311,
+        "startChar": 0,
+        "endLine": 312,
+        "endChar": 76
+      },
+      "revId": "626cb5da00a8d2ff53658590159bdcd73ced6fa0",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "cc24eece_bc271a38",
@@ -37,6 +61,30 @@
       "writtenOn": "2025-02-03T22:29:03Z",
       "side": 1,
       "message": "Are these used ? If not, remove them",
+      "range": {
+        "startLine": 457,
+        "startChar": 4,
+        "endLine": 492,
+        "endChar": 71
+      },
+      "revId": "626cb5da00a8d2ff53658590159bdcd73ced6fa0",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b195ed8f_a1d6a6ca",
+        "filename": "metadata/tests/dependency_metadata_test.py",
+        "patchSetId": 37
+      },
+      "lineNbr": 492,
+      "author": {
+        "id": 3388142
+      },
+      "writtenOn": "2025-02-04T00:15:03Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "cc24eece_bc271a38",
       "range": {
         "startLine": 457,
         "startChar": 4,

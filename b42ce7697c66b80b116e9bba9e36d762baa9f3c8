@@ -33,6 +33,119 @@
       "message": "sokcevic@chromium.org PTAL",
       "revId": "b42ce7697c66b80b116e9bba9e36d762baa9f3c8",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c95dc109_657ccfb4",
+        "filename": "git_common.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 667,
+      "author": {
+        "id": 1560543
+      },
+      "writtenOn": "2025-02-04T16:36:50Z",
+      "side": 1,
+      "message": "nit: duplicated below, remove it",
+      "fixSuggestions": [
+        {
+          "fixId": "07409907_30f766d4",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "git_common.py",
+              "range": {
+                "startLine": 667,
+                "startChar": 0,
+                "endLine": 668,
+                "endChar": 0
+              },
+              "replacement": ""
+            }
+          ]
+        }
+      ],
+      "revId": "b42ce7697c66b80b116e9bba9e36d762baa9f3c8",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2fddfeac_d0eb279c",
+        "filename": "git_squash_branch.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 86,
+      "author": {
+        "id": 1560543
+      },
+      "writtenOn": "2025-02-04T16:36:50Z",
+      "side": 1,
+      "message": "nit: collect all branches that diverged and print summary outside the for loop.",
+      "fixSuggestions": [
+        {
+          "fixId": "6804a950_ad4f5fcc",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "git_squash_branch.py",
+              "range": {
+                "startLine": 55,
+                "startChar": 0,
+                "endLine": 55,
+                "endChar": 0
+              },
+              "replacement": "\n"
+            },
+            {
+              "path": "git_squash_branch.py",
+              "range": {
+                "startLine": 81,
+                "startChar": 0,
+                "endLine": 81,
+                "endChar": 0
+              },
+              "replacement": "    diverged_branches_list \u003d []\n"
+            },
+            {
+              "path": "git_squash_branch.py",
+              "range": {
+                "startLine": 86,
+                "startChar": 0,
+                "endLine": 89,
+                "endChar": 0
+              },
+              "replacement": "            diverged_branches_list.append(branch)\n\n    if diverged_branches_list:\n        print(f\u0027Cannot use `git squash-branch` since the following children have \u0027\n              f\u0027diverged from their upstream and could cause conflicts: \u0027\n              f\u0027{diverged_branches_list}\u0027)\n        return 1\n"
+            }
+          ]
+        }
+      ],
+      "revId": "b42ce7697c66b80b116e9bba9e36d762baa9f3c8",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "06ab85b8_4e68e116",
+        "filename": "tests/git_squash_branch_test.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 1560543
+      },
+      "writtenOn": "2025-02-04T16:36:50Z",
+      "side": 1,
+      "message": "This can work, but you could also check for return value of main function.",
+      "range": {
+        "startLine": 76,
+        "startChar": 0,
+        "endLine": 78,
+        "endChar": 60
+      },
+      "revId": "b42ce7697c66b80b116e9bba9e36d762baa9f3c8",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

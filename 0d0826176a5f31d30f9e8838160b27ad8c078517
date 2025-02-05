@@ -36,6 +36,24 @@
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
     {
+      "unresolved": true,
+      "key": {
+        "uuid": "fa2a8690_71b6f504",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1560543
+      },
+      "writtenOn": "2025-02-05T17:05:56Z",
+      "side": 1,
+      "message": "In general, I\u0027d prefer if we could simplify the interface and be more opinionated (as you mentioned, automatic squash in rebase-update). However, that will require to introduce breaking changes too, and will definitely take longer to ship it. In this case, it would only make sense if we overhaul the entire branch management, and I don\u0027t think we can justify such investment. So, I think this patch is an okay compromise to achieve what we need, even though it adds additional complexity wrt interface.\n\nGoing back to my original comment: If we choose between a command that\u0027s tightly coupled with another command (e.g. we know that those two will be executed sequentially, and never independent), then I think it\u0027s better to add a new flag. But, if you think this command as standalone is useful in other context, I\u0027m okay if we keep it.",
+      "parentUuid": "bf188892_31061275",
+      "revId": "0d0826176a5f31d30f9e8838160b27ad8c078517",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
       "unresolved": false,
       "key": {
         "uuid": "7e9d8219_41d3e06c",
@@ -197,6 +215,24 @@
       "side": 1,
       "message": "Even with having the `-f` parameter to do the same thing?",
       "parentUuid": "42c53ad5_e5fac5f0",
+      "revId": "0d0826176a5f31d30f9e8838160b27ad8c078517",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "60d14c38_587d9854",
+        "filename": "git_cl.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 4350,
+      "author": {
+        "id": 1560543
+      },
+      "writtenOn": "2025-02-05T17:05:56Z",
+      "side": 1,
+      "message": "Sorry, I got confused. --force is totally okay since it\u0027s only used for prompt skipping, as it says in its description. I mixed up how we use --yes in another project we maintain (`repo`).",
+      "parentUuid": "f0c65a32_17680bcb",
       "revId": "0d0826176a5f31d30f9e8838160b27ad8c078517",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }

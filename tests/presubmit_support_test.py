@@ -98,6 +98,13 @@ class ProvidedDiffChangeTest(fake_repos.FakeReposTestBase):
         self._test('somewhere/else', ['not a top level file!'],
                    ['still not a top level file!'])
 
+    def test_unix_local_paths(self):
+        if sys.platform == 'win32':
+            self.assertTrue(r'somewhere\else' in af._change.LocalPaths())
+        else:
+            self.assertTrue('somewhere/else' in af._change.LocalPaths())
+        self.assertEqual('somewhere/else' in af.UnixLocalPaths())
+
 
 class TestGenerateDiff(fake_repos.FakeReposTestBase):
     """ Tests for --generate_diff.

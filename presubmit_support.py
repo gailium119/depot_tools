@@ -746,6 +746,15 @@ class InputApi(object):
         logging.debug('LocalPaths: %s', paths)
         return paths
 
+    def UnixLocalPaths(self):
+        """Returns unix-style local paths of input_api.AffectedFiles().
+
+        I.e., on Windows the path will contain forward slashes,
+        not backslashes. Other platforms are unchanged.
+
+        Use this when you need to check paths in a platform-independent way."""
+        return [p.replace(os.path.sep, '/') for p in self.LocalPaths()]
+
     def AbsoluteLocalPaths(self):
         """Returns absolute local paths of input_api.AffectedFiles()."""
         return [af.AbsoluteLocalPath() for af in self.AffectedFiles()]
@@ -784,6 +793,9 @@ class InputApi(object):
         '/' path separators should be used in the regular expressions and will work
         on Windows as well as other platforms.
 
+        For backwards-compatibility, '\' path separators will
+        also work correctly on Windows (but not on other platforms).
+
         Note: Copy-paste this function to suit your needs or use a lambda function.
         """
         if files_to_check is None:
@@ -793,13 +805,11 @@ class InputApi(object):
 
         def Find(affected_file, items):
             local_path = affected_file.LocalPath()
+            unix_local_path = affected_file.UnixLocalPath()
             for item in items:
                 if self.re.match(item, local_path):
                     return True
-                # Handle the cases where the files regex only handles /, but the
-                # local path uses \.
-                if self.is_windows and self.re.match(
-                        item, local_path.replace('\\', '/')):
+                if self.re.match(item, unix_local_path):
                     return True
             return False
 
@@ -1040,6 +1050,15 @@ class AffectedFile(object):
         often != client root).
         """
         return normpath(self._path)
+
+    def UnixLocalPath(self):
+        """Returns LocalPath() normalized to use forward slashes.
+
+        On Windows, this means that any backslashes in the path will be
+        replaced with forward slashes. On other platforms the behavior
+        is unchanged."""
+
+        return self.LocalPath().replace(os.path.sep, '/')
 
     def AbsoluteLocalPath(self):
         """Returns the absolute path of this file on the local disk."""
@@ -1389,6 +1408,15 @@ class Change(object):
     def LocalPaths(self):
         """Convenience function."""
         return [af.LocalPath() for af in self.AffectedFiles()]
+
+    def UnixLocalPaths(self):
+        """Returns unix-style local paths of .AffectedFiles().
+
+        I.e., on Windows the path will contain forward slashes,
+        not backslashes. Other platforms are unchanged.
+
+        Use this when you need to check paths in a platform-independent way."""
+        return [p.replace(os.path.sep, '/') for p in self.LocalPaths()]
 
     def LocalSubmodules(self):
         """Returns local paths for affected submodules."""

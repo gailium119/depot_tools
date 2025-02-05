@@ -1,6 +1,23 @@
 {
   "comments": [
     {
+      "unresolved": true,
+      "key": {
+        "uuid": "72304196_391edb2e",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1560543
+      },
+      "writtenOn": "2025-02-05T16:47:13Z",
+      "side": 1,
+      "message": "Is it fair to say that squash-closed will only be used to run git rebase-update? If so, why would we want to expose this as a standalone command, and not add it to rebase-update?",
+      "revId": "0d0826176a5f31d30f9e8838160b27ad8c078517",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
       "unresolved": false,
       "key": {
         "uuid": "7e9d8219_41d3e06c",
@@ -31,6 +48,102 @@
       "writtenOn": "2025-02-05T16:46:05Z",
       "side": 1,
       "message": "+yiwzhang@ for this one as well.",
+      "revId": "0d0826176a5f31d30f9e8838160b27ad8c078517",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "deedd4b2_b02cff0c",
+        "filename": "git_cl.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 4321,
+      "author": {
+        "id": 1560543
+      },
+      "writtenOn": "2025-02-05T16:47:13Z",
+      "side": 1,
+      "message": "there is no more \u0027rietveld-not-supported\u0027 status, please removed.\n\nhttps://source.chromium.org/chromium/chromium/tools/depot_tools/+/main:git_cl.py;l\u003d2447;drc\u003dcf5b6bd0cbc9a4a149818d0306a73723ddce5903",
+      "range": {
+        "startLine": 4321,
+        "startChar": 33,
+        "endLine": 4321,
+        "endChar": 55
+      },
+      "fixSuggestions": [
+        {
+          "fixId": "12a05798_b515d816",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "git_cl.py",
+              "range": {
+                "startLine": 4225,
+                "startChar": 0,
+                "endLine": 4230,
+                "endChar": 0
+              },
+              "replacement": "    proposal \u003d [\n        (cl.GetBranch(),\n         GetArchiveTagForBranch(cl.GetIssue(), cl.GetBranch(), tags,\n                                options.pattern))\n        for cl, status in statuses\n        if status \u003d\u003d \u0027closed\u0027\n    ]\n"
+            },
+            {
+              "path": "git_cl.py",
+              "range": {
+                "startLine": 4321,
+                "startChar": 0,
+                "endLine": 4322,
+                "endChar": 0
+              },
+              "replacement": "        if status \u003d\u003d \u0027closed\u0027\n"
+            }
+          ]
+        }
+      ],
+      "revId": "0d0826176a5f31d30f9e8838160b27ad8c078517",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "42c53ad5_e5fac5f0",
+        "filename": "git_cl.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 4350,
+      "author": {
+        "id": 1560543
+      },
+      "writtenOn": "2025-02-05T16:47:13Z",
+      "side": 1,
+      "message": "nit: add --yes parameter to CMDsquash_closed",
+      "fixSuggestions": [
+        {
+          "fixId": "dc70514c_350720d6",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "git_cl.py",
+              "range": {
+                "startLine": 4302,
+                "startChar": 0,
+                "endLine": 4302,
+                "endChar": 0
+              },
+              "replacement": "    parser.add_option(\u0027-y\u0027,\n                      \u0027--yes\u0027,\n                      action\u003d\u0027store_true\u0027,\n                      help\u003d\u0027Bypasses the confirmation prompt.\u0027)\n"
+            },
+            {
+              "path": "git_cl.py",
+              "range": {
+                "startLine": 4347,
+                "startChar": 0,
+                "endLine": 4348,
+                "endChar": 0
+              },
+              "replacement": "    if not options.force and not options.yes:\n"
+            }
+          ]
+        }
+      ],
       "revId": "0d0826176a5f31d30f9e8838160b27ad8c078517",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }

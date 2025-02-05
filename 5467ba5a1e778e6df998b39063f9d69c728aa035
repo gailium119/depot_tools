@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "77daa63f_e57aec77",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1367998
+      },
+      "writtenOn": "2025-02-05T23:13:28Z",
+      "side": 1,
+      "message": "thank you!",
+      "revId": "5467ba5a1e778e6df998b39063f9d69c728aa035",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "48aad86c_6d1791d1",
+        "filename": "presubmit_support.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 743,
+      "author": {
+        "id": 1367998
+      },
+      "writtenOn": "2025-02-05T23:13:28Z",
+      "side": 1,
+      "message": "nit: might be good to also update comments for the old `LocalPaths`",
+      "range": {
+        "startLine": 743,
+        "startChar": 8,
+        "endLine": 743,
+        "endChar": 18
+      },
+      "revId": "5467ba5a1e778e6df998b39063f9d69c728aa035",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

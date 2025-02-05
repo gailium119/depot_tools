@@ -1,0 +1,21 @@
+Reviewers: [a@example.com]
+Directories: ['chrome/browser']
+M, chrome/browser/a.cc
+M, chrome/browser/b.cc
+
+Reviewers: [a@example.com, b@example.com, ]
+M, foo/browser/a.cc
+Directories: ['foo', 'bar/baz']
+M, bar/baz/b.cc
+D, foo/bar/c.h
+
+Reviewers: []
+Directories: Custom string
+A, a/b/c
+
+Reviewers: [ ]
+Directories: Custom string
+A, a/b/d
+
+
+D, a/e

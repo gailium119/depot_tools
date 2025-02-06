@@ -5024,9 +5024,10 @@ def CMDlint(parser, args):
 def CMDpresubmit(parser, args):
     """Runs presubmit tests on the current changelist."""
     if gclient_utils.IsEnvCog():
-        # TODO - crbug/336555565: give user more instructions on how to
-        # trigger presubmit in Cog once the UX is finalized.
-        print('presubmit command is not supported in non-git environment.',
+        print('presubmit command is not supported in non-git environment. '
+              'Please use the "Chromium PRESUBMITS" panel or the "Run '
+              'Presubmit Checks" command in the command palette in the editor '
+              'instead.',
               file=sys.stderr)
         return 1
     parser.add_option('-u',
@@ -6309,7 +6310,7 @@ def CMDweb(parser, args):
     if gclient_utils.IsEnvCog():
         print(
             'web command is not supported. Please use "Gerrit: Open Changes '
-            'in Gerrit" functionality in the command palette in the Editor '
+            'in Gerrit" functionality in the command palette in the editor '
             'instead.',
             file=sys.stderr)
         return 1
@@ -6958,9 +6959,9 @@ def CMDformat(parser, args):
     """Runs auto-formatting tools (clang-format etc.) on the diff."""
     if gclient_utils.IsEnvCog():
         print(
-            'format command is not supported. Please use the "Format '
-            'Modified Lines in All Files (git cl format)" functionality in'
-            'command palette in the editor instead.',
+            'format command is not supported in non-git environment. Please '
+            'use the "Format Modified Lines in All Files (git cl format)" '
+            'functionality in the command palette in the editor instead.',
             file=sys.stderr)
         return 1
     clang_exts = ['.cc', '.cpp', '.h', '.m', '.mm', '.proto']

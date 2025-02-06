@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5886083b_99e96e30",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1544922
+      },
+      "writtenOn": "2025-02-06T22:44:24Z",
+      "side": 1,
+      "message": "Reverting this change as a quick fix. This script should be updated to handle `git.bat` pointing to a non-existent path - that will take some time to test. Reverting is a faster fix.",
+      "revId": "a209b13e24c08885175b0b51844890c5ce1ecab6",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

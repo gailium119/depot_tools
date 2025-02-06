@@ -16,6 +16,23 @@
       "message": "LGTM just in case it\u0027s needed",
       "revId": "a54f5cc17099bedbdfebd6df6c3d2a30920f3a51",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0e3e4625_ce4ca38d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 3388142
+      },
+      "writtenOn": "2025-02-06T06:09:24Z",
+      "side": 1,
+      "message": "I added chromium-third-party@google.com as a reviewer and gwqs selected Bill (@morbo), but he can\u0027t LGTM this despite chromium-third-party@google.com being listed as an OWNER. We either need to update the process or something has gone wrong here.",
+      "revId": "a54f5cc17099bedbdfebd6df6c3d2a30920f3a51",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

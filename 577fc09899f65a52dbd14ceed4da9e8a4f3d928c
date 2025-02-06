@@ -69,6 +69,24 @@
       "parentUuid": "bc401fe9_5080039a",
       "revId": "577fc09899f65a52dbd14ceed4da9e8a4f3d928c",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e3d2cb8c_73445575",
+        "filename": "split_cl.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 101,
+      "author": {
+        "id": 3481761
+      },
+      "writtenOn": "2025-02-06T23:43:54Z",
+      "side": 1,
+      "message": "\u003e I suggest we be more opinionated here. Perhaps, mandate that git cl split can only be executed once per branch, or user needs to clean old branches before git cl split can be executed again.\n\nThis makes sense to me for a future CL; I think the rule should probably be \"you must clean up old branches unless you\u0027re resuming a previous upload without any changes\". We can enforce this (in the current scheme) by computing the hashes for each branch we\u0027re going to generate in advance, and making sure there aren\u0027t any existing `_split` branches with a different hash. If there any any existing branches with the _same_ hash, we skip uploading them per the current resumption mechanism.\n\n\u003e Derive human-readable name based on the list of files, ensure there\u0027s no conflict (maybe by passing alrady used names).\n\nI suppose we could use some heuristic to infer a common directory (python has a function for this), and append that to the branch name after the hash. That should still be unique and deterministic, though it will get very long. The inferred directory might not be as useful as one a human would provide, but it\u0027s no worse than the current naming scheme.",
+      "parentUuid": "a7cc7a2d_7412137e",
+      "revId": "577fc09899f65a52dbd14ceed4da9e8a4f3d928c",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

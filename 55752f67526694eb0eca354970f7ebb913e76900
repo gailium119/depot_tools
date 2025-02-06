@@ -1,0 +1,39 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "97510783_3d7175d3",
+        "filename": "git_cl.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 5027,
+      "author": {
+        "id": 1303432
+      },
+      "writtenOn": "2025-02-06T17:22:11Z",
+      "side": 1,
+      "message": "I think \"non-git environment\" or \"in Cog\" was still useful context that I\u0027d keep from the original (it is supported in git still).",
+      "fixSuggestions": [
+        {
+          "fixId": "1adf25c2_5deb0d11",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "git_cl.py",
+              "range": {
+                "startLine": 5027,
+                "startChar": 0,
+                "endLine": 5030,
+                "endChar": 0
+              },
+              "replacement": "        print(\u0027presubmit command is not supported in non-git environment. Please\u0027\n              \u0027 use the \"Chromium PRESUBMITS\" panel or the \"Run Presubmit Checks\"\u0027\n              \u0027 command in the command palette instead.\u0027,\n"
+            }
+          ]
+        }
+      ],
+      "revId": "55752f67526694eb0eca354970f7ebb913e76900",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

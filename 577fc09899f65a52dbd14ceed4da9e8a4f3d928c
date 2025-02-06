@@ -51,6 +51,24 @@
       "parentUuid": "38db6456_50e6dc43",
       "revId": "577fc09899f65a52dbd14ceed4da9e8a4f3d928c",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a7cc7a2d_7412137e",
+        "filename": "split_cl.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 101,
+      "author": {
+        "id": 1560543
+      },
+      "writtenOn": "2025-02-06T22:36:57Z",
+      "side": 1,
+      "message": "\u003e I\u0027m not sure what the concern here is, can you clarify? The hashes should be the same so long as the list of files is identical.\n\nI checked the entire codebase, and we don\u0027t create branches during --dry-run. With that, my concern is less valid. It is about what happens if someone runs git cl split multiple times on the same branch, they will end up with \nfoo_{hash1}\nfoo_{hash2}\nfoo_{hashN}\nand it will be hard to know which one contains what, and which one is obsolete. With the old implementation, at least user had an idea what each branch contains.\n\n\u003e The problem here is that you can\u0027t safely resume if they\u0027re named this way, since there isn\u0027t a relationship between the branch name and its contents \n\nThat\u0027s true. But I think we have a different problem if the split command is re-executed - let\u0027s assume someone modifies content of their mass change after split and re-runs it. Won\u0027t this potentially generate new branches, and leave old ones behind?\n\nI suggest we be more opinionated here. Perhaps, mandate that git cl split can only be executed once per branch, or user needs to clean old branches before git cl split can be executed again. Open to other suggestions - and that doesn\u0027t block this CL since it\u0027s not directly related to it.\n\n\u003e That\u0027s basically what I\u0027m doing with the hash, I just don\u0027t see a way to make it readable while preserving uniqueness and determinism of branch names.\n\nThis suggestion was to address my concern about know what branch contains what. This is very much optional. It could me something like: derive human-readable name based on the list of files, ensure there\u0027s no conflict (maybe by passing alrady used names).",
+      "parentUuid": "bc401fe9_5080039a",
+      "revId": "577fc09899f65a52dbd14ceed4da9e8a4f3d928c",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

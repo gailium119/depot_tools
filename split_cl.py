@@ -90,14 +90,15 @@ def EnsureInGitRepository():
     git.run('rev-parse')
 
 
-def CreateBranchForDirectories(prefix, directories, upstream):
-    """Creates a branch named |prefix| + "_" + |directories[0]| + "_split".
+def CreateBranchForOneCL(prefix, files, upstream):
+    """Creates a branch named |prefix| + "_" + |hash(files)| + "_split".
 
     Return false if the branch already exists. |upstream| is used as upstream
     for the created branch.
     """
     existing_branches = set(git.branches(use_limit=False))
-    branch_name = prefix + '_' + directories[0] + '_split'
+    files_hash = hash(tuple(sorted(files)))
+    branch_name = f'{prefix}_{files_hash}_split'
     if branch_name in existing_branches:
         return False
     git.run('checkout', '-t', upstream, '-b', branch_name)
@@ -159,8 +160,8 @@ def UploadCl(refactor_branch, refactor_branch_upstream, directories, files,
         topic: Topic to associate with uploaded CLs.
     """
     # Create a branch.
-    if not CreateBranchForDirectories(refactor_branch, directories,
-                                      refactor_branch_upstream):
+    if not CreateBranchForOneCL(refactor_branch, files,
+                                refactor_branch_upstream):
         print('Skipping ' + FormatDirectoriesForPrinting(directories) +
               ' for which a branch already exists.')
         return

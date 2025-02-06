@@ -5024,9 +5024,9 @@ def CMDlint(parser, args):
 def CMDpresubmit(parser, args):
     """Runs presubmit tests on the current changelist."""
     if gclient_utils.IsEnvCog():
-        # TODO - crbug/336555565: give user more instructions on how to
-        # trigger presubmit in Cog once the UX is finalized.
-        print('presubmit command is not supported in non-git environment.',
+        print('presubmit command is not supported. Please use the "Chromium'
+              'PRESUBMITS" panel or the "Run Presubmit Checks" command in the '
+              'command palette instead.',
               file=sys.stderr)
         return 1
     parser.add_option('-u',

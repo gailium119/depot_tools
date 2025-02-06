@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "eed867fe_30a4fb87",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 3481761
+      },
+      "writtenOn": "2025-02-06T17:36:04Z",
+      "side": 1,
+      "message": "While working on implementing sokcevic@\u0027s suggestion about the name of the \"Directories\" field, I discovered that the uploading algorithm uses the list of directories to name the branches that it uploads, which seems like a fundamentally flawed approach due to nondeterminism. This should address that and also make future changes easier.",
+      "revId": "577fc09899f65a52dbd14ceed4da9e8a4f3d928c",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "47517a97_42a3e2d8",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 3481761
+      },
+      "writtenOn": "2025-02-07T18:24:03Z",
+      "side": 1,
+      "message": "Apologies for the larger-than-usual CL, but I don\u0027t see a great way to split this up. This implements the \"saving/loading files\" part of the design doc. It incorporates the suggestions that users be able to edit the splitting interactively, and also prints an explanation of the file format to each file.\n\nIt does not implement the suggestion that the \"Directories\" field be replaced with a \"Description\" field. I intend to do that in a followup CL, because it turns out that the assumption that it\u0027s a list of directories appears in several places in the file, so that\u0027s a significant refactor on its own.",
+      "revId": "aa0c00e9894919c7ac2caadb8265952416e06842",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

@@ -1,0 +1,3 @@
+Reviewers: [a@example.com]
+Directories: foo
+a.cc

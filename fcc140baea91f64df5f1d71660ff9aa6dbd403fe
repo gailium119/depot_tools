@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2000d087_45c496b7",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 3481761
+      },
+      "writtenOn": "2025-02-07T16:23:38Z",
+      "side": 1,
+      "message": "Part 1 of the suggestions from crrev.com/c/6236622. I tested this by running it on a sample large CL; I think the results are reasonably readable. They\u0027re long, but hopefully nobody will have to type them all out, so it should be fine. I tried putting the dirname before the hash, but found this version was more readable.\n\nSince we\u0027re getting the dirname somewhat heuristically, you can see that it\u0027s possible for multiple branches to get the same one. Fortunately, the hash means they\u0027re still distinguishable.\n\nGenerated branch names:\nbts_04538362992782652214_chrome/browser/ash/app_list_split\nbts_01151256097349378346_chrome/browser/ash/arc/extensions_split\nbts_07991011648140884670_chrome_split\nbts_06434039295932524656_chrome/browser/ash_split\nbts_06716776725808312453_chrome/browser/ash/floating_sso_split\nbts_06673785864176651576_chrome/browser/ash/input_method_split\nbts_05067912019144932697_chrome/browser/ash/kerberos_split\nbts_04037152906116124425_chrome/browser/ash/language_packs_split\nbts_08753886123408448446_chrome/browser/ash/login_split\nbts_05632509804184774723_chrome/browser/ash/login/signin_split\nbts_08136315021319875946_chrome/browser/ash/policy_split\nbts_07377846877578414948_chrome/browser/ash/system_logs_split\nbts_05593672083014663456_chrome/browser/autocomplete_split\nbts_00209310530513344949_chrome/browser/autofill_split\nbts_00864435583146429269_chrome/browser/devtools_split\nbts_01280431441939726719_chrome/browser/enterprise/connectors_split\nbts_04830159414067330693_chrome/browser/extensions_split\nbts_00012168419716541460_chrome/browser/extensions/api/declarative_net_request_split\nbts_03291283451252963897_chrome/browser/extensions/api/messaging_split\nbts_08021882713562561828_chrome/browser/extensions/api/tab_capture_split\nbts_03781300578313801417_chrome/browser/extensions/api/web_request_split\nbts_00637046614484584460_chrome/browser/media/router/discovery/dial_split\nbts_01702250829986423625_chrome/browser/media/webrtc_split\nbts_02150109804497302522_chrome/browser/nearby_sharing/local_device_data_split\nbts_07524645425871267406_chrome/browser/page_load_metrics/observers_split\nbts_01121531191754691420_chrome/browser/policy/test_split\nbts_04344579150287670947_chrome/browser/predictors_split\nbts_00049072055393567212_chrome/browser/storage_split\nbts_00644215138160731376_chrome_split\nbts_08020237374432825019_chrome/browser/ui/ash/test_split\nbts_02495010670120351917_chrome/browser/ui/views/frame_split\nbts_02077380196166899716_chrome/browser/ui/views/hats_split\nbts_07060757969241703009_chrome/browser/ui/views_split\nbts_06863719130433993196_chrome/browser/ui/views/side_panel/extensions_split\nbts_04834825146920680063_chrome/browser/ui/views/side_panel_split\nbts_08457339020128241658_chrome/browser/ui/views/user_education_split\nbts_02329218894803900183_chrome/common_split\nbts_07512022929395357008_chrome/common/privacy_budget_split\nbts_05625127020847833811_chrome/installer_split\nbts_03469249971293175584_chrome/test/base/ash/interactive/cellular_split\nbts_09202830046617796662_chrome/test/chromedriver/chrome_split\nbts_09126768862591708076_chrome/test_split\nbts_03379738320014214248_chrome/updater_split",
+      "revId": "fcc140baea91f64df5f1d71660ff9aa6dbd403fe",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

@@ -33,6 +33,24 @@
       "message": "I replied in https://crrev.com/c/6239492 looks like there is a mismatch between the file and what you are listing. Also these need to be put into the correct list. I appreciate this is a hassle, having this many transitive licenses makes things difficult.",
       "revId": "e8c6573e34e7118a805e1a9f3eeb324a41368fe2",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ac064824_4db91de7",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1211034
+      },
+      "writtenOn": "2025-02-07T18:10:42Z",
+      "side": 1,
+      "message": "Thank you, I update the other CL and fixed the issue there, and moved the items here as suggested in the other CL.",
+      "parentUuid": "4a1f4361_5483d008",
+      "revId": "e8c6573e34e7118a805e1a9f3eeb324a41368fe2",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

@@ -1,0 +1,184 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "29e0c853_57c70acd",
+        "filename": "split_cl.py",
+        "patchSetId": 5
+      },
+      "lineNbr": 538,
+      "author": {
+        "id": 1560543
+      },
+      "writtenOn": "2025-02-10T16:14:18Z",
+      "side": 1,
+      "message": "Please fix this WARNING reported by Spellchecker: \"direcory\" is a possible misspelling of \"directory\".\n\nAnalyzer Description: Checks for common typos.\nOwner: chops-source-team@google.com\n\n\"direcory\" is a possible misspelling of \"directory\".\n\nTo bypass Spellchecker, add a footer with DISABLE_SPELLCHECKER",
+      "range": {
+        "startLine": 538,
+        "startChar": 37,
+        "endLine": 538,
+        "endChar": 45
+      },
+      "revId": "f823c9e70af6fc3475e22bff58e900580a0a0626",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8bff4cc0_2fecebec",
+        "filename": "split_cl.py",
+        "patchSetId": 5
+      },
+      "lineNbr": 558,
+      "author": {
+        "id": 1560543
+      },
+      "writtenOn": "2025-02-10T16:14:18Z",
+      "side": 1,
+      "message": "Could you make this modification now? Technically speaking, a change in schema will be a breaking change, so I\u0027d rather we start using description from the very beginning.",
+      "range": {
+        "startLine": 556,
+        "startChar": 0,
+        "endLine": 558,
+        "endChar": 68
+      },
+      "revId": "f823c9e70af6fc3475e22bff58e900580a0a0626",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f56e5a1a_f465fefa",
+        "filename": "split_cl.py",
+        "patchSetId": 5
+      },
+      "lineNbr": 568,
+      "author": {
+        "id": 1560543
+      },
+      "writtenOn": "2025-02-10T16:14:18Z",
+      "side": 1,
+      "message": "containing a string with no new lines",
+      "range": {
+        "startLine": 568,
+        "startChar": 40,
+        "endLine": 568,
+        "endChar": 48
+      },
+      "fixSuggestions": [
+        {
+          "fixId": "ade9c97a_a20fd6a6",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "split_cl.py",
+              "range": {
+                "startLine": 568,
+                "startChar": 0,
+                "endLine": 569,
+                "endChar": 0
+              },
+              "replacement": "    - A \u0027Directories: \u0027 line containing a string with no new lines, and\n"
+            }
+          ]
+        }
+      ],
+      "revId": "f823c9e70af6fc3475e22bff58e900580a0a0626",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "58e130f7_bbcc91a8",
+        "filename": "split_cl.py",
+        "patchSetId": 5
+      },
+      "lineNbr": 607,
+      "author": {
+        "id": 1560543
+      },
+      "writtenOn": "2025-02-10T16:14:18Z",
+      "side": 1,
+      "message": "If we are strick about ordering, we should use state machine here. Directories (that is, description) should come after Reviewer line and before the list of actions. Otherwise, a user can place description in any order.",
+      "revId": "f823c9e70af6fc3475e22bff58e900580a0a0626",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "62453091_54f8efce",
+        "filename": "split_cl.py",
+        "patchSetId": 5
+      },
+      "lineNbr": 617,
+      "author": {
+        "id": 1560543
+      },
+      "writtenOn": "2025-02-10T16:14:18Z",
+      "side": 1,
+      "message": "\",\" can be in a filepath. There is only one hit for chromium/src, but there could be others:\n\n```\nthird_party/blink/web_tests/third_party/NotoSansSymbol/NotoSansSymbols-Regular-u1d49e,1f1ef.ttf\n```",
+      "range": {
+        "startLine": 617,
+        "startChar": 21,
+        "endLine": 617,
+        "endChar": 22
+      },
+      "fixSuggestions": [
+        {
+          "fixId": "19fd4b62_41e11f49",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "split_cl.py",
+              "range": {
+                "startLine": 617,
+                "startChar": 0,
+                "endLine": 618,
+                "endChar": 0
+              },
+              "replacement": "        parts \u003d line.split(\",\", 1)\n"
+            }
+          ]
+        }
+      ],
+      "revId": "f823c9e70af6fc3475e22bff58e900580a0a0626",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ad8f1524_5081c75c",
+        "filename": "split_cl.py",
+        "patchSetId": 5
+      },
+      "lineNbr": 623,
+      "author": {
+        "id": 1560543
+      },
+      "writtenOn": "2025-02-10T16:14:18Z",
+      "side": 1,
+      "message": "I suggest to add some validation here - at least that parts[0] is a single character.\n\nalternatively, add validation in CLInfo (i.e. don\u0027t use files.append, but a method that does validation).",
+      "fixSuggestions": [
+        {
+          "fixId": "5b7b5315_a4b0268f",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "split_cl.py",
+              "range": {
+                "startLine": 623,
+                "startChar": 0,
+                "endLine": 624,
+                "endChar": 0
+              },
+              "replacement": "        action \u003d parts[0].strip().upper()\n        if not (action \u003d\u003d \u0027A\u0027 or action \u003d\u003d \u0027M\u0027 or action \u003d\u003d \u0027D\u0027):\n            raise ClSplitParseError(\n                f\"Error parsing line: Action must be \u0027A\u0027, \u0027M\u0027, or \u0027D\u0027:\\n{line}\")\n"
+            }
+          ]
+        }
+      ],
+      "revId": "f823c9e70af6fc3475e22bff58e900580a0a0626",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c4e5a6c3_5c6bbe61",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1343440
+      },
+      "writtenOn": "2025-02-10T01:35:29Z",
+      "side": 1,
+      "message": "Temporary block before we revert the upstream CL.",
+      "revId": "70074c350112afbefe73bfec3b3b85e9176ce112",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

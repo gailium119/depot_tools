@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "99a34017_0e4f2ee5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1544922
+      },
+      "writtenOn": "2025-02-10T07:03:10Z",
+      "side": 1,
+      "message": "Running `bootstrap\\win_tools.bat` should fix up git wrappers for someone coming back to Chromium on win development after a long time. I\u0027ve updated the comments in the script to be more accurate about what it\u0027s doing now that Git isn\u0027t bundled.",
+      "revId": "2bb5a3c51b5486bf7d23fa70ff92f67f9f6bbd40",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

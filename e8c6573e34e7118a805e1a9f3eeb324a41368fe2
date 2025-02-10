@@ -51,6 +51,24 @@
       "parentUuid": "4a1f4361_5483d008",
       "revId": "e8c6573e34e7118a805e1a9f3eeb324a41368fe2",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8ecab719_fc033008",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 3388142
+      },
+      "writtenOn": "2025-02-10T03:01:57Z",
+      "side": 1,
+      "message": "The following are spdx and belong in ALLOWED_SPDX_LICENSES:\nnotice:\n* HPND-doc\n* Spencer-86\n* UPL-1.0\n* Unicode-TOU\n* W3C\n* softSurfer\n\nThese are restricted and go in \u0027WITH_PERMISSION_ONLY\u0027, make sure you are aware of their conditions, check with an open source lawyer if you haven\u0027t done so already:\n* GPL-3.0-with-GCC-exception\n* GPL-3.0-with-bison-exception\n\n\nThe rest go in \u0027EXTENDED_LICENSE_CLASSIFIERS\u0027:\nunencumbered:\n* Google-Owned\n* LicenseRef-Public-Domain-JSR\npermissive:\n* PngSuite\nnotice:\n* Fujitsu\n* IAIKGraz\n* LicenseRef-IBM-Corporation-1993\n* LicenseRef-Oasis-IPR\n* LicenseRef-uthash\n* Techtronix\n* UnicodeCharacterDatabase\n* X11docs\n* XFree86\n* unicode_org\n\n\nThe following shows up as \u0027by_exception_only\u0027 but I think its a bug, see http://b/395013652:\n* LicenseRef-MicrosoftEnterpriseWindowsDriverKit\n\nEither leave it out for now or wait until that bug is addressed.",
+      "parentUuid": "ac064824_4db91de7",
+      "revId": "e8c6573e34e7118a805e1a9f3eeb324a41368fe2",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

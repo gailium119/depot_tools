@@ -24,6 +24,30 @@
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "fa9b0cc6_df1e34ad",
+        "filename": "split_cl.py",
+        "patchSetId": 5
+      },
+      "lineNbr": 538,
+      "author": {
+        "id": 3481761
+      },
+      "writtenOn": "2025-02-10T16:50:45Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "29e0c853_57c70acd",
+      "range": {
+        "startLine": 538,
+        "startChar": 37,
+        "endLine": 538,
+        "endChar": 45
+      },
+      "revId": "f823c9e70af6fc3475e22bff58e900580a0a0626",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "8bff4cc0_2fecebec",
@@ -37,6 +61,30 @@
       "writtenOn": "2025-02-10T16:14:18Z",
       "side": 1,
       "message": "Could you make this modification now? Technically speaking, a change in schema will be a breaking change, so I\u0027d rather we start using description from the very beginning.",
+      "range": {
+        "startLine": 556,
+        "startChar": 0,
+        "endLine": 558,
+        "endChar": 68
+      },
+      "revId": "f823c9e70af6fc3475e22bff58e900580a0a0626",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "82e683e2_64568e08",
+        "filename": "split_cl.py",
+        "patchSetId": 5
+      },
+      "lineNbr": 558,
+      "author": {
+        "id": 3481761
+      },
+      "writtenOn": "2025-02-10T16:50:45Z",
+      "side": 1,
+      "message": "I changed the line in the format; going through and changing everything else to use a \"description\" instead of a directory list is significant and also a potentially breaking change, so I\u0027d prefer to do that in a different CL.",
+      "parentUuid": "8bff4cc0_2fecebec",
       "range": {
         "startLine": 556,
         "startChar": 0,
@@ -90,6 +138,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "9c2843b7_ea2ded98",
+        "filename": "split_cl.py",
+        "patchSetId": 5
+      },
+      "lineNbr": 568,
+      "author": {
+        "id": 3481761
+      },
+      "writtenOn": "2025-02-10T16:50:45Z",
+      "side": 1,
+      "message": "This seems redundant; by definition a line doesn\u0027t contain any newlines (except possibly the one at the end.",
+      "parentUuid": "f56e5a1a_f465fefa",
+      "range": {
+        "startLine": 568,
+        "startChar": 40,
+        "endLine": 568,
+        "endChar": 48
+      },
+      "revId": "f823c9e70af6fc3475e22bff58e900580a0a0626",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "58e130f7_bbcc91a8",
         "filename": "split_cl.py",
         "patchSetId": 5
@@ -101,6 +173,24 @@
       "writtenOn": "2025-02-10T16:14:18Z",
       "side": 1,
       "message": "If we are strick about ordering, we should use state machine here. Directories (that is, description) should come after Reviewer line and before the list of actions. Otherwise, a user can place description in any order.",
+      "revId": "f823c9e70af6fc3475e22bff58e900580a0a0626",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8940218f_c042aaa8",
+        "filename": "split_cl.py",
+        "patchSetId": 5
+      },
+      "lineNbr": 607,
+      "author": {
+        "id": 3481761
+      },
+      "writtenOn": "2025-02-10T16:50:45Z",
+      "side": 1,
+      "message": "I\u0027m not very concerned about strictness; I don\u0027t think it\u0027s very confusing if they put description later than intended, and it seems unlikely in any case, since this is basically a temporary format where they\u0027re mostly expected to just copy and tweak existing things.",
+      "parentUuid": "58e130f7_bbcc91a8",
       "revId": "f823c9e70af6fc3475e22bff58e900580a0a0626",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
@@ -146,6 +236,30 @@
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "72365b75_fffb5536",
+        "filename": "split_cl.py",
+        "patchSetId": 5
+      },
+      "lineNbr": 617,
+      "author": {
+        "id": 3481761
+      },
+      "writtenOn": "2025-02-10T16:50:45Z",
+      "side": 1,
+      "message": "Changed to use regex parsing to avoid this.",
+      "parentUuid": "62453091_54f8efce",
+      "range": {
+        "startLine": 617,
+        "startChar": 21,
+        "endLine": 617,
+        "endChar": 22
+      },
+      "revId": "f823c9e70af6fc3475e22bff58e900580a0a0626",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "ad8f1524_5081c75c",
@@ -177,6 +291,24 @@
           ]
         }
       ],
+      "revId": "f823c9e70af6fc3475e22bff58e900580a0a0626",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1cd9fd52_af4b7be5",
+        "filename": "split_cl.py",
+        "patchSetId": 5
+      },
+      "lineNbr": 623,
+      "author": {
+        "id": 3481761
+      },
+      "writtenOn": "2025-02-10T16:50:45Z",
+      "side": 1,
+      "message": "This is validated (implicitly) in the ValidateSplitting function, since it compares to the files reported by git, including the action (there\u0027s also a test for this, in split_cl_test.py, line 436).",
+      "parentUuid": "ad8f1524_5081c75c",
       "revId": "f823c9e70af6fc3475e22bff58e900580a0a0626",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }

@@ -33,6 +33,23 @@
       "message": "I added chromium-third-party@google.com as a reviewer and gwqs selected Bill (@morbo), but he can\u0027t LGTM this despite chromium-third-party@google.com being listed as an OWNER. We either need to update the process or something has gone wrong here.",
       "revId": "a54f5cc17099bedbdfebd6df6c3d2a30920f3a51",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "44754ee0_077bea8a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 3388142
+      },
+      "writtenOn": "2025-02-10T03:09:36Z",
+      "side": 1,
+      "message": "I belive Joey fixed the issue with chromium-third-party not having committers. Thanks Joey.",
+      "revId": "a54f5cc17099bedbdfebd6df6c3d2a30920f3a51",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

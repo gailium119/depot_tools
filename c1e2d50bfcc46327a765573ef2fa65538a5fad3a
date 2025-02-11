@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1c64b279_7cd80864",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1499972
+      },
+      "writtenOn": "2025-02-11T16:34:46Z",
+      "side": 1,
+      "message": "PTAL. I\u0027m planning to revert this, and then put back [patchset #2](https://chromium-review.googlesource.com/c/chromium/tools/depot_tools/+/6104282/2) for review.",
+      "revId": "c1e2d50bfcc46327a765573ef2fa65538a5fad3a",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

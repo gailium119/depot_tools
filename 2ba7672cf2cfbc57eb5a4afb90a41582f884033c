@@ -18,6 +18,24 @@
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "df7ef792_b1d732b1",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1499972
+      },
+      "writtenOn": "2025-02-12T23:36:48Z",
+      "side": 1,
+      "message": "Awesome, thanks for understanding and approving!",
+      "parentUuid": "fa263e89_5cf317c9",
+      "revId": "2ba7672cf2cfbc57eb5a4afb90a41582f884033c",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "95d2b991_811a2733",
@@ -31,6 +49,24 @@
       "writtenOn": "2025-02-12T18:44:15Z",
       "side": 1,
       "message": "man/man1/git-rebase-update.1 is not updated - please run man/src/make_docs.sh.",
+      "revId": "2ba7672cf2cfbc57eb5a4afb90a41582f884033c",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "51f834a8_b2cb13e8",
+        "filename": "man/src/git-rebase-update.txt",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1499972
+      },
+      "writtenOn": "2025-02-12T23:36:48Z",
+      "side": 1,
+      "message": "Happy to try, but...\n\n```\nTraceback (most recent call last):\n  File \"/Users/masonfreed/depot_tools/man/src/asciidoc/asciidoc/asciidoc\", line 23, in \u003cmodule\u003e\n    import ast\n  File \"/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/ast.py\", line 29, in \u003cmodule\u003e\n    from contextlib import contextmanager, nullcontext\n  File \"/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/contextlib.py\", line 6, in \u003cmodule\u003e\n    from collections import deque\nImportError: cannot import name \u0027deque\u0027 from \u0027collections\u0027 (/Users/masonfreed/depot_tools/man/src/asciidoc/asciidoc/collections.py)\n```\n\nPerhaps I could just manually update the one file? I did that - PTAL.",
+      "parentUuid": "95d2b991_811a2733",
       "revId": "2ba7672cf2cfbc57eb5a4afb90a41582f884033c",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }

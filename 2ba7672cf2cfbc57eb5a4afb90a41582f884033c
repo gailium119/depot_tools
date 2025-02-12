@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fa263e89_5cf317c9",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1560543
+      },
+      "writtenOn": "2025-02-12T18:44:15Z",
+      "side": 1,
+      "message": "Thanks for trying to land what we asked for. Given the pushback, and how this flow is useful for some, I believe we have no other option at this time.",
+      "revId": "2ba7672cf2cfbc57eb5a4afb90a41582f884033c",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "95d2b991_811a2733",
+        "filename": "man/src/git-rebase-update.txt",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1560543
+      },
+      "writtenOn": "2025-02-12T18:44:15Z",
+      "side": 1,
+      "message": "man/man1/git-rebase-update.1 is not updated - please run man/src/make_docs.sh.",
+      "revId": "2ba7672cf2cfbc57eb5a4afb90a41582f884033c",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

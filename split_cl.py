@@ -6,6 +6,7 @@
 
 import collections
 import dataclasses
+import hashlib
 import os
 import re
 import subprocess2
@@ -40,9 +41,14 @@ def HashList(lst: List[Any]) -> int:
     Hash a list, returning a positive integer. Lists with identical elements
     should have the same hash, regardless of order.
     """
-    # Python refuses to hash lists directly because they're mutable
-    tup = tuple(sorted(lst))
-    return abs(hash(tup))
+    # We need a bytes-like object for hashlib algorithms
+    byts = bytes().join(
+        (action + file).encode() for action, file in sorted(lst))
+    # No security implication: we just need a deterministic output
+    hashed = hashlib.sha1(byts)
+    as_int = int(hashed.hexdigest(), 16)
+    # Ensure positive, truncate to 20 digits
+    return abs(as_int) % (10**20)
 
 FilesAndOwnersDirectory = collections.namedtuple("FilesAndOwnersDirectory",
                                                  "files owners_directories")

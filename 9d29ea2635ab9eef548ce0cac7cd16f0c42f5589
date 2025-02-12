@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7ab2d2cf_8e05aa0a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1303432
+      },
+      "writtenOn": "2025-02-12T16:18:13Z",
+      "side": 1,
+      "message": "I\u0027m not a good reviewer for auto-ninja. Probably should be build team.",
+      "revId": "9d29ea2635ab9eef548ce0cac7cd16f0c42f5589",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

@@ -69,6 +69,24 @@
       "parentUuid": "95d2b991_811a2733",
       "revId": "2ba7672cf2cfbc57eb5a4afb90a41582f884033c",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5ced2e56_be1e933d",
+        "filename": "man/src/git-rebase-update.txt",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1560543
+      },
+      "writtenOn": "2025-02-12T23:39:25Z",
+      "side": 1,
+      "message": "Mind filing a bug under infra\u003esdk so my team can fix it?",
+      "parentUuid": "51f834a8_b2cb13e8",
+      "revId": "2ba7672cf2cfbc57eb5a4afb90a41582f884033c",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

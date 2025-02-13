@@ -87,6 +87,24 @@
       "parentUuid": "51f834a8_b2cb13e8",
       "revId": "2ba7672cf2cfbc57eb5a4afb90a41582f884033c",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ede1c59a_0047eeaa",
+        "filename": "man/src/git-rebase-update.txt",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1499972
+      },
+      "writtenOn": "2025-02-13T01:15:03Z",
+      "side": 1,
+      "message": "Sure thing! Done: https://issues.chromium.org/issues/396174247",
+      "parentUuid": "5ced2e56_be1e933d",
+      "revId": "2ba7672cf2cfbc57eb5a4afb90a41582f884033c",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

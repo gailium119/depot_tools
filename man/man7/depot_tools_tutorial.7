@@ -2,12 +2,12 @@
 .\"     Title: depot_tools_tutorial
 .\"    Author: [FIXME: author] [see http://www.docbook.org/tdg5/en/html/author]
 .\" Generator: DocBook XSL Stylesheets vsnapshot <http://docbook.sf.net/>
-.\"      Date: 08/26/2022
+.\"      Date: 02/13/2025
 .\"    Manual: Chromium depot_tools Manual
-.\"    Source: depot_tools 59e95c91
+.\"    Source: depot_tools c6304922
 .\"  Language: English
 .\"
-.TH "DEPOT_TOOLS_TUTORIAL" "7" "08/26/2022" "depot_tools 59e95c91" "Chromium depot_tools Manual"
+.TH "DEPOT_TOOLS_TUTORIAL" "7" "02/13/2025" "depot_tools c6304922" "Chromium depot_tools Manual"
 .\" -----------------------------------------------------------------
 .\" * Define some portability stuff
 .\" -----------------------------------------------------------------
@@ -642,6 +642,7 @@ Someone on the code review pointed out that our typo\-fix has a typo :( We\*(Aqr
 .nf
 \fB$ git freeze\fR
 
+<string>:1: DeprecationWarning: \*(Aqpipes\*(Aq is deprecated and slated for removal in Python 3\&.13
 \fB$ git checkout fix_typo\fR
 Switched to branch \*(Aqfix_typo\*(Aq
 Your branch is ahead of \*(Aqorigin/main\*(Aq by 1 commit\&.
@@ -714,6 +715,7 @@ origin/main
   chap2
 \fB  fix_typo *
 \fR
+<string>:1: DeprecationWarning: \*(Aqpipes\*(Aq is deprecated and slated for removal in Python 3\&.13
 \fB$ git nav\-upstream\fR
 Note: switching to \*(Aqorigin/main\*(Aq\&.
 
@@ -882,13 +884,17 @@ From https://upstream
    beec6f4\&.\&.59cdb73  main       \-> origin/main
 Rebasing: chap2
 Rebasing: fix_typo
-Failed! Attempting to squash fix_typo \&.\&.\&. Success!
-Rebasing: chap3
-Reparented chap3 to track origin/main (was tracking chap2)
-Deleted branch fix_typo (was 5d26fec)\&.
-Deleted branch chap2 (was 5d26fec)\&.
+Your working copy is in mid\-rebase\&. Either:
+ * completely resolve like a normal git\-rebase; OR
+ * try squashing your branch first
+   (git rebase \-\-abort && git squash\-branch) and try
+   again; OR
+ * abort the rebase and mark this branch as dormant:
+       git rebase \-\-abort && \e
+       git config branch\&.fix_typo\&.dormant true
 
-Running `git gc \-\-auto` \- Ctrl\-C to abort is OK\&.
+And then run `git rebase\-update \-n` to resume\&.
+
 .fi
 .if n \{\
 .RE
@@ -903,14 +909,19 @@ Well look at that\&. The CQ landed our typo and chapter2 branches already and gi
 \fB$ gclient sync\fR
 \&.\&.\&. truncated output \&.\&.\&.
 \fB$ git map\fR
-* \fB93fe917ad1\fR	\fB(HEAD \-> chap3\fR\fB) \fR2014\-04\-10 ~ beginning of chapter 3
-* \fB5d26fec369\fR	\fB(origin/main\fR\fB, origin/HEAD\fR\fB) \fR2014\-04\-10 ~ Finish chapter 2
+\fB* 5d26fec369\fR	\fB(origin/main\fR\fB, origin/HEAD\fR\fB, chap2\fR\fB) \fR2014\-04\-10 ~ Finish chapter 2    <(\fBchap2\fR)
 * \fBdf7fefbf06\fR	2014\-04\-10 ~ Revert 255617, due to it not tracking use of the link doctor page properly\&.
 * \fB4b39cda0ac\fR	2014\-04\-10 ~ Fix terrible typo\&.
 * \fB248c5b6fe3\fR	2014\-04\-10 ~ Temporarily CHECK(trial) in ChromeRenderProcessObserver::OnSetFieldTrialGroup\&.
 * \fB8171df8af9\fR	2014\-04\-10 ~ Remove AMD family check for the flapper crypto accelerator\&.
 * \fBd6a30d2e56\fR	2014\-04\-10 ~ Change the Pica load benchmark to listen for the polymer\-ready event
-* \fBbeec6f4746\fR	2014\-04\-10 ~ Make ReflectorImpl use mailboxes
+| * \fB7d4238a1e2\fR	\fB(chap3\fR\fB) \fR2014\-04\-10 ~ beginning of chapter 3
+| * \fBceef712d7f\fR	2014\-04\-10 ~ Finish chapter 2    <(\fBchap3\fR)
+|/
+| * \fB2c0ad9c59b\fR	\fB(fix_typo\fR\fB) \fR2014\-04\-10 ~ Fix typo for good!
+| * \fB615ffa720f\fR	2014\-04\-10 ~ Fix terrible typo\&.
+|/
+* \fBbeec6f4746\fR	2014\-04\-10 ~ Make ReflectorImpl use mailboxes    <(\fBfix_typo\fR)
 * \fB41290e02b7\fR	2014\-04\-10 ~ don\*(Aqt use glibc\-specific execinfo\&.h on uclibc builds
 * \fBa76fde7b7b\fR	2014\-04\-10 ~ [fsp] Add requestUnmount() method together with the request manager\&.
 * \fB9de7a713b3\fR	2014\-04\-10 ~ linux_aura: Use system configuration for middle clicking the titlebar\&.
@@ -938,19 +949,21 @@ Rebasing: chap2
 \&.\&.\&. lots of output, it\*(Aqs a conflict alright :(\&.\&.\&.
 \fB$ git diff\fR
 \fBdiff \-\-cc build/whitespace_file\&.txt
-index 1293282,f903ea2\&.\&.0000000
+index 32e3e9e,a25abea\&.\&.0000000
 \-\-\- a/build/whitespace_file\&.txt
 +++ b/build/whitespace_file\&.txt
-@@@ \-42,4 \-42,5 +42,9 @@@ when the fan was last cleaned
-  There was an poignant pause\&.
+@@@ \-17,7 \-17,7 +17,11 @@@ swept up the streets (for it is in Lond
+  the housetops, and fiercely agitating the scanty flame of the lamps that
+  struggled against the elements\&. A hooded figure emerged\&.
 
-  CHAPTER 3:
 ++<<<<<<< HEAD
- +Hilariousness! This chapter is awesome!
+ +It was a Domo\-Kun\&.
 ++=======
-+ Mr\&. Usagi felt that something wasn\*(Aqt right\&. Shortly after the Domo\-Kun left he
-+ began feeling sick\&.
-++>>>>>>> 93fe917 (beginning of chapter 3)
++ It was a Domo\-Kuun\&.
+++>>>>>>> 615ffa7 (Fix terrible typo\&.)
+
+  "What took you so long?", inquired his wife\&.
+
 \fR
 .fi
 .if n \{\
@@ -969,16 +982,28 @@ Oh, well, that\*(Aqs not too bad\&. In fact\&.\&.\&. that\*(Aqs a terrible chapt
 
 \fB$ git diff \-\-cached\fR
 \fBdiff \-\-git a/build/whitespace_file\&.txt b/build/whitespace_file\&.txt
-index 1293282\&.\&.f903ea2 100644
+index 32e3e9e\&.\&.a25abea 100644
 \-\-\- a/build/whitespace_file\&.txt
 +++ b/build/whitespace_file\&.txt
-@@ \-42,4 +42,5 @@ when the fan was last cleaned\&.
- There was an poignant pause\&.
+@@ \-17,7 +17,7 @@ swept up the streets (for it is in London that our scene lies), rattling along
+ the housetops, and fiercely agitating the scanty flame of the lamps that
+ struggled against the elements\&. A hooded figure emerged\&.
 
- CHAPTER 3:
-\-Hilariousness! This chapter is awesome!
-+Mr\&. Usagi felt that something wasn\*(Aqt right\&. Shortly after the Domo\-Kun left he
-+began feeling sick\&.
+\-It was a Domo\-Kun\&.
++It was a Domo\-Kuun\&.
+
+ "What took you so long?", inquired his wife\&.
+
+@@ \-34,9 +34,3 @@ with his fork, watching the runny jelly spread and pool across his plate,
+ like the blood of a dying fawn\&. \e"It reminds me of that time \-\-\e" he started, as
+ his wife cut in quickly: \e"\-\- please\&. I can\*(Aqt bear to hear it\&.\e"\&. A flury of
+ images coming from the past flowed through his mind\&.
+\-
+\-"You recall what happened on Mulholland drive?" The ceiling fan rotated slowly
+\-overhead, barely disturbing the thick cigarette smoke\&. No doubt was left about
+\-when the fan was last cleaned\&.
+\-
+\-There was an poignant pause\&.
 \fR
 .fi
 .if n \{\
@@ -992,28 +1017,44 @@ Much better
 .\}
 .nf
 \fB$ git rebase \-\-continue\fR
-[detached HEAD 1cb4f5b] beginning of chapter 3
- 1 file changed, 2 insertions(+), 1 deletion(\-)
+[detached HEAD 99992ac] Fix terrible typo\&.
+ 1 file changed, 1 insertion(+), 7 deletions(\-)
 
 \fB$ git rebase\-update\fR
 Fetching origin
-chap3 up\-to\-date
+Rebasing: chap2
+Rebasing: fix_typo
+Your working copy is in mid\-rebase\&. Either:
+ * completely resolve like a normal git\-rebase; OR
+ * try squashing your branch first
+   (git rebase \-\-abort && git squash\-branch) and try
+   again; OR
+ * abort the rebase and mark this branch as dormant:
+       git rebase \-\-abort && \e
+       git config branch\&.fix_typo\&.dormant true
 
-Running `git gc \-\-auto` \- Ctrl\-C to abort is OK\&.
+And then run `git rebase\-update \-n` to resume\&.
+
 
 \fB$ gclient sync\fR
 \&.\&.\&. truncated output \&.\&.\&.
 \fB$ git map\fR
-* \fB1cb4f5b622\fR	\fB(HEAD \-> chap3\fR\fB) \fR2014\-04\-10 ~ beginning of chapter 3
-* \fB59cdb7335b\fR	\fB(origin/main\fR\fB, origin/HEAD\fR\fB) \fR2014\-04\-10 ~ Refactor data interchange format\&.
+\fB* 59cdb7335b\fR	\fB(origin/main\fR\fB, origin/HEAD\fR\fB, chap2\fR\fB) \fR2014\-04\-10 ~ Refactor data interchange format\&.    <(\fBchap2\fR)
 * \fB34676a3583\fR	2014\-04\-10 ~ Ensure FS is exited for all not\-in\-same\-page navigations\&.
 * \fB7d4784e867\fR	2014\-04\-10 ~ Add best chapter2 ever!
-* \fB5d26fec369\fR	2014\-04\-10 ~ Finish chapter 2
-* \fBdf7fefbf06\fR	2014\-04\-10 ~ Revert 255617, due to it not tracking use of the link doctor page properly\&.
-* \fB4b39cda0ac\fR	2014\-04\-10 ~ Fix terrible typo\&.
-* \fB248c5b6fe3\fR	2014\-04\-10 ~ Temporarily CHECK(trial) in ChromeRenderProcessObserver::OnSetFieldTrialGroup\&.
-* \fB8171df8af9\fR	2014\-04\-10 ~ Remove AMD family check for the flapper crypto accelerator\&.
-* \fBd6a30d2e56\fR	2014\-04\-10 ~ Change the Pica load benchmark to listen for the polymer\-ready event
+| * \fB7d4238a1e2\fR	\fB(chap3\fR\fB) \fR2014\-04\-10 ~ beginning of chapter 3
+| * \fBceef712d7f\fR	2014\-04\-10 ~ Finish chapter 2    <(\fBchap3\fR)
+| | * \fB5d1a31a3b6\fR	\fB(fix_typo\fR\fB) \fR2014\-04\-10 ~ Fix typo for good!
+| | * \fB99992ac260\fR	2014\-04\-10 ~ Fix terrible typo\&.
+| |/
+|/|
+* | \fB5d26fec369\fR	2014\-04\-10 ~ Finish chapter 2    <(\fBfix_typo\fR)
+* | \fBdf7fefbf06\fR	2014\-04\-10 ~ Revert 255617, due to it not tracking use of the link doctor page properly\&.
+* | \fB4b39cda0ac\fR	2014\-04\-10 ~ Fix terrible typo\&.
+* | \fB248c5b6fe3\fR	2014\-04\-10 ~ Temporarily CHECK(trial) in ChromeRenderProcessObserver::OnSetFieldTrialGroup\&.
+* | \fB8171df8af9\fR	2014\-04\-10 ~ Remove AMD family check for the flapper crypto accelerator\&.
+* | \fBd6a30d2e56\fR	2014\-04\-10 ~ Change the Pica load benchmark to listen for the polymer\-ready event
+|/
 * \fBbeec6f4746\fR	2014\-04\-10 ~ Make ReflectorImpl use mailboxes
 * \fB41290e02b7\fR	2014\-04\-10 ~ don\*(Aqt use glibc\-specific execinfo\&.h on uclibc builds
 * \fBa76fde7b7b\fR	2014\-04\-10 ~ [fsp] Add requestUnmount() method together with the request manager\&.

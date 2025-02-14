@@ -55,6 +55,7 @@ import git_auth
 import git_common
 import git_footers
 import git_new_branch
+import git_squash_branch
 import google_java_format
 import metrics
 import metrics_utils
@@ -4276,6 +4277,91 @@ def CMDarchive(parser, args):
     return 0
 
 
+@metrics.collector.collect_metrics('git cl squash-closed')
+def CMDsquash_closed(parser, args):
+    """Squashes branches associated with closed changelists, and reparents their children."""
+    if gclient_utils.IsEnvCog():
+        print('squash_closed command is not supported in non-git environment.',
+              file=sys.stderr)
+        return 1
+
+    parser.add_option(
+        '-j',
+        '--maxjobs',
+        action='store',
+        type=int,
+        help='The maximum number of jobs to use when retrieving review status.')
+    parser.add_option('-f',
+                      '--force',
+                      action='store_true',
+                      help='Bypasses the confirmation prompt.')
+    parser.add_option('-d',
+                      '--dry-run',
+                      action='store_true',
+                      help='Skip the branch tagging and removal steps.')
+
+    options, args = parser.parse_args(args)
+    if args:
+        parser.error('Unsupported args: %s' % ' '.join(args))
+
+    if git_common.is_dirty_git_tree('squash-closed'):
+        return 1
+
+    branches = RunGit(['for-each-ref', '--format=%(refname)', 'refs/heads'])
+    if not branches:
+        return 0
+
+    print('Finding all branches associated with closed issues...')
+    changes = [Changelist(branchref=b) for b in branches.splitlines()]
+    statuses = get_cl_statuses(changes,
+                               fine_grained=True,
+                               max_processes=options.maxjobs)
+    proposal = [cl.GetBranch() for cl, status in statuses if status == 'closed']
+    proposal.sort()
+
+    if not proposal:
+        print('No branches with closed codereview issues found.')
+        return 0
+
+    print('\nBranches with closed issues that will be squashed:\n')
+    for next_item in proposal:
+        print('  ' + next_item)
+
+    # Quit now on if this is a dry run.
+    if options.dry_run:
+        print('\nNo changes were made (dry run).\n')
+        return 0
+
+    current_branch = scm.GIT.GetBranch(settings.GetRoot())
+    if current_branch in proposal:
+        print('You are currently on a branch \'%s\' which is associated with a '
+              'closed codereview issue, so squash-closed cannot proceed. '
+              'Please checkout another branch and run this command again.' %
+              current_branch)
+        return 1
+
+    # Prompt the user to continue unless they've specified to always continue.
+    if not options.force:
+        answer = gclient_utils.AskForData(
+            '\nProceed with deletion (Y/n)? ').lower()
+        if answer not in ('y', ''):
+            print('Aborted.')
+            return 1
+
+    # scm.GIT.GetBranch does not work for detached HEAD situations.
+    reset_branch = git_common.current_branch()
+    for branch in proposal:
+        RunGit(['checkout', branch])
+        if git_squash_branch.main([]) != 0:
+            RunGit(['checkout', reset_branch])
+            return 1
+
+    RunGit(['checkout', reset_branch])
+    print('\nJob\'s done!')
+
+    return 0
+
+
 @metrics.collector.collect_metrics('git cl status')
 def CMDstatus(parser, args):
     """Show status of changelists.
@@ -4938,9 +5024,10 @@ def CMDlint(parser, args):
 def CMDpresubmit(parser, args):
     """Runs presubmit tests on the current changelist."""
     if gclient_utils.IsEnvCog():
-        # TODO - crbug/336555565: give user more instructions on how to
-        # trigger presubmit in Cog once the UX is finalized.
-        print('presubmit command is not supported in non-git environment.',
+        print('presubmit command is not supported in non-git environment. '
+              'Please use the "Chromium PRESUBMITS" panel or the "Run '
+              'Presubmit Checks" command in the command palette in the editor '
+              'instead.',
               file=sys.stderr)
         return 1
     parser.add_option('-u',
@@ -5767,6 +5854,12 @@ def CMDsplit(parser, args):
     parser.add_option('--topic',
                       default=None,
                       help='Topic to specify when uploading')
+    parser.add_option('--from-file',
+                      type='str',
+                      default=None,
+                      help='If present, load the split CLs from the given file '
+                      'instead of computing a splitting. These file are '
+                      'generated each time the script is run.')
     options, _ = parser.parse_args(args)
 
     if not options.description_file and not options.dry_run:
@@ -5778,7 +5871,7 @@ def CMDsplit(parser, args):
     return split_cl.SplitCl(options.description_file, options.comment_file,
                             Changelist, WrappedCMDupload, options.dry_run,
                             options.cq_dry_run, options.enable_auto_submit,
-                            options.max_depth, options.topic,
+                            options.max_depth, options.topic, options.from_file,
                             settings.GetRoot())
 
 
@@ -6222,9 +6315,9 @@ def CMDweb(parser, args):
     """Opens the current CL in the web browser."""
     if gclient_utils.IsEnvCog():
         print(
-            'web command is not supported. Please use "Gerrit: Open Changes '
-            'in Gerrit" functionality in the command palette in the Editor '
-            'instead.',
+            'web command is not supported in non-git environment. Please use '
+            '"Gerrit: Open Changes in Gerrit" functionality in the command '
+            'palette in the editor instead.',
             file=sys.stderr)
         return 1
 
@@ -6872,9 +6965,9 @@ def CMDformat(parser, args):
     """Runs auto-formatting tools (clang-format etc.) on the diff."""
     if gclient_utils.IsEnvCog():
         print(
-            'format command is not supported. Please use the "Format '
-            'Modified Lines in All Files (git cl format)" functionality in'
-            'command palette in the editor instead.',
+            'format command is not supported in non-git environment. Please '
+            'use the "Format Modified Lines in All Files (git cl format)" '
+            'functionality in the command palette in the editor instead.',
             file=sys.stderr)
         return 1
     clang_exts = ['.cc', '.cpp', '.h', '.m', '.mm', '.proto']

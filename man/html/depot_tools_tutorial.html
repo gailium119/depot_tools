@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
 <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
-<meta name="generator" content="AsciiDoc 10.2.0" />
+<meta name="generator" content="AsciiDoc 10.2.1" />
 <title>depot_tools_tutorial(7)</title>
 <style type="text/css">
 /* Shared CSS for AsciiDoc xhtml11 and html5 backends */
@@ -1296,6 +1296,7 @@ no changes added to commit (use "git add" and/or "git commit -a")
 
 </code></pre></div></div><p><div class="paragraph"> Someone on the code review pointed out that our typo-fix has a typo :( We're still working on 'chap2' but we really want to land 'fix_typo', so let's switch over and fix it.</p></div><div class="listingblock"><div class="content"><pre><code><span style="font-weight: bold; color: #BFBFBF">$ git freeze</span>
 
+&lt;string&gt;:1: DeprecationWarning: 'pipes' is deprecated and slated for removal in Python 3.13
 <span style="font-weight: bold; color: #BFBFBF">$ git checkout fix_typo</span>
 Switched to branch 'fix_typo'
 Your branch is ahead of 'origin/main' by 1 commit.
@@ -1346,6 +1347,7 @@ It was a Domo-<span style="color: #FF5555">Banana</span><span style="color: #50F
 </span><span style="color: #50FA7B"></span><span style="color: #50FA7B">  chap2
 </span><span style="color: #8BE9FD"></span><span style="font-weight: bold; color: #8BE9FD">  fix_typo *
 </span>
+&lt;string&gt;:1: DeprecationWarning: 'pipes' is deprecated and slated for removal in Python 3.13
 <span style="font-weight: bold; color: #BFBFBF">$ git nav-upstream</span>
 Note: switching to 'origin/main'.
 
@@ -1632,7 +1634,7 @@ by checking out the <a href="https://chromium.googlesource.com/chromium/tools/de
 <div id="footer">
 <div id="footer-text">
 Last updated
- 2022-08-26 21:13:38 PDT
+ 2025-02-14 17:15:17 UTC
 </div>
 </div>
 </body>

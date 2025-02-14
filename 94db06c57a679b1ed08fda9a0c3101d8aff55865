@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0e0ebc26_d8cb222e",
+        "filename": "man/man7/depot_tools_tutorial.7",
+        "patchSetId": 3
+      },
+      "lineNbr": 645,
+      "author": {
+        "id": 1560543
+      },
+      "writtenOn": "2025-02-14T17:22:52Z",
+      "side": 1,
+      "message": "this is problematic, looking into it",
+      "revId": "94db06c57a679b1ed08fda9a0c3101d8aff55865",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

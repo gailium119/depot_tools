@@ -1,0 +1,65 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6fbd6d38_9a10ca49",
+        "filename": "split_cl.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 1560543
+      },
+      "writtenOn": "2025-02-14T17:36:35Z",
+      "side": 1,
+      "message": "nit- why not use first N chars from hexdigest, where N can be relatively small (10?)",
+      "range": {
+        "startLine": 49,
+        "startChar": 0,
+        "endLine": 51,
+        "endChar": 33
+      },
+      "fixSuggestions": [
+        {
+          "fixId": "8b626715_f4ee8c02",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "split_cl.py",
+              "range": {
+                "startLine": 39,
+                "startChar": 0,
+                "endLine": 40,
+                "endChar": 0
+              },
+              "replacement": "def HashList(lst: List[Any]) -\u003e str:\n"
+            },
+            {
+              "path": "split_cl.py",
+              "range": {
+                "startLine": 48,
+                "startChar": 0,
+                "endLine": 52,
+                "endChar": 0
+              },
+              "replacement": "    return hashlib.sha1(byts).hexdigest()[:10]\n"
+            },
+            {
+              "path": "split_cl.py",
+              "range": {
+                "startLine": 126,
+                "startChar": 0,
+                "endLine": 127,
+                "endChar": 0
+              },
+              "replacement": "    return f\"{prefix}_{HashList(files)}_{common_path}_split\"\n"
+            }
+          ]
+        }
+      ],
+      "revId": "fe729475e8f9a558c561da29e755d137fb89da34",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

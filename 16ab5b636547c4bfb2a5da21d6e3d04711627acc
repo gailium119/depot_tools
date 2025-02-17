@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4dc178eb_e9243e31",
+        "filename": "autoninja.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 244,
+      "author": {
+        "id": 1366072
+      },
+      "writtenOn": "2025-02-17T02:49:44Z",
+      "side": 1,
+      "message": "`use_reclient` isn\u0027t finalized at this point?",
+      "range": {
+        "startLine": 244,
+        "startChar": 19,
+        "endLine": 244,
+        "endChar": 31
+      },
+      "revId": "16ab5b636547c4bfb2a5da21d6e3d04711627acc",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

@@ -22,6 +22,30 @@
       },
       "revId": "16ab5b636547c4bfb2a5da21d6e3d04711627acc",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d38cf610_9ff74082",
+        "filename": "autoninja.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 244,
+      "author": {
+        "id": 1001939
+      },
+      "writtenOn": "2025-02-17T03:00:26Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4dc178eb_e9243e31",
+      "range": {
+        "startLine": 244,
+        "startChar": 19,
+        "endLine": 244,
+        "endChar": 31
+      },
+      "revId": "16ab5b636547c4bfb2a5da21d6e3d04711627acc",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

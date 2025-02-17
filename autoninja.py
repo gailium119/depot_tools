@@ -236,6 +236,15 @@ def _main_inner(input_args, build_id, should_collect_logs=False):
     use_reclient = _get_use_reclient_value(output_dir)
     use_android_build_server = False
 
+    # If --offline is set, then reclient will use the local compiler instead of
+    # doing a remote compile. This is convenient if you want to briefly disable
+    # remote compile. It avoids having to rebuild the world when transitioning
+    # between RBE/non-RBE builds. However, it is not as fast as doing a "normal"
+    # non-RBE build because an extra process is created for each compile step.
+    if offline and use_reclient:
+        # Tell reclient to do local compiles.
+        os.environ["RBE_remote_disabled"] = "1"
+
     # Attempt to auto-detect remote build acceleration. We support gn-based
     # builds, where we look for args.gn in the build tree, and cmake-based
     # builds where we look for rules.ninja.
@@ -388,15 +397,6 @@ def _main_inner(input_args, build_id, should_collect_logs=False):
             # just set it here for us and it'll apply to the build tool we
             # spawn later.
             os.nice(10)
-
-    # If --offline is set, then reclient will use the local compiler instead of
-    # doing a remote compile. This is convenient if you want to briefly disable
-    # remote compile. It avoids having to rebuild the world when transitioning
-    # between RBE/non-RBE builds. However, it is not as fast as doing a "normal"
-    # non-RBE build because an extra process is created for each compile step.
-    if offline:
-        # Tell reclient to do local compiles.
-        os.environ["RBE_remote_disabled"] = "1"
 
     # On macOS and most Linux distributions, the default limit of open file
     # descriptors is too low (256 and 1024, respectively).

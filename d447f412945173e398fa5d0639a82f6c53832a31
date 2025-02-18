@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a64c2d30_48fa34e5",
+        "filename": "PRESUBMIT.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 153,
+      "author": {
+        "id": 1157909
+      },
+      "writtenOn": "2025-02-18T22:46:30Z",
+      "side": 1,
+      "message": "I got presubmit error like\n\n```\n** Presubmit ERRORS: 1 **\nEvaluation of CheckCIPDManifest failed: \u0027str\u0027 object has no attribute \u0027Extension\u0027, Traceback (most recent call last):\n  File \"/usr/local/google/home/chanli/tools/depot_tools/presubmit_support.py\", line 1891, in _run_check_function\n    result \u003d eval(function_name + \u0027(*__args)\u0027, context)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"\u003cstring\u003e\", line 1, in \u003cmodule\u003e\n  File \"/usr/local/google/home/chanli/projects/depot/depot_tools/PRESUBMIT.py\", line 153, in CheckCIPDManifest\n    if path.Extension() \u003d\u003d \u0027.txt\u0027:\n       ^^^^^^^^^^^^^^\nAttributeError: \u0027str\u0027 object has no attribute \u0027Extension\u0027\n```\n\nIf I read the code right, I think L152 should be removed?",
+      "revId": "d447f412945173e398fa5d0639a82f6c53832a31",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

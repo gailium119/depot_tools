@@ -1,0 +1,105 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5797e66e_dfa4f7ba",
+        "filename": "git_rebase_update.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 148,
+      "author": {
+        "id": 1367998
+      },
+      "writtenOn": "2025-02-18T23:25:40Z",
+      "side": 1,
+      "message": "nit: use `format_branch_name` to match style",
+      "range": {
+        "startLine": 148,
+        "startChar": 4,
+        "endLine": 148,
+        "endChar": 20
+      },
+      "fixSuggestions": [
+        {
+          "fixId": "4a82196c_b2fc5d09",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "git_rebase_update.py",
+              "range": {
+                "startLine": 148,
+                "startChar": 0,
+                "endLine": 149,
+                "endChar": 0
+              },
+              "replacement": "def format_branch_name(branch):\n"
+            },
+            {
+              "path": "git_rebase_update.py",
+              "range": {
+                "startLine": 171,
+                "startChar": 0,
+                "endLine": 172,
+                "endChar": 0
+              },
+              "replacement": "        print(\u0027Rebasing:\u0027, format_branch_name(branch))\n"
+            },
+            {
+              "path": "git_rebase_update.py",
+              "range": {
+                "startLine": 192,
+                "startChar": 0,
+                "endLine": 193,
+                "endChar": 0
+              },
+              "replacement": "                  format_branch_name(branch),\n"
+            },
+            {
+              "path": "git_rebase_update.py",
+              "range": {
+                "startLine": 239,
+                "startChar": 0,
+                "endLine": 240,
+                "endChar": 0
+              },
+              "replacement": "        print(\u0027%s up-to-date\u0027 % format_branch_name(branch))\n"
+            },
+            {
+              "path": "git_rebase_update.py",
+              "range": {
+                "startLine": 338,
+                "startChar": 0,
+                "endLine": 339,
+                "endChar": 0
+              },
+              "replacement": "        print(\u0027Skipping %s: No upstream specified\u0027 % format_branch_name(branch))\n"
+            },
+            {
+              "path": "git_rebase_update.py",
+              "range": {
+                "startLine": 359,
+                "startChar": 0,
+                "endLine": 360,
+                "endChar": 0
+              },
+              "replacement": "            print(\u0027Skipping dormant branch\u0027, format_branch_name(branch))\n"
+            },
+            {
+              "path": "git_rebase_update.py",
+              "range": {
+                "startLine": 383,
+                "startChar": 0,
+                "endLine": 384,
+                "endChar": 0
+              },
+              "replacement": "            print(\u0027  %s\u0027 % format_branch_name(branch))\n"
+            }
+          ]
+        }
+      ],
+      "revId": "19a9f4625c73e181ce1ff873a2ca4ec794b8786e",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

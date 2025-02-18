@@ -16,6 +16,41 @@
       "message": "Hi,\nthis CL is a spiritual sucessor to CL 6236404 which added UnixLocalPath*() in presubmit_support. It introduces `AffectedFile.Extension()` to standardize file name parsing. This CL is used by my Chromium CL 6273461.",
       "revId": "b5ff5d2ba22f361c25edc2578c3ddedde6fbf69d",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "32484f56_cee3c65c",
+        "filename": "presubmit_support.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 1167,
+      "author": {
+        "id": 1003232
+      },
+      "writtenOn": "2025-02-18T20:16:11Z",
+      "side": 1,
+      "message": "Nit: typo: \"portion\".",
+      "fixSuggestions": [
+        {
+          "fixId": "dfbeaba4_4adf42c1",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "presubmit_support.py",
+              "range": {
+                "startLine": 1167,
+                "startChar": 0,
+                "endLine": 1168,
+                "endChar": 0
+              },
+              "replacement": "        File extension is the portion of file name after the last dot, including the dot.\n"
+            }
+          ]
+        }
+      ],
+      "revId": "b5ff5d2ba22f361c25edc2578c3ddedde6fbf69d",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

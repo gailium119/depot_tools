@@ -69,6 +69,24 @@
       "parentUuid": "ac064824_4db91de7",
       "revId": "e8c6573e34e7118a805e1a9f3eeb324a41368fe2",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6c956f0b_7d192354",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1211034
+      },
+      "writtenOn": "2025-02-19T11:52:58Z",
+      "side": 1,
+      "message": "I could havily reduce the dependencies.",
+      "parentUuid": "8ecab719_fc033008",
+      "revId": "e8c6573e34e7118a805e1a9f3eeb324a41368fe2",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

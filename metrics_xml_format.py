@@ -18,7 +18,7 @@ def GetMetricsDir(top_dir, path):
         os.path.join(top_dir, 'tools', 'metrics', 'structured'),
         os.path.join(top_dir, 'tools', 'metrics', 'ukm'),
     ]
-    abs_dirname = os.path.dirname(os.path.realpath(path))
+    abs_dirname = os.path.dirname(path)
     for xml_dir in metrics_xml_dirs:
         if abs_dirname.startswith(xml_dir):
             return xml_dir
@@ -45,13 +45,20 @@ def FindMetricsXMLFormatterTool(path, verbose=False):
     if not top_dir:
         log('Not executed in a Chromium checkout; skip formatting', verbose)
         return ''
+
+    # realpath them to ensure that that the below path checks work even if
+    # they are symlinks.
+    top_dir = os.path.realpath(top_dir)
+    path = os.path.realpath(path)
+
     xml_dir = GetMetricsDir(top_dir, path)
     if not xml_dir:
         log(f'{path} is not a metric XML; skip formatting', verbose)
         return ''
+
     # Just to ensure that the given file is located in the current checkout
     # folder. If not, skip the formatting.
-    if not os.path.realpath(path).startswith(os.path.realpath(top_dir)):
+    if not path.startswith(top_dir):
         log(
             f'{path} is not located in the current Chromium checkout; '
             'skip formatting', verbose)

@@ -12,6 +12,7 @@ import sys
 
 
 def GetMetricsDir(top_dir, path):
+    top_dir = os.path.realpath(top_dir)
     metrics_xml_dirs = [
         os.path.join(top_dir, 'tools', 'metrics', 'actions'),
         os.path.join(top_dir, 'tools', 'metrics', 'histograms'),

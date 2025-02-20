@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "14e0e84b_392556b7",
+        "filename": "presubmit_canned_checks.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 2248,
+      "author": {
+        "id": 1367998
+      },
+      "writtenOn": "2025-02-20T21:07:38Z",
+      "side": 1,
+      "message": "should this be bypassable w/ a footer? or do we want this to be unbypassable like CheckNoNewGitFilesAddedInDependencies?",
+      "range": {
+        "startLine": 2248,
+        "startChar": 21,
+        "endLine": 2248,
+        "endChar": 60
+      },
+      "revId": "febb34138193c9d222fde904cce501bc7c741efb",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

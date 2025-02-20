@@ -2221,6 +2221,43 @@ def CheckNoNewGitFilesAddedInDependencies(input_api, output_api):
     return errors
 
 
+def CheckNoNewHooksInDependencies(input_api, output_api):
+    """Returns an error if there are any new hooks in DEPS."""
+    # Run only if DEPS has been modified.
+    deps_affected_files = [
+        f for f in input_api.AffectedFiles() if f.LocalPath() == 'DEPS'
+    ]
+    if not deps_affected_files:
+        return []
+
+    deps_affected_file = deps_affected_files[0]
+    new_deps = _ParseDeps("".join(deps_affected_file.NewContents()))
+    new_hooks = new_deps.get('hooks', [])
+    new_hook_names = set(hook.get('name') for hook in new_hooks)
+
+    if old_contents := deps_affected_file.OldContents():
+        old_deps = _ParseDeps(old_contents)
+        old_hooks = old_deps.get('hooks', [])
+        old_hook_names = set(hook.get('name') for hook in old_hooks)
+        if added_hooks := new_hook_names - old_hook_names:
+            return [
+                output_api.PresubmitError(
+                    'New DEPS hooks are not allowed in DEPS. Found hooks: '
+                    f"{', '.join(added_hooks)}. Please use 'gcs' or "
+                    "'cipd' dependency types instead."
+                )
+            ]
+    elif new_hooks:
+        return [
+            output_api.PresubmitError(
+                    'New DEPS hooks are not allowed in new DEPS files. Found '
+                    f"hooks: {', '.join(new_hook_names)}. Please use 'gcs' or "
+                    "'cipd' dependency types instead."
+            )
+        ]
+    return []
+
+
 @functools.lru_cache(maxsize=None)
 def _ParseDeps(contents):
     """Simple helper for parsing DEPS files."""

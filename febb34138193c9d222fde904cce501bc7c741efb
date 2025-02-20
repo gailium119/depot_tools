@@ -22,6 +22,30 @@
       },
       "revId": "febb34138193c9d222fde904cce501bc7c741efb",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b8c2e554_6cc653dd",
+        "filename": "presubmit_canned_checks.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 2248,
+      "author": {
+        "id": 1560543
+      },
+      "writtenOn": "2025-02-20T21:17:30Z",
+      "side": 1,
+      "message": "There are gclient hooks that don\u0027t add external dependencies. For example, https://chromium.googlesource.com/chromium/src/+/db186c0ff5f05b6cd38e9decd7417e836093041c/DEPS#4908 and https://chromium.googlesource.com/chromium/src/+/db186c0ff5f05b6cd38e9decd7417e836093041c/DEPS#5587.\n\nI don\u0027t think we have a good way to know if a hook will download data from GCS, or any other remote location.\n\nPerhaps a git footer that states no external deps are downloaded from newly added hook is way to go. I would solicit feedback from source advisors.",
+      "parentUuid": "14e0e84b_392556b7",
+      "range": {
+        "startLine": 2248,
+        "startChar": 21,
+        "endLine": 2248,
+        "endChar": 60
+      },
+      "revId": "febb34138193c9d222fde904cce501bc7c741efb",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

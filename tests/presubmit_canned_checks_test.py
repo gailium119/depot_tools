@@ -534,5 +534,72 @@ class CheckNoNewGitFilesAddedInDependenciesTest(unittest.TestCase):
         self.assertEqual(0, len(results))
 
 
+class CheckNoNewHooksInDependenciesTest(unittest.TestCase):
+
+    def setUp(self):
+        self.input_api = MockInputApi()
+
+    def test_no_deps_file_change(self):
+        self.input_api.files = [
+            MockAffectedFile('foo.py', 'content'),
+        ]
+        results = presubmit_canned_checks.CheckNoNewHooksInDependencies(
+            self.input_api, MockOutputApi())
+        self.assertEqual(0, len(results))
+
+    def test_hook_changes(self):
+        test_cases = [
+            {
+                'name': 'no new hooks',
+                'old_contents': "hooks = []",
+                'new_contents': "hooks = []",
+                'expected_errors': 0,
+                'error_msg_substrings': []
+            },
+            {
+                'name': 'add new hook',
+                'old_contents': "hooks = [{'name': 'old_hook'}]",
+                'new_contents': "hooks = [{'name': 'old_hook'}, {'name': 'new_hook'}]",
+                'expected_errors': 1,
+                'error_msg_substrings': ['New DEPS hooks are not allowed', 'new_hook']
+            },
+            {
+                'name': 'change existing hook',
+                'old_contents': "hooks = [{'name': 'existing_hook', 'action': ['run', './test.sh']}]",
+                'new_contents': "hooks = [{'name': 'existing_hook', 'action': ['run', './test_v2.sh']}]",
+                'expected_errors': 0,
+                'error_msg_substrings': []
+            },
+            {
+                'name': 'remove hook',
+                'old_contents': "hooks = [{'name': 'old_hook'}, {'name': 'hook_to_remove'}]",
+                'new_contents': "hooks = [{'name': 'old_hook'}]",
+                'expected_errors': 0,
+                'error_msg_substrings': []
+            },
+        ]
+        for case in test_cases:
+            with self.subTest(case_name=case['name']):
+                self.input_api.files = [
+                    MockAffectedFile('DEPS',
+                                     old_contents=case['old_contents'],
+                                     new_contents=case['new_contents']),
+                ]
+                results = presubmit_canned_checks.CheckNoNewHooksInDependencies(
+                    self.input_api, MockOutputApi())
+                self.assertEqual(case['expected_errors'], len(results))
+                for msg_substring in case['error_msg_substrings']:
+                    self.assertTrue(msg_substring in results[0].message)
+
+    def test_new_deps_file_no_hooks_allowed(self):
+        self.input_api.files = [
+            MockAffectedFile('DEPS', old_contents="", new_contents="hooks = [{'name': 'new_hook'}]", action='A'),
+        ]
+        results = presubmit_canned_checks.CheckNoNewHooksInDependencies(self.input_api, MockOutputApi())
+        self.assertEqual(1, len(results))
+        self.assertIn('New DEPS hooks are not allowed in new DEPS files', results[0].message)
+        self.assertIn('new_hook', results[0].message)
+
+
 if __name__ == '__main__':
     unittest.main()

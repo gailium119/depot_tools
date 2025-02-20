@@ -16,6 +16,24 @@
       "message": "sokcevic PTAL. I think I might need a second person since I\u0027m not a depot_tools OWNER",
       "revId": "59dd72636ee7aff1ea6ded8b0c4518dec4e02589",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e76d256a_6252db47",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1560543
+      },
+      "writtenOn": "2025-02-20T23:20:32Z",
+      "side": 1,
+      "message": "Thanks! Could you run ./man/src/make_docs.sh to generate html and man pages? I\u0027ll add someone on my team after that.",
+      "parentUuid": "cc3d202f_7ea98e02",
+      "revId": "59dd72636ee7aff1ea6ded8b0c4518dec4e02589",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

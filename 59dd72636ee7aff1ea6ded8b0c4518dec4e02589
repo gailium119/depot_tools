@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "cc3d202f_7ea98e02",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1328910
+      },
+      "writtenOn": "2025-02-20T23:17:53Z",
+      "side": 1,
+      "message": "sokcevic PTAL. I think I might need a second person since I\u0027m not a depot_tools OWNER",
+      "revId": "59dd72636ee7aff1ea6ded8b0c4518dec4e02589",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

@@ -1788,6 +1788,9 @@ def PanProjectChecks(input_api,
         results.extend(
             input_api.canned_checks.CheckNoNewGitFilesAddedInDependencies(
                 input_api, output_api))
+        results.extend(
+            input_api.canned_checks.CheckNoNewHooksInDependencies(
+                input_api, output_api))
         if input_api.change.scm == 'git':
             snapshot("checking for commit objects in tree")
             results.extend(
@@ -2219,6 +2222,43 @@ def CheckNoNewGitFilesAddedInDependencies(input_api, output_api):
             path = _os.path.dirname(path)
 
     return errors
+
+
+def CheckNoNewHooksInDependencies(input_api, output_api):
+    """Returns an error if there are any new hooks in DEPS."""
+    deps_affected_files = [
+        f for f in input_api.AffectedFiles() if f.LocalPath() == 'DEPS'
+    ]
+    if not deps_affected_files:
+        return []
+
+    deps_affected_file = deps_affected_files[0]
+    new_contents = deps_affected_file.NewContents()
+    new_deps = _ParseDeps("\n".join(new_contents))
+    new_hooks = new_deps.get('hooks', [])
+    new_hook_names = set(hook.get('name') for hook in new_hooks)
+
+    if old_contents := deps_affected_file.OldContents():
+        old_deps = _ParseDeps("\n".join(old_contents))
+        old_hooks = old_deps.get('hooks', [])
+        old_hook_names = set(hook.get('name') for hook in old_hooks)
+        if added_hooks := new_hook_names - old_hook_names:
+            return [
+                output_api.PresubmitError(
+                    'New DEPS hooks are not allowed in DEPS. Found hooks: '
+                    f"{', '.join(added_hooks)}. Please use 'gcs' or "
+                    "'cipd' dependency types instead."
+                )
+            ]
+    elif new_hooks:
+        return [
+            output_api.PresubmitError(
+                    'New DEPS hooks are not allowed in new DEPS files. Found '
+                    f"hooks: {', '.join(new_hook_names)}. Please use 'gcs' or "
+                    "'cipd' dependency types instead."
+            )
+        ]
+    return []
 
 
 @functools.lru_cache(maxsize=None)

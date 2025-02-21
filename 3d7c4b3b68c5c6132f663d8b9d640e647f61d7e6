@@ -1,0 +1,154 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b204096c_f04c43b9",
+        "filename": "win_toolchain/get_toolchain_if_necessary.py",
+        "patchSetId": 7
+      },
+      "lineNbr": 482,
+      "author": {
+        "id": 1366072
+      },
+      "writtenOn": "2025-02-21T07:01:48Z",
+      "side": 1,
+      "message": "nit: return if not sys.platform.startswith(\u0027win32\u0027)",
+      "fixSuggestions": [
+        {
+          "fixId": "2cce63f9_74359c6e",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "win_toolchain/get_toolchain_if_necessary.py",
+              "range": {
+                "startLine": 482,
+                "startChar": 0,
+                "endLine": 499,
+                "endChar": 0
+              },
+              "replacement": "    if not sys.platform.startswith(\u0027win32\u0027):\n        # build/vs_toolchain.py sets up ciopfs on vs_files,\n        # so using different target_dir won\u0027t work on Linux?\n        return target_dir\n    if os.path.exists(junction_dir):\n        try:\n            if os.path.samefile(os.readlink(junction_dir), target_dir):\n                return junction_dir\n        except:\n            # os.readlik may fail if junction_dir is not junction or symlink\n            pass\n        RmDir(junction_dir)\n    print(\u0027Setup a directry junction %s to %s\u0027 % (junction_dir, target_dir))\n    subprocess.run([\u0027mklink\u0027, \u0027/J\u0027, junction_dir, target_dir],\n                   shell\u003dTrue,\n                   check\u003dTrue)\n    return junction_dir\n"
+            }
+          ]
+        }
+      ],
+      "revId": "3d7c4b3b68c5c6132f663d8b9d640e647f61d7e6",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "44ac86a3_7a6d9cc2",
+        "filename": "win_toolchain/get_toolchain_if_necessary.py",
+        "patchSetId": 7
+      },
+      "lineNbr": 523,
+      "author": {
+        "id": 1366072
+      },
+      "writtenOn": "2025-02-21T07:01:48Z",
+      "side": 1,
+      "message": "on Windows",
+      "range": {
+        "startLine": 523,
+        "startChar": 66,
+        "endLine": 523,
+        "endChar": 69
+      },
+      "fixSuggestions": [
+        {
+          "fixId": "3c75c4c1_fd7ea316",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "win_toolchain/get_toolchain_if_necessary.py",
+              "range": {
+                "startLine": 523,
+                "startChar": 0,
+                "endLine": 524,
+                "endChar": 0
+              },
+              "replacement": "                        help\u003d\u0027don\\\u0027t setup junction for toolchain dir on Windows\u0027)\n"
+            }
+          ]
+        }
+      ],
+      "revId": "3d7c4b3b68c5c6132f663d8b9d640e647f61d7e6",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "87f04311_29969bd3",
+        "filename": "win_toolchain/get_toolchain_if_necessary.py",
+        "patchSetId": 7
+      },
+      "lineNbr": 550,
+      "author": {
+        "id": 1366072
+      },
+      "writtenOn": "2025-02-21T07:01:48Z",
+      "side": 1,
+      "message": "Move this comment before L555.",
+      "range": {
+        "startLine": 548,
+        "startChar": 0,
+        "endLine": 550,
+        "endChar": 0
+      },
+      "fixSuggestions": [
+        {
+          "fixId": "7926ec32_c8c0bba1",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "win_toolchain/get_toolchain_if_necessary.py",
+              "range": {
+                "startLine": 548,
+                "startChar": 0,
+                "endLine": 550,
+                "endChar": 0
+              },
+              "replacement": ""
+            },
+            {
+              "path": "win_toolchain/get_toolchain_if_necessary.py",
+              "range": {
+                "startLine": 555,
+                "startChar": 0,
+                "endLine": 555,
+                "endChar": 0
+              },
+              "replacement": "\n    # Move to depot_tools\\win_toolchain where we\u0027ll store our files, and where\n    # the downloader script is.\n"
+            }
+          ]
+        }
+      ],
+      "revId": "3d7c4b3b68c5c6132f663d8b9d640e647f61d7e6",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2fbeb082_645ae0c2",
+        "filename": "win_toolchain/get_toolchain_if_necessary.py",
+        "patchSetId": 7
+      },
+      "lineNbr": 554,
+      "author": {
+        "id": 1366072
+      },
+      "writtenOn": "2025-02-21T07:01:48Z",
+      "side": 1,
+      "message": "Please add a comment about the junction.",
+      "range": {
+        "startLine": 554,
+        "startChar": 25,
+        "endLine": 554,
+        "endChar": 38
+      },
+      "revId": "3d7c4b3b68c5c6132f663d8b9d640e647f61d7e6",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

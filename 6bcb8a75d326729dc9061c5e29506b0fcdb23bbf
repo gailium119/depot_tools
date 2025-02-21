@@ -34,6 +34,24 @@
       "parentUuid": "63cbced6_4eae8f59",
       "revId": "6bcb8a75d326729dc9061c5e29506b0fcdb23bbf",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c7bf74e9_0bc9e6ed",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1366072
+      },
+      "writtenOn": "2025-02-21T07:01:48Z",
+      "side": 1,
+      "message": "We tested on Windows. And it works as expected. Symlinking on Linux isn\u0027t supported workflow for now.",
+      "parentUuid": "26fa6774_a6657f35",
+      "revId": "6bcb8a75d326729dc9061c5e29506b0fcdb23bbf",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

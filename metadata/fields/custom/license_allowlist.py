@@ -200,6 +200,8 @@ WITH_PERMISSION_ONLY = frozenset([
     "Opus-Patent-BSD-3-Clause",
     "UnRAR",
     # go/keep-sorted end
+    # Patent files are special, and must be handled on a case by case basis.
+    "Patent",
 ])
 
 ALLOWED_LICENSES = ALLOWED_SPDX_LICENSES | EXTENDED_LICENSE_CLASSIFIERS

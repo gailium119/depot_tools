@@ -474,6 +474,22 @@ def EnableCrashDumpCollection():
             pass
 
 
+def SetupJunction(toolchain_dir):
+    """Sets up junction for toolchain dir."""
+    junction_dir = BASEDIR
+    if junction_dir == toolchain_dir:
+        return toolchain_dir
+    if os.path.exists(junction_dir):
+        if os.path.samefile(os.readlink(junction_dir), toolchain_dir):
+            return junction_dir
+        os.remove(junction_dir)
+    print('Setup a directry junction %s to %s' % (junction_dir, toolchain_dir))
+    subprocess.run(['mklink', '/J', junkction_dir, toolchain_dir],
+                   shell=True,
+                   check=True)
+    return junction_dir
+
+
 def main():
     parser = argparse.ArgumentParser(
         description=__doc__,
@@ -494,6 +510,9 @@ def main():
     parser.add_argument('desired_hash',
                         metavar='desired-hash',
                         help='toolchain hash to download')
+    parser.add_argument('--no-junction',
+                        action='store_true',
+                        help='don\'t setup junction for toolchain dir')
     args = parser.parse_args()
 
     if not (sys.platform.startswith(('cygwin', 'win32')) or args.force):
@@ -517,6 +536,8 @@ def main():
     toolchain_dir = os.path.abspath(args.toolchain_dir)
     if not os.path.isdir(toolchain_dir):
         os.makedirs(toolchain_dir)
+    if not args.no_junction:
+        toolchain_dir = SetupJunction(args.toolchain_dir)
     os.chdir(toolchain_dir)
 
     # Move to depot_tools\win_toolchain where we'll store our files, and where
@@ -526,7 +547,7 @@ def main():
         os.mkdir(target_dir)
     toolchain_target_dir = os.path.join(target_dir, args.desired_hash)
 
-    abs_toolchain_target_dir = os.path.abspath(toolchain_target_dir)
+    abs_toolchain_target_dir = os.path.join(toolchain_dir, toolchain_target_dir)
 
     got_new_toolchain = False
 

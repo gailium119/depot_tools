@@ -36,6 +36,24 @@
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "190156d5_3cfa4afd",
+        "filename": "win_toolchain/get_toolchain_if_necessary.py",
+        "patchSetId": 7
+      },
+      "lineNbr": 482,
+      "author": {
+        "id": 1001939
+      },
+      "writtenOn": "2025-02-21T07:09:57Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "b204096c_f04c43b9",
+      "revId": "3d7c4b3b68c5c6132f663d8b9d640e647f61d7e6",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "44ac86a3_7a6d9cc2",
@@ -73,6 +91,30 @@
           ]
         }
       ],
+      "revId": "3d7c4b3b68c5c6132f663d8b9d640e647f61d7e6",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "82692698_bfc303dc",
+        "filename": "win_toolchain/get_toolchain_if_necessary.py",
+        "patchSetId": 7
+      },
+      "lineNbr": 523,
+      "author": {
+        "id": 1001939
+      },
+      "writtenOn": "2025-02-21T07:09:57Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "44ac86a3_7a6d9cc2",
+      "range": {
+        "startLine": 523,
+        "startChar": 66,
+        "endLine": 523,
+        "endChar": 69
+      },
       "revId": "3d7c4b3b68c5c6132f663d8b9d640e647f61d7e6",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
@@ -128,6 +170,30 @@
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "5a447b35_a0384336",
+        "filename": "win_toolchain/get_toolchain_if_necessary.py",
+        "patchSetId": 7
+      },
+      "lineNbr": 550,
+      "author": {
+        "id": 1001939
+      },
+      "writtenOn": "2025-02-21T07:09:57Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "87f04311_29969bd3",
+      "range": {
+        "startLine": 548,
+        "startChar": 0,
+        "endLine": 550,
+        "endChar": 0
+      },
+      "revId": "3d7c4b3b68c5c6132f663d8b9d640e647f61d7e6",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "2fbeb082_645ae0c2",
@@ -141,6 +207,30 @@
       "writtenOn": "2025-02-21T07:01:48Z",
       "side": 1,
       "message": "Please add a comment about the junction.",
+      "range": {
+        "startLine": 554,
+        "startChar": 25,
+        "endLine": 554,
+        "endChar": 38
+      },
+      "revId": "3d7c4b3b68c5c6132f663d8b9d640e647f61d7e6",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "37764e6a_79e2a416",
+        "filename": "win_toolchain/get_toolchain_if_necessary.py",
+        "patchSetId": 7
+      },
+      "lineNbr": 554,
+      "author": {
+        "id": 1001939
+      },
+      "writtenOn": "2025-02-21T07:09:57Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2fbeb082_645ae0c2",
       "range": {
         "startLine": 554,
         "startChar": 25,

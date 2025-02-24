@@ -18,6 +18,41 @@
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "59a0c673_706ad4a6",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1160859
+      },
+      "writtenOn": "2025-02-24T21:05:38Z",
+      "side": 1,
+      "message": "`mklink /j` doesn\u0027t need admin",
+      "parentUuid": "800f0ae6_d4941673",
+      "revId": "42bdf2a8f631441c6843e95ddcb22a59246dbd14",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "86e86648_7f82119a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1160859
+      },
+      "writtenOn": "2025-02-24T21:05:38Z",
+      "side": 1,
+      "message": "I can\u0027t really reason about what this CL does tbh... I am a bit worried about rmdir the vs_files dir - will this result in needing to re-download all the files again?",
+      "revId": "42bdf2a8f631441c6843e95ddcb22a59246dbd14",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "046e2015_c4578dca",

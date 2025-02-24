@@ -1,0 +1,91 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "800f0ae6_d4941673",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1003232
+      },
+      "writtenOn": "2025-02-24T20:57:18Z",
+      "side": 1,
+      "message": "Are you sure this\u0027ll work w/o admin privs? I feel like I\u0027ve had mixed success w/ mklink as a regular user. wfh@, maybe you can confirm?",
+      "revId": "42bdf2a8f631441c6843e95ddcb22a59246dbd14",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "046e2015_c4578dca",
+        "filename": "win_toolchain/get_toolchain_if_necessary.py",
+        "patchSetId": 8
+      },
+      "lineNbr": 491,
+      "author": {
+        "id": 1003232
+      },
+      "writtenOn": "2025-02-24T20:57:18Z",
+      "side": 1,
+      "message": "typo: readlink.",
+      "fixSuggestions": [
+        {
+          "fixId": "cc17db58_f3fe8f01",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "win_toolchain/get_toolchain_if_necessary.py",
+              "range": {
+                "startLine": 491,
+                "startChar": 0,
+                "endLine": 492,
+                "endChar": 0
+              },
+              "replacement": "            # os.readlink may fail if junction_dir is not junction or symlink\n"
+            }
+          ]
+        }
+      ],
+      "revId": "42bdf2a8f631441c6843e95ddcb22a59246dbd14",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5d6de699_ecce2760",
+        "filename": "win_toolchain/get_toolchain_if_necessary.py",
+        "patchSetId": 8
+      },
+      "lineNbr": 494,
+      "author": {
+        "id": 1003232
+      },
+      "writtenOn": "2025-02-24T20:57:18Z",
+      "side": 1,
+      "message": "typo: directory.",
+      "fixSuggestions": [
+        {
+          "fixId": "47065011_eed6253c",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "win_toolchain/get_toolchain_if_necessary.py",
+              "range": {
+                "startLine": 494,
+                "startChar": 0,
+                "endLine": 495,
+                "endChar": 0
+              },
+              "replacement": "    print(\u0027Setup a directory junction %s to %s\u0027 % (junction_dir, target_dir))\n"
+            }
+          ]
+        }
+      ],
+      "revId": "42bdf2a8f631441c6843e95ddcb22a59246dbd14",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

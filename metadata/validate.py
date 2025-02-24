@@ -157,10 +157,11 @@ def check_file(
         # CLs are not blocked by invalid metadata in presubmits yet.
         # Bug: b/285453019.
         if result.is_fatal():
+            message = result.get_message(width=60)
+            error_messages.append(message)
+        else:
             message = result.get_message(prescript=_TRANSITION_PRESCRIPT,
                                          width=60)
-        else:
-            message = result.get_message(width=60)
-        warning_messages.append(message)
+            warning_messages.append(message)
 
     return error_messages, warning_messages

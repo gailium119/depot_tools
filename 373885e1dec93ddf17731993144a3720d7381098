@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f0bb66a7_009ac149",
+        "filename": "metadata/validate.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 153,
+      "author": {
+        "id": 1544922
+      },
+      "writtenOn": "2025-02-24T06:33:59Z",
+      "side": 1,
+      "message": "There\u0027s no need for the transition prescript - you can do:\n```\ntarget \u003d error_messages if result.is_fatal() else warning_messages\ntarget.append(result.get_message(width\u003d60))\n```",
+      "revId": "373885e1dec93ddf17731993144a3720d7381098",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

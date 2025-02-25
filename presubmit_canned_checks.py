@@ -1788,6 +1788,9 @@ def PanProjectChecks(input_api,
         results.extend(
             input_api.canned_checks.CheckNoNewGitFilesAddedInDependencies(
                 input_api, output_api))
+        results.extend(
+            input_api.canned_checks.CheckNoNewHooksInDependencies(
+                input_api, output_api))
         if input_api.change.scm == 'git':
             snapshot("checking for commit objects in tree")
             results.extend(
@@ -2219,6 +2222,45 @@ def CheckNoNewGitFilesAddedInDependencies(input_api, output_api):
             path = _os.path.dirname(path)
 
     return errors
+
+
+def CheckNewDepsHooksHasReuqiredReviewers(input_api, output_api,
+                                          required_reviewers: list[str]):
+    """Ensure CL to add new DEPS hooks has at least one required reviewer."""
+    if not required_reviewers:
+        raise ValueError('required_reviewers must be non-empty')
+    if not input_api.change.issue:
+        return []  # Not a Gerrit CL.
+    deps_affected_files = [
+        f for f in input_api.AffectedFiles() if f.LocalPath() == 'DEPS'
+    ]
+    if not deps_affected_files:
+        return []  # Not a DEPS change.
+    deps_affected_file = deps_affected_files[0]
+
+    def _get_hooks_names(dep_contents):
+        deps = _ParseDeps('\n'.join(dep_contents))
+        hooks = deps.get('hooks', [])
+        return set(hook.get('name') for hook in hooks)
+
+    old_hooks = _get_hooks_names(deps_affected_file.OldContents())
+    new_hooks = _get_hooks_names(deps_affected_file.NewContents())
+    if old_hooks == new_hooks:
+        return []  # No new hooks added.
+
+    reviewers = set(r.strip for r in input_api.gerrit.GetChangeReviewers(
+            input_api.change.issue, approving_only=False))
+
+    if reviewers & required_reviewers:
+        return []  # At least one required reviewer is present.
+    return [
+        output_api.PresubmitError(
+            f'New DEPS {"hooks" if len(new_hooks-old_hooks) == 1 else "hook"} '
+            f'({", ".join(new_hooks-old_hooks)}) are found. Please add '
+            'one of the following reviewers:\n'
+            f'{"\n".join(required_reviewers)}'
+        )
+    ]
 
 
 @functools.lru_cache(maxsize=None)

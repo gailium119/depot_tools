@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5f4c8735_ae8bd252",
+        "filename": "autoninja.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 135,
+      "author": {
+        "id": 1161379
+      },
+      "writtenOn": "2025-02-26T06:28:38Z",
+      "side": 0,
+      "message": "Keep this blank line?",
+      "revId": "a60883e901e5bc78a3ebccdca7c01d00e2390536",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

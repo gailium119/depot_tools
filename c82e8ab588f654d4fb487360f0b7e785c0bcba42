@@ -38,6 +38,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "325863f8_3cf6244c",
+        "filename": "autoninja.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 145,
+      "author": {
+        "id": 1003232
+      },
+      "writtenOn": "2025-02-26T19:57:14Z",
+      "side": 1,
+      "message": "Oh, are you checking it in as part of https://crrev.com/c/6299478 ?\n\nSee my comments over on that CL.",
+      "parentUuid": "2daf9e25_2f96b146",
+      "revId": "c82e8ab588f654d4fb487360f0b7e785c0bcba42",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "25da1074_00a267d6",
         "filename": "autoninja.py",
         "patchSetId": 3

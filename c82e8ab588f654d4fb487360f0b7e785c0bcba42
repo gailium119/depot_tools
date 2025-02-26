@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "25da1074_00a267d6",
+        "filename": "autoninja.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 300,
+      "author": {
+        "id": 1126674
+      },
+      "writtenOn": "2025-02-26T14:53:57Z",
+      "side": 1,
+      "message": "You\u0027re returning the string `\"true\"` here, so the use on 305 will always be True even when it\u0027s the string \"false\". Maybe have _get_remoteexec_default() return a pair of bools?",
+      "revId": "c82e8ab588f654d4fb487360f0b7e785c0bcba42",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

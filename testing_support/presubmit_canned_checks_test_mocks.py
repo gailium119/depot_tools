@@ -258,10 +258,12 @@ class MockChange(object):
     This class can be used in presubmit unittests to mock the query of the
     current change.
     """
-    def __init__(self, changed_files, description=''):
+
+    def __init__(self, changed_files, description='', issue=0):
         self._changed_files = changed_files
         self.footers = defaultdict(list)
         self._description = description
+        self._issue = issue
 
     def LocalPaths(self):
         return self._changed_files
@@ -277,3 +279,11 @@ class MockChange(object):
 
     def DescriptionText(self):
         return self._description
+
+    @property
+    def issue(self):
+        return self._issue
+
+    @issue.setter
+    def issue(self, new_issue):
+        self._issue = new_issue

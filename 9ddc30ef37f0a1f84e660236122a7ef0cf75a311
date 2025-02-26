@@ -1,0 +1,39 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d7e52177_e002b3f1",
+        "filename": "presubmit_canned_checks.py",
+        "patchSetId": 9
+      },
+      "lineNbr": 2230,
+      "author": {
+        "id": 1003232
+      },
+      "writtenOn": "2025-02-26T21:16:26Z",
+      "side": 1,
+      "message": "This comment seems a little off. One would think that all CLs will be Gerrit CLs. I imagine this more means that you can\u0027t do the check because we can\u0027t get the list of reviewers until the CL has been uploaded?",
+      "fixSuggestions": [
+        {
+          "fixId": "b0281040_818f36f6",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "presubmit_canned_checks.py",
+              "range": {
+                "startLine": 2230,
+                "startChar": 0,
+                "endLine": 2231,
+                "endChar": 0
+              },
+              "replacement": "        return []  # Not a Gerrit CL, so we can\u0027t get the list of reviewers.\n"
+            }
+          ]
+        }
+      ],
+      "revId": "9ddc30ef37f0a1f84e660236122a7ef0cf75a311",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

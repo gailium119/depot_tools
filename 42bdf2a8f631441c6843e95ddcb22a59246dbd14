@@ -53,6 +53,24 @@
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "bc5b9c51_5425b990",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1001939
+      },
+      "writtenOn": "2025-02-26T04:32:52Z",
+      "side": 1,
+      "message": "RmDir L493 will remove vs_files if toolchain dir specified other than third_party/depot_tools/win_toolchain and use junction (i.e. third_party/depot_tools/win_toolchain/vs_files should be junction to point to toolchain dir, otherwise it removes vs_files and creates correct junction)",
+      "parentUuid": "86e86648_7f82119a",
+      "revId": "42bdf2a8f631441c6843e95ddcb22a59246dbd14",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "046e2015_c4578dca",
@@ -88,6 +106,24 @@
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "500ac117_66b439b6",
+        "filename": "win_toolchain/get_toolchain_if_necessary.py",
+        "patchSetId": 8
+      },
+      "lineNbr": 491,
+      "author": {
+        "id": 1001939
+      },
+      "writtenOn": "2025-02-26T04:32:52Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "046e2015_c4578dca",
+      "revId": "42bdf2a8f631441c6843e95ddcb22a59246dbd14",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "5d6de699_ecce2760",
@@ -119,6 +155,24 @@
           ]
         }
       ],
+      "revId": "42bdf2a8f631441c6843e95ddcb22a59246dbd14",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e9288a38_155bd903",
+        "filename": "win_toolchain/get_toolchain_if_necessary.py",
+        "patchSetId": 8
+      },
+      "lineNbr": 494,
+      "author": {
+        "id": 1001939
+      },
+      "writtenOn": "2025-02-26T04:32:52Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5d6de699_ecce2760",
       "revId": "42bdf2a8f631441c6843e95ddcb22a59246dbd14",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }

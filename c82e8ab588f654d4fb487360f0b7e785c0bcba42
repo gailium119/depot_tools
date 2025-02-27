@@ -71,6 +71,24 @@
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "a3e1fbfa_0866ace1",
+        "filename": "autoninja.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 145,
+      "author": {
+        "id": 1001939
+      },
+      "writtenOn": "2025-02-27T01:28:48Z",
+      "side": 1,
+      "message": "Acknowledged",
+      "parentUuid": "325863f8_3cf6244c",
+      "revId": "c82e8ab588f654d4fb487360f0b7e785c0bcba42",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "25da1074_00a267d6",
@@ -84,6 +102,24 @@
       "writtenOn": "2025-02-26T14:53:57Z",
       "side": 1,
       "message": "You\u0027re returning the string `\"true\"` here, so the use on 305 will always be True even when it\u0027s the string \"false\". Maybe have _get_remoteexec_default() return a pair of bools?",
+      "revId": "c82e8ab588f654d4fb487360f0b7e785c0bcba42",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "eb12f69a_eaddb638",
+        "filename": "autoninja.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 300,
+      "author": {
+        "id": 1001939
+      },
+      "writtenOn": "2025-02-27T01:28:48Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "25da1074_00a267d6",
       "revId": "c82e8ab588f654d4fb487360f0b7e785c0bcba42",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }

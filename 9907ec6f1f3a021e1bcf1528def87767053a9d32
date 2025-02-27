@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "100e06c7_316d3c94",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1002869
+      },
+      "writtenOn": "2025-02-27T15:12:02Z",
+      "side": 1,
+      "message": "Hi Devon and Josip,\n\nWhile using `git cl split` yesterday, here are the fixes I needed to get it to work on my machine. Hopefully it helps others too.\n\nThe first is that `Emit()` had a warning since `None` is not type `str`. The second is that `Emit` takes only one arg.\n\nThanks,\nPeter",
+      "revId": "9907ec6f1f3a021e1bcf1528def87767053a9d32",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

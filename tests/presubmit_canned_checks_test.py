@@ -567,16 +567,31 @@ class CheckNewDEPSHooksHasRequiredReviewersTest(unittest.TestCase):
             },
             {
                 'name':
-                'add new hook but reviewer missing',
+                'add new hook and require review',
                 'old_contents': ['hooks = [{"name": "old_hook"}]'],
                 'new_contents': [
                     'hooks = [{"name": "old_hook"}, {"name": "new_hook"},  {"name": "new_hook_2"}]'
                 ],
                 'reviewers': [],
                 'expected_error_msg':
-                'New DEPS hooks (new_hook, new_hook_2) are found. Please add '
-                'one of the following reviewers:\n * foo@chromium.org\n '
-                '* bar@chromium.org'
+                'New DEPS hooks (new_hook, new_hook_2) are found. Please '
+                'request review from one of the following reviewers:\n'
+                ' * foo@chromium.org\n * bar@chromium.org'
+            },
+            {
+                'name':
+                'add new hook and require approval',
+                'old_contents': ['hooks = [{"name": "old_hook"}]'],
+                'new_contents': [
+                    'hooks = [{"name": "old_hook"}, {"name": "new_hook"},  {"name": "new_hook_2"}]'
+                ],
+                'submitting':
+                True,
+                'reviewers': ['not_relevant@chromium.org'],
+                'expected_error_msg':
+                'New DEPS hooks (new_hook, new_hook_2) are found. The CL must '
+                'be approved by one of the following reviewers:\n'
+                ' * foo@chromium.org\n * bar@chromium.org'
             },
             {
                 'name':
@@ -585,6 +600,17 @@ class CheckNewDEPSHooksHasRequiredReviewersTest(unittest.TestCase):
                 'new_contents': [
                     'hooks = [{"name": "old_hook"}, {"name": "new_hook"},  {"name": "new_hook_2"}]'
                 ],
+                'reviewers': ['foo@chromium.org'],
+            },
+            {
+                'name':
+                'add new hook and reviewer already approves',
+                'old_contents': ['hooks = [{"name": "old_hook"}]'],
+                'new_contents': [
+                    'hooks = [{"name": "old_hook"}, {"name": "new_hook"},  {"name": "new_hook_2"}]'
+                ],
+                'submitting':
+                True,
                 'reviewers': ['foo@chromium.org'],
             },
             {
@@ -618,6 +644,9 @@ class CheckNewDEPSHooksHasRequiredReviewersTest(unittest.TestCase):
                                      old_contents=case['old_contents'],
                                      new_contents=case['new_contents']),
                 ]
+                if case.get('submitting', False):
+                    self.input_api.is_committing = True
+                    self.input_api.dry_run = False
                 gerrit_mock.GetChangeReviewers.return_value = case['reviewers']
                 results = presubmit_canned_checks.CheckNewDEPSHooksHasRequiredReviewers(
                     self.input_api,

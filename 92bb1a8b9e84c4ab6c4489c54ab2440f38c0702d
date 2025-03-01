@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8d88e738_a8451108",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1560543
+      },
+      "writtenOn": "2025-03-01T01:47:42Z",
+      "side": 1,
+      "message": "We could limit one per line too, but we should be explicit in OWNERS File with `# For new DEPS hook`",
+      "revId": "92bb1a8b9e84c4ab6c4489c54ab2440f38c0702d",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c4c4d729_20235b7f",
+        "filename": "presubmit_canned_checks.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 2260,
+      "author": {
+        "id": 1560543
+      },
+      "writtenOn": "2025-03-01T01:47:42Z",
+      "side": 1,
+      "message": "there can be multiple owners in a single file, see:\n\nhttps://gerrit.googlesource.com/plugins/find-owners/+/HEAD/src/main/resources/Documentation/syntax.md#owners-file-syntax\n\nWe should collect them all.",
+      "revId": "92bb1a8b9e84c4ab6c4489c54ab2440f38c0702d",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1fcc0289_1caac9c1",
+        "filename": "tests/presubmit_canned_checks_test.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 615,
+      "author": {
+        "id": 1560543
+      },
+      "writtenOn": "2025-03-01T01:47:42Z",
+      "side": 1,
+      "message": "update this test to include multiple owners per line.\n\n```suggestion\n                        \u0027per-file DEPS\u003dbar@chromium.org # For new DEPS hook\u0027\n                        \u0027per-file DEPS\u003dbaz@chromium.org,quc@chromium.org, quux@chromium.org # For new DEPS hook\u0027```",
+      "revId": "92bb1a8b9e84c4ab6c4489c54ab2440f38c0702d",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

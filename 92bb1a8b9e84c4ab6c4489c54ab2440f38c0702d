@@ -35,6 +35,24 @@
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "c7500e29_d601de96",
+        "filename": "presubmit_canned_checks.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 2260,
+      "author": {
+        "id": 1381059
+      },
+      "writtenOn": "2025-03-03T18:27:52Z",
+      "side": 1,
+      "message": "Good point. I\u0027ve never seen example in real life though. Added support multiple owners in a single line.",
+      "parentUuid": "c4c4d729_20235b7f",
+      "revId": "92bb1a8b9e84c4ab6c4489c54ab2440f38c0702d",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "1fcc0289_1caac9c1",
@@ -48,6 +66,24 @@
       "writtenOn": "2025-03-01T01:47:42Z",
       "side": 1,
       "message": "update this test to include multiple owners per line.\n\n```suggestion\n                        \u0027per-file DEPS\u003dbar@chromium.org # For new DEPS hook\u0027\n                        \u0027per-file DEPS\u003dbaz@chromium.org,quc@chromium.org, quux@chromium.org # For new DEPS hook\u0027```",
+      "revId": "92bb1a8b9e84c4ab6c4489c54ab2440f38c0702d",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ef8ca294_2eec484e",
+        "filename": "tests/presubmit_canned_checks_test.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 615,
+      "author": {
+        "id": 1381059
+      },
+      "writtenOn": "2025-03-03T18:27:52Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1fcc0289_1caac9c1",
       "revId": "92bb1a8b9e84c4ab6c4489c54ab2440f38c0702d",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }

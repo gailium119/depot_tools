@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ad092a92_72e5f0e4",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 3481761
+      },
+      "writtenOn": "2025-03-04T19:02:21Z",
+      "side": 1,
+      "message": "This is the first part of the new splitting algorithm; it can be reviewed on its own, so I\u0027m submitting it separately.",
+      "revId": "25c8bf1a64635933503b11ac34da24e11de84eba",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

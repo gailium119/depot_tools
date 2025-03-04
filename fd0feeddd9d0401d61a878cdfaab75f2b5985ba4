@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3e72e18f_18560129",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 3481761
+      },
+      "writtenOn": "2025-03-04T19:01:45Z",
+      "side": 1,
+      "message": "Minor tweak to `git cl split` before the main clustering algorithm implementation",
+      "revId": "fd0feeddd9d0401d61a878cdfaab75f2b5985ba4",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

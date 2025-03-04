@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e3804e07_a5ff4893",
+        "filename": "git_cl.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 5279,
+      "author": {
+        "id": 1147264
+      },
+      "writtenOn": "2025-03-04T22:00:54Z",
+      "side": 1,
+      "message": "The change on L5296 made a behaviour change in this line.\n\nLet\u0027s say that opts.python is None. i.e., the user didn\u0027t specify --python to `git cl format`. Previously, this logic would format the python files that don\u0027t have applicable .style.yapf by using the default .style.yapf, bunlded in depot_tools.\n\nAfter this CL, this logic would not format python files by default, unless it has an applicable .style.yapf.\n\nI\u0027m not sure if this was intended or not, but this caused the issue described in b/400759419.",
+      "range": {
+        "startLine": 5278,
+        "startChar": 8,
+        "endLine": 5279,
+        "endChar": 37
+      },
+      "revId": "fa40bfa39bf0399570558e24bd3f8680a8130ac2",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

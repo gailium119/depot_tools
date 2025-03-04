@@ -51,6 +51,24 @@
       ],
       "revId": "d735446626fbcee760e2c8f4344bd856ab50a8cb",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "bdb6e16a_e61d67d5",
+        "filename": "owners_client.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 132,
+      "author": {
+        "id": 3481761
+      },
+      "writtenOn": "2025-03-04T20:07:22Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7efb167e_66734853",
+      "revId": "d735446626fbcee760e2c8f4344bd856ab50a8cb",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

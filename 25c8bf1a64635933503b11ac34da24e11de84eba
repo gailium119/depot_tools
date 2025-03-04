@@ -16,6 +16,23 @@
       "message": "This is the first part of the new splitting algorithm; it can be reviewed on its own, so I\u0027m submitting it separately.",
       "revId": "25c8bf1a64635933503b11ac34da24e11de84eba",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "97a240ae_36ec5221",
+        "filename": "split_cl.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 799,
+      "author": {
+        "id": 1560543
+      },
+      "writtenOn": "2025-03-04T20:00:42Z",
+      "side": 1,
+      "message": "You could run `git ls-files` and get a list of files checked into Git. But, I don\u0027t expect a significant change in performance.",
+      "revId": "25c8bf1a64635933503b11ac34da24e11de84eba",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

@@ -16,6 +16,41 @@
       "message": "This is part of the new splitting algorithm which is easy to review in isolation.",
       "revId": "d735446626fbcee760e2c8f4344bd856ab50a8cb",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7efb167e_66734853",
+        "filename": "owners_client.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 132,
+      "author": {
+        "id": 1560543
+      },
+      "writtenOn": "2025-03-04T19:42:49Z",
+      "side": 1,
+      "message": "could be empty",
+      "fixSuggestions": [
+        {
+          "fixId": "313b94bb_2d6b53e2",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "owners_client.py",
+              "range": {
+                "startLine": 132,
+                "startChar": 0,
+                "endLine": 132,
+                "endChar": 0
+              },
+              "replacement": "        if not owners_by_path:\n            return []\n\n"
+            }
+          ]
+        }
+      ],
+      "revId": "d735446626fbcee760e2c8f4344bd856ab50a8cb",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

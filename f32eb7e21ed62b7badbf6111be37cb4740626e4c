@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ac172a37_b16b3ec5",
+        "filename": "google_cloud_storage.README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 3355336
+      },
+      "writtenOn": "2025-03-05T22:14:51Z",
+      "side": 1,
+      "message": "I think this might be better as a Google doc?  Or colocated somewhere with the existing sources of documentation, like the official chromium docs.\n\nI\u0027m -0.5 on slapping random docs in places; docs are only useful if they are convenient to find and use, otherwise, more docs is worse than less docs.",
+      "revId": "f32eb7e21ed62b7badbf6111be37cb4740626e4c",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

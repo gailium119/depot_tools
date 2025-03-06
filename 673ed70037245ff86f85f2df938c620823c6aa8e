@@ -70,6 +70,30 @@
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
     {
+      "unresolved": true,
+      "key": {
+        "uuid": "c1b6f36f_452ec2d2",
+        "filename": "README.google_cloud_storage.md",
+        "patchSetId": 5
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 1559487
+      },
+      "writtenOn": "2025-03-06T02:42:12Z",
+      "side": 1,
+      "message": "Is thie the same on GCE bots ? Which ofcourse has its own metadata server",
+      "parentUuid": "5a38812d_f40151f1",
+      "range": {
+        "startLine": 37,
+        "startChar": 20,
+        "endLine": 39,
+        "endChar": 37
+      },
+      "revId": "673ed70037245ff86f85f2df938c620823c6aa8e",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
       "unresolved": false,
       "key": {
         "uuid": "1f65525e_02a14fb7",
@@ -83,6 +107,30 @@
       "writtenOn": "2025-03-06T02:39:50Z",
       "side": 1,
       "message": "the wrapper seems to have logic to use .boto if it exists. Don\u0027t know why it is there and how important it is https://chromium.googlesource.com/chromium/tools/depot_tools/+/refs/heads/main/gsutil.py#249",
+      "range": {
+        "startLine": 61,
+        "startChar": 0,
+        "endLine": 64,
+        "endChar": 37
+      },
+      "revId": "673ed70037245ff86f85f2df938c620823c6aa8e",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f3df98ae_c97b8b83",
+        "filename": "README.google_cloud_storage.md",
+        "patchSetId": 5
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 1559487
+      },
+      "writtenOn": "2025-03-06T02:42:12Z",
+      "side": 1,
+      "message": "Yeah I\u0027d think we could remove it but I guess this CL was about documenting current state.",
+      "parentUuid": "1f65525e_02a14fb7",
       "range": {
         "startLine": 61,
         "startChar": 0,

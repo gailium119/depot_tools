@@ -3955,6 +3955,18 @@ def CMDcreds_check(parser, args):
     return 1
 
 
+def CMDcreds_check2(parser, args):
+    """Checks credentials and suggests changes."""
+    _, _ = parser.parse_args(args)
+    cl = Changelist()
+    try:
+        remote_url = cl.GetRemoteUrl()
+    except subprocess2.CalledProcessError:
+        remote_url = ''
+    wizard = git_auth.ConfigWizard(sys.stdin, sys.stdout)
+    wizard.run(remote_url)
+
+
 @metrics.collector.collect_metrics('git cl baseurl')
 def CMDbaseurl(parser, args):
     """Gets or sets base-url for this branch."""

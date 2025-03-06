@@ -1,0 +1,96 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7e1809a4_f336c2b0",
+        "filename": "README.google_cloud_storage.md",
+        "patchSetId": 5
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1002539
+      },
+      "writtenOn": "2025-03-06T02:39:50Z",
+      "side": 1,
+      "message": "nit: they are not git hooks, but gclient hooks (git has its own hooks mechanism, AFAIK gclient doesn\u0027t use it)",
+      "range": {
+        "startLine": 8,
+        "startChar": 23,
+        "endLine": 8,
+        "endChar": 49
+      },
+      "revId": "673ed70037245ff86f85f2df938c620823c6aa8e",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "908bb67f_0ef04456",
+        "filename": "README.google_cloud_storage.md",
+        "patchSetId": 5
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1002539
+      },
+      "writtenOn": "2025-03-06T02:39:50Z",
+      "side": 1,
+      "message": "It uses the standard unmodified gsutil fetching it from https://storage.googleapis.com/pub/",
+      "range": {
+        "startLine": 26,
+        "startChar": 0,
+        "endLine": 28,
+        "endChar": 9
+      },
+      "revId": "673ed70037245ff86f85f2df938c620823c6aa8e",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5a38812d_f40151f1",
+        "filename": "README.google_cloud_storage.md",
+        "patchSetId": 5
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 1002539
+      },
+      "writtenOn": "2025-03-06T02:39:50Z",
+      "side": 1,
+      "message": "Note this happens only on dev machines. When running on bots (inside builds), there\u0027s already a LUCI auth context server available (it is part of Buildbucket agent driving the task) and it is used directly. This local server serves tokens of the service account the build runs as.",
+      "range": {
+        "startLine": 37,
+        "startChar": 20,
+        "endLine": 39,
+        "endChar": 37
+      },
+      "revId": "673ed70037245ff86f85f2df938c620823c6aa8e",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1f65525e_02a14fb7",
+        "filename": "README.google_cloud_storage.md",
+        "patchSetId": 5
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 1002539
+      },
+      "writtenOn": "2025-03-06T02:39:50Z",
+      "side": 1,
+      "message": "the wrapper seems to have logic to use .boto if it exists. Don\u0027t know why it is there and how important it is https://chromium.googlesource.com/chromium/tools/depot_tools/+/refs/heads/main/gsutil.py#249",
+      "range": {
+        "startLine": 61,
+        "startChar": 0,
+        "endLine": 64,
+        "endChar": 37
+      },
+      "revId": "673ed70037245ff86f85f2df938c620823c6aa8e",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

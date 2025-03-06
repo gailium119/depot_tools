@@ -71,6 +71,24 @@
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "d8704ee3_8620a3fd",
+        "filename": "google_cloud_storage.README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1559487
+      },
+      "writtenOn": "2025-03-06T02:02:22Z",
+      "side": 1,
+      "message": "Yeah like I said, its not perfect but I can\u0027t determine a better place for it. Have renamed as suggested. To be honest I first noticed metrics.README.md and followed that. I think the idea would be if its file specific it should be file.README.md but if its not file specific then README.file.md might be better. You basically want the readme to show up near the file.",
+      "parentUuid": "2eb89006_8509304d",
+      "revId": "f32eb7e21ed62b7badbf6111be37cb4740626e4c",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "2a501130_80253a41",
@@ -84,6 +102,24 @@
       "writtenOn": "2025-03-06T01:12:08Z",
       "side": 1,
       "message": "I think you should wrap the paragraphs, per style guidelines/consistency",
+      "revId": "f32eb7e21ed62b7badbf6111be37cb4740626e4c",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7c860b5e_e01fcf3b",
+        "filename": "google_cloud_storage.README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1559487
+      },
+      "writtenOn": "2025-03-06T02:02:22Z",
+      "side": 1,
+      "message": "done, got lazy in the IDE, need to switch back to vim. Brains feeling mushy",
+      "parentUuid": "2a501130_80253a41",
       "revId": "f32eb7e21ed62b7badbf6111be37cb4740626e4c",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }

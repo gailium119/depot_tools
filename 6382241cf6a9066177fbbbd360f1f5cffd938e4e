@@ -1,0 +1,49 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fa1e163e_c86f8868",
+        "filename": "presubmit_support.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 2035,
+      "author": {
+        "id": 1560543
+      },
+      "writtenOn": "2025-03-06T00:04:23Z",
+      "side": 1,
+      "message": "nit - the client will have to remove the first and the last line. Why not just print json?",
+      "fixSuggestions": [
+        {
+          "fixId": "41fc60e7_8601cb3b",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "presubmit_support.py",
+              "range": {
+                "startLine": 2035,
+                "startChar": 0,
+                "endLine": 2036,
+                "endChar": 0
+              },
+              "replacement": ""
+            },
+            {
+              "path": "presubmit_support.py",
+              "range": {
+                "startLine": 2037,
+                "startChar": 0,
+                "endLine": 2038,
+                "endChar": 0
+              },
+              "replacement": ""
+            }
+          ]
+        }
+      ],
+      "revId": "6382241cf6a9066177fbbbd360f1f5cffd938e4e",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

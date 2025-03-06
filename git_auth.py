@@ -9,7 +9,7 @@ import enum
 import functools
 import logging
 import os
-from typing import TYPE_CHECKING, Callable
+from typing import TYPE_CHECKING, Callable, TextIO
 import urllib.parse
 
 import gerrit_util
@@ -312,3 +312,60 @@ def ClearRepoConfig(cwd: str, cl: git_cl.Changelist) -> None:
     c = ConfigChanger.new_from_env(cwd, cl)
     c.mode = ConfigMode.NO_AUTH
     c.apply(cwd)
+
+
+class ConfigWizard(object):
+
+    def __init__(self, stdin: TextIO, stdout: TextIO):
+        self._ui = _UserInterface(stdin, stdout)
+
+    def run(self):
+        self._println(
+            'Checking your Git configuration for authenticating to Gerrit...')
+
+        # XXXXXXXXXXXXXX
+        # if not in repo
+        # XXXXXXXXXXXXX
+        # if in repo
+        # detect config
+        # config global
+        ...
+
+    def _println(self, s: str) -> None:
+        self._ui.write(s)
+        self._ui.write('\n')
+
+
+class _UserInterface(object):
+    """Abstracts user interaction.
+
+    This implementation supports regular terminals.
+    """
+
+    def __init__(self, stdin: TextIO, stdout: TextIO):
+        self._stdin = stdin
+        self._stdout = stdout
+
+    def read_yn(self, prompt: str, *, default: bool | None = None) -> bool:
+        """Reads a yes/no response from stdin.
+
+        The prompt should end in '?'.
+        """
+        prompt = f'{prompt} [{self._prompts[default]}]: '
+        while True:
+            self._stdout.write(prompt)
+            self._stdout.flush()
+            response = self._stdin.readline().strip().lower()
+            if response in ('y', 'yes'):
+                return True
+            if response in ('n', 'no'):
+                return False
+            if not response and default is not None:
+                return default
+
+    def write(self, s: str) -> None:
+        """Write string as-is.
+
+        The string should usually end in a newline.
+        """
+        self._stdout.write(line)

@@ -3955,6 +3955,13 @@ def CMDcreds_check(parser, args):
     return 1
 
 
+def CMDcreds_check2(parser, args):
+    """Checks credentials and suggests changes."""
+    _, _ = parser.parse_args(args)
+    wizard = git_auth.ConfigWizard(sys.stdin, sys.stdout)
+    wizard.run()
+
+
 @metrics.collector.collect_metrics('git cl baseurl')
 def CMDbaseurl(parser, args):
     """Gets or sets base-url for this branch."""

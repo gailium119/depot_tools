@@ -6,10 +6,11 @@
 from __future__ import annotations
 
 import enum
+import contextlib
 import functools
 import logging
 import os
-from typing import TYPE_CHECKING, Callable
+from typing import TYPE_CHECKING, Callable, TextIO
 import urllib.parse
 
 import gerrit_util
@@ -315,3 +316,236 @@ def ClearRepoConfig(cwd: str, cl: git_cl.Changelist) -> None:
     c = ConfigChanger.new_from_env(cwd, cl)
     c.mode = ConfigMode.NO_AUTH
     c.apply(cwd)
+
+
+class _ConfigError(Exception):
+    """Subclass for errors raised by ConfigWizard."""
+
+
+class ConfigWizard(object):
+
+    def __init__(self, stdin: TextIO, stdout: TextIO):
+        self._ui = _UserInterface(stdin, stdout)
+
+    def run(self):
+        with self._handle_config_errors():
+            ...
+
+    def _run_outside_repo(self) -> None:
+        self._println(
+            'Looks like we are running outside of a Gerrit repository,'
+            ' so we will check your global Git configuration.')
+        global_email = self._check_global_email()
+        has_sso_helper = self._check_sso_helper()
+        if has_sso_helper:
+            self._setconfig('protocol.sso.allow', 'always', scope='global')
+        # XXXXXXXXXXXXXXXXXXX for each host
+        use_sso = self._check_use_sso()
+        if global_email:
+            check_sso_result = gerrit_util.CheckShouldUseSSO()
+        if not global_email:
+            if has_sso_helper:
+                self._printlin(
+                    'Since you do not have an email configured, you will be configured to use SSO'
+                )
+                ...
+            # XXXXXx check SSO to default to googler
+
+    def _run_inside_repo(self) -> None:
+        self._println('Looks like we are running inside a Gerrit repository,'
+                      ' so we will check your Git configuration for this repo.')
+        global_email = self._check_global_email()
+        local_email = self._check_local_email()
+        has_sso_helper = self._check_sso_helper()
+        if has_sso_helper:
+            self._setconfig('protocol.sso.allow', 'always', scope='global')
+
+        host = self._check_repo_host()
+        email = global_email
+        scope = 'global'
+        if local_email and local_email != global_email:
+            self._println('You have an email configured in your local repo'
+                          ' which is different than your global Git config.')
+            self._println(
+                'We will configure Gerrit authentication for your local repo only.'
+            )
+            email = local_email
+            scope = 'local'
+        use_sso = self._check_use_sso(host, email)
+        ...
+
+    def _run_for_host(self, host: str) -> None:
+        """Run config wizard for the given Gerrit host."""
+        host = self._check_host(host)
+        self._println(
+            'Checking your Git configuration for authenticating to Gerrit...')
+        global_email = self._check_global_email()
+        has_sso_helper = gerrit_util.ssoHelper.find_cmd()
+        if has_sso_helper:
+            self._println('SSO helper is available.')
+        # XXXXXXXXX check repo local email
+        if not global_email:
+            if has_sso_helper:
+                ...
+            # XXXXXx check SSO to default to googler
+
+        # XXXXXXXXXXXXXX
+        # check gitcookies
+        # if in repo
+        # XXXXX
+        # if not in repo
+        # check global email
+
+        # XXXXXXXXXXXXXX
+        # check gitcookies
+        # check sso?
+        # if not in repo
+        # XXXXXXXXXXXXX
+        # if in repo
+        # detect config
+        # config global
+
+    def _check_gitcookies(self):
+        ...
+
+    def _check_gitcookies_for_host(self, host: str):
+        ...
+
+    def _check_repo_host(self) -> str:
+        # XXXXXXXXXXXXX
+        ...
+
+    def _check_global_email(self) -> str:
+        email = scm.GIT.GetConfig(os.getcwd(), 'user.email',
+                                  scope='global') or ''
+        if email:
+            self._println(f'Your global Git email is: {email}')
+            return email
+        self._println(
+            'You do not have an email configured in your global Git config.')
+        if not self._ui.read_yn('Do you want to set it up now?', default=True):
+            return ''
+        name = scm.GIT.GetConfig(os.getcwd(), 'user.name', scope='global') or ''
+        if not name:
+            name = self._ui.read_line('Enter your name (e.g., John Doe)',
+                                      check=_check_nonempty)
+            self._setconfig('user.name', name, scope='global')
+        email = self._ui.read_line('Enter your email', check=_check_nonempty)
+        self._setconfig('user.email', email, scope='global')
+        return email
+
+    def _check_local_email(self) -> str:
+        email = scm.GIT.GetConfig(os.getcwd(), 'user.email',
+                                  scope='local') or ''
+        if email:
+            self._println(
+                f'You have an email configured in your local repo: {email}')
+        return email
+
+    def _check_use_sso(self, host: str, email: str) -> bool:
+        result = gerrit_util.CheckShouldUseSSO()
+        text = 'use' if result else 'not use'
+        self._println(
+            f'Determined we should {text} SSO for {email} on {host} because: {result.reason}'
+        )
+        return result.status
+
+    def _check_sso_helper(self) -> bool:
+        has_sso_helper = gerrit_util.ssoHelper.find_cmd()
+        if has_sso_helper:
+            self._println('SSO helper is available.')
+        return has_sso_helper
+
+    def _setconfig(self, name: str, value: str, *,
+                   scope: scm.GitConfigScope) -> None:
+        self._println(f'(Setting {name}={value!r} in your {scope} Git config)')
+        scm.GIT.SetConfig(os.getcwd(), name, value, scope=scope)
+
+    @contextlib.contextmanager
+    def _handle_config_errors(self):
+        try:
+            yield None
+        except _ConfigError as e:
+            self._println(f'ConfigError: {e!s}')
+
+    def _println(self, s: str) -> None:
+        self._ui.write(s)
+        self._ui.write('\n')
+
+
+_InputChecker = Callable[['_UserInterface', str], bool]
+
+
+def _check_any(ui: _UserInterface, input: str) -> bool:
+    """Allow any input."""
+    return True
+
+
+def _check_nonempty(ui: _UserInterface, input: str) -> bool:
+    """Reject nonempty input."""
+    if input:
+        return True
+    ui.write('Input cannot be empty.\n')
+    return False
+
+
+class _UserInterface(object):
+    """Abstracts user interaction.
+
+    This implementation supports regular terminals.
+    """
+
+    _prompts = {
+        None: 'y/n',
+        True: 'Y/n',
+        False: 'y/N',
+    }
+
+    def __init__(self, stdin: TextIO, stdout: TextIO):
+        self._stdin = stdin
+        self._stdout = stdout
+
+    def read_yn(self, prompt: str, *, default: bool | None = None) -> bool:
+        """Reads a yes/no response.
+
+        The prompt should end in '?'.
+        """
+        prompt = f'{prompt} [{self._prompts[default]}]: '
+        while True:
+            self._stdout.write(prompt)
+            self._stdout.flush()
+            response = self._stdin.readline().strip().lower()
+            if response in ('y', 'yes'):
+                return True
+            if response in ('n', 'no'):
+                return False
+            if not response and default is not None:
+                return default
+
+    def read_line(self,
+                  prompt: str,
+                  *,
+                  check: _InputChecker = _check_any) -> str:
+        """Reads a line of input.
+
+        Trailing whitespace is stripped from the read string.
+        The prompt should not end in any special indicator like a colon.
+
+        Optionally, an input check function may be provided.  This
+        method will continue to prompt for input until it passes the
+        check.  The check should print some explanation for rejected
+        inputs.
+        """
+        while True:
+            self._stdout.write(f'{prompt}: ')
+            self._stdout.flush()
+            s = self._stdin.readline().rstrip()
+            if check(self, s):
+                return s
+
+    def write(self, s: str) -> None:
+        """Write string as-is.
+
+        The string should usually end in a newline.
+        """
+        self._stdout.write(s)

@@ -1,6 +1,23 @@
 {
   "comments": [
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "fc1425ea_0f292474",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 3355336
+      },
+      "writtenOn": "2025-03-06T01:12:08Z",
+      "side": 1,
+      "message": "General content is fine, probably? Skimmed it but I\u0027m not an expert on GCS interactions specifically",
+      "revId": "f32eb7e21ed62b7badbf6111be37cb4740626e4c",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "ac172a37_b16b3ec5",
@@ -32,6 +49,41 @@
       "side": 1,
       "message": "Certainly open to moving this in other chromium docs if you can link me, but I put it here because all the tools are in the same dir. As for Google Docs, I guess it should be more accessible to chromium devs at large. As an aside, README.gclient.md shows up in google search and (maybe llms? :))",
       "parentUuid": "ac172a37_b16b3ec5",
+      "revId": "f32eb7e21ed62b7badbf6111be37cb4740626e4c",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2eb89006_8509304d",
+        "filename": "google_cloud_storage.README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 3355336
+      },
+      "writtenOn": "2025-03-06T01:12:08Z",
+      "side": 1,
+      "message": "I feel like the docs here are about using depot_tools and not documenting facts that help people develop depot_tools...  (FWIW I have been considering adding a manpage here to explain auth as well)\n\n`README.gclient.md` is a readme for the gclient tool, and likewise for `README.git-cl.md`.  I see now that there\u0027s a cheeky `metrics.README.md`.  Who cares about consistency, amirite?\n\nIMO, at the very least, all of the readmes that aren\u0027t readmes for depot_tools tool users should go into a `docs/` or maybe the existing `man/`.\n\nI\u0027m happy to defer the bikeshedding resolution to vadimsh, but please at least make it `README.blah.md` for consistency (and ideally fix the metrics one too).",
+      "parentUuid": "9e5cac1e_437fa4be",
+      "revId": "f32eb7e21ed62b7badbf6111be37cb4740626e4c",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2a501130_80253a41",
+        "filename": "google_cloud_storage.README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 3355336
+      },
+      "writtenOn": "2025-03-06T01:12:08Z",
+      "side": 1,
+      "message": "I think you should wrap the paragraphs, per style guidelines/consistency",
       "revId": "f32eb7e21ed62b7badbf6111be37cb4740626e4c",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }

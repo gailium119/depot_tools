@@ -18,6 +18,24 @@
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "a8741062_88659fd4",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1559487
+      },
+      "writtenOn": "2025-03-06T02:08:18Z",
+      "side": 1,
+      "message": "Will wait for Vadim to give it a once over.",
+      "parentUuid": "fc1425ea_0f292474",
+      "revId": "f32eb7e21ed62b7badbf6111be37cb4740626e4c",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "ac172a37_b16b3ec5",

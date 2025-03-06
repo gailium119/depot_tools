@@ -120,6 +120,30 @@
     {
       "unresolved": false,
       "key": {
+        "uuid": "00e80cfd_8a96f596",
+        "filename": "README.google_cloud_storage.md",
+        "patchSetId": 5
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 1002539
+      },
+      "writtenOn": "2025-03-06T02:51:15Z",
+      "side": 1,
+      "message": "Yes, LUCI auth context thing implementes GCE metadata server protocol (relevant parts https://pkg.go.dev/go.chromium.org/luci@v0.0.0-20250306010135-7f5cfafce0d9/auth/integration/gcemeta) and installs itself via GCE_METADATA_HOST (and few other) env vars. Almost all GCP libraries respect these env vars and end up hitting the LUCI context server.\n\nThere is also a similar hack for Firebase, git and docker. All hacks are collected in https://pkg.go.dev/go.chromium.org/luci@v0.0.0-20250306010135-7f5cfafce0d9/auth/authctx",
+      "parentUuid": "a3540991_12c8339a",
+      "range": {
+        "startLine": 37,
+        "startChar": 20,
+        "endLine": 39,
+        "endChar": 37
+      },
+      "revId": "673ed70037245ff86f85f2df938c620823c6aa8e",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
         "uuid": "1f65525e_02a14fb7",
         "filename": "README.google_cloud_storage.md",
         "patchSetId": 5

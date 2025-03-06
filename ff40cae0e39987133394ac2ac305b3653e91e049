@@ -16,6 +16,24 @@
       "message": "This is the CL that finally implements the new clustering algorithm. I hope to do some maintenance CLs in the future (e.g. splitting up the big functions), but this is the last functional change I have in mind. Thanks for all your help!\n\nOnce this is reviewed and eventually submitted, I think it makes sense to send some sort of announcement email so people are aware of the new features. Hopefully it will encourage people who gave up on the script to try it again. Do you know where it would make most sense to do that?\n\nRelatedly, do you collect metrics about usage of the various scripts? I\u0027d be interested to see if the number of users/amount of calls actually goes up or not.",
       "revId": "ff40cae0e39987133394ac2ac305b3653e91e049",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "24c7233e_c14189d6",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1560543
+      },
+      "writtenOn": "2025-03-06T22:41:08Z",
+      "side": 1,
+      "message": "Agreed about announcement, it should go to chromium-dev@ IMO.\n\nhttps://source.chromium.org/chromium/infra/infra_superproject/+/main:infra/go/src/infra/appengine/depot_tools_metrics/metrics/constants.go;l\u003d63 - git cl split is collected, but we don\u0027t have new known arguments. The data is stored in bigquery.",
+      "parentUuid": "0f0877ba_14d3c0c4",
+      "revId": "ff40cae0e39987133394ac2ac305b3653e91e049",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

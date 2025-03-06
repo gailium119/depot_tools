@@ -44,6 +44,24 @@
       ],
       "revId": "6382241cf6a9066177fbbbd360f1f5cffd938e4e",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bda08373_bb5c8a4f",
+        "filename": "presubmit_support.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 2035,
+      "author": {
+        "id": 1381059
+      },
+      "writtenOn": "2025-03-06T00:48:55Z",
+      "side": 1,
+      "message": "The script also writes some log lines (e.g. `Runing Presumit upload checks on branch abc ...`, `commit check took a long time xxx` ) to stdout during the execution. Therefore, it means the stdout will be a mix of presubmit result json and non-result log lines. So I wrap the result json wither header and footer to  easily and deterministically find where the result json in the output.\n\nI think ideally `presubmit_support.py ... --json-output -` would only output reuslt json in stdout and nothing else unless `-v` is provided. But it would also be fairly hard to mandate this as anyone could just use sys.stdout or print to write to stdout. I\u0027m open for other ideas.",
+      "parentUuid": "fa1e163e_c86f8868",
+      "revId": "6382241cf6a9066177fbbbd360f1f5cffd938e4e",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

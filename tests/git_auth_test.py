@@ -5,11 +5,15 @@
 # found in the LICENSE file.
 """Unit tests for git_cl.py."""
 
+from __future__ import annotations
+
+from collections.abc import Iterable
 import logging
 import os
 import sys
-import unittest
 from typing import Iterable
+import unittest
+import urllib
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
@@ -193,6 +197,52 @@ class TestConfigChanger(unittest.TestCase):
             'credential.https://chromium.googlesource.com.helper': ['', 'luci'],
         }
         self.assertEqual(self.global_state, want)
+
+
+class TestConfigWizard(unittest.TestCase):
+
+    maxDiff = None
+
+    def setUp(self):
+        self._global_state_view: Iterable[tuple[str,
+                                                list[str]]] = scm_mock.GIT(self)
+        self.ui = _FakeUI()
+        self.wizard = git_auth.ConfigWizard(self.ui)
+
+    @property
+    def global_state(self):
+        return dict(self._global_state_view)
+
+    def test_configure_sso_global(self):
+        parts = urllib.parse.urlsplit(
+            'https://chromium.googlesource.com/chromium/tools/depot_tools.git')
+        self.wizard._configure_sso(parts, scope='global')
+        want = {
+            'url.sso://chromium/.insteadof':
+            ['https://chromium.googlesource.com/'],
+        }
+        self.assertEqual(self.global_state, want)
+
+
+class _FakeUI(object):
+    """Implements _UserInterface for testing."""
+
+    def __init__(self, choices: Iterable[str] = ()):
+        self.choices: list[str] = list(choices)
+
+    def read_yn(self, prompt: str, *, default: bool | None = None) -> bool:
+        choice = self.choices.pop(0)
+        if choie == 'y':
+            return True
+        if choice == 'n':
+            return False
+        raise Exception(f'invalid choice for yn {choice!r}')
+
+    def read_line(self, prompt: str, *, check=lambda *any: True) -> str:
+        return self.choices.pop(0)
+
+    def write(self, s: str) -> None:
+        pass
 
 
 if __name__ == '__main__':

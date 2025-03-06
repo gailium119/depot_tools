@@ -24,6 +24,30 @@
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "6760b256_29ac172a",
+        "filename": "README.google_cloud_storage.md",
+        "patchSetId": 5
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1559487
+      },
+      "writtenOn": "2025-03-06T03:29:42Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7e1809a4_f336c2b0",
+      "range": {
+        "startLine": 8,
+        "startChar": 23,
+        "endLine": 8,
+        "endChar": 49
+      },
+      "revId": "673ed70037245ff86f85f2df938c620823c6aa8e",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "908bb67f_0ef04456",
@@ -37,6 +61,30 @@
       "writtenOn": "2025-03-06T02:39:50Z",
       "side": 1,
       "message": "It uses the standard unmodified gsutil fetching it from https://storage.googleapis.com/pub/",
+      "range": {
+        "startLine": 26,
+        "startChar": 0,
+        "endLine": 28,
+        "endChar": 9
+      },
+      "revId": "673ed70037245ff86f85f2df938c620823c6aa8e",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c3fb6f4d_7b4eb36b",
+        "filename": "README.google_cloud_storage.md",
+        "patchSetId": 5
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1559487
+      },
+      "writtenOn": "2025-03-06T03:29:42Z",
+      "side": 1,
+      "message": "done",
+      "parentUuid": "908bb67f_0ef04456",
       "range": {
         "startLine": 26,
         "startChar": 0,
@@ -132,6 +180,30 @@
       "side": 1,
       "message": "Yes, LUCI auth context thing implementes GCE metadata server protocol (relevant parts https://pkg.go.dev/go.chromium.org/luci@v0.0.0-20250306010135-7f5cfafce0d9/auth/integration/gcemeta) and installs itself via GCE_METADATA_HOST (and few other) env vars. Almost all GCP libraries respect these env vars and end up hitting the LUCI context server.\n\nThere is also a similar hack for Firebase, git and docker. All hacks are collected in https://pkg.go.dev/go.chromium.org/luci@v0.0.0-20250306010135-7f5cfafce0d9/auth/authctx",
       "parentUuid": "a3540991_12c8339a",
+      "range": {
+        "startLine": 37,
+        "startChar": 20,
+        "endLine": 39,
+        "endChar": 37
+      },
+      "revId": "673ed70037245ff86f85f2df938c620823c6aa8e",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "28937806_c922d71e",
+        "filename": "README.google_cloud_storage.md",
+        "patchSetId": 5
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 1559487
+      },
+      "writtenOn": "2025-03-06T03:29:42Z",
+      "side": 1,
+      "message": "oh awesome, thanks ! Added a blurb about bots",
+      "parentUuid": "00e80cfd_8a96f596",
       "range": {
         "startLine": 37,
         "startChar": 20,

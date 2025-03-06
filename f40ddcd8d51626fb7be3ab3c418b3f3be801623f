@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fe32e1f4_224b5883",
+        "filename": "presubmit_canned_checks.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 2088,
+      "author": {
+        "id": 1001907
+      },
+      "writtenOn": "2025-03-06T00:51:09Z",
+      "side": 0,
+      "message": "Removed because this is all part of fixing infra.git deps and the recipes-py deps entry is already gone.",
+      "revId": "f40ddcd8d51626fb7be3ab3c418b3f3be801623f",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

@@ -2081,13 +2081,12 @@ def CheckForCommitObjects(input_api, output_api):
 
         url = dep if isinstance(dep, str) else dep['url']
         commit_hash = url.split('@')[-1]
-        # Two exceptions were in made in two projects prior to this check
-        # enforcement. We need to address those exceptions, but in the meantime
-        # we can't fail this global presubmit check
-        # https://chromium.googlesource.com/infra/infra/+/refs/heads/main/DEPS#45
-        if dep_path == 'recipes-py' and commit_hash == 'refs/heads/main':
-            continue
 
+        # One exception is made prior to this check enforcement.
+        #
+        # We need to address this exception, but in the meantime we can't fail
+        # this global presubmit check.
+        #
         # https://chromium.googlesource.com/angle/angle/+/refs/heads/main/DEPS#412
         if dep_path == 'third_party/dummy_chromium':
             continue
@@ -2168,7 +2167,12 @@ def CheckForRecursedeps(input_api, output_api):
         # No recursedeps entry, carry on!
         return []
 
-    existing_deps = deps.get('deps', {})
+    existing_deps: set[str] = set()
+    # If git_dependencies is SYNC or SUBMODULES, prefer the submodule data.
+    if deps.get('git_dependencies', 'DEPS') == 'DEPS':
+      existing_deps = set(deps.get('deps', {}))
+    else:
+      existing_deps = input_api.change.AllLocalSubmodules()
 
     errors = []
     for check_dep in deps['recursedeps']:
@@ -2178,6 +2182,7 @@ def CheckForRecursedeps(input_api, output_api):
                     f'Found recuredep entry {check_dep} but it is not found '
                     'in\n deps itself. Remove it from recurcedeps or add '
                     'deps entry.'))
+
     return errors
 
 

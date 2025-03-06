@@ -6,10 +6,12 @@
 from __future__ import annotations
 
 import enum
+from collections.abc import Collection
+import contextlib
 import functools
 import logging
 import os
-from typing import TYPE_CHECKING, Callable
+from typing import TYPE_CHECKING, Callable, TextIO
 import urllib.parse
 
 import gerrit_util
@@ -328,6 +330,464 @@ def ClearRepoConfig(cwd: str, cl: git_cl.Changelist) -> None:
     c = ConfigChanger.new_from_env(cwd, cl)
     c.mode = ConfigMode.NO_AUTH
     c.apply(cwd)
+
+
+class _ConfigError(Exception):
+    """Subclass for errors raised by ConfigWizard."""
+
+
+class ConfigWizard(object):
+    """Wizard for setting up user's Git config Gerrit authentication."""
+
+    def __init__(self, stdin: TextIO, stdout: TextIO):
+        self._ui = _UserInterface(stdin, stdout)
+
+    def run(self, remote_url: str):
+        with self._handle_config_errors():
+            self._run(remote_url)
+
+    def _run(self, remote_url: str):
+        self._println('This tool will help check your Gerrit authentication.')
+        self._println(
+            '(Report any issues to https://issues.chromium.org/issues/new?component=1456702&template=2076315)'
+        )
+        self._println()
+        if not newauth.Enabled():
+            self._println('You have not enabled new auth.')
+            self._println('This tool will configure Git to use new auth,')
+            self._println('while depot_tools will continue to use old auth.')
+            self._println(
+                "We recommend aborting, though you may continue if you're adventurous."
+            )
+            if not self._ui.read_yn('Continue?', default=False):
+                return
+        self._check_gitcookies()
+        has_sso = self._check_sso_helper()
+        if has_sso:
+            self._set_config('protocol.sso.allow', 'always', scope='global')
+            self._println()
+        if _is_gerrit_url(remote_url):
+            self._println(
+                'Looks like we are running inside a Gerrit repository,')
+            self._println(
+                f'so we will check your Git configuration for {remote_url}')
+            self._println()
+            parts = urllib.parse.urlsplit(remote_url)
+            self._run_inside_repo(parts)
+        else:
+            self._println(
+                'Looks like we are running outside of a Gerrit repository,')
+            self._println('so we will check your global Git configuration.')
+            self._println()
+            self._run_outside_repo(has_sso=has_sso)
+
+    def _run_outside_repo(self, *, has_sso: bool) -> None:
+        global_email = self._check_global_email()
+
+        self._println()
+        self._println(
+            'Since we are not running in a Gerrit repository,'
+            ' we do not know which Gerrit host(s) to check specifically.')
+        self._println(
+            'You can re-run this command inside a Gerrit repository,'
+            ' or we can try to set up some commonly used Gerrit hosts.')
+        if not self._ui.read_yn('Set up commonly used Gerrit hosts?',
+                                default=True):
+            self._print_manual_instructions()
+            return
+
+        hosts = []
+        if self._ui.read_yn('Do you work on Chromium/Chrome?', default=False):
+            hosts.extend([
+                'chromium.googlesource.com',
+            ])
+            if has_sso:
+                hosts.extend([
+                    'chrome-internal.googlesource.com',
+                ])
+        # TODO(ayatane): Add support for Android, other workflows?
+        if not hosts:
+            self._println("We didn't get any hosts to configure.")
+            self._print_manual_instructions()
+            return
+
+        for host in hosts:
+            self._println()
+            self._println(f'Checking authentication config for {host}')
+            parts = urllib.parse.urlsplit(f'https://{host}/')
+            self._configure(parts, global_email, scope='global')
+
+    def _run_inside_repo(self, parts: urllib.parse.SplitResult) -> None:
+        global_email = self._check_global_email()
+        local_email = self._check_local_email()
+
+        email = global_email
+        scope = 'global'
+        if local_email and local_email != global_email:
+            self._println(
+                'You have different emails configured locally vs globally.')
+            self._println(
+                'We will configure Gerrit authentication for your local repo only.'
+            )
+            self._println()
+            email = local_email
+            scope = 'local'
+        self._configure(parts, email, scope=scope)
+
+    def _configure(self, parts: urllib.parse.SplitResult, email: str, *,
+                   scope: scm.GitConfigScope) -> None:
+        use_sso = self._check_use_sso(parts, email)
+        if use_sso:
+            self._configure_sso(parts, scope=scope)
+        else:
+            self._configure_oauth(parts, scope=scope)
+
+    def _configure_sso(self, parts: urllib.parse.SplitResult, *,
+                       scope: scm.GitConfigScope) -> None:
+        if parts.scheme == 'sso':
+            self._println(f'Your remote URL {parts.geturl()} already uses SSO')
+        else:
+            self._set_sso_rewrite(parts, scope=scope)
+        self._clear_url_rewrite_override(parts, scope=scope)
+
+    def _configure_oauth(self, parts: urllib.parse.SplitResult, *,
+                         scope: scm.GitConfigScope) -> None:
+        self._set_oauth_helper(parts, scope=scope)
+        if scope == 'local':
+            # Override a potential SSO rewrite set in the global config
+            self._set_url_rewrite_override(parts, scope=scope)
+        self._clear_sso_rewrite(parts, scope=scope)
+
+    def _check_gitcookies(self):
+        gitcookies = os.path.expanduser('~/.gitcookies')
+        cookiefile = scm.GIT.GetConfig(
+            os.getcwd(), 'http.cookiefile', scope='global') or ''
+        if not os.path.exists(gitcookies) and not cookiefile:
+            return
+        if not os.path.samefile(gitcookies, cookiefile):
+            self._println()
+            self._println('You have a .gitcookies file, but in your Git config')
+            self._println(
+                f'you have a different file {cookiefile} set for http.cookiefile'
+            )
+            self._println('We cannot handle this unusual case')
+            raise _ConfigError('unusual gitcookie setup')
+
+        self._println()
+        if cookiefile:
+            self._println(
+                'You appear to have a cookie file configured for Git.')
+            self._println(f'http.cookiefile={cookiefile!r}')
+        else:
+            self._println(
+                "You have a .gitcookies file (though it's not configured for Git)."
+            )
+            self._println("It may still cause issues for depot_tools however.")
+            cookiefile = gitcookies
+
+        contains_gerrit = False
+        contains_nongerrit = False
+        with open(cookiefile, 'r') as f:
+            for line in f:
+                if line.lstrip().startswith('#'):
+                    continue
+                if not line.strip():
+                    continue
+                if '.googlesource.com' in line:
+                    contains_gerrit = True
+                else:
+                    contains_nongerrit = True
+
+        if not contains_gerrit:
+            self._println(
+                "The cookie file doesn't appear to contain any Gerrit cookies,")
+            self._println('so we will ignore it.')
+            return
+
+        if contains_nongerrit:
+            self._println(
+                'The cookie file contains Gerrit cookies and non-Gerrit cookies.'
+            )
+            self._println(
+                'Cookie auth is deprecated, and these cookies may interfere with Gerrit authentication.'
+            )
+            self._println(
+                "Since you have non-Gerrit cookies too, we won't try to fix it for you."
+            )
+            self._println_action(
+                f'Please remove the Gerrit cookies (lines containing .googlesource.com) from {cookiefile}'
+            )
+            return
+
+        self._println('The cookie file contains Gerrit cookies.')
+        self._println(
+            'Cookie auth is deprecated, and these cookies may interfere with Gerrit authentication.'
+        )
+        if not self._ui.read_yn(
+                'Shall we remove your cookies (they will be backed up)?',
+                default=True):
+            self._println(
+                'Okay, we recommend that you remove them later to avoid issues.'
+            )
+            return
+
+        backup = f'{cookiefile}.old'
+        os.rename(cookiefile, backup)
+        self._println_notify(f'Moved {cookiefile!r} to {backup!r}')
+        self._set_config('http.cookiefile', None, scope='global')
+
+    def _check_global_email(self) -> str:
+        email = scm.GIT.GetConfig(os.getcwd(), 'user.email',
+                                  scope='global') or ''
+        if email:
+            self._println(f'Your global Git email is: {email}')
+            return email
+        self._println(
+            'You do not have an email configured in your global Git config.')
+        if not self._ui.read_yn('Do you want to set one now?', default=True):
+            self._println('Will attempt to continue without a global email.')
+            return ''
+        name = scm.GIT.GetConfig(os.getcwd(), 'user.name', scope='global') or ''
+        if not name:
+            name = self._ui.read_line('Enter your name (e.g., John Doe)',
+                                      check=_check_nonempty)
+            self._set_config('user.name', name, scope='global')
+        email = self._ui.read_line('Enter your email', check=_check_nonempty)
+        self._set_config('user.email', email, scope='global')
+        return email
+
+    def _check_local_email(self) -> str:
+        email = scm.GIT.GetConfig(os.getcwd(), 'user.email',
+                                  scope='local') or ''
+        if email:
+            self._println(
+                f'You have an email configured in your local repo: {email}')
+        return email
+
+    def _check_use_sso(self, parts: urllib.parse.SplitResult,
+                       email: str) -> bool:
+        host = _url_review_host(parts)
+        result = gerrit_util.CheckShouldUseSSO(host, email)
+        text = 'use' if result.status else 'not use'
+        self._println(f'Decided we should {text} SSO for {email!r} on {host}')
+        self._println(f'Reason: {result.reason}')
+        self._println()
+        return result.status
+
+    def _check_sso_helper(self) -> bool:
+        has_sso_helper = bool(gerrit_util.ssoHelper.find_cmd())
+        if has_sso_helper:
+            self._println('SSO helper is available.')
+        return has_sso_helper
+
+    def _print_manual_instructions(self) -> None:
+        self._println()
+        self._println(
+            'Instructions for manually configuring Gerrit authentication:')
+        self._println(
+            'https://commondatastorage.googleapis.com/chrome-infra-docs/flat/depot_tools/docs/html/depot_tools_gerrit_auth.html'
+        )
+
+    def _set_oauth_helper(self, parts: urllib.parse.SplitResult, *,
+                          scope: scm.GitConfigScope) -> None:
+        cred_key = _creds_helper_key(parts)
+        self._set_config(cred_key, '', modify_all=True, scope=scope)
+        self._set_config(cred_key, 'luci', append=True, scope=scope)
+
+    def _set_sso_rewrite(self, parts: urllib.parse.SplitResult, *,
+                         scope: scm.GitConfigScope) -> None:
+        sso_key = _sso_rewrite_key(parts)
+        self._set_config(sso_key,
+                         _url_host_url(parts),
+                         modify_all=True,
+                         scope=scope)
+
+    def _clear_sso_rewrite(self, parts: urllib.parse.SplitResult, *,
+                           scope: scm.GitConfigScope) -> None:
+        sso_key = _sso_rewrite_key(parts)
+        self._set_config(sso_key, None, modify_all=True, scope=scope)
+
+    def _set_url_rewrite_override(self, parts: urllib.parse.SplitResult, *,
+                                  scope: scm.GitConfigScope) -> None:
+        url_key = _url_rewrite_key(parts)
+        self._set_config(url_key, parts.geturl(), modify_all=True, scope=scope)
+
+    def _clear_url_rewrite_override(self, parts: urllib.parse.SplitResult, *,
+                                    scope: scm.GitConfigScope) -> None:
+        url_key = _url_rewrite_key(parts)
+        self._set_config(url_key, None, scope=scope, modify_all=True)
+
+    def _set_config(self,
+                    key: str,
+                    value: str | None,
+                    *,
+                    scope: scm.GitConfigScope,
+                    modify_all: bool = False,
+                    append: bool = False) -> None:
+        scope_msg = f'In your {scope} Git config,'
+        if append:
+            assert value is not None
+            self._println_notify(
+                f'{scope_msg} we appended {key}={value!r} to existing values')
+        else:
+            if value is None:
+                action = f"we cleared {'all values' if modify_all else 'the value'} for {key}"
+            else:
+                action = f'we set {key}={value!r}'
+                if modify_all:
+                    action += ', replacing any existing values'
+            self._println_notify(f'{scope_msg} {action}')
+
+        scm.GIT.SetConfig(os.getcwd(),
+                          key,
+                          value,
+                          scope=scope,
+                          modify_all=modify_all,
+                          append=append)
+
+    @contextlib.contextmanager
+    def _handle_config_errors(self):
+        try:
+            yield None
+        except _ConfigError as e:
+            self._println(f'ConfigError: {e!s}')
+
+    def _println_action(self, s: str) -> None:
+        """Print a notification about a manual action."""
+        self._println(f'!!! {s}')
+
+    def _println_notify(self, s: str) -> None:
+        """Print a notification about a change we made."""
+        self._println(f'>>> {s}')
+
+    def _println(self, s: str = '') -> None:
+        self._ui.write(s)
+        self._ui.write('\n')
+
+
+_InputChecker = Callable[['_UserInterface', str], bool]
+
+
+def _check_any(ui: _UserInterface, line: str) -> bool:
+    """Allow any input."""
+    return True
+
+
+def _check_nonempty(ui: _UserInterface, line: str) -> bool:
+    """Reject nonempty input."""
+    if line:
+        return True
+    ui.write('Input cannot be empty.\n')
+    return False
+
+
+def _check_choice(choices: Collection[str]) -> _InputChecker:
+    """Allow specified choices."""
+
+    def func(ui: _UserInterface, line: str) -> bool:
+        if line in choices:
+            return True
+        ui.write('Invalid choice.\n')
+        return False
+
+    return func
+
+
+class _UserInterface(object):
+    """Abstracts user interaction.
+
+    This implementation supports regular terminals.
+    """
+
+    _prompts = {
+        None: 'y/n',
+        True: 'Y/n',
+        False: 'y/N',
+    }
+
+    def __init__(self, stdin: TextIO, stdout: TextIO):
+        self._stdin = stdin
+        self._stdout = stdout
+
+    def read_yn(self, prompt: str, *, default: bool | None = None) -> bool:
+        """Reads a yes/no response.
+
+        The prompt should end in '?'.
+        """
+        prompt = f'{prompt} [{self._prompts[default]}]: '
+        while True:
+            self._stdout.write(prompt)
+            self._stdout.flush()
+            response = self._stdin.readline().strip().lower()
+            if response in ('y', 'yes'):
+                return True
+            if response in ('n', 'no'):
+                return False
+            if not response and default is not None:
+                return default
+            self._stdout.write('Type y or n.\n')
+
+    def read_line(self,
+                  prompt: str,
+                  *,
+                  check: _InputChecker = _check_any) -> str:
+        """Reads a line of input.
+
+        Trailing whitespace is stripped from the read string.
+        The prompt should not end in any special indicator like a colon.
+
+        Optionally, an input check function may be provided.  This
+        method will continue to prompt for input until it passes the
+        check.  The check should print some explanation for rejected
+        inputs.
+        """
+        while True:
+            self._stdout.write(f'{prompt}: ')
+            self._stdout.flush()
+            s = self._stdin.readline().rstrip()
+            if check(self, s):
+                return s
+
+    def write(self, s: str) -> None:
+        """Write string as-is.
+
+        The string should usually end in a newline.
+        """
+        self._stdout.write(s)
+
+
+def _is_gerrit_url(url: str) -> bool:
+    """Checks if URL is for a Gerrit host."""
+    if not url:
+        return False
+    parts = urllib.parse.urlsplit(url)
+    if parts.netloc.endswith('.googlesource.com') or parts.netloc.endswith(
+            '.git.corp.google.com'):
+        return True
+    return False
+
+
+def _creds_helper_key(parts: urllib.parse.SplitResult) -> str:
+    """Return Git config key for credential helpers."""
+    return f'credential.{_url_host_url(parts)}.helper'
+
+
+def _sso_rewrite_key(parts: urllib.parse.SplitResult) -> str:
+    """Return Git config key for SSO URL rewrites."""
+    return f'url.sso://{_url_shortname(parts)}/.insteadOf'
+
+
+def _url_rewrite_key(parts: urllib.parse.SplitResult) -> str:
+    """Return Git config key for rewriting the full URL."""
+    return f'url.{parts.geturl()}.insteadOf'
+
+
+def _url_review_host(parts: urllib.parse.SplitResult) -> str:
+    """Format URL as Gerrit review host.
+
+    Example: chromium-review.googlesource.com
+    """
+    return f'{_url_shortname(parts)}-review.googlesource.com'
 
 
 def _url_shortname(parts: urllib.parse.SplitResult) -> str:

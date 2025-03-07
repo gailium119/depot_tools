@@ -16,6 +16,24 @@
       "message": "this will not work with recrusedeps that don\u0027t use_relative_path \u003d True (that\u0027s only chromium/src afaik).\n\nIf use_relative_paths is not set in `deps`, we can compute path using dirname(deps_path) and gclient_paths.FindGclientRoot and strip it from check_dep.\n\nOr we can hack it and do a check if the dependency begins with src/ (see: https://crsrc.org/d/presubmit_canned_checks.py;l\u003d2204)",
       "revId": "cdf1352a1abe68478859aa513c3088e9ef7ecce3",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "be8881da_4386818b",
+        "filename": "presubmit_canned_checks.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 2179,
+      "author": {
+        "id": 1001907
+      },
+      "writtenOn": "2025-03-07T01:25:14Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "feddc8ce_94e10ae4",
+      "revId": "cdf1352a1abe68478859aa513c3088e9ef7ecce3",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

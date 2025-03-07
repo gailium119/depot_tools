@@ -16,6 +16,24 @@
       "message": "don\u0027t have any permissino to vote but lgtm. I also tested this locally and it fixes my issue. ty!",
       "revId": "d69cd2b17ac8e9bbef4c61124287ddbcfce262fd",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8f317aab_4f058e8f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1560543
+      },
+      "writtenOn": "2025-03-07T21:35:50Z",
+      "side": 1,
+      "message": "Thanks for checking it!",
+      "parentUuid": "0573fabc_67a752c5",
+      "revId": "d69cd2b17ac8e9bbef4c61124287ddbcfce262fd",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

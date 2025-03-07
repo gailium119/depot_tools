@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2ee738c0_4e27d5f4",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1560543
+      },
+      "writtenOn": "2025-03-07T21:52:31Z",
+      "side": 1,
+      "message": "PS1 - original change, PS2 with pure formatting, actual change PS2..PS4.",
+      "revId": "a5cfe26bba55de4360262b0c2c904ad52bf336f6",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

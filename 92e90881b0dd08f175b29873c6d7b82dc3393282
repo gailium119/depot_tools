@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "389dd3b3_b9dba411",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1001907
+      },
+      "writtenOn": "2025-03-07T08:32:31Z",
+      "side": 1,
+      "message": "PTAL - Patchset 1 is the originally reverted change to help see the fix.",
+      "revId": "92e90881b0dd08f175b29873c6d7b82dc3393282",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

@@ -16,6 +16,40 @@
       "message": "friendly ping",
       "revId": "3384462ee1534f162c43d8d60b72b3f04561252f",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1f1b37b0_7989db82",
+        "filename": "README.google_cloud_storage.md",
+        "patchSetId": 7
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 3355336
+      },
+      "writtenOn": "2025-03-07T00:02:26Z",
+      "side": 1,
+      "message": "nit: there\u0027s an extra line here",
+      "revId": "3384462ee1534f162c43d8d60b72b3f04561252f",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "38faf656_d75a157e",
+        "filename": "README.google_cloud_storage.md",
+        "patchSetId": 7
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 3355336
+      },
+      "writtenOn": "2025-03-07T00:02:26Z",
+      "side": 1,
+      "message": "nit: delete empty lines at the end (though make sure there\u0027s exactly one newline char at the end)",
+      "revId": "3384462ee1534f162c43d8d60b72b3f04561252f",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

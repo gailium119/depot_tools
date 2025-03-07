@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0573fabc_67a752c5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1160859
+      },
+      "writtenOn": "2025-03-07T21:34:37Z",
+      "side": 1,
+      "message": "don\u0027t have any permissino to vote but lgtm. I also tested this locally and it fixes my issue. ty!",
+      "revId": "d69cd2b17ac8e9bbef4c61124287ddbcfce262fd",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

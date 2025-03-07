@@ -62,6 +62,24 @@
       "parentUuid": "fa1e163e_c86f8868",
       "revId": "6382241cf6a9066177fbbbd360f1f5cffd938e4e",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a2f412a7_0781f49c",
+        "filename": "presubmit_support.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 2035,
+      "author": {
+        "id": 1560543
+      },
+      "writtenOn": "2025-03-07T03:23:34Z",
+      "side": 1,
+      "message": "Yeah, that\u0027s true. It will be somewhat difficult to ensure nothing gets added in the future.\n\nWith the limitation mentioned in the commit message, I couldn\u0027t think of anything better so lgtm.",
+      "parentUuid": "bda08373_bb5c8a4f",
+      "revId": "6382241cf6a9066177fbbbd360f1f5cffd938e4e",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

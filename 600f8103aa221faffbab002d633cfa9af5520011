@@ -16,6 +16,23 @@
       "message": "PS1 - revert; PS2 actual patch",
       "revId": "600f8103aa221faffbab002d633cfa9af5520011",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "67e4b240_914366e4",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1381059
+      },
+      "writtenOn": "2025-03-10T22:45:41Z",
+      "side": 1,
+      "message": "oops. I realized that I disabled all sso stuff while debugging but forgot to turned it back on when I\u0027m working on the fix so I falsefuly thought my previous fix has worked. Thank you for fix Josip.",
+      "revId": "600f8103aa221faffbab002d633cfa9af5520011",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

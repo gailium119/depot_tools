@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2c013e62_82c06621",
+        "filename": "git_cl.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 6697,
+      "author": {
+        "id": 1147264
+      },
+      "writtenOn": "2025-03-11T22:53:34Z",
+      "side": 1,
+      "message": "it\u0027s a single dash - https://source.chromium.org/chromium/chromium/src/+/main:third_party/clang-format/script/clang-format-diff.py;l\u003d70-75;drc\u003dd2bee6477349e500ed274b15a9da8e062a0fcf27",
+      "range": {
+        "startLine": 6697,
+        "startChar": 36,
+        "endLine": 6697,
+        "endChar": 37
+      },
+      "revId": "b530a9c8acb815c7f0e0a42558244bfa5b9e2f36",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

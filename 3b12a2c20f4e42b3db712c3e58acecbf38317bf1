@@ -112,6 +112,30 @@
       },
       "revId": "3b12a2c20f4e42b3db712c3e58acecbf38317bf1",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "de8af3c8_2b9ed06f",
+        "filename": "recipes/recipe_modules/gerrit/api.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 251,
+      "author": {
+        "id": 1147264
+      },
+      "writtenOn": "2025-03-12T17:49:47Z",
+      "side": 1,
+      "message": "\u003e So the intention of the CL is to add verbose logging arg/option and but default them all to false so that it doesnt affect the behaviour of the existing callers.\n\nYeha, I get the idea. My question is, why does this CL sets the default verbose param value for this particular function, `get_changes()`?  If there is a reason, can you describe why? \n\nThe description states that \"get_changes() is **already** using verbose logging\", but it doesn\u0027t look like it was already using verbose, and I\u0027m asking the reason for the existing behaviour change.",
+      "parentUuid": "7686dd2c_836b0fb9",
+      "range": {
+        "startLine": 250,
+        "startChar": 0,
+        "endLine": 251,
+        "endChar": 30
+      },
+      "revId": "3b12a2c20f4e42b3db712c3e58acecbf38317bf1",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

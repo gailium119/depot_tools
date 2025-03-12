@@ -310,7 +310,7 @@ class Mirror(object):
         if not self.bootstrap_bucket:
             return False
 
-        gsutil = Gsutil(self.gsutil_exe, boto_path=None)
+        gsutil = Gsutil(self.gsutil_exe)
 
         # Get the most recent version of the directory.
         # This is determined from the most recent version of a .ready file.
@@ -604,7 +604,7 @@ class Mirror(object):
         gen_number = subprocess.check_output(
             [self.git_exe, '--git-dir', self.mirror_path,
              'number']).decode('utf-8', 'ignore').strip()
-        gsutil = Gsutil(path=self.gsutil_exe, boto_path=None)
+        gsutil = Gsutil(path=self.gsutil_exe)
 
         dest_prefix = '%s/%s' % (self._gs_path, gen_number)
 

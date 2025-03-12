@@ -247,7 +247,9 @@ def main():
     parser.add_option('-b',
                       '--bucket',
                       help='Google Storage bucket to upload to.')
-    parser.add_option('-e', '--boto', help='Specify a custom boto file.')
+    parser.add_option('-e',
+                      '--boto',
+                      help='Deprecated: This option has no effect.')
     parser.add_option('-a',
                       '--archive',
                       action='store_true',
@@ -302,13 +304,12 @@ def main():
 
     # Make sure we can find a working instance of gsutil.
     if os.path.exists(GSUTIL_DEFAULT_PATH):
-        gsutil = Gsutil(GSUTIL_DEFAULT_PATH, boto_path=options.boto)
+        gsutil = Gsutil(GSUTIL_DEFAULT_PATH)
     else:
         gsutil = None
         for path in os.environ["PATH"].split(os.pathsep):
             if os.path.exists(path) and 'gsutil' in os.listdir(path):
-                gsutil = Gsutil(os.path.join(path, 'gsutil'),
-                                boto_path=options.boto)
+                gsutil = Gsutil(os.path.join(path, 'gsutil'))
         if not gsutil:
             parser.error('gsutil not found in %s, bad depot_tools checkout?' %
                          GSUTIL_DEFAULT_PATH)

@@ -64,6 +64,30 @@
       },
       "revId": "3b12a2c20f4e42b3db712c3e58acecbf38317bf1",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c17d6ceb_42ca8a5c",
+        "filename": "recipes/recipe_modules/gerrit/api.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 251,
+      "author": {
+        "id": 1147264
+      },
+      "writtenOn": "2025-03-12T17:32:12Z",
+      "side": 1,
+      "message": "Here is my interpretation of your comment.\n\n- This is what CL does: \"the verbose parameter in this function is set to True by default: verbose\u003dTrue\"\n- The is the expected outcome of the change: \"So if the function is called with no verbose set explicitly, the --verbose key will still be set.\"\n\nIt\u0027s a change for an existing function. I see that you set the default param value for `verbose` in any other functions with `False`, and I believe that it\u0027s to keep the existing behaviour. So, I\u0027m wondering why this CL changes the default behaviour of get_changes(), although the CL doesn\u0027t change the default beghaviour of any others.",
+      "parentUuid": "aee1eca2_17549a9a",
+      "range": {
+        "startLine": 250,
+        "startChar": 0,
+        "endLine": 251,
+        "endChar": 30
+      },
+      "revId": "3b12a2c20f4e42b3db712c3e58acecbf38317bf1",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

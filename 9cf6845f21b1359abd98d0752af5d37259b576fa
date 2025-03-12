@@ -22,6 +22,30 @@
       },
       "revId": "9cf6845f21b1359abd98d0752af5d37259b576fa",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9a34ec02_8c63c018",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 3355336
+      },
+      "writtenOn": "2025-03-12T01:42:17Z",
+      "side": 1,
+      "message": "I don\u0027t think having the path works (which of course raises questions on how thoroughly this path was tested by dogfooders, who probably predominantly use SSO), (discovered by me editing my personal Git config for an unrelated reason).\n\nThe credential config uses a different matching rule than URL.  If a path is present, it only does exact match (vs URL rules which always do partial matches on the entire string).",
+      "parentUuid": "f7e64290_ca8e7154",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 10,
+        "endChar": 21
+      },
+      "revId": "9cf6845f21b1359abd98d0752af5d37259b576fa",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

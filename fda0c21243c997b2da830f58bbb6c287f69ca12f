@@ -1,0 +1,114 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fb6f5585_e6e5f537",
+        "filename": "git_auth.py",
+        "patchSetId": 9
+      },
+      "lineNbr": 339,
+      "author": {
+        "id": 1560543
+      },
+      "writtenOn": "2025-03-12T01:46:21Z",
+      "side": 1,
+      "message": "Could you add functional tests for this? You can use GIT_CONFIG_GLOBAL to set a custom, global config.",
+      "revId": "fda0c21243c997b2da830f58bbb6c287f69ca12f",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7e6f24cd_84904992",
+        "filename": "git_auth.py",
+        "patchSetId": 9
+      },
+      "lineNbr": 399,
+      "author": {
+        "id": 1560543
+      },
+      "writtenOn": "2025-03-12T01:46:21Z",
+      "side": 1,
+      "message": "fyi here are the hosts that we support in chromium/src: https://chromium.googlesource.com/chromium/src/+/refs/heads/main/DEPS#547\n\nI think it\u0027s okay to start with chromium/chrome-internal.",
+      "revId": "fda0c21243c997b2da830f58bbb6c287f69ca12f",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "31214473_b825e057",
+        "filename": "git_auth.py",
+        "patchSetId": 9
+      },
+      "lineNbr": 534,
+      "author": {
+        "id": 1560543
+      },
+      "writtenOn": "2025-03-12T01:46:21Z",
+      "side": 1,
+      "message": "nit: use `.bak`",
+      "fixSuggestions": [
+        {
+          "fixId": "9999fc85_0a93fd15",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "git_auth.py",
+              "range": {
+                "startLine": 534,
+                "startChar": 0,
+                "endLine": 535,
+                "endChar": 0
+              },
+              "replacement": "        backup \u003d f\u0027{cookiefile}.bak\u0027\n"
+            }
+          ]
+        }
+      ],
+      "revId": "fda0c21243c997b2da830f58bbb6c287f69ca12f",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "84f9980d_1cc127a1",
+        "filename": "git_cl.py",
+        "patchSetId": 9
+      },
+      "lineNbr": 3958,
+      "author": {
+        "id": 1560543
+      },
+      "writtenOn": "2025-03-12T01:46:21Z",
+      "side": 1,
+      "message": "should we pivot to creds_wizard name?",
+      "range": {
+        "startLine": 3958,
+        "startChar": 7,
+        "endLine": 3958,
+        "endChar": 19
+      },
+      "fixSuggestions": [
+        {
+          "fixId": "63276395_357396ad",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "git_cl.py",
+              "range": {
+                "startLine": 3958,
+                "startChar": 0,
+                "endLine": 3959,
+                "endChar": 0
+              },
+              "replacement": "def CMDcreds_wizard(parser, args):\n"
+            }
+          ]
+        }
+      ],
+      "revId": "fda0c21243c997b2da830f58bbb6c287f69ca12f",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

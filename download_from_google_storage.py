@@ -105,17 +105,9 @@ class Gsutil(object):
         if not os.path.exists(path):
             raise FileNotFoundError('GSUtil not found in %s' % path)
         self.path = path
-        self.boto_path = boto_path
 
     def get_sub_env(self):
         env = os.environ.copy()
-        if self.boto_path == os.devnull:
-            env['AWS_CREDENTIAL_FILE'] = ''
-            env['BOTO_CONFIG'] = ''
-        elif self.boto_path:
-            env['AWS_CREDENTIAL_FILE'] = self.boto_path
-            env['BOTO_CONFIG'] = self.boto_path
-
         if PLATFORM_MAPPING[sys.platform] != 'win':
             env.update((x, "/tmp") for x in _TEMPDIR_ENV_VARS)
 
@@ -625,8 +617,7 @@ def main(args):
     parser.add_option('-n',
                       '--no_auth',
                       action='store_true',
-                      help='Skip auth checking.  Use if it\'s known that the '
-                      'target bucket is a public bucket.')
+                      help='DEPRECATED: This option has no effect.')
     parser.add_option('-p',
                       '--platform',
                       help='A regular expression that is compared against '
@@ -671,30 +662,9 @@ def main(args):
                       options.platform)
             return 0
 
-    # Set the boto file to /dev/null if we don't need auth.
-    if options.no_auth:
-        if (set(
-            ('http_proxy', 'https_proxy')).intersection(env.lower()
-                                                        for env in os.environ)
-                and 'NO_AUTH_BOTO_CONFIG' not in os.environ):
-            print(
-                'NOTICE: You have PROXY values set in your environment, but '
-                'gsutil in depot_tools does not (yet) obey them.',
-                file=sys.stderr)
-            print(
-                'Also, --no_auth prevents the normal BOTO_CONFIG environment '
-                'variable from being used.',
-                file=sys.stderr)
-            print(
-                'To use a proxy in this situation, please supply those '
-                'settings in a .boto file pointed to by the '
-                'NO_AUTH_BOTO_CONFIG environment variable.',
-                file=sys.stderr)
-        options.boto = os.environ.get('NO_AUTH_BOTO_CONFIG', os.devnull)
-
     # Make sure gsutil exists where we expect it to.
     if os.path.exists(GSUTIL_DEFAULT_PATH):
-        gsutil = Gsutil(GSUTIL_DEFAULT_PATH, boto_path=options.boto)
+        gsutil = Gsutil(GSUTIL_DEFAULT_PATH)
     else:
         parser.error('gsutil not found in %s, bad depot_tools checkout?' %
                      GSUTIL_DEFAULT_PATH)

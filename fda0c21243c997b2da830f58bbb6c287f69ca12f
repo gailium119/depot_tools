@@ -20,6 +20,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "014fa9a5_22ee9676",
+        "filename": "git_auth.py",
+        "patchSetId": 9
+      },
+      "lineNbr": 339,
+      "author": {
+        "id": 3355336
+      },
+      "writtenOn": "2025-03-12T20:20:08Z",
+      "side": 1,
+      "message": "I\u0027m not sure tests make sense for this.  The tests will basically become change detectors, especially as we tweak this over time.  This is basically a decision tree, and the tests will be a 1:1 mapping of the logic.",
+      "parentUuid": "fb6f5585_e6e5f537",
+      "revId": "fda0c21243c997b2da830f58bbb6c287f69ca12f",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "7e6f24cd_84904992",
         "filename": "git_auth.py",
         "patchSetId": 9

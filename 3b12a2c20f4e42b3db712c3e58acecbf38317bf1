@@ -40,6 +40,30 @@
       ],
       "revId": "3b12a2c20f4e42b3db712c3e58acecbf38317bf1",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "aee1eca2_17549a9a",
+        "filename": "recipes/recipe_modules/gerrit/api.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 251,
+      "author": {
+        "id": 3578280
+      },
+      "writtenOn": "2025-03-12T08:33:01Z",
+      "side": 1,
+      "message": "What I meant is that the `verbose` parameter in this function is set to `True` by default: `verbose\u003dTrue`. So if the function is called with no `verbose` set explicitly, the `--verbose` key will still be set.",
+      "parentUuid": "ff1fb975_81022fdb",
+      "range": {
+        "startLine": 250,
+        "startChar": 0,
+        "endLine": 251,
+        "endChar": 30
+      },
+      "revId": "3b12a2c20f4e42b3db712c3e58acecbf38317bf1",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

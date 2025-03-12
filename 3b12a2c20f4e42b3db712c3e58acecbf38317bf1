@@ -88,6 +88,30 @@
       },
       "revId": "3b12a2c20f4e42b3db712c3e58acecbf38317bf1",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7686dd2c_836b0fb9",
+        "filename": "recipes/recipe_modules/gerrit/api.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 251,
+      "author": {
+        "id": 1543417
+      },
+      "writtenOn": "2025-03-12T17:39:48Z",
+      "side": 1,
+      "message": "Thanks for the review Scott :D)\n\nSo there was an outage in official release recently and it initially took us a long while to locate the cause... and in that incident we found that if we have had verbose logging enabled it would be really helpful.\n\nSo the intention of the CL is to add verbose logging arg/option and but default them all to false so that it doesnt affect the behaviour of the existing callers. And in our official recipes, we\u0027ll actually set verbose\u003dtrue.\nEven though during the outage we only needed verbose logging for that one call, but it may be benefitially just give that option to other methods for the future.\n\nHopefully this helps :D)",
+      "parentUuid": "c17d6ceb_42ca8a5c",
+      "range": {
+        "startLine": 250,
+        "startChar": 0,
+        "endLine": 251,
+        "endChar": 30
+      },
+      "revId": "3b12a2c20f4e42b3db712c3e58acecbf38317bf1",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

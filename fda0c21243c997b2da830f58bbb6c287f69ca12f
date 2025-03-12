@@ -38,6 +38,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "59da3e6b_ae58fb15",
+        "filename": "git_auth.py",
+        "patchSetId": 9
+      },
+      "lineNbr": 339,
+      "author": {
+        "id": 1560543
+      },
+      "writtenOn": "2025-03-12T20:47:10Z",
+      "side": 1,
+      "message": "I think there is still value to avoid manual testing. Note that I intentionally didn\u0027t ask for unit tests since those would be very much 1:1 mapping.\n\nI assume you tested this and checked updated ~/.gitconfig. Instead of that, you could\u0027ve compared an expected output of gitconfig with generatede one.\n\nAnd I agree that any change in the wizard will likely mean a change in gitconfig, and, IMO, that\u0027s okay.",
+      "parentUuid": "014fa9a5_22ee9676",
+      "revId": "fda0c21243c997b2da830f58bbb6c287f69ca12f",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "7e6f24cd_84904992",
         "filename": "git_auth.py",
         "patchSetId": 9

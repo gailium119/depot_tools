@@ -184,6 +184,30 @@
       },
       "revId": "3b12a2c20f4e42b3db712c3e58acecbf38317bf1",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "dfba5033_ae339283",
+        "filename": "recipes/recipe_modules/gerrit/api.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 251,
+      "author": {
+        "id": 1543417
+      },
+      "writtenOn": "2025-03-13T17:56:03Z",
+      "side": 1,
+      "message": "Thanks for checking carefully :D)",
+      "parentUuid": "cec2e8e6_b9e81ff5",
+      "range": {
+        "startLine": 250,
+        "startChar": 0,
+        "endLine": 251,
+        "endChar": 30
+      },
+      "revId": "3b12a2c20f4e42b3db712c3e58acecbf38317bf1",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

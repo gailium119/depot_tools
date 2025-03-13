@@ -28,10 +28,10 @@ TEST_DIR = os.path.dirname(os.path.abspath(__file__))
 
 
 class GsutilMock(object):
-    def __init__(self, path, boto_path, timeout=None):
+
+    def __init__(self, path, timeout=None):
         self.path = path
         self.timeout = timeout
-        self.boto_path = boto_path
         self.expected = []
         self.history = []
         self.lock = threading.Lock()
@@ -151,7 +151,7 @@ class GstoolsUnitTests(unittest.TestCase):
 
     def test_gsutil(self):
         # This will download a real gsutil package from Google Storage.
-        gsutil = download_from_google_storage.Gsutil(GSUTIL_DEFAULT_PATH, None)
+        gsutil = download_from_google_storage.Gsutil(GSUTIL_DEFAULT_PATH)
         self.assertEqual(gsutil.path, GSUTIL_DEFAULT_PATH)
         code, _, err = gsutil.check_call()
         self.assertEqual(code, 0, err)

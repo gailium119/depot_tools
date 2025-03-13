@@ -16,6 +16,24 @@
       "message": "Heeey folks :D)\n\nI am working an new recipe and was hoping to use the method to quickly verify if a branch *does not* exist by allowing 404 status when fetcing logs of a branch ref.\n\nThe recipe module provides `ref` method but it takes too long and generates too much data.\n\nPlease let know if this makes sense. Thanks!",
       "revId": "26eb0f6562ddfc8c01bde1c69df88fe80fe1b9a6",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "99f14b14_aa57fb2f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1543417
+      },
+      "writtenOn": "2025-03-13T18:02:44Z",
+      "side": 1,
+      "message": "Resolving this and will submit in around 1 hour if no objections :D)\n\nThanks!",
+      "parentUuid": "7212255b_6e7ab454",
+      "revId": "26eb0f6562ddfc8c01bde1c69df88fe80fe1b9a6",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

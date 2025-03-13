@@ -34,6 +34,65 @@
       "parentUuid": "7212255b_6e7ab454",
       "revId": "26eb0f6562ddfc8c01bde1c69df88fe80fe1b9a6",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ab011686_39692ce6",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1147264
+      },
+      "writtenOn": "2025-03-13T18:12:34Z",
+      "side": 1,
+      "message": "\u003e I am working an new recipe and was hoping to use the method to quickly verify if a branch does not exist by allowing 404 status when fetcing logs of a branch ref.\n\nI guess you are talking about the callsite calling this function, and it\u0027s not visible in this CL, and there isn\u0027t enough context about the business logic you talked about. So, I don\u0027t know, but I\u0027m stamping as the code change looks safe.",
+      "parentUuid": "99f14b14_aa57fb2f",
+      "revId": "26eb0f6562ddfc8c01bde1c69df88fe80fe1b9a6",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3ddf647d_e8d33dca",
+        "filename": "recipes/recipe_modules/gitiles/resources/gerrit_client.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 80,
+      "author": {
+        "id": 1147264
+      },
+      "writtenOn": "2025-03-13T18:12:34Z",
+      "side": 1,
+      "message": "nit; it\u0027d be a good usecase for the walrus operator.\n\n```\nwhile (next_page :\u003d last_result.get(\u0027next\u0027, \u0027\u0027)) and len(commits) \u003c limit:\n  query_params[\u0027s\u0027] \u003d next_page\n```",
+      "range": {
+        "startLine": 79,
+        "startChar": 2,
+        "endLine": 80,
+        "endChar": 47
+      },
+      "fixSuggestions": [
+        {
+          "fixId": "696425b8_4d9ac084",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "recipes/recipe_modules/gitiles/resources/gerrit_client.py",
+              "range": {
+                "startLine": 79,
+                "startChar": 0,
+                "endLine": 81,
+                "endChar": 0
+              },
+              "replacement": "  while (next_page :\u003d last_result.get(\u0027next\u0027, \u0027\u0027)) and len(commits) \u003c limit:\n    query_params[\u0027s\u0027] \u003d next_page\n"
+            }
+          ]
+        }
+      ],
+      "revId": "26eb0f6562ddfc8c01bde1c69df88fe80fe1b9a6",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

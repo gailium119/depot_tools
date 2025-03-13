@@ -93,6 +93,30 @@
       ],
       "revId": "26eb0f6562ddfc8c01bde1c69df88fe80fe1b9a6",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "136e41de_39aa9e2f",
+        "filename": "recipes/recipe_modules/gitiles/resources/gerrit_client.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 80,
+      "author": {
+        "id": 1543417
+      },
+      "writtenOn": "2025-03-13T18:16:35Z",
+      "side": 1,
+      "message": "Good catch. Thanks :D)",
+      "parentUuid": "3ddf647d_e8d33dca",
+      "range": {
+        "startLine": 79,
+        "startChar": 2,
+        "endLine": 80,
+        "endChar": 47
+      },
+      "revId": "26eb0f6562ddfc8c01bde1c69df88fe80fe1b9a6",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

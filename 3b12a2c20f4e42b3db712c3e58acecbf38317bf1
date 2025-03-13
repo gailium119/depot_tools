@@ -136,6 +136,30 @@
       },
       "revId": "3b12a2c20f4e42b3db712c3e58acecbf38317bf1",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ec9dd528_004995f7",
+        "filename": "recipes/recipe_modules/gerrit/api.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 251,
+      "author": {
+        "id": 3578280
+      },
+      "writtenOn": "2025-03-13T09:47:08Z",
+      "side": 1,
+      "message": "I set `verbose` to `True` on the `get_changes` function to keep the old behavior. In the \"before\" part of the diff `--verbose` flag is unconditionally passed to the command:\n\n```py\nargs \u003d [\n    \u0027changes\u0027,\n    \u0027--verbose\u0027, # \u003c\u003d\u003d\u003d\u003d Here\n    \u0027--host\u0027, host,\n    \u0027--json_file\u0027, self.m.json.output()\n]\n```\n\nMy changes are adding the `verbose` parameter to all functions in the module for consistency. In order to keep behavior the same, I had to set it to `False` in all functions except `get_changes` (and the caller functions), but to `True` for `get_changes`, so that `--verbose` flag is still passed and there is no changes in the code using the current version of this module.\n\nIt is also reflected in the expectation file diffs: the `--verbose` flag was passed before these changes for the `get_changes` functions, and it\u0027s still passed after the changes, just at a different position, because now we are adding it last.\n\nPlease let me know if it makes more sense now :)",
+      "parentUuid": "de8af3c8_2b9ed06f",
+      "range": {
+        "startLine": 250,
+        "startChar": 0,
+        "endLine": 251,
+        "endChar": 30
+      },
+      "revId": "3b12a2c20f4e42b3db712c3e58acecbf38317bf1",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

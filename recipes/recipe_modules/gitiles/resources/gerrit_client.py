@@ -75,8 +75,8 @@ def fetch_log_with_paging(query_params, limit, fetch):
   """
   # Log api returns {'log': [list of commits], 'next': hash}.
   last_result = fetch(query_params)
-  commits = last_result['log']
-  while last_result.get('next') and len(commits) < limit:
+  commits = last_result.get('log', [])
+  while last_result.get('next', '') and len(commits) < limit:
     query_params['s'] = last_result.get('next')
     last_result = fetch(query_params)
     # The first commit in `last_result` is not necessarily the parent of the

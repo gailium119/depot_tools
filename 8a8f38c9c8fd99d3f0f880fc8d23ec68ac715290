@@ -1,0 +1,68 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a817bb1b_54fb1806",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1381059
+      },
+      "writtenOn": "2025-03-14T16:48:22Z",
+      "side": 1,
+      "message": "Please delete",
+      "range": {
+        "startLine": 9,
+        "startChar": 14,
+        "endLine": 16,
+        "endChar": 14
+      },
+      "revId": "8a8f38c9c8fd99d3f0f880fc8d23ec68ac715290",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6ed18b9f_a2ffd31e",
+        "filename": "gerrit_util.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 1436,
+      "author": {
+        "id": 1381059
+      },
+      "writtenOn": "2025-03-14T16:48:22Z",
+      "side": 1,
+      "message": "Curious, in what scenario 204 is returned? I don\u0027t see it mentioned in the Gerrit doc: https://gerrit-review.googlesource.com/Documentation/rest-api-changes.html#abandon-change",
+      "range": {
+        "startLine": 1436,
+        "startChar": 60,
+        "endLine": 1436,
+        "endChar": 63
+      },
+      "fixSuggestions": [
+        {
+          "fixId": "358f36b1_2259aae2",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "gerrit_util.py",
+              "range": {
+                "startLine": 1436,
+                "startChar": 0,
+                "endLine": 1436,
+                "endChar": 0
+              },
+              "replacement": "    # Gerrit returns 204 if the change was already abandoned.\n"
+            }
+          ]
+        }
+      ],
+      "revId": "8a8f38c9c8fd99d3f0f880fc8d23ec68ac715290",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

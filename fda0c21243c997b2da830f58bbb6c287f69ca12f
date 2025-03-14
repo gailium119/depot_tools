@@ -56,6 +56,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "e4db9bca_28c5bc51",
+        "filename": "git_auth.py",
+        "patchSetId": 9
+      },
+      "lineNbr": 339,
+      "author": {
+        "id": 3355336
+      },
+      "writtenOn": "2025-03-14T01:03:53Z",
+      "side": 1,
+      "message": "Added some tests for the \"interesting\" portions of the code.",
+      "parentUuid": "59da3e6b_ae58fb15",
+      "revId": "fda0c21243c997b2da830f58bbb6c287f69ca12f",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "7e6f24cd_84904992",
         "filename": "git_auth.py",
         "patchSetId": 9
@@ -67,6 +85,24 @@
       "writtenOn": "2025-03-12T01:46:21Z",
       "side": 1,
       "message": "fyi here are the hosts that we support in chromium/src: https://chromium.googlesource.com/chromium/src/+/refs/heads/main/DEPS#547\n\nI think it\u0027s okay to start with chromium/chrome-internal.",
+      "revId": "fda0c21243c997b2da830f58bbb6c287f69ca12f",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9cd94e8e_fe40c9a4",
+        "filename": "git_auth.py",
+        "patchSetId": 9
+      },
+      "lineNbr": 399,
+      "author": {
+        "id": 3355336
+      },
+      "writtenOn": "2025-03-14T01:03:53Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7e6f24cd_84904992",
       "revId": "fda0c21243c997b2da830f58bbb6c287f69ca12f",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
@@ -102,6 +138,24 @@
           ]
         }
       ],
+      "revId": "fda0c21243c997b2da830f58bbb6c287f69ca12f",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ede19b10_5efb31a0",
+        "filename": "git_auth.py",
+        "patchSetId": 9
+      },
+      "lineNbr": 534,
+      "author": {
+        "id": 3355336
+      },
+      "writtenOn": "2025-03-14T01:03:53Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "31214473_b825e057",
       "revId": "fda0c21243c997b2da830f58bbb6c287f69ca12f",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
@@ -143,6 +197,30 @@
           ]
         }
       ],
+      "revId": "fda0c21243c997b2da830f58bbb6c287f69ca12f",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "cb1b8a37_6ca437e6",
+        "filename": "git_cl.py",
+        "patchSetId": 9
+      },
+      "lineNbr": 3958,
+      "author": {
+        "id": 3355336
+      },
+      "writtenOn": "2025-03-14T01:03:53Z",
+      "side": 1,
+      "message": "I plan on replacing the existing new auth `creds_check` after this has been tested a bit.",
+      "parentUuid": "84f9980d_1cc127a1",
+      "range": {
+        "startLine": 3958,
+        "startChar": 7,
+        "endLine": 3958,
+        "endChar": 19
+      },
       "revId": "fda0c21243c997b2da830f58bbb6c287f69ca12f",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }

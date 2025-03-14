@@ -26,6 +26,30 @@
     {
       "unresolved": false,
       "key": {
+        "uuid": "cab0b305_971012b4",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1560543
+      },
+      "writtenOn": "2025-03-14T16:49:24Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "a817bb1b_54fb1806",
+      "range": {
+        "startLine": 9,
+        "startChar": 14,
+        "endLine": 16,
+        "endChar": 14
+      },
+      "revId": "8a8f38c9c8fd99d3f0f880fc8d23ec68ac715290",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
         "uuid": "6ed18b9f_a2ffd31e",
         "filename": "gerrit_util.py",
         "patchSetId": 2

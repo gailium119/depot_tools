@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "14efab0f_7a4b6d4c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 3355336
+      },
+      "writtenOn": "2025-03-14T20:34:27Z",
+      "side": 1,
+      "message": "huh, looks like `uploaderin:ldap/eng` for copying votes doesn\u0027t apply to linked chromium.org accounts",
+      "revId": "e79fcf0e510cd5bc6ade869541f4675e3af7e90b",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

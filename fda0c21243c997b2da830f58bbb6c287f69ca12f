@@ -72,6 +72,24 @@
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "cba2e068_07efb7c9",
+        "filename": "git_auth.py",
+        "patchSetId": 9
+      },
+      "lineNbr": 339,
+      "author": {
+        "id": 1560543
+      },
+      "writtenOn": "2025-03-14T17:28:11Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e4db9bca_28c5bc51",
+      "revId": "fda0c21243c997b2da830f58bbb6c287f69ca12f",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "7e6f24cd_84904992",

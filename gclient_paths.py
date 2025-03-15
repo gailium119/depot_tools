@@ -20,7 +20,7 @@ import subprocess2
 # pylint: disable=line-too-long
 
 
-@functools.lru_cache
+@functools.lru_cache()
 def FindGclientRoot(from_dir, filename='.gclient'):
     """Tries to find the gclient root."""
     real_from_dir = os.path.abspath(from_dir)
@@ -71,7 +71,7 @@ def FindGclientRoot(from_dir, filename='.gclient'):
     return None
 
 
-@functools.lru_cache
+@functools.lru_cache()
 def _GetPrimarySolutionPathInternal(cwd):
     gclient_root = FindGclientRoot(cwd)
     if gclient_root:
@@ -100,7 +100,7 @@ def GetPrimarySolutionPath():
     return _GetPrimarySolutionPathInternal(os.getcwd())
 
 
-@functools.lru_cache
+@functools.lru_cache()
 def _GetBuildtoolsPathInternal(cwd, override):
     if override is not None:
         return override
@@ -155,7 +155,7 @@ def GetExeSuffix():
     return ''
 
 
-@functools.lru_cache
+@functools.lru_cache()
 def GetGClientPrimarySolutionName(gclient_root_dir_path):
     """Returns the name of the primary solution in the .gclient file specified."""
     gclient_config_file = os.path.join(gclient_root_dir_path, '.gclient')

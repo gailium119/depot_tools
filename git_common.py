@@ -1276,7 +1276,7 @@ def upstream(branch):
         return None
 
 
-@functools.lru_cache
+@functools.lru_cache()
 def check_git_version(
         min_version: Tuple[int] = GIT_MIN_VERSION) -> Optional[str]:
     """Checks whether git is installed, and its version meets the recommended

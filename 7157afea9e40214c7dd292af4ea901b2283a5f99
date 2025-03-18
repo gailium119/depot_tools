@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "284c6e4e_eb58de5b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 3355336
+      },
+      "writtenOn": "2025-03-18T23:19:58Z",
+      "side": 1,
+      "message": "I will send out some dogfood announcement and update docs after, so we can get a week of dogfooding before rolling out new auth (timeline is debatable and escalatable)",
+      "revId": "7157afea9e40214c7dd292af4ea901b2283a5f99",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

@@ -375,7 +375,7 @@ class ConfigWizard(object):
         self._println(
             '(Report any issues to https://issues.chromium.org/issues/new?component=1456702&template=2076315)'
         )
-        if not newauth.Enabled():
+        if not newauth.EnabledInConfig():
             self._println()
             self._println('You have not enabled new auth.')
             self._println('This tool will configure Git to use new auth,')

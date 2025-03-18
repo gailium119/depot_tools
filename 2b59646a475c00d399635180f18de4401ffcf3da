@@ -34,6 +34,24 @@
       "parentUuid": "20d200b5_fe0f672b",
       "revId": "2b59646a475c00d399635180f18de4401ffcf3da",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "bb65789b_95aca458",
+        "filename": "git_auth.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 675,
+      "author": {
+        "id": 3355336
+      },
+      "writtenOn": "2025-03-18T22:21:44Z",
+      "side": 1,
+      "message": "b/404618626",
+      "parentUuid": "239817ff_422548db",
+      "revId": "2b59646a475c00d399635180f18de4401ffcf3da",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4d9de062_2d30176f",
+        "filename": "autoninja",
+        "patchSetId": 2
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1001939
+      },
+      "writtenOn": "2025-03-26T04:22:37Z",
+      "side": 1,
+      "message": "no need to set this at the head of PATH, so that it will be used for any python3 script invoked in the build process?",
+      "revId": "d76f8d5f715fe2bd8630ce6e240a058d5d99d29d",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

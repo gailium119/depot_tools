@@ -1,0 +1,96 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6a10b26b_7f3eb48a",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 5
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1002539
+      },
+      "writtenOn": "2025-03-26T17:40:08Z",
+      "side": 1,
+      "message": "How can it be not enabled if it hardcodes True? Did you plan to implement some opt-in/opt-out mechanism?",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 9,
+        "endChar": 10
+      },
+      "revId": "fabe262deab7096357a8de6cce8c8d347b6958e8",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0287e90b_1a6f308a",
+        "filename": "gsutil.py",
+        "patchSetId": 5
+      },
+      "lineNbr": 210,
+      "author": {
+        "id": 1002539
+      },
+      "writtenOn": "2025-03-26T17:40:08Z",
+      "side": 1,
+      "message": "nit: get_boto_path",
+      "range": {
+        "startLine": 210,
+        "startChar": 4,
+        "endLine": 210,
+        "endChar": 19
+      },
+      "revId": "fabe262deab7096357a8de6cce8c8d347b6958e8",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2edfd5d7_dad7c71b",
+        "filename": "gsutil.py",
+        "patchSetId": 5
+      },
+      "lineNbr": 211,
+      "author": {
+        "id": 1002539
+      },
+      "writtenOn": "2025-03-26T17:40:08Z",
+      "side": 1,
+      "message": "This is no longer correct",
+      "range": {
+        "startLine": 211,
+        "startChar": 7,
+        "endLine": 211,
+        "endChar": 69
+      },
+      "revId": "fabe262deab7096357a8de6cce8c8d347b6958e8",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b05b1fc2_722c1885",
+        "filename": "gsutil.py",
+        "patchSetId": 5
+      },
+      "lineNbr": 267,
+      "author": {
+        "id": 1002539
+      },
+      "writtenOn": "2025-03-26T17:40:08Z",
+      "side": 1,
+      "message": "note this will print \"Not logged in\" to stderr. Maybe its worth suppresing it.",
+      "range": {
+        "startLine": 267,
+        "startChar": 8,
+        "endLine": 267,
+        "endChar": 56
+      },
+      "revId": "fabe262deab7096357a8de6cce8c8d347b6958e8",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

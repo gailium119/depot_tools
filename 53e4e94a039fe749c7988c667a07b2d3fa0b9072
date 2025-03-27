@@ -24,6 +24,30 @@
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
     {
+      "unresolved": true,
+      "key": {
+        "uuid": "c8ef752d_0aafb507",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 7
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1559487
+      },
+      "writtenOn": "2025-03-27T02:29:35Z",
+      "side": 1,
+      "message": "Ok, I can do that. Are you able to +1 this and I can wait a few days for the shim changes to rollout ?",
+      "parentUuid": "8a146e41_a5ad4db9",
+      "range": {
+        "startLine": 13,
+        "startChar": 0,
+        "endLine": 14,
+        "endChar": 12
+      },
+      "revId": "53e4e94a039fe749c7988c667a07b2d3fa0b9072",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
       "unresolved": false,
       "key": {
         "uuid": "da636046_a75e6a4f",

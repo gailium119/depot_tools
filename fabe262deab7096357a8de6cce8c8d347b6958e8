@@ -24,6 +24,30 @@
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "f184a62e_e664d5e3",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 5
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1559487
+      },
+      "writtenOn": "2025-03-27T02:16:19Z",
+      "side": 1,
+      "message": "This is true, let me update the commit message. I prefer to keep it hardcoded to true with a const so in the worst case someone could just change that const to false in their depot tools if its an emergency. I\u0027d say the const var should be removed if this change doesnt break anything.",
+      "parentUuid": "6a10b26b_7f3eb48a",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 9,
+        "endChar": 10
+      },
+      "revId": "fabe262deab7096357a8de6cce8c8d347b6958e8",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "0287e90b_1a6f308a",
@@ -47,6 +71,30 @@
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "be4a77a6_0af728b9",
+        "filename": "gsutil.py",
+        "patchSetId": 5
+      },
+      "lineNbr": 210,
+      "author": {
+        "id": 1559487
+      },
+      "writtenOn": "2025-03-27T02:16:19Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0287e90b_1a6f308a",
+      "range": {
+        "startLine": 210,
+        "startChar": 4,
+        "endLine": 210,
+        "endChar": 19
+      },
+      "revId": "fabe262deab7096357a8de6cce8c8d347b6958e8",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "2edfd5d7_dad7c71b",
@@ -60,6 +108,30 @@
       "writtenOn": "2025-03-26T17:40:08Z",
       "side": 1,
       "message": "This is no longer correct",
+      "range": {
+        "startLine": 211,
+        "startChar": 7,
+        "endLine": 211,
+        "endChar": 69
+      },
+      "revId": "fabe262deab7096357a8de6cce8c8d347b6958e8",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5bb7fb2b_b6f6d4b0",
+        "filename": "gsutil.py",
+        "patchSetId": 5
+      },
+      "lineNbr": 211,
+      "author": {
+        "id": 1559487
+      },
+      "writtenOn": "2025-03-27T02:16:19Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2edfd5d7_dad7c71b",
       "range": {
         "startLine": 211,
         "startChar": 7,

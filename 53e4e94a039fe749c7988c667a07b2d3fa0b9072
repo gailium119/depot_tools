@@ -1,6 +1,29 @@
 {
   "comments": [
     {
+      "unresolved": true,
+      "key": {
+        "uuid": "8a146e41_a5ad4db9",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 7
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1002539
+      },
+      "writtenOn": "2025-03-27T02:27:17Z",
+      "side": 1,
+      "message": "Note this will need to be deployed first (or as part of this CL) by updating https://chromium.googlesource.com/chromium/tools/depot_tools/+/refs/heads/main/cipd_manifest.txt#49 (e.g. pick some git_revision from https://chrome-infra-packages.appspot.com/p/infra/tools/luci-auth/linux-amd64/+/latest to get the most recently built version).\n\nSee also https://chromium.googlesource.com/chromium/tools/depot_tools/+/refs/heads/main/cipd_manifest.txt#11 (in case you haven\u0027t done this before).",
+      "range": {
+        "startLine": 13,
+        "startChar": 0,
+        "endLine": 14,
+        "endChar": 12
+      },
+      "revId": "53e4e94a039fe749c7988c667a07b2d3fa0b9072",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
       "unresolved": false,
       "key": {
         "uuid": "da636046_a75e6a4f",

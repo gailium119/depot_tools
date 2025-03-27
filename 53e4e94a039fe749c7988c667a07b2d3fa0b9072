@@ -135,6 +135,52 @@
       "message": "thanks for the feedback Vadim, PTAL !",
       "revId": "53e4e94a039fe749c7988c667a07b2d3fa0b9072",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fc69cd86_1039e1ff",
+        "filename": "gsutil.py",
+        "patchSetId": 7
+      },
+      "lineNbr": 225,
+      "author": {
+        "id": 1147264
+      },
+      "writtenOn": "2025-03-27T19:13:55Z",
+      "side": 1,
+      "message": "This function `returns the path`. Shouldn\u0027t this be `return \"\"`?",
+      "range": {
+        "startLine": 225,
+        "startChar": 4,
+        "endLine": 225,
+        "endChar": 16
+      },
+      "revId": "53e4e94a039fe749c7988c667a07b2d3fa0b9072",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "13cf21ff_a0da4caa",
+        "filename": "gsutil.py",
+        "patchSetId": 7
+      },
+      "lineNbr": 263,
+      "author": {
+        "id": 1147264
+      },
+      "writtenOn": "2025-03-27T19:13:55Z",
+      "side": 1,
+      "message": "Shouldn\u0027t this try LUCI_AUTH even if the boto file doesn\u0027t exist?",
+      "range": {
+        "startLine": 263,
+        "startChar": 28,
+        "endLine": 263,
+        "endChar": 37
+      },
+      "revId": "53e4e94a039fe749c7988c667a07b2d3fa0b9072",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

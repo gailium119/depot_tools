@@ -16,6 +16,24 @@
       "message": "Hello, Allen.\n\nI\u0027m glad that newauth is getting things right.\n\nCan we consider adding a switch to suppress warnings about `.gitcookie` files?\n\nBecause I\u0027m also currently working on the fuchsia project, and the workflow of the fuchsia project still seems to be using `.gitcookie`, every time I execute commands like `git cl upload` in the Chromium project, the warning message here appears every time.\n\n:)",
       "revId": "2bfa28f442009c4db0735c8789c611f3cfb3031c",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ab5f218a_8fba81ae",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 11
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 3355336
+      },
+      "writtenOn": "2025-03-27T23:19:16Z",
+      "side": 1,
+      "message": "No, we do not plan to support `.gitcookies` files so a switch does not make sense.  Can you file a bug so we can see how to fix the fuchsia workflow, or how to otherwise make this work?",
+      "parentUuid": "02351d58_24fda6b7",
+      "revId": "2bfa28f442009c4db0735c8789c611f3cfb3031c",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

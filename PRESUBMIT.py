@@ -195,3 +195,6 @@ def CheckPatchFormatted(input_api, output_api):
 
 def CheckFreezeOnCommit(input_api, output_api):
     return input_api.canned_checks.CheckInfraFreeze(input_api, output_api)
+
+def CheckChangeHasBugField(input_api, output_api):
+    return input_api.canned_checks.CheckChangeHasBugField(input_api, output_api)

@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0e7a72dc_9cfd4feb",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1153420
+      },
+      "writtenOn": "2025-03-28T18:43:30Z",
+      "side": 1,
+      "message": "Hey Andy, I\u0027ve noticed in a recent code review that we don\u0027t have liscence PRESUBMIT checks for android resource files. Despite most of them (~99%) containing the liscence. Previously I\u0027ve noticed that we\u0027re letting trailing whitespace through in android resource files as well. I believe this fix changes both of these.\n\nWhile I think you could make a good argument that all or most .xml files should be included. Especially histogram files. But there\u0027s hundreds of XML files that don\u0027t have a liscence, some of which are test data, and adding them would likely cause breakage. https://source.chromium.org/search?q\u003d-file:%5Eout%2F%20-file:%5Ethird_party%20-copyright%20file:%5C.xml\u0026ss\u003dchromium\u0026start\u003d21\n\nWhile on the other hand, there\u0027s only ~35 android resource files curently in violation, and I\u0027ll be able to easily migrate all of these myself.\n* https://source.chromium.org/search?q\u003d-file:%5Eout%2F%20-file:%5Ethird_party%20-copyright%20file:%5C.xml%20file:%5C%2Fres%5C%2F\u0026sq\u003d\u0026ss\u003dchromium\n* https://source.corp.google.com/search?q\u003d-copyright%20file:%5C.xml%20file:%5C%2Fres%5C%2F\u0026ss\u003dh%2Fchrome-internal%2Fcodesearch%2Fchrome%2Fsrc%2F%2B%2Frefs%2Fheads%2Fmain:clank%2F\n\nI don\u0027t have approval for this change from anyone else, and hoping that you\u0027re able to approve this.",
+      "revId": "e9372a42bd9ae340a01115589188bd77fdc4d571",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "357a7eba_e7396ea7",
+        "filename": "tests/roll_dep_test.py",
+        "patchSetId": 20
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 1378025
+      },
+      "writtenOn": "2025-03-31T23:31:53Z",
+      "side": 0,
+      "message": "Please add other test cases so you exercise all if branches introduced in the code.",
+      "revId": "3ce438f7f0ba505ed055b0b0c0b2eb725357c84e",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

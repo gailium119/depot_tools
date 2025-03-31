@@ -16,6 +16,131 @@
       "message": "Moving myself to CC as you already have two reviewers and I am time poor today!",
       "revId": "1d5f34ef11780af9a699d31e7c803e7fe1527441",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d697e1ec_b3605948",
+        "filename": "roll_dep.py",
+        "patchSetId": 20
+      },
+      "lineNbr": 236,
+      "author": {
+        "id": 1378025
+      },
+      "writtenOn": "2025-03-31T23:31:53Z",
+      "side": 1,
+      "message": "This should be inside if then branch instead of being a condition.\n\nIf you really want to print success message, do so inside update_readme_chromium before returning True (relates to the other comment)\n\nYou should also drop return type if you don\u0027t use it\u0027s result.",
+      "fixSuggestions": [
+        {
+          "fixId": "ba36fd6a_a5c9ddb6",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "roll_dep.py",
+              "range": {
+                "startLine": 235,
+                "startChar": 0,
+                "endLine": 238,
+                "endChar": 0
+              },
+              "replacement": "        if args.update_readme:\n            update_readme_chromium(dependency, roll_to, current_dir)\n"
+            },
+            {
+              "path": "roll_dep.py",
+              "range": {
+                "startLine": 304,
+                "startChar": 0,
+                "endLine": 304,
+                "endChar": 0
+              },
+              "replacement": "        print(f\u0027Updated revision in README.chromium for {dependency} to {roll_to}\u0027)\n"
+            }
+          ]
+        }
+      ],
+      "revId": "1d5f34ef11780af9a699d31e7c803e7fe1527441",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c54f8dfa_fce719ba",
+        "filename": "roll_dep.py",
+        "patchSetId": 20
+      },
+      "lineNbr": 287,
+      "author": {
+        "id": 1378025
+      },
+      "writtenOn": "2025-03-31T23:31:53Z",
+      "side": 1,
+      "message": "You should explain multi dependency file update isn\u0027t supported (why it failed( instead of just explaining facts.\n\nA casual user won\u0027t know contains divider results in failure.\n\nSame below for multi revision scenario",
+      "fixSuggestions": [
+        {
+          "fixId": "99384bed_1cdad316",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "roll_dep.py",
+              "range": {
+                "startLine": 286,
+                "startChar": 0,
+                "endLine": 287,
+                "endChar": 0
+              },
+              "replacement": "        print(\u0027README.chromium contains \"- DEPENDENCY DIVIDER -\", \u0027\n              \u0027multi-dependency files are not supported\u0027)\n"
+            },
+            {
+              "path": "roll_dep.py",
+              "range": {
+                "startLine": 292,
+                "startChar": 0,
+                "endLine": 293,
+                "endChar": 0
+              },
+              "replacement": "        print(f\u0027README.chromium contains {revision_count} Revision: lines, \u0027\n              \u0027files with multiple dependencies are not supported\u0027)\n"
+            }
+          ]
+        }
+      ],
+      "revId": "1d5f34ef11780af9a699d31e7c803e7fe1527441",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7aa90cef_ef3c37b0",
+        "filename": "roll_dep.py",
+        "patchSetId": 20
+      },
+      "lineNbr": 300,
+      "author": {
+        "id": 1378025
+      },
+      "writtenOn": "2025-03-31T23:31:53Z",
+      "side": 1,
+      "message": "Please be consistent if the rest of function is \n\nIf failure condition:\n  Return False",
+      "fixSuggestions": [
+        {
+          "fixId": "5494f096_2019fb38",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "roll_dep.py",
+              "range": {
+                "startLine": 300,
+                "startChar": 0,
+                "endLine": 307,
+                "endChar": 0
+              },
+              "replacement": "    if new_content \u003d\u003d content:\n        print(f\u0027README.chromium already has revision {roll_to}, \\ncontent:{new_content}\u0027)\n        return False\n\n    with open(readme_path, \u0027w\u0027) as f:\n        f.write(new_content)\n    check_call([\u0027git\u0027, \u0027add\u0027, readme_path], cwd\u003dcurrent_dir)\n    return True\n"
+            }
+          ]
+        }
+      ],
+      "revId": "1d5f34ef11780af9a699d31e7c803e7fe1527441",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

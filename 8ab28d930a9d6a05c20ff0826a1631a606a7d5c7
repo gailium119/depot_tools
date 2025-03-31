@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "946ea12f_79aeee26",
+        "filename": "git_auth.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 362,
+      "author": {
+        "id": 3355336
+      },
+      "writtenOn": "2025-03-31T22:32:19Z",
+      "side": 1,
+      "message": "Moved to fix definition ordering",
+      "revId": "8ab28d930a9d6a05c20ff0826a1631a606a7d5c7",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

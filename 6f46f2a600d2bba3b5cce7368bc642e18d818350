@@ -42,6 +42,54 @@
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "eb533ada_9bb68702",
+        "filename": "roll_dep.py",
+        "patchSetId": 34
+      },
+      "lineNbr": 271,
+      "author": {
+        "id": 3388142
+      },
+      "writtenOn": "2025-04-01T07:13:02Z",
+      "side": 1,
+      "message": "Fix applied.",
+      "parentUuid": "044b2eb9_71a1bc19",
+      "range": {
+        "startLine": 271,
+        "startChar": 2,
+        "endLine": 271,
+        "endChar": 109
+      },
+      "revId": "6f46f2a600d2bba3b5cce7368bc642e18d818350",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "febec9b6_e538b8d7",
+        "filename": "roll_dep.py",
+        "patchSetId": 34
+      },
+      "lineNbr": 271,
+      "author": {
+        "id": 3388142
+      },
+      "writtenOn": "2025-04-01T07:13:02Z",
+      "side": 1,
+      "message": "Fix applied.",
+      "parentUuid": "044b2eb9_71a1bc19",
+      "range": {
+        "startLine": 271,
+        "startChar": 2,
+        "endLine": 271,
+        "endChar": 109
+      },
+      "revId": "6f46f2a600d2bba3b5cce7368bc642e18d818350",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "576678e2_c1b14f81",
@@ -73,6 +121,42 @@
           ]
         }
       ],
+      "revId": "6f46f2a600d2bba3b5cce7368bc642e18d818350",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "20fa1106_a17ffaf4",
+        "filename": "roll_dep.py",
+        "patchSetId": 34
+      },
+      "lineNbr": 301,
+      "author": {
+        "id": 3388142
+      },
+      "writtenOn": "2025-04-01T07:13:02Z",
+      "side": 1,
+      "message": "Fix applied.",
+      "parentUuid": "576678e2_c1b14f81",
+      "revId": "6f46f2a600d2bba3b5cce7368bc642e18d818350",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7528fd5b_f19997a5",
+        "filename": "roll_dep.py",
+        "patchSetId": 34
+      },
+      "lineNbr": 301,
+      "author": {
+        "id": 3388142
+      },
+      "writtenOn": "2025-04-01T07:13:02Z",
+      "side": 1,
+      "message": "Fix applied.",
+      "parentUuid": "576678e2_c1b14f81",
       "revId": "6f46f2a600d2bba3b5cce7368bc642e18d818350",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }

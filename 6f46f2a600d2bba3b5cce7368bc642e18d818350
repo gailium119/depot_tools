@@ -1,0 +1,80 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "044b2eb9_71a1bc19",
+        "filename": "roll_dep.py",
+        "patchSetId": 34
+      },
+      "lineNbr": 271,
+      "author": {
+        "id": 1378025
+      },
+      "writtenOn": "2025-04-01T07:10:14Z",
+      "side": 1,
+      "message": "please line break properly",
+      "range": {
+        "startLine": 271,
+        "startChar": 2,
+        "endLine": 271,
+        "endChar": 109
+      },
+      "fixSuggestions": [
+        {
+          "fixId": "9e5511bf_b00dc3a4",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "roll_dep.py",
+              "range": {
+                "startLine": 271,
+                "startChar": 0,
+                "endLine": 272,
+                "endChar": 0
+              },
+              "replacement": "    readme_path \u003d os.path.normpath(\n        os.path.join(gclient_root, dependency, os.path.pardir,\n                     \u0027README.chromium\u0027))\n"
+            }
+          ]
+        }
+      ],
+      "revId": "6f46f2a600d2bba3b5cce7368bc642e18d818350",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "576678e2_c1b14f81",
+        "filename": "roll_dep.py",
+        "patchSetId": 34
+      },
+      "lineNbr": 301,
+      "author": {
+        "id": 1378025
+      },
+      "writtenOn": "2025-04-01T07:10:14Z",
+      "side": 1,
+      "message": "nit: put a new line above to split logical blocks",
+      "fixSuggestions": [
+        {
+          "fixId": "7b7514e8_9a291608",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "roll_dep.py",
+              "range": {
+                "startLine": 301,
+                "startChar": 0,
+                "endLine": 301,
+                "endChar": 0
+              },
+              "replacement": "\n"
+            }
+          ]
+        }
+      ],
+      "revId": "6f46f2a600d2bba3b5cce7368bc642e18d818350",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

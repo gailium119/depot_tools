@@ -37,19 +37,35 @@ class FakeRepos(fake_repos.FakeReposBase):
             'origin': 'git/repo_2@3',
         })
 
+        dep_revision = self.git_hashes['repo_2'][1][0]
         self._commit_git(
             'repo_1', {
                 'DEPS': '\n'.join([
                     'deps = {',
                     ' "src/foo": "file://%(git_base)srepo_2@%(repo_2_revision)s",',
+                    ' "src/third_party/repo_2/repo_2": "file://%(git_base)srepo_2@%(repo_2_revision)s",',
                     '}',
                     'hooks = [',
                     '  {"action": ["foo", "--android", "{checkout_android}"]}',
                     ']',
                 ]) % {
                     'git_base': self.git_base.replace('\\', '\\\\'),
-                    'repo_2_revision': self.git_hashes['repo_2'][1][0],
+                    'repo_2_revision': dep_revision,
                 },
+                'README.chromium': '\n'.join([
+                    'Name: test repo',
+                    'URL: https://example.com',
+                    'Version: 1.0',
+                    'Revision: abcabc123123',
+                    'License: MIT',
+                ]),
+                'third_party/repo_2/README.chromium': '\n'.join([
+                    'Name: test repo',
+                    'URL: https://example.com',
+                    'Version: 1.0',
+                    'Revision: DEPS',
+                    'License: MIT',
+                ]),
             })
 
 
@@ -70,6 +86,7 @@ class RollDepTest(fake_repos.FakeReposTestBase):
         self.enabled = self.FAKE_REPOS.set_up_git()
         self.src_dir = os.path.join(self.root_dir, 'src')
         self.foo_dir = os.path.join(self.src_dir, 'foo')
+        self.tp2_dir = os.path.join(self.src_dir, 'third_party/repo_2/repo_2')
         if self.enabled:
             self.call([
                 GCLIENT, 'config', 'file://' + self.git_base + 'repo_1',
@@ -98,7 +115,7 @@ class RollDepTest(fake_repos.FakeReposTestBase):
     def testRollsDep(self):
         if not self.enabled:
             return
-        stdout, stderr, returncode = self.call([ROLL_DEP, 'src/foo'])
+        stdout, stderr, returncode = self.call([ROLL_DEP, 'src/foo', 'src/third_party/repo_2/repo_2'])
         expected_revision = self.githash('repo_2', 3)
 
         self.assertEqual(stderr, '')
@@ -111,6 +128,8 @@ class RollDepTest(fake_repos.FakeReposTestBase):
         self.assertEqual([
             'deps = {',
             ' "src/foo": "file://' + self.git_base.replace('\\', '\\\\') +
+            'repo_2@' + expected_revision + '",',
+            ' "src/third_party/repo_2/repo_2": "file://' + self.git_base.replace('\\', '\\\\') +
             'repo_2@' + expected_revision + '",',
             '}',
             'hooks = [',
@@ -125,6 +144,23 @@ class RollDepTest(fake_repos.FakeReposTestBase):
 
         self.assertIn(expected_message, stdout)
         self.assertIn(expected_message, commit_message)
+
+
+    def testRollsDepWithReadme(self):
+        """Tests that roll-dep fails when README.chromium contains the divider."""
+        if not self.enabled:
+            return
+        stdout, _, returncode = self.call([ROLL_DEP, '--update-readme', 'src/foo'])
+        contents = ""
+        readme_path = os.path.join(self.src_dir, 'README.chromium')
+        if os.path.exists(readme_path):
+            with open(readme_path, 'r') as f:
+                contents = f.read()
+        # Check that the revision was updated.
+        self.assertIn('Revision:', contents)
+        self.assertNotIn('Revision: abcabc123123', contents)
+        self.assertNotIn('No README.chromium found', stdout)
+        self.assertEqual(returncode, 0)
 
     def testRollsDepReviewers(self):
         if not self.enabled:
@@ -145,10 +181,10 @@ class RollDepTest(fake_repos.FakeReposTestBase):
     def testRollsDepToSpecificRevision(self):
         if not self.enabled:
             return
+        old_revision = self.githash('repo_2', 1)
+        specified_revision = self.githash('repo_2', 2)
         stdout, stderr, returncode = self.call(
-            [ROLL_DEP, 'src/foo', '--roll-to',
-             self.githash('repo_2', 2)])
-        expected_revision = self.githash('repo_2', 2)
+            [ROLL_DEP, 'src/foo',  '--roll-to', specified_revision])
 
         self.assertEqual(stderr, '')
         self.assertEqual(returncode, 0)
@@ -156,11 +192,13 @@ class RollDepTest(fake_repos.FakeReposTestBase):
         with open(os.path.join(self.src_dir, 'DEPS')) as f:
             contents = f.read()
 
-        self.assertEqual(self.gitrevparse(self.foo_dir), expected_revision)
+        self.assertEqual(self.gitrevparse(self.foo_dir), specified_revision)
         self.assertEqual([
             'deps = {',
             ' "src/foo": "file://' + self.git_base.replace('\\', '\\\\') +
-            'repo_2@' + expected_revision + '",',
+            'repo_2@' + specified_revision + '",',
+            ' "src/third_party/repo_2/repo_2": "file://' + self.git_base.replace('\\', '\\\\') +
+            'repo_2@' + old_revision + '",',
             '}',
             'hooks = [',
             '  {"action": ["foo", "--android", "{checkout_android}"]}',
@@ -180,6 +218,7 @@ class RollDepTest(fake_repos.FakeReposTestBase):
             return
         stdout, stderr, returncode = self.call(
             [ROLL_DEP, 'src/foo', '--log-limit', '1'])
+        old_revision = self.githash('repo_2', 1)
         expected_revision = self.githash('repo_2', 3)
 
         self.assertEqual(stderr, '')
@@ -193,6 +232,8 @@ class RollDepTest(fake_repos.FakeReposTestBase):
             'deps = {',
             ' "src/foo": "file://' + self.git_base.replace('\\', '\\\\') +
             'repo_2@' + expected_revision + '",',
+            ' "src/third_party/repo_2/repo_2": "file://' + self.git_base.replace('\\', '\\\\') +
+            'repo_2@' + old_revision + '",',
             '}',
             'hooks = [',
             '  {"action": ["foo", "--android", "{checkout_android}"]}',

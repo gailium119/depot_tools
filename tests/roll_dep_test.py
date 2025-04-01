@@ -37,6 +37,7 @@ class FakeRepos(fake_repos.FakeReposBase):
             'origin': 'git/repo_2@3',
         })
 
+        dep_revision = self.git_hashes['repo_2'][1][0]
         self._commit_git(
             'repo_1', {
                 'DEPS': '\n'.join([
@@ -48,8 +49,15 @@ class FakeRepos(fake_repos.FakeReposBase):
                     ']',
                 ]) % {
                     'git_base': self.git_base.replace('\\', '\\\\'),
-                    'repo_2_revision': self.git_hashes['repo_2'][1][0],
+                    'repo_2_revision': dep_revision,
                 },
+                'README.chromium': '\n'.join([
+                    'Name: test repo',
+                    'URL: https://example.com',
+                    'Version: 1.0',
+                    'Revision: abcabc123123',
+                    'License: MIT',
+                ])
             })
 
 
@@ -125,6 +133,23 @@ class RollDepTest(fake_repos.FakeReposTestBase):
 
         self.assertIn(expected_message, stdout)
         self.assertIn(expected_message, commit_message)
+
+
+    def testRollsDepWithReadme(self):
+        """Tests that roll-dep fails when README.chromium contains the divider."""
+        if not self.enabled:
+            return
+        stdout, _, returncode = self.call([ROLL_DEP, '--update-readme', 'src/foo'])
+        contents = ""
+        readme_path = os.path.join(self.src_dir, 'README.chromium')
+        if os.path.exists(readme_path):
+            with open(readme_path, 'r') as f:
+                contents = f.read()
+        # Check that the revision was updated.
+        self.assertIn('Revision:', contents)
+        self.assertNotIn('Revision: abcabc123123', contents)
+        self.assertNotIn('No README.chromium found', stdout)
+        self.assertEqual(returncode, 0)
 
     def testRollsDepReviewers(self):
         if not self.enabled:

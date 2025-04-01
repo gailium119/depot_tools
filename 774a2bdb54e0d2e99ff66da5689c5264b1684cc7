@@ -1,0 +1,96 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "336ead6e_13fd17a5",
+        "filename": "download_from_google_storage.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 628,
+      "author": {
+        "id": 1147264
+      },
+      "writtenOn": "2025-04-01T00:41:56Z",
+      "side": 1,
+      "message": "nit; I\u0027d add `this flag has no effect` to clarify the meaning of `DEPRECATED`. Optionally, I\u0027d vote up for removing the existing description just to shorten the help message.\n\n```\nparser.add_option(\u0027-n\u0027,\n                  \u0027--no_auth\u0027,\n                  action\u003d\u0027store_true\u0027,\n                  help\u003d\u0027DEPRECATED: this flag has no effect.\u0027) \n```",
+      "range": {
+        "startLine": 628,
+        "startChar": 28,
+        "endLine": 628,
+        "endChar": 38
+      },
+      "revId": "774a2bdb54e0d2e99ff66da5689c5264b1684cc7",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3f73200e_737103b0",
+        "filename": "download_from_google_storage.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 680,
+      "author": {
+        "id": 1147264
+      },
+      "writtenOn": "2025-04-01T00:41:56Z",
+      "side": 1,
+      "message": "use",
+      "range": {
+        "startLine": 680,
+        "startChar": 57,
+        "endLine": 680,
+        "endChar": 61
+      },
+      "revId": "774a2bdb54e0d2e99ff66da5689c5264b1684cc7",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ffc94b4b_d223d9c0",
+        "filename": "download_from_google_storage.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 680,
+      "author": {
+        "id": 1147264
+      },
+      "writtenOn": "2025-04-01T00:41:56Z",
+      "side": 1,
+      "message": "If I read it correctly, the env variable is to ask not to use the .boto file. However, the env is now deprecated and has no effect.\n\nMeaning that, gsutil.py will always look for and use [GSUtil] or [Boto] settings configured in the .boto config file. Is that right? While \"automatically\" also makes sense, I feel that \"always\" might be more intuitive, but please feel free to disagree for the word choice 😊",
+      "range": {
+        "startLine": 680,
+        "startChar": 43,
+        "endLine": 680,
+        "endChar": 56
+      },
+      "revId": "774a2bdb54e0d2e99ff66da5689c5264b1684cc7",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bb453e52_7f6ee859",
+        "filename": "download_from_google_storage.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 681,
+      "author": {
+        "id": 1147264
+      },
+      "writtenOn": "2025-04-01T00:41:56Z",
+      "side": 1,
+      "message": "nit; I\u0027d shorten it as `in the .boto configuration file`",
+      "range": {
+        "startLine": 681,
+        "startChar": 32,
+        "endLine": 681,
+        "endChar": 72
+      },
+      "revId": "774a2bdb54e0d2e99ff66da5689c5264b1684cc7",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

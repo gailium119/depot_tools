@@ -24,6 +24,30 @@
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "945ca1c3_0e21e228",
+        "filename": "download_from_google_storage.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 628,
+      "author": {
+        "id": 1559487
+      },
+      "writtenOn": "2025-04-02T00:51:09Z",
+      "side": 1,
+      "message": "works for me",
+      "parentUuid": "336ead6e_13fd17a5",
+      "range": {
+        "startLine": 628,
+        "startChar": 28,
+        "endLine": 628,
+        "endChar": 38
+      },
+      "revId": "774a2bdb54e0d2e99ff66da5689c5264b1684cc7",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "3f73200e_737103b0",
@@ -70,6 +94,54 @@
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "20767fe2_c4c9cece",
+        "filename": "download_from_google_storage.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 680,
+      "author": {
+        "id": 1559487
+      },
+      "writtenOn": "2025-04-02T00:51:09Z",
+      "side": 1,
+      "message": "I can go with always, its clearer. ty",
+      "parentUuid": "ffc94b4b_d223d9c0",
+      "range": {
+        "startLine": 680,
+        "startChar": 43,
+        "endLine": 680,
+        "endChar": 56
+      },
+      "revId": "774a2bdb54e0d2e99ff66da5689c5264b1684cc7",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "01f07b94_75b85b90",
+        "filename": "download_from_google_storage.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 680,
+      "author": {
+        "id": 1559487
+      },
+      "writtenOn": "2025-04-02T00:51:09Z",
+      "side": 1,
+      "message": "ty !",
+      "parentUuid": "3f73200e_737103b0",
+      "range": {
+        "startLine": 680,
+        "startChar": 57,
+        "endLine": 680,
+        "endChar": 61
+      },
+      "revId": "774a2bdb54e0d2e99ff66da5689c5264b1684cc7",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "bb453e52_7f6ee859",
@@ -83,6 +155,30 @@
       "writtenOn": "2025-04-01T00:41:56Z",
       "side": 1,
       "message": "nit; I\u0027d shorten it as `in the .boto configuration file`",
+      "range": {
+        "startLine": 681,
+        "startChar": 32,
+        "endLine": 681,
+        "endChar": 72
+      },
+      "revId": "774a2bdb54e0d2e99ff66da5689c5264b1684cc7",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "25c8d6a5_b0654103",
+        "filename": "download_from_google_storage.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 681,
+      "author": {
+        "id": 1559487
+      },
+      "writtenOn": "2025-04-02T00:51:09Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "bb453e52_7f6ee859",
       "range": {
         "startLine": 681,
         "startChar": 32,

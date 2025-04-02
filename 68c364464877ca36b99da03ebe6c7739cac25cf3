@@ -52,6 +52,24 @@
       "parentUuid": "44048b9d_d68da26d",
       "revId": "68c364464877ca36b99da03ebe6c7739cac25cf3",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "85213de4_1abb71d9",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1147264
+      },
+      "writtenOn": "2025-04-02T06:55:55Z",
+      "side": 1,
+      "message": "\u003e We know currently some third_party directory are excluded case by case, but without this anytime someone adds a third_party dependencies outside common directories they may have to change multiple formatters\u0027 configs.\n\nI understand the concern, but I\u0027m not sure how the git-config would avoid the concern. What would be the path pattern set in the git config? I guess your team would want to preconfigure it with something like, `third_party/*`. Then, the same problem would still occur. If someone adds a new third_party dependency out of the common folder, you still need to update the git config to match the new third_party dependency. Updating the git config may feel easier than updating the format config files, but I don\u0027t think it\u0027s significantly better. git-cl-format supports a limited number of formatters, and many of them are using clang-format, such as .proto, .js, .TS, .CPP, and others. You don\u0027t need separate config for each of the languages for disabling all the formatting in a given folder.\n\nAlso, there is another issue with adding the special config that can only be recognized by git-cl-format. PRESUBMIT.py happens to validate formating by running the format binaries. However, if the git-config is only recognized by `git cl format` command, it\u0027d be difficult to ensure that `PRESUBMIT.py`` and `git cl format` would agree with each other. Furthermore, the exactly same issue exists between AyeAye/Tricium and the tooling. It\u0027s important that all the static analysis tools, including Aye, PRESUBMIT checks, and git cl format agree with each other.\n\nFor the same reasons, chromium/src already removed all the custom formatting configs hard-coded in PRESUBMIT.py to those canonical configuration files, such as .clang-format. As a result, it becomes much easier to ensure that formatting tools agree with each other however they are run, such as remotely with AyeAye or PRESUBMIT.py in tryjobs, or locally. Using the git config for ignoring pattern makes all these super difficult, and we have been trying to remove those in the past years.\n\n\u003e Also, I understand git config is not available in CoG. Is there anything prevent git-cl reading from codereview.settings in that case?\n\nIn the case, `codereview.settings` is being used as the .clang-format-ignore. First of all, if it\u0027s acceptable to hard-code the known third_party patterns into `codereview.settings` file, I don\u0027t see how it is different to hard-coding the patterns to .clang-format in chromium/src or in the rievetd git-config.",
+      "parentUuid": "c8358abf_617c807f",
+      "revId": "68c364464877ca36b99da03ebe6c7739cac25cf3",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

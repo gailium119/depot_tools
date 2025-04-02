@@ -16,6 +16,24 @@
       "message": "Hi!\n\nI noticed that the Dart Windows analyzer bot is currently red. The failures started around the time of this CL and seem to relate to a missing file from a `vs_files` folder in the depot_tools folder.\n\nExample failure:\n\n```\nFileNotFoundError: [Errno 2] No such file or directory: \u0027C:\\\\b\\\\s\\\\w\\\\ir\\\\kitchen-checkout\\\\depot_tools\\\\win_toolchain\\\\vs_files\\\\27370823e7\\\\sys64\\\\msvcp140.dll\u0027\nERROR at //build/toolchain/win/msvc_toolchain.gni:47:3: Script returned non-zero exit code.\n  exec_script(\"//build/vs_toolchain.py\",\n```\n\nhttps://ci.chromium.org/ui/p/dart/builders/ci.sandbox/analyzer-win-release/30817/overview\n\nhttps://logs.chromium.org/logs/dart/buildbucket/cr-buildbucket/8718742890517081409/+/u/build_dart/stdout?format\u003draw\n\nDoes this seem like a bug here in depot_tools, or should I file it against the Dart repo?",
       "revId": "c6684fda9877962580c021aab7c8bc0e9f1c2647",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e7c32ba1_462447ea",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 12
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 3718623
+      },
+      "writtenOn": "2025-04-02T17:23:46Z",
+      "side": 1,
+      "message": "This issue appears to be resolved - my guess is that it was something specific to the Dart build scripts since there are no matching commits here. Sorry for the noise!",
+      "parentUuid": "fa75088c_ca286224",
+      "revId": "c6684fda9877962580c021aab7c8bc0e9f1c2647",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

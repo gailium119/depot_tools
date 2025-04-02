@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9bbb956e_c89dd10c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1147264
+      },
+      "writtenOn": "2025-04-02T06:21:42Z",
+      "side": 1,
+      "message": "would you use the config files supported by the formatters?\ne.g., .clang-format-ignore, .rustfmt.toml, pyproject.toml, etc.\n\nUsing the git config is something we are trying to avoid. Ideally, devs should be able to run the format binaries directly. For example, they should be able to run the clang-format executable, bundled in depot_tools, to format CPP files.\n\nAlso, use of git-config for formatting configs also add unnecessary dependencies to the format tools. For example, in CoG workspace, we cannot use the git config.",
+      "revId": "68c364464877ca36b99da03ebe6c7739cac25cf3",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

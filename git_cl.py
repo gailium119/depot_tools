@@ -135,6 +135,8 @@ DEFAULT_BUILDBUCKET_HOST = 'cr-buildbucket.appspot.com'
 DEFAULT_LINT_REGEX = r"(.*\.cpp|.*\.cc|.*\.h)"
 DEFAULT_LINT_IGNORE_REGEX = r"$^"
 
+DEFAULT_FORMAT_IGNORE_REGEX = r"$^"
+
 # File name for yapf style config files.
 YAPF_CONFIG_FILENAME = '.style.yapf'
 
@@ -837,6 +839,7 @@ class Settings(object):
         self.gerrit_skip_ensure_authenticated = None
         self.git_editor = None
         self.format_full_by_default = None
+        self.format_ignore_regex = None
         self.is_status_commit_order_by_date = None
 
     def _LazyUpdateIfNeeded(self):
@@ -948,6 +951,10 @@ class Settings(object):
             self.format_full_by_default = self._GetConfigBool(
                 'rietveld.format-full-by-default')
         return self.format_full_by_default
+
+    def GetFormatIgnoreRegex(self):
+        return self._GetConfig('rietveld.format-ignore-regex',
+                               DEFAULT_FORMAT_IGNORE_REGEX)
 
     def IsStatusCommitOrderByDate(self):
         if self.is_status_commit_order_by_date is None:
@@ -3610,6 +3617,7 @@ def LoadCodereviewSettingsFromFile(fileobj):
     SetProperty('cpplint-ignore-regex', 'LINT_IGNORE_REGEX')
     SetProperty('run-post-upload-hook', 'RUN_POST_UPLOAD_HOOK')
     SetProperty('format-full-by-default', 'FORMAT_FULL_BY_DEFAULT')
+    SetProperty('format-ignore-regex', 'FORMAT_IGNORE_REGEX')
 
     if 'GERRIT_HOST' in keyvals:
         scm.GIT.SetConfig(root, 'gerrit.host', keyvals['GERRIT_HOST'])
@@ -7021,17 +7029,34 @@ def CMDformat(parser, args):
     GN_EXTS = ['.gn', '.gni', '.typemap']
     parser.add_option('--full',
                       action='store_true',
-                      help='Reformat the full content of all touched files')
+                      help='Reformat the full content of all touched files.')
+    parser.add_option(
+        '--ignore',
+        type=str,
+        default=settings.GetFormatIgnoreRegex(),
+        help='Avoid formatting file paths match the reqular expression.')
     parser.add_option('--upstream', help='Branch to check against')
     parser.add_option('--dry-run',
                       action='store_true',
                       help='Don\'t modify any file on disk.')
+    parser.add_option('--diff',
+                      action='store_true',
+                      help='Print diff to stdout rather than modifying files.')
+    parser.add_option('--presubmit',
+                      action='store_true',
+                      help='Used when running the script from a presubmit.')
+
     parser.add_option(
         '--no-clang-format',
         dest='clang_format',
         action='store_false',
         default=True,
         help='Disables formatting of various file types using clang-format.')
+    parser.add_option('--js',
+                      action='store_true',
+                      help='Format javascript code with clang-format. '
+                      'Has no effect if --no-clang-format is set.')
+
     parser.add_option('--python',
                       action='store_true',
                       help='Enables python formatting on all python files.')
@@ -7043,16 +7068,6 @@ def CMDformat(parser, args):
         'If neither --python or --no-python are set, python files that have a '
         '.style.yapf file in an ancestor directory will be formatted. '
         'It is an error to set both.')
-    parser.add_option('--js',
-                      action='store_true',
-                      help='Format javascript code with clang-format. '
-                      'Has no effect if --no-clang-format is set.')
-    parser.add_option('--diff',
-                      action='store_true',
-                      help='Print diff to stdout rather than modifying files.')
-    parser.add_option('--presubmit',
-                      action='store_true',
-                      help='Used when running the script from a presubmit.')
 
     parser.add_option(
         '--rust-fmt',
@@ -7126,6 +7141,14 @@ def CMDformat(parser, args):
                                 upstream_commit, files)
     diff_files = diff_output.splitlines()
 
+    # Filter ignored files and print warnings
+    filtered_files, ignored_files = [], []
+    for file in diff_files:
+        (ignored_files
+         if re.match(opts.ignore, file) else filtered_files).append(file)
+    if ignored_files:
+        logging.warning('Ignored file(s): %s', ','.join(ignored_files))
+
     if opts.js:
         clang_exts.extend(['.js', '.ts'])
 
@@ -7151,7 +7174,7 @@ def CMDformat(parser, args):
     top_dir = settings.GetRoot()
     return_value = 0
     for file_types, format_func in formatters:
-        paths = [p for p in diff_files if MatchingFileType(p, file_types)]
+        paths = [p for p in filtered_files if MatchingFileType(p, file_types)]
         if not paths:
             continue
         ret = format_func(opts, paths, top_dir, upstream_commit)

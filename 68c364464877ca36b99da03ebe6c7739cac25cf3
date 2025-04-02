@@ -70,6 +70,24 @@
       "parentUuid": "c8358abf_617c807f",
       "revId": "68c364464877ca36b99da03ebe6c7739cac25cf3",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b0dbaeee_4f847409",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1378662
+      },
+      "writtenOn": "2025-04-02T10:03:54Z",
+      "side": 1,
+      "message": "ok, all these makes sense. I was also thinking what if someone\u0027s local IDE decided format on save since currently patch is not always separated from the vendored code. IIUC a large part of your concern is the difficulty to ensure all callers (e.g. `git cl format`, `PRESUBMIT.py`...) agree with each other to ensure consistency, while in this case our concerns become how to make all formaters agree with each other.\n\nMaybe an alternative solution can be a persubmit check to ensure all these language specific formatter agreed with each other. Also it\u0027s unclear to me whether a tool modifies all related top-level formatter configs is feasible.\n\nOr maybe since we may try to enforce a directory structure for all third-party dependencies, could we provide a tool to generate a set of formatter configs with `src/` so we can avoid a centralized config? one potential issue is third-party repos may contain their own formatter configs which could shadow our configs. @renewitt@google.com wdyt? we can start with putting configs under `third_party/`.",
+      "parentUuid": "85213de4_1abb71d9",
+      "revId": "68c364464877ca36b99da03ebe6c7739cac25cf3",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

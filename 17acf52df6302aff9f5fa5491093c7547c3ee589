@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b4a3a8fa_4257cbb9",
+        "filename": "siso.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 132,
+      "author": {
+        "id": 1419102
+      },
+      "writtenOn": "2025-04-02T06:51:11Z",
+      "side": 1,
+      "message": "What should `rbe_instance` be? Do users actually need to manually configure this?",
+      "revId": "17acf52df6302aff9f5fa5491093c7547c3ee589",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

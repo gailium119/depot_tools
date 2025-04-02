@@ -16,6 +16,24 @@
       "message": "tested locally",
       "revId": "3254f646ddcbdc793628cccca12f29c123d39085",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9f4b0bc2_900872d2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1378662
+      },
+      "writtenOn": "2025-04-02T06:16:00Z",
+      "side": 1,
+      "message": "we expect adding `FORMAT_IGNORE_REGEX: ^(.*/)?third_party/` to https://source.chromium.org/chromium/chromium/src/+/main:codereview.settings",
+      "parentUuid": "36534d7e_83a7fb25",
+      "revId": "3254f646ddcbdc793628cccca12f29c123d39085",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

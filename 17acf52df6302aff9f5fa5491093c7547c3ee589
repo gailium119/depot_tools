@@ -16,6 +16,24 @@
       "message": "What should `rbe_instance` be? Do users actually need to manually configure this?",
       "revId": "17acf52df6302aff9f5fa5491093c7547c3ee589",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "022e1b09_7303be37",
+        "filename": "siso.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 132,
+      "author": {
+        "id": 1001939
+      },
+      "writtenOn": "2025-04-02T07:41:31Z",
+      "side": 1,
+      "message": "https://chromium.googlesource.com/chromium/src/+/63c5382d898a7639cc47b72a711582ba0b644e7d/DEPS#253\n\nhttps://chromium.googlesource.com/chromium/src/+/main/docs/linux/build_instructions.md#use-reclient\n\u003e Next, you\u0027ll have to specify your rbe_instance in your .gclient configuration to use the correct one for Chromium contributors:",
+      "parentUuid": "b4a3a8fa_4257cbb9",
+      "revId": "17acf52df6302aff9f5fa5491093c7547c3ee589",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

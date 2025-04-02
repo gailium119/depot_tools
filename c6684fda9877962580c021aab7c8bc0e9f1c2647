@@ -34,6 +34,24 @@
       "parentUuid": "fa75088c_ca286224",
       "revId": "c6684fda9877962580c021aab7c8bc0e9f1c2647",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d5c85255_2cbe3a24",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 12
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1238297
+      },
+      "writtenOn": "2025-04-02T18:00:48Z",
+      "side": 1,
+      "message": "No, it was caused by this CL. We added `--no-junction` to workaround the problem. We also had to terminate some bots whose caches had somehow been corrupted by this change.",
+      "parentUuid": "e7c32ba1_462447ea",
+      "revId": "c6684fda9877962580c021aab7c8bc0e9f1c2647",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

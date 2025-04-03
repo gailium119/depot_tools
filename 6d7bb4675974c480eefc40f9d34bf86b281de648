@@ -16,6 +16,29 @@
       "message": "Josip is out, so swapping reviewers.",
       "revId": "6d7bb4675974c480eefc40f9d34bf86b281de648",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "25ee25c1_181f250f",
+        "filename": "gclient_scm.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 589,
+      "author": {
+        "id": 1367998
+      },
+      "writtenOn": "2025-04-03T17:35:21Z",
+      "side": 1,
+      "message": "it might still be useful to keep target_rev in here somewhere, maybe something like:\n\n`Will cherrypick target_rev_hash (target_rev) ... etc`",
+      "range": {
+        "startLine": 589,
+        "startChar": 28,
+        "endLine": 589,
+        "endChar": 66
+      },
+      "revId": "6d7bb4675974c480eefc40f9d34bf86b281de648",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

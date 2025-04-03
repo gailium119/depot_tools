@@ -106,6 +106,24 @@
       "parentUuid": "b0dbaeee_4f847409",
       "revId": "68c364464877ca36b99da03ebe6c7739cac25cf3",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9a3a68bb_8a29559f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1378662
+      },
+      "writtenOn": "2025-04-03T04:03:40Z",
+      "side": 1,
+      "message": "If the top level configs can work than configs under `//third_party` (not in each child dependency dir) should also work fine. This may be a good start point since: 1. we can test whether these configs can fufill our goal 2. avoid the extra hassle to manage per-dependency configs.\n\nTBC I\u0027m not saying this should relying on the dependency structure. We just need to take this into account when designing the structure if we decided go down this route.\n\nAnyway, abandon this CL and in favor of putting configs under `//third_party`.",
+      "parentUuid": "bfd5b371_f1ea30ca",
+      "revId": "68c364464877ca36b99da03ebe6c7739cac25cf3",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

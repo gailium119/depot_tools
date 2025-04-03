@@ -88,6 +88,24 @@
       "parentUuid": "85213de4_1abb71d9",
       "revId": "68c364464877ca36b99da03ebe6c7739cac25cf3",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bfd5b371_f1ea30ca",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1553262
+      },
+      "writtenOn": "2025-04-03T00:49:59Z",
+      "side": 1,
+      "message": "I think if we just narrow the scope to //third_party for now, to prove the concept, then that\u0027s a good start. As with everything, there\u0027s a lot of complexity and edge cases, but in order to make meaningful improvements let\u0027s start small.\n\nIdeally we would need:\n- a way to ensure third party code is not accidentally formatted\n- a way to identify if someone has formatted it so we don\u0027t fix and then backslide\n- to stop tools from autoformatting when they\u0027re run\n- to stop presubmits from telling people that they do need to format third party code\n- documentation about how we opt certain directories or file types out of formatting, so we can keep this healthy.\n\nA presubmit could be a good way to identify when something has been formatted, but what would we be checking it against? We have no way to know what tool was used to format the third party code - so what are the fail/pass conditions for the presubmit?\n\nI think we\u0027re going to be a while away from being able to force everything into a specific structure.\n\nFrom reading this thread, it seems like we can just opt to start with //third_party and put language specific opt out files for each one under that top level, or do we need to actually supply the non-formatting file in each child dependency dir? If the second, that does feel challenging to scale cleanly",
+      "parentUuid": "b0dbaeee_4f847409",
+      "revId": "68c364464877ca36b99da03ebe6c7739cac25cf3",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

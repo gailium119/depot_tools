@@ -22,6 +22,30 @@
       },
       "revId": "da20634b934552c7afa55cb9e33283ba690ea0b5",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c609e4f1_2719068a",
+        "filename": "autoninja.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 90,
+      "author": {
+        "id": 1001939
+      },
+      "writtenOn": "2025-04-04T07:06:55Z",
+      "side": 1,
+      "message": "this is canonical way to detect root directory?",
+      "parentUuid": "38bb4f01_2e6c06f8",
+      "range": {
+        "startLine": 87,
+        "startChar": 0,
+        "endLine": 90,
+        "endChar": 70
+      },
+      "revId": "da20634b934552c7afa55cb9e33283ba690ea0b5",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

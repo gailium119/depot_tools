@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "cdd9f697_11dd62a7",
+        "filename": "git_auth.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 740,
+      "author": {
+        "id": 3355336
+      },
+      "writtenOn": "2025-04-04T00:55:58Z",
+      "side": 0,
+      "message": "Moved this line so it\u0027s only printed once",
+      "revId": "9c3ceaff83c8f65d7d376fe210cd9d2d28b6d661",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

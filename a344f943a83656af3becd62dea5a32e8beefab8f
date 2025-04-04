@@ -3,6 +3,29 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "d51ad293_f4e2a4f6",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1381059
+      },
+      "writtenOn": "2025-04-04T21:33:38Z",
+      "side": 1,
+      "message": "Is there a bug to link to?",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 9,
+        "endChar": 24
+      },
+      "revId": "a344f943a83656af3becd62dea5a32e8beefab8f",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "86244e31_f049de10",
         "filename": "/COMMIT_MSG",
         "patchSetId": 1

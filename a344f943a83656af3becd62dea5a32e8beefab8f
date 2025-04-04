@@ -24,6 +24,30 @@
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "94911b0b_64229d8a",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 3355336
+      },
+      "writtenOn": "2025-04-04T22:23:28Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "d51ad293_f4e2a4f6",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 9,
+        "endChar": 24
+      },
+      "revId": "a344f943a83656af3becd62dea5a32e8beefab8f",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "86244e31_f049de10",
@@ -37,6 +61,30 @@
       "writtenOn": "2025-04-04T20:42:44Z",
       "side": 1,
       "message": "so if I were to reinstall depot_tools and not run creds-check, when would I hit an error, and do those errors tell people to run it?",
+      "range": {
+        "startLine": 11,
+        "startChar": 48,
+        "endLine": 12,
+        "endChar": 38
+      },
+      "revId": "a344f943a83656af3becd62dea5a32e8beefab8f",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "53cf4a97_961dca65",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 3355336
+      },
+      "writtenOn": "2025-04-04T22:23:28Z",
+      "side": 1,
+      "message": "This is tied to the user\u0027s Git config.  If the user has a fresh Git config and they haven\u0027t run creds-check, a fetch that requires auth would fail.  The root error is coming from Git, so we can\u0027t touch that.  We could add some handling in gclient, which parses Git stderr and tried to match the error.  Kinda hacky, but I\u0027ll probably add it later.\n\nThe main \"fix\" is updating the docs",
+      "parentUuid": "86244e31_f049de10",
       "range": {
         "startLine": 11,
         "startChar": 48,

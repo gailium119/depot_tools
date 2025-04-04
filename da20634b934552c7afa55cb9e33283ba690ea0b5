@@ -142,6 +142,30 @@
       },
       "revId": "da20634b934552c7afa55cb9e33283ba690ea0b5",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a3c60efd_44f4ea17",
+        "filename": "autoninja.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 90,
+      "author": {
+        "id": 1577257
+      },
+      "writtenOn": "2025-04-04T07:39:18Z",
+      "side": 1,
+      "message": "I checked the `gclient_paths.py` code and it seems to attempt to handle a lot of potential cases that I don\u0027t think are relevant for Chromium. Should be fine to just use `gclient_paths.GetPrimarySolutionPath()` here. Either is fine with me (and looks like we could go through the code in depot_tools and try to understand / clean it up more widely, not just here.)",
+      "parentUuid": "23dba3f2_442b1db2",
+      "range": {
+        "startLine": 87,
+        "startChar": 0,
+        "endLine": 90,
+        "endChar": 70
+      },
+      "revId": "da20634b934552c7afa55cb9e33283ba690ea0b5",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

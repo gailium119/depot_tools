@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "86244e31_f049de10",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1367998
+      },
+      "writtenOn": "2025-04-04T20:42:44Z",
+      "side": 1,
+      "message": "so if I were to reinstall depot_tools and not run creds-check, when would I hit an error, and do those errors tell people to run it?",
+      "range": {
+        "startLine": 11,
+        "startChar": 48,
+        "endLine": 12,
+        "endChar": 38
+      },
+      "revId": "a344f943a83656af3becd62dea5a32e8beefab8f",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

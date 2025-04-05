@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "61e5cdb9_b1919a03",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1003006
+      },
+      "writtenOn": "2025-04-05T04:46:15Z",
+      "side": 1,
+      "message": "I guess I am the only person left attempting to build LLVM with RBE these days. I think this change broke building LLVM with RBE as described at go/lexan/rbe . I was going to tinker around with building LLVM on some underpowered hardware with the help of RBE and piggybacking on the Chromium build configuration. I can make forward progress by rolling back to older depot_tools.\n\nThis is the failure stack trace if you\u0027re interested:\n\n$ an not\nTraceback (most recent call last):\n  File \"/usr/local/google/home/rnk/depot_tools/autoninja.py\", line 569, in \u003cmodule\u003e\n    sys.exit(main(sys.argv))\n             ^^^^^^^^^^^^^^\n  File \"/usr/local/google/home/rnk/depot_tools/autoninja.py\", line 558, in main\n    exit_code \u003d _main_inner(input_args, build_id, should_collect_logs)\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/google/home/rnk/depot_tools/autoninja.py\", line 312, in _main_inner\n    use_reclient \u003d values[\"use_reclient_on_ninja\"]\n                   ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^\nTypeError: \u0027NoneType\u0027 object is not subscriptable\n\nEssentially, we hit this `None` return and fail to index later on, because... I don\u0027t have a .gclient solution. Up to you what you want to do with that, I can\u0027t reasonably expect this to work.",
+      "revId": "f638e8a918fb4e4c26ea3be77fdf398949404358",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

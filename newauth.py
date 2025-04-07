@@ -35,7 +35,7 @@ def SwitchedOn() -> bool:
 
 def Default() -> bool:
     "Returns default enablement status for new auth stack."
-    return False
+    return True
 
 
 def _HasGitcookies() -> bool:

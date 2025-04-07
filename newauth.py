@@ -13,12 +13,27 @@ import scm
 
 def Enabled() -> bool:
     """Returns True if new auth stack is enabled."""
-    if not EnabledInConfig():
-        return False
-    if _HasGitcookies():
-        _PrintGitcookiesWarning()
-        return False
-    return True
+    if SwitchedOn():
+        if _HasGitcookies():
+            _PrintGitcookiesWarning()
+            return False
+        return True
+    return False
+
+
+def SwitchedOn() -> bool:
+    """Returns True if new auth stack is "switched on".
+
+    Note that this does not necessarily mean that new auth is enabled.
+    In particular, we still disable new auth if a .gitcookies file is
+    present, to protect bots that haven't been migrated yet.
+    """
+    return EnabledInConfig() or Default()
+
+
+def Default() -> bool:
+    "Returns default enablement status for new auth stack."
+    return False
 
 
 def _HasGitcookies() -> bool:

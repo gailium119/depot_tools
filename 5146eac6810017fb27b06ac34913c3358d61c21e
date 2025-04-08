@@ -46,6 +46,30 @@
       },
       "revId": "5146eac6810017fb27b06ac34913c3358d61c21e",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "45f2d3a8_da2db405",
+        "filename": "newauth.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 3355336
+      },
+      "writtenOn": "2025-04-08T17:12:11Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1647b357_e198ab59",
+      "range": {
+        "startLine": 38,
+        "startChar": 18,
+        "endLine": 38,
+        "endChar": 33
+      },
+      "revId": "5146eac6810017fb27b06ac34913c3358d61c21e",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

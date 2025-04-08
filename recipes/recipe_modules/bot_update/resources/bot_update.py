@@ -1118,6 +1118,19 @@ def checkout(options, git_slns, specs, revisions, step_text):
         # create file, no content
         pass
 
+  print('Verifying revisions for pinned deps...')
+  pinned_revs = {
+      name: rev
+      for name, rev in revisions.items() if COMMIT_HASH_RE.match(rev)
+  }
+  for name, expected_rev in pinned_revs.items():
+    dep_path = os.path.join(os.getcwd(), name.replace('/', os.path.sep))
+    current_rev = git('rev-parse', 'HEAD', cwd=dep_path).strip()
+    if current_rev != expected_rev:
+      msg = (f"Post-sync verification failed for pinned dependency {name}:"
+             f"Expected {expected_rev} but found {current_rev}.\n")
+      raise GclientSyncFailed(msg, 1, msg)
+
   # Take care of got_revisions outputs.
   revision_mapping = GOT_REVISION_MAPPINGS.get(git_slns[0]['url'], {})
   if options.revision_mapping:

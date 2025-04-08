@@ -1,0 +1,75 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "50fdd0b9_0f08fd55",
+        "filename": "gclient_scm.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 553,
+      "author": {
+        "id": 1560543
+      },
+      "writtenOn": "2025-04-08T22:34:27Z",
+      "side": 1,
+      "message": "this looks mostly duplicated, let\u0027s make a helper for it.",
+      "range": {
+        "startLine": 550,
+        "startChar": 0,
+        "endLine": 553,
+        "endChar": 68
+      },
+      "fixSuggestions": [
+        {
+          "fixId": "1302bc69_56875260",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "gclient_scm.py",
+              "range": {
+                "startLine": 490,
+                "startChar": 0,
+                "endLine": 491,
+                "endChar": 0
+              },
+              "replacement": "                        file_list):        \n"
+            },
+            {
+              "path": "gclient_scm.py",
+              "range": {
+                "startLine": 539,
+                "startChar": 0,
+                "endLine": 539,
+                "endChar": 0
+              },
+              "replacement": "        def _update_mirror(target_rev):\n            url, _ \u003d gclient_utils.SplitUrlRevision(self.url)\n            mirror \u003d self._GetMirror(url, options, target_rev, target_rev)\n            if mirror:\n                rev_type \u003d \u0027branch\u0027 if target_rev.startswith(\n                    \u0027refs/\u0027) else \u0027hash\u0027\n                self._UpdateMirrorIfNotContains(mirror, options, rev_type,\n                                                target_rev)\n\n"
+            },
+            {
+              "path": "gclient_scm.py",
+              "range": {
+                "startLine": 550,
+                "startChar": 0,
+                "endLine": 555,
+                "endChar": 0
+              },
+              "replacement": "                _update_mirror(target_rev)\n"
+            },
+            {
+              "path": "gclient_scm.py",
+              "range": {
+                "startLine": 559,
+                "startChar": 0,
+                "endLine": 566,
+                "endChar": 0
+              },
+              "replacement": "            _update_mirror(target_rev)\n"
+            }
+          ]
+        }
+      ],
+      "revId": "dced71c16065d2efa03ed3a694a8e30fff3e6737",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

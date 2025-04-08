@@ -70,6 +70,30 @@
       ],
       "revId": "dced71c16065d2efa03ed3a694a8e30fff3e6737",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3bfcad25_30b20f49",
+        "filename": "gclient_scm.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 553,
+      "author": {
+        "id": 1147264
+      },
+      "writtenOn": "2025-04-08T22:46:25Z",
+      "side": 1,
+      "message": "GetMirror()s are given different arguments. Hence, if we add a helper function, it\u0027d be like below\n\n```\ndef _updateMirrorIf(options, target_rev, fetch_spec):\n    url, _ \u003d ....\n    mirror \u003d self._GetMirror(URL, options, target_rev, fetch_spec)\n    if mirror:\n       self._Update(...)\n```\n\nI\u0027m a bit hesitant to make the wrapper, because there are at least 3 wrappers partly overlap and/or similar\n- _GetMirror(), and GetCacheMirror(), _updateMirrorIfNotContains().\n\nI considered moving `url, _ \u003d gclient_utils.SplitUrlRevision(..)` didn\u0027t want to make `url` into the upper scope, because it\u0027s only used by the _UpdateMirrorIfNotContains(), but the outer scope has a code referencing `self.url`. Hence, I\u0027d rather limit the scope of `url` inside the if statements.\n\nIn short, I am not sure if adding a simple wrapper for this particular case would be useful in other cases, and I\u0027d rather put them as they are now. If we want to make this block more readable and simpler, then I\u0027d rather refactor the entire block, other than making a small wrapper that reduces a couple of lines.",
+      "parentUuid": "50fdd0b9_0f08fd55",
+      "range": {
+        "startLine": 550,
+        "startChar": 0,
+        "endLine": 553,
+        "endChar": 68
+      },
+      "revId": "dced71c16065d2efa03ed3a694a8e30fff3e6737",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

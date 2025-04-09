@@ -452,6 +452,14 @@ def _main_inner(input_args, build_id, should_collect_logs=False):
                 resource.RLIMIT_NOFILE)
 
     ninja_args = ['ninja']
+    if use_remoteexec and not use_reclient:
+        print(
+            "Error: You're trying to use remote exec but "
+            "not use reclient, with Ninja.\n",
+            file=sys.stderr,
+        )
+        return 1
+
     num_cores = multiprocessing.cpu_count()
     if not j_specified and not t_specified:
         if not offline and use_remoteexec:

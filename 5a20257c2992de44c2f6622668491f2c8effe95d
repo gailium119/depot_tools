@@ -34,6 +34,24 @@
       "parentUuid": "5d57d236_97c287ae",
       "revId": "5a20257c2992de44c2f6622668491f2c8effe95d",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7372efb7_f2b1b351",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1001939
+      },
+      "writtenOn": "2025-04-09T06:43:06Z",
+      "side": 1,
+      "message": "anyway, ok to check gn layer.",
+      "parentUuid": "a250904c_cb18a7ff",
+      "revId": "5a20257c2992de44c2f6622668491f2c8effe95d",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

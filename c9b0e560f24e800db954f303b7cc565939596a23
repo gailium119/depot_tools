@@ -16,6 +16,24 @@
       "message": "LGTM, but I wonder if you found a build that would hit the error case.",
       "revId": "c9b0e560f24e800db954f303b7cc565939596a23",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "04124aec_cbd649dc",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1367998
+      },
+      "writtenOn": "2025-04-09T18:03:11Z",
+      "side": 1,
+      "message": "yep, the original P0 bug that motivated this CL was http://b/407561960. perfetto had the wrong gitlink revision (see https://logs.chromium.org/logs/chromium/buildbucket/cr-buildbucket/8718858691786809233/+/u/bot_update/stdout). gclient/bot_update should\u0027ve caught this but didn\u0027t",
+      "parentUuid": "bd1b6f6f_fba2aee8",
+      "revId": "c9b0e560f24e800db954f303b7cc565939596a23",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

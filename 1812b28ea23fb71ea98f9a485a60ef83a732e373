@@ -1,0 +1,59 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bfb5e9f0_09df5ed5",
+        "filename": "git_auth.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 545,
+      "author": {
+        "id": 1003232
+      },
+      "writtenOn": "2025-04-10T23:46:46Z",
+      "side": 1,
+      "message": "We get this message when the user passed --global, right? So you might actually be in a Gerrit repo and the first few lines might be wrong?\n\nAlso, I think we need to update the _run_inside_repo message as well, to indicate that it may not be enough.",
+      "fixSuggestions": [
+        {
+          "fixId": "a131c126_34e7491d",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "git_auth.py",
+              "range": {
+                "startLine": 534,
+                "startChar": 0,
+                "endLine": 538,
+                "endChar": 0
+              },
+              "replacement": "        if not force_global:\n            self._println(\n                \u0027You can re-run this command inside a Gerrit repository to check a specific host,\u0027\n            )\n            self._println(\u0027or we can set up some commonly used Gerrit hosts.\u0027)\n        else:\n            self._println(\u0027We will set up some commonly used Gerrit hosts.\u0027)\n"
+            },
+            {
+              "path": "git_auth.py",
+              "range": {
+                "startLine": 605,
+                "startChar": 0,
+                "endLine": 605,
+                "endChar": 0
+              },
+              "replacement": "            self._println(\u0027These may use different Gerrit hosts.\u0027)\n"
+            },
+            {
+              "path": "git_auth.py",
+              "range": {
+                "startLine": 606,
+                "startChar": 0,
+                "endLine": 607,
+                "endChar": 0
+              },
+              "replacement": "                \u0027You may need to run this command again inside the submodules to configure them.\u0027\n"
+            }
+          ]
+        }
+      ],
+      "revId": "1812b28ea23fb71ea98f9a485a60ef83a732e373",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

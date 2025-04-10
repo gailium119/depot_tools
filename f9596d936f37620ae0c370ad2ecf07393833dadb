@@ -16,6 +16,23 @@
       "message": "scott\u0027s OOO til next week, @sokcevic@chromium.org PTAL",
       "revId": "f9596d936f37620ae0c370ad2ecf07393833dadb",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e162b172_deeae27a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1560543
+      },
+      "writtenOn": "2025-04-10T17:13:59Z",
+      "side": 1,
+      "message": "lgtm",
+      "revId": "f9596d936f37620ae0c370ad2ecf07393833dadb",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

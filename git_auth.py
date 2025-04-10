@@ -588,6 +588,29 @@ class ConfigWizard(object):
         assert info is not None
         if info.method == _ConfigMethod.OAUTH:
             used_oauth = True
+
+        dirs = list(scm.GIT.ListSubmodules(os.getcwd()))
+        if dirs:
+            self._println()
+            self._println('This repository appears to have submodules.')
+            if self._read_yn(
+                    'Do you want to check all of them recursively (saying no may break gclient sync)?',
+                    default=True):
+                original_dir = os.getcwd()
+                try:
+                    while dirs:
+                        d = dirs.pop(0)
+                        try:
+                            os.chdir(os.path.join(original_dir, d))
+                        except OSError:
+                            self._println(
+                                f'Could not change into {d!r}, so skipping')
+                            continue
+                        info = self._configure_repo(global_email=global_email)
+                        if info and info.method == _ConfigMethod.OAUTH:
+                            used_oauth = True
+                finally:
+                    os.chdir(original_dir)
         if used_oauth:
             self._print_oauth_instructions()
 

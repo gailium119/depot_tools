@@ -16,6 +16,23 @@
       "message": "Thanks. Let\u0027s see if that ends up being good enough (I don\u0027t have a suggestion for something better at the moment, to be clear) :).",
       "revId": "2bb507a2d7d063731e8282d47a203c1fb12f22b6",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2a1d6fe9_3a40b06e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 3355336
+      },
+      "writtenOn": "2025-04-10T23:39:02Z",
+      "side": 1,
+      "message": "It turns out that after I fixed the \"recursion\" part, this is completely impractical to run on chromium src.  Welp, I guess we\u0027ll go with the more hacky reminder.",
+      "revId": "2bb507a2d7d063731e8282d47a203c1fb12f22b6",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

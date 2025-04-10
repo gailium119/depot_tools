@@ -1,0 +1,49 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f974ac8e_4b0272b2",
+        "filename": "git_auth.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 597,
+      "author": {
+        "id": 1003232
+      },
+      "writtenOn": "2025-04-10T23:14:06Z",
+      "side": 1,
+      "message": "As discussed off-CL, let\u0027s see if we can change this to something that will be clearer that if you say no your checkout may be broken.",
+      "fixSuggestions": [
+        {
+          "fixId": "4b31fd2c_8eccdb6d",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "git_auth.py",
+              "range": {
+                "startLine": 596,
+                "startChar": 0,
+                "endLine": 598,
+                "endChar": 0
+              },
+              "replacement": "            if self._read_yn(\n                    \u0027Do you want to check all of them recursively? (recommended)\u0027,\n                    default\u003dTrue):\n"
+            },
+            {
+              "path": "git_auth.py",
+              "range": {
+                "startLine": 613,
+                "startChar": 0,
+                "endLine": 613,
+                "endChar": 0
+              },
+              "replacement": "            else:\n                self._println(\n                    \u0027Skipping submodules. Your checkout may be broken.\u0027)\n"
+            }
+          ]
+        }
+      ],
+      "revId": "2433bdcbec3c60cd5ae466e8fc7c3a6849cf7ac6",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

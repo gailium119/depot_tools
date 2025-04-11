@@ -8,6 +8,7 @@ binary when run inside a gclient source tree, so users can just type
 "siso" on the command line."""
 
 import os
+import shutil
 import signal
 import subprocess
 import sys

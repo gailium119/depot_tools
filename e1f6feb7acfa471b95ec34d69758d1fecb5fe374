@@ -1,0 +1,39 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "34ee8a03_36428809",
+        "filename": "siso.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 1545727
+      },
+      "writtenOn": "2025-04-11T13:43:57Z",
+      "side": 1,
+      "message": "I can’t build anymore on mac. Running autoninja returns:\n\nFile \"/Users/arthurmilchior/depot_tools/siso.py\", line 43, in _is_google_corp_machine\n    return shutil.which(\"gcert\") is not None\n           ^^^^^^\nNameError: name \u0027shutil\u0027 is not defined",
+      "fixSuggestions": [
+        {
+          "fixId": "31fa8ed5_f6d7e3b9",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "siso.py",
+              "range": {
+                "startLine": 13,
+                "startChar": 0,
+                "endLine": 13,
+                "endChar": 0
+              },
+              "replacement": "import shutil\n"
+            }
+          ]
+        }
+      ],
+      "revId": "e1f6feb7acfa471b95ec34d69758d1fecb5fe374",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

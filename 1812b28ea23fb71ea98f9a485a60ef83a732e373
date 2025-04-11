@@ -1,6 +1,23 @@
 {
   "comments": [
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "b356fbe4_085e6b23",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1003232
+      },
+      "writtenOn": "2025-04-11T00:49:12Z",
+      "side": 1,
+      "message": "I\u0027m not wild about this state, but okay.",
+      "revId": "1812b28ea23fb71ea98f9a485a60ef83a732e373",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "bfb5e9f0_09df5ed5",
@@ -70,6 +87,24 @@
       "side": 1,
       "message": "\u003e So you might actually be in a Gerrit repo and the first few lines might be wrong?\n\nThis is handled above:\n\n\u003e We will pretend to be running outside of a Gerrit repository\n\u003e and check your global Git configuration since you passed --global.\n\nImproving this is a bit finnicky so it\u0027s fine for now IMO.\n\n\u003e Also, I think we need to update the _run_inside_repo message as well, to indicate that it may not be enough.\n\nIsn\u0027t that literally the new message I added below?",
       "parentUuid": "bfb5e9f0_09df5ed5",
+      "revId": "1812b28ea23fb71ea98f9a485a60ef83a732e373",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3cacf709_5f207db8",
+        "filename": "git_auth.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 545,
+      "author": {
+        "id": 1003232
+      },
+      "writtenOn": "2025-04-11T00:49:12Z",
+      "side": 1,
+      "message": "\u003e Isn\u0027t that literally the new message I added below?\n\nOh, sorry, I guess I stopped reading the diff and didn\u0027t see that.",
+      "parentUuid": "3f760de1_07195006",
       "revId": "1812b28ea23fb71ea98f9a485a60ef83a732e373",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }

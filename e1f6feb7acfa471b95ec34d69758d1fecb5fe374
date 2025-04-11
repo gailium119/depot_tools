@@ -34,6 +34,24 @@
       ],
       "revId": "e1f6feb7acfa471b95ec34d69758d1fecb5fe374",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c96346f1_bad20168",
+        "filename": "siso.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 1366072
+      },
+      "writtenOn": "2025-04-11T14:02:30Z",
+      "side": 1,
+      "message": "Ah, thank you for reporting it. I made https://crrev.com/c/6449093",
+      "parentUuid": "34ee8a03_36428809",
+      "revId": "e1f6feb7acfa471b95ec34d69758d1fecb5fe374",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

@@ -52,6 +52,24 @@
       "parentUuid": "e7c32ba1_462447ea",
       "revId": "c6684fda9877962580c021aab7c8bc0e9f1c2647",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ad811d6b_ec70dd03",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 12
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1001604
+      },
+      "writtenOn": "2025-04-14T20:29:14Z",
+      "side": 1,
+      "message": "BoringSSL Windows CI has also started going a bit haywire.\nhttps://logs.chromium.org/logs/boringssl/buildbucket/cr-buildbucket/8717583113225361169/+/u/cmake/stdout\n\nGuessing this had something to do with it, though I don\u0027t yet understand how.",
+      "parentUuid": "d5c85255_2cbe3a24",
+      "revId": "c6684fda9877962580c021aab7c8bc0e9f1c2647",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

@@ -41,6 +41,30 @@
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "32f29769_2fc60869",
+        "filename": "git_auth.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 537,
+      "author": {
+        "id": 3355336
+      },
+      "writtenOn": "2025-04-14T22:57:42Z",
+      "side": 1,
+      "message": "\"we\" as in this tool, same as above lines.",
+      "parentUuid": "ff0c3b9a_1ede4812",
+      "range": {
+        "startLine": 537,
+        "startChar": 25,
+        "endLine": 537,
+        "endChar": 32
+      },
+      "revId": "1812b28ea23fb71ea98f9a485a60ef83a732e373",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "bfb5e9f0_09df5ed5",

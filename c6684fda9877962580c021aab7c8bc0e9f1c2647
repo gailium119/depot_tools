@@ -70,6 +70,24 @@
       "parentUuid": "d5c85255_2cbe3a24",
       "revId": "c6684fda9877962580c021aab7c8bc0e9f1c2647",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ec661f47_30dc46d0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 12
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1001604
+      },
+      "writtenOn": "2025-04-14T22:57:48Z",
+      "side": 1,
+      "message": "The mention of bots with corrupted caches scares me, so currently thinking we\u0027ll just abandon this script and switch to the package in CIPD. BoringSSL already doesn\u0027t use Chromium\u0027s build scripts and whatnot (CMake instead of GN) and keeping up with changes here has been increasingly challenging.",
+      "parentUuid": "ad811d6b_ec70dd03",
+      "revId": "c6684fda9877962580c021aab7c8bc0e9f1c2647",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

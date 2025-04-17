@@ -22,6 +22,48 @@
       },
       "revId": "20fe56e7f90b5a999517affdd3bde2c26a41bf99",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a6f68433_59e16b51",
+        "filename": "split_cl.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 412,
+      "author": {
+        "id": 3481761
+      },
+      "writtenOn": "2025-04-17T19:22:23Z",
+      "side": 1,
+      "message": "Fix applied.",
+      "parentUuid": "89b83479_2568c6f1",
+      "range": {
+        "startLine": 412,
+        "startChar": 39,
+        "endLine": 412,
+        "endChar": 46
+      },
+      "fixSuggestions": [
+        {
+          "fixId": "05546c1c_9e10fba3",
+          "description": "GET_AI_FIX_FOR_COMMENT prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "split_cl.py",
+              "range": {
+                "startLine": 412,
+                "startChar": 0,
+                "endLine": 413,
+                "endChar": 0
+              },
+              "replacement": "    Arguments are the same as SplitCl, except for the last:\n"
+            }
+          ]
+        }
+      ],
+      "revId": "20fe56e7f90b5a999517affdd3bde2c26a41bf99",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

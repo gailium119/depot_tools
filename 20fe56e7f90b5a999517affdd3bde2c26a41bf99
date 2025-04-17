@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "89b83479_2568c6f1",
+        "filename": "split_cl.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 412,
+      "author": {
+        "id": 1560543
+      },
+      "writtenOn": "2025-04-17T19:21:29Z",
+      "side": 1,
+      "message": "Please fix this WARNING reported by Spellchecker: \"excecpt\" is a possible misspelling of \"except\".\n\nAnalyzer Description: Checks for common typos.\nOwner: chops-source-team@google.com\n\n\"excecpt\" is a possible misspelling of \"except\".\n\nTo bypass Spellchecker, add a footer with DISABLE_SPELLCHECKER",
+      "range": {
+        "startLine": 412,
+        "startChar": 39,
+        "endLine": 412,
+        "endChar": 46
+      },
+      "revId": "20fe56e7f90b5a999517affdd3bde2c26a41bf99",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

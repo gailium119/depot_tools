@@ -40,6 +40,72 @@
       ],
       "revId": "e9805649d3c62dc4ff0ce4cce68c18dec95ef4e8",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b132bc98_53cf231b",
+        "filename": "gclient_scm.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 1339,
+      "author": {
+        "id": 1367998
+      },
+      "writtenOn": "2025-04-17T20:39:35Z",
+      "side": 1,
+      "message": "Fix applied.",
+      "parentUuid": "6ad8eb2a_3c0ab9dc",
+      "range": {
+        "startLine": 1339,
+        "startChar": 17,
+        "endLine": 1339,
+        "endChar": 18
+      },
+      "revId": "e9805649d3c62dc4ff0ce4cce68c18dec95ef4e8",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3400a115_304e5953",
+        "filename": "gclient_scm.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 1339,
+      "author": {
+        "id": 1367998
+      },
+      "writtenOn": "2025-04-17T20:39:35Z",
+      "side": 1,
+      "message": "Fix applied.",
+      "parentUuid": "6ad8eb2a_3c0ab9dc",
+      "range": {
+        "startLine": 1339,
+        "startChar": 17,
+        "endLine": 1339,
+        "endChar": 18
+      },
+      "fixSuggestions": [
+        {
+          "fixId": "0e51dec2_e39fc6da",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "gclient_scm.py",
+              "range": {
+                "startLine": 1339,
+                "startChar": 0,
+                "endLine": 1340,
+                "endChar": 0
+              },
+              "replacement": "        is_sha \u003d gclient_utils.IsFullGitSha(revision)\n"
+            }
+          ]
+        }
+      ],
+      "revId": "e9805649d3c62dc4ff0ce4cce68c18dec95ef4e8",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

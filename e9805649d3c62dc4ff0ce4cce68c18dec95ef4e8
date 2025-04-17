@@ -1,0 +1,45 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6ad8eb2a_3c0ab9dc",
+        "filename": "gclient_scm.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 1339,
+      "author": {
+        "id": 1560543
+      },
+      "writtenOn": "2025-04-17T20:26:44Z",
+      "side": 1,
+      "message": "gclient_utils.IsFullGitSha",
+      "range": {
+        "startLine": 1339,
+        "startChar": 17,
+        "endLine": 1339,
+        "endChar": 18
+      },
+      "fixSuggestions": [
+        {
+          "fixId": "37b45f2b_81589ced",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "gclient_scm.py",
+              "range": {
+                "startLine": 1339,
+                "startChar": 0,
+                "endLine": 1340,
+                "endChar": 0
+              },
+              "replacement": "        is_sha \u003d gclient_utils.IsFullGitSha(revision)\n"
+            }
+          ]
+        }
+      ],
+      "revId": "e9805649d3c62dc4ff0ce4cce68c18dec95ef4e8",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

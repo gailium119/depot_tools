@@ -16,6 +16,24 @@
       "message": "I think we are stepping on each others foot: https://chromium-review.googlesource.com/c/chromium/tools/depot_tools/+/5835142\n\niiuc since `/refs/changes/*` are treated as hash, there will be no local refs available so `git cat-file /refs/changes/...^{commit}` will fail: https://logs.chromium.org/logs/infra-internal/buildbucket/cr-buildbucket/8717387982397297537/+/u/gclient_sync/stdout\n\nThough I\u0027m not sure the correct fix here. maybe we should skip the check if revision is `/refs/changes/...` or maybe we should figure out the true commit for the change.",
       "revId": "9c0db48c845ef9044bc11933cc28d145957c7035",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "09fb9a00_306bf6db",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1367998
+      },
+      "writtenOn": "2025-04-17T19:22:36Z",
+      "side": 1,
+      "message": "Thanks for bringing that to my attention. I have https://crrev.com/c/6469936 to skip the check for now, but I think we shouldn\u0027t be categorizing `refs/changes/*` as type `hash`",
+      "parentUuid": "6491f8b2_f9a88674",
+      "revId": "9c0db48c845ef9044bc11933cc28d145957c7035",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

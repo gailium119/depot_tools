@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "11d96333_65651c7f",
+        "filename": "split_cl.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 125,
+      "author": {
+        "id": 1560543
+      },
+      "writtenOn": "2025-04-17T20:32:25Z",
+      "side": 1,
+      "message": "nit: I\u0027d rather this return None and let caller to assert. Also, since we are returning three variables, consider returning named tuple or object.",
+      "revId": "c01a53f0fcad27ded11e563ad8f6750e6973b6a2",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

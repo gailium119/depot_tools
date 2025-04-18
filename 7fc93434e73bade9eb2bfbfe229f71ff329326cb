@@ -20,6 +20,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "0281e498_edc0ff14",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1381059
+      },
+      "writtenOn": "2025-04-18T20:29:16Z",
+      "side": 1,
+      "message": "Yes, I did plan to announce it after the full integration is done (i.e. recipe start to pick up the location and report the findings).\n\n\u003e other projects that use presubmit\n\nIs there any other projects other than chromium/chrome (including those related project like gn, v8...) that is using presubmit?",
+      "parentUuid": "5ca11461_3af0eadf",
+      "revId": "7fc93434e73bade9eb2bfbfe229f71ff329326cb",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "7eeb302c_e08162c8",
         "filename": "presubmit_support.py",
         "patchSetId": 3
@@ -31,6 +49,30 @@
       "writtenOn": "2025-04-18T18:53:36Z",
       "side": 1,
       "message": "is this relative to repo root or to the presubmit.py that\u0027s getting run?",
+      "range": {
+        "startLine": 321,
+        "startChar": 4,
+        "endLine": 322,
+        "endChar": 18
+      },
+      "revId": "7fc93434e73bade9eb2bfbfe229f71ff329326cb",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d514ea2a_1ccaadbb",
+        "filename": "presubmit_support.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 322,
+      "author": {
+        "id": 1381059
+      },
+      "writtenOn": "2025-04-18T20:29:16Z",
+      "side": 1,
+      "message": "relative to the repo root. Fixed the docstring",
+      "parentUuid": "7eeb302c_e08162c8",
       "range": {
         "startLine": 321,
         "startChar": 4,
@@ -64,6 +106,30 @@
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "d384d918_252febc7",
+        "filename": "presubmit_support.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 338,
+      "author": {
+        "id": 1381059
+      },
+      "writtenOn": "2025-04-18T20:29:16Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6369905a_e89aa5ae",
+      "range": {
+        "startLine": 338,
+        "startChar": 29,
+        "endLine": 338,
+        "endChar": 42
+      },
+      "revId": "7fc93434e73bade9eb2bfbfe229f71ff329326cb",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "46f3cf15_7ef796cf",
@@ -87,6 +153,30 @@
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "c24c2bee_4683475a",
+        "filename": "presubmit_support.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 387,
+      "author": {
+        "id": 1381059
+      },
+      "writtenOn": "2025-04-18T20:29:16Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "46f3cf15_7ef796cf",
+      "range": {
+        "startLine": 387,
+        "startChar": 8,
+        "endLine": 387,
+        "endChar": 73
+      },
+      "revId": "7fc93434e73bade9eb2bfbfe229f71ff329326cb",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "6e11ad0a_17a1c211",
@@ -100,6 +190,30 @@
       "writtenOn": "2025-04-18T18:53:36Z",
       "side": 1,
       "message": "should this also print end_col/line info?",
+      "range": {
+        "startLine": 429,
+        "startChar": 54,
+        "endLine": 434,
+        "endChar": 61
+      },
+      "revId": "7fc93434e73bade9eb2bfbfe229f71ff329326cb",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1c6943a5_c6ab7bb0",
+        "filename": "presubmit_support.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 434,
+      "author": {
+        "id": 1381059
+      },
+      "writtenOn": "2025-04-18T20:29:16Z",
+      "side": 1,
+      "message": "sure, I initially think giving a starting position is enough to identity where the code wrong. I guess there\u0027s harm to print end position.",
+      "parentUuid": "6e11ad0a_17a1c211",
       "range": {
         "startLine": 429,
         "startChar": 54,

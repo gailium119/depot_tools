@@ -1,0 +1,113 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5ca11461_3af0eadf",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1367998
+      },
+      "writtenOn": "2025-04-18T18:53:36Z",
+      "side": 1,
+      "message": "this would be a substantial addition to the presubmit framework, wdyt about a small announcement to chrome devs (+ other projects that use presubmit)?",
+      "revId": "7fc93434e73bade9eb2bfbfe229f71ff329326cb",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7eeb302c_e08162c8",
+        "filename": "presubmit_support.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 322,
+      "author": {
+        "id": 1367998
+      },
+      "writtenOn": "2025-04-18T18:53:36Z",
+      "side": 1,
+      "message": "is this relative to repo root or to the presubmit.py that\u0027s getting run?",
+      "range": {
+        "startLine": 321,
+        "startChar": 4,
+        "endLine": 322,
+        "endChar": 18
+      },
+      "revId": "7fc93434e73bade9eb2bfbfe229f71ff329326cb",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6369905a_e89aa5ae",
+        "filename": "presubmit_support.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 338,
+      "author": {
+        "id": 1367998
+      },
+      "writtenOn": "2025-04-18T18:53:36Z",
+      "side": 1,
+      "message": "might be worth making this a const that developers can use vs having a bunch of `\u0027/COMMIT_MSG\u0027` across presubmit checks. also if it\u0027s not necessary for path reasons can this be \"Commit Message\" for the nicer ux:\n```\nFound in:\n  - Commit Message\n```",
+      "range": {
+        "startLine": 338,
+        "startChar": 29,
+        "endLine": 338,
+        "endChar": 42
+      },
+      "revId": "7fc93434e73bade9eb2bfbfe229f71ff329326cb",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "46f3cf15_7ef796cf",
+        "filename": "presubmit_support.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 387,
+      "author": {
+        "id": 1367998
+      },
+      "writtenOn": "2025-04-18T18:53:36Z",
+      "side": 1,
+      "message": "there will now be two ways to list where results occur. should using `items` be deprecated w/ a notice?",
+      "range": {
+        "startLine": 387,
+        "startChar": 8,
+        "endLine": 387,
+        "endChar": 73
+      },
+      "revId": "7fc93434e73bade9eb2bfbfe229f71ff329326cb",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6e11ad0a_17a1c211",
+        "filename": "presubmit_support.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 434,
+      "author": {
+        "id": 1367998
+      },
+      "writtenOn": "2025-04-18T18:53:36Z",
+      "side": 1,
+      "message": "should this also print end_col/line info?",
+      "range": {
+        "startLine": 429,
+        "startChar": 54,
+        "endLine": 434,
+        "endChar": 61
+      },
+      "revId": "7fc93434e73bade9eb2bfbfe229f71ff329326cb",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

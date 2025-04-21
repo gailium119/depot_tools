@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3fbebaa3_1fdf8c2a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1367998
+      },
+      "writtenOn": "2025-04-21T22:58:31Z",
+      "side": 1,
+      "message": "sending this as a WIP CL since I\u0027m still waiting on http://b/401148931#comment2 and I need to make tests we settle on an approach",
+      "revId": "ce0a465defc7a984dc4fa8add245cc337c540fcb",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9b9c5bba_15c7f640",
+        "filename": "git_cl.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 826,
+      "author": {
+        "id": 1367998
+      },
+      "writtenOn": "2025-04-21T22:58:31Z",
+      "side": 1,
+      "message": "the exact behavior of this method is dependent on the response to http://b/401148931#comment2, namely:\n1. what format `rootRepo:` should be\n2. whether a CL to the superproject should set rootRepo",
+      "revId": "ce0a465defc7a984dc4fa8add245cc337c540fcb",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

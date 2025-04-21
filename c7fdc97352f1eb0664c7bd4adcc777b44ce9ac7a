@@ -1,0 +1,62 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c2de2f30_e2dfbee0",
+        "filename": "recipes/recipe_modules/presubmit/api.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 119,
+      "author": {
+        "id": 1367998
+      },
+      "writtenOn": "2025-04-21T16:14:00Z",
+      "side": 1,
+      "message": "add some info about finding upload here",
+      "fixSuggestions": [
+        {
+          "fixId": "446dcaea_524d658d",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "recipes/recipe_modules/presubmit/api.py",
+              "range": {
+                "startLine": 120,
+                "startChar": 0,
+                "endLine": 120,
+                "endChar": 0
+              },
+              "replacement": "    This function also uploads findings to Gerrit, based on the results of the\n    presubmit checks.\n\n"
+            }
+          ]
+        }
+      ],
+      "revId": "c7fdc97352f1eb0664c7bd4adcc777b44ce9ac7a",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3f77ae8d_e4aad3cf",
+        "filename": "recipes/recipe_modules/presubmit/api.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 221,
+      "author": {
+        "id": 1367998
+      },
+      "writtenOn": "2025-04-21T16:14:00Z",
+      "side": 1,
+      "message": "since this will be used by projects other than chromium, does it make sense to add a  `finding_category` arg to `execute()`?",
+      "range": {
+        "startLine": 221,
+        "startChar": 18,
+        "endLine": 221,
+        "endChar": 36
+      },
+      "revId": "c7fdc97352f1eb0664c7bd4adcc777b44ce9ac7a",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

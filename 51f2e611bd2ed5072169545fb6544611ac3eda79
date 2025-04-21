@@ -1,0 +1,45 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cfd500d3_a2966d29",
+        "filename": "presubmit_support.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 322,
+      "author": {
+        "id": 1367998
+      },
+      "writtenOn": "2025-04-21T15:04:28Z",
+      "side": 1,
+      "message": "nit: this can read like \"relative to COMMIT_MSG PATH\". maybe flip to `path MUST be COMMIT_MSG_PATH or relative to the repo root`?",
+      "range": {
+        "startLine": 322,
+        "startChar": 35,
+        "endLine": 322,
+        "endChar": 63
+      },
+      "fixSuggestions": [
+        {
+          "fixId": "51206ba1_503b47bd",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "presubmit_support.py",
+              "range": {
+                "startLine": 322,
+                "startChar": 0,
+                "endLine": 323,
+                "endChar": 0
+              },
+              "replacement": "    # path MUST be COMMIT_MSG_PATH or relative to the repo root to indicate\n"
+            }
+          ]
+        }
+      ],
+      "revId": "51f2e611bd2ed5072169545fb6544611ac3eda79",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

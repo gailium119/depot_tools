@@ -52,6 +52,24 @@
       "parentUuid": "09fb9a00_306bf6db",
       "revId": "9c0db48c845ef9044bc11933cc28d145957c7035",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "01c29c23_224ebc8d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1378662
+      },
+      "writtenOn": "2025-04-22T23:23:42Z",
+      "side": 1,
+      "message": "Thanks I think this is fixed. For some context `refs/changes/*` categorized as type hash because it\u0027s not a branch and doesn\u0027t have a remote branch for `gclient` to diff. It will behave exactly as a hash in most of the cases. Otherwise we need to add a dedicated categorization.",
+      "parentUuid": "6df1d218_dbd6b6a4",
+      "revId": "9c0db48c845ef9044bc11933cc28d145957c7035",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

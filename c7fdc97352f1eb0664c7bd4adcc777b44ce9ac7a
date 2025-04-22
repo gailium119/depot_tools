@@ -36,6 +36,24 @@
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "0bc8cde3_092eb536",
+        "filename": "recipes/recipe_modules/presubmit/api.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 119,
+      "author": {
+        "id": 1381059
+      },
+      "writtenOn": "2025-04-22T20:58:56Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "c2de2f30_e2dfbee0",
+      "revId": "c7fdc97352f1eb0664c7bd4adcc777b44ce9ac7a",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "3f77ae8d_e4aad3cf",
@@ -49,6 +67,30 @@
       "writtenOn": "2025-04-21T16:14:00Z",
       "side": 1,
       "message": "since this will be used by projects other than chromium, does it make sense to add a  `finding_category` arg to `execute()`?",
+      "range": {
+        "startLine": 221,
+        "startChar": 18,
+        "endLine": 221,
+        "endChar": 36
+      },
+      "revId": "c7fdc97352f1eb0664c7bd4adcc777b44ce9ac7a",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "430022df_f8bc496a",
+        "filename": "recipes/recipe_modules/presubmit/api.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 221,
+      "author": {
+        "id": 1381059
+      },
+      "writtenOn": "2025-04-22T20:58:56Z",
+      "side": 1,
+      "message": "The categories would need to be registered in [AyeAye](http://google3/wireless/android/busytown/ayeaye/config/categories.gcl;l\u003d4878;rcl\u003d749232607) so that they can be displayed in Gerrit. Therefore, I would open it up in execute() as a kwargs if other projects think a separate category is necessary. I\u0027m landing it as is so that I can start testing. Happy to add it later if it turns out to be needed",
+      "parentUuid": "3f77ae8d_e4aad3cf",
       "range": {
         "startLine": 221,
         "startChar": 18,

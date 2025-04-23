@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e4d5ba8e_274b1492",
+        "filename": "gclient.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 3980,
+      "author": {
+        "id": 1367998
+      },
+      "writtenOn": "2025-04-23T17:10:32Z",
+      "side": 1,
+      "message": "this is already tested here: https://source.chromium.org/chromium/chromium/tools/depot_tools/+/main:tests/gclient_test.py;l\u003d987-1023;drc\u003dedba22d4eb12b5db5bdee7dc921da7857be1b687",
+      "range": {
+        "startLine": 3980,
+        "startChar": 25,
+        "endLine": 3980,
+        "endChar": 40
+      },
+      "revId": "d5a0478c709c6ba7edb18633090238863729c543",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

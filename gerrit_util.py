@@ -948,6 +948,8 @@ class ChainedAuthenticator(_Authenticator):
     def authenticate(self, conn: HttpConn):
         for a in self.authenticators:
             if a.is_applicable(conn=conn):
+                LOGGER.debug('ChainedAuthenticator.authenticate: Selected %s.',
+                             type(a).__name__)
                 a.authenticate(conn)
                 break
         else:

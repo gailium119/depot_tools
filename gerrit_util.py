@@ -894,6 +894,12 @@ class GitCredsAuthenticator(_Authenticator):
                 LOGGER.debug(
                     "Gerrit account check returned 400; likely account missing")
                 return False
+            if e.http_status == 401:
+                # This is likely because the user doesn't have an
+                # account on the Gerrit host.
+                LOGGER.debug(
+                    "Gerrit account check returned 401; likely account missing")
+                return False
             raise
         if 'email' not in info:
             LOGGER.debug("Gerrit account does not exist on %r", host)

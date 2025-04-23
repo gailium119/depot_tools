@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f7c81a44_3ff5fce5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1147264
+      },
+      "writtenOn": "2025-04-23T21:46:22Z",
+      "side": 1,
+      "message": "Tested at https://paste.googleplex.com/5423868262744064 with the commands that takuto@ provided in the bug.",
+      "revId": "2592aea882c7db16e6e981dda4afa5240b39cd74",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

@@ -45,6 +45,54 @@
       },
       "revId": "d5a0478c709c6ba7edb18633090238863729c543",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9aed50c3_7d51c867",
+        "filename": "gclient.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 3985,
+      "author": {
+        "id": 1367998
+      },
+      "writtenOn": "2025-04-23T17:24:38Z",
+      "side": 1,
+      "message": "this option was copy/pasted from `gclient revinfo`\u0027s and I don\u0027t think it\u0027s a particularly big deal that this goes off an extra line since it\u0027s consistent with the other help text",
+      "parentUuid": "755412bb_1501e9de",
+      "range": {
+        "startLine": 3984,
+        "startChar": 0,
+        "endLine": 3985,
+        "endChar": 28
+      },
+      "revId": "d5a0478c709c6ba7edb18633090238863729c543",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c23cb5eb_aa6d7e33",
+        "filename": "gclient.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 3985,
+      "author": {
+        "id": 1367998
+      },
+      "writtenOn": "2025-04-23T17:24:38Z",
+      "side": 1,
+      "message": "this option was copy/pasted from `gclient revinfo`\u0027s and I don\u0027t think it\u0027s a particularly big deal that this goes off an extra line since it\u0027s consistent with the other help text",
+      "parentUuid": "755412bb_1501e9de",
+      "range": {
+        "startLine": 3984,
+        "startChar": 0,
+        "endLine": 3985,
+        "endChar": 28
+      },
+      "revId": "d5a0478c709c6ba7edb18633090238863729c543",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

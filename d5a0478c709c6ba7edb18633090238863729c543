@@ -22,6 +22,29 @@
       },
       "revId": "d5a0478c709c6ba7edb18633090238863729c543",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "755412bb_1501e9de",
+        "filename": "gclient.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 3985,
+      "author": {
+        "id": 1147264
+      },
+      "writtenOn": "2025-04-23T17:16:41Z",
+      "side": 1,
+      "message": "nit; can be one-liner with the following\n\n```\nhelp\u003d\"Specify to skip processing of given types of deps.\"\n```",
+      "range": {
+        "startLine": 3984,
+        "startChar": 0,
+        "endLine": 3985,
+        "endChar": 28
+      },
+      "revId": "d5a0478c709c6ba7edb18633090238863729c543",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

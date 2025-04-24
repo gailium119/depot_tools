@@ -39,6 +39,29 @@
       },
       "revId": "af8e2828586a07aee08592c3dc3bc34667bbd9b4",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9e94934b_3a7cd830",
+        "filename": "gsutil.py",
+        "patchSetId": 10
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 1147264
+      },
+      "writtenOn": "2025-04-24T17:53:04Z",
+      "side": 1,
+      "message": "https://docs.python.org/3/library/urllib.request.html#legacy-interface\n\nurllib.request.urlretrieve() is a legacy interface and may get deprecated at some point. I think we should consider the use of `requests`, as suggested in https://docs.python.org/3/library/urllib.request.html#module-urllib.request.\n\nThe package is already available in depot_tools; i.e., you can import and use it.\n: https://source.chromium.org/chromium/chromium/tools/depot_tools/+/main:.vpython3;l\u003d35",
+      "range": {
+        "startLine": 72,
+        "startChar": 19,
+        "endLine": 72,
+        "endChar": 30
+      },
+      "revId": "af8e2828586a07aee08592c3dc3bc34667bbd9b4",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

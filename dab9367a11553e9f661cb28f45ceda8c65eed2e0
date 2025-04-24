@@ -22,6 +22,30 @@
       },
       "revId": "dab9367a11553e9f661cb28f45ceda8c65eed2e0",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "624d0ebd_59bd9b6d",
+        "filename": "git_auth.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 801,
+      "author": {
+        "id": 3355336
+      },
+      "writtenOn": "2025-04-24T21:12:15Z",
+      "side": 1,
+      "message": "Make it easier to shove .zshrc or others here when someone complains.\n\nIt\u0027s kinda pre-mature but since I\u0027ve already written it and it\u0027s not adding much complexity, I don\u0027t feel like taking it out.",
+      "parentUuid": "726299fd_c457b747",
+      "range": {
+        "startLine": 792,
+        "startChar": 33,
+        "endLine": 801,
+        "endChar": 21
+      },
+      "revId": "dab9367a11553e9f661cb28f45ceda8c65eed2e0",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

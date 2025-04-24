@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "726299fd_c457b747",
+        "filename": "git_auth.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 801,
+      "author": {
+        "id": 1367998
+      },
+      "writtenOn": "2025-04-24T03:06:12Z",
+      "side": 1,
+      "message": "any reason to not check this directly for now vs. putting it in the list?",
+      "range": {
+        "startLine": 792,
+        "startChar": 33,
+        "endLine": 801,
+        "endChar": 21
+      },
+      "revId": "dab9367a11553e9f661cb28f45ceda8c65eed2e0",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

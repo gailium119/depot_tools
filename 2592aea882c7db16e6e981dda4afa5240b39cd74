@@ -16,6 +16,47 @@
       "message": "Tested at https://paste.googleplex.com/5423868262744064 with the commands that takuto@ provided in the bug.",
       "revId": "2592aea882c7db16e6e981dda4afa5240b39cd74",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b5ec9c2f_e2d1fbf5",
+        "filename": "split_cl.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 333,
+      "author": {
+        "id": 1367998
+      },
+      "writtenOn": "2025-04-24T03:00:48Z",
+      "side": 1,
+      "message": "repository_root",
+      "range": {
+        "startLine": 333,
+        "startChar": 8,
+        "endLine": 333,
+        "endChar": 23
+      },
+      "fixSuggestions": [
+        {
+          "fixId": "9aebcbb7_16925616",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "split_cl.py",
+              "range": {
+                "startLine": 333,
+                "startChar": 0,
+                "endLine": 334,
+                "endChar": 0
+              },
+              "replacement": "        repository_root: Absolute path to the repository root.\n"
+            }
+          ]
+        }
+      ],
+      "revId": "2592aea882c7db16e6e981dda4afa5240b39cd74",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

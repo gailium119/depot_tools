@@ -16,6 +16,24 @@
       "message": "FYI:\nhttps://logs.chromium.org/logs/chromium/buildbucket/cr-buildbucket/8716686564218584097/+/u/RECIPE_CRASH__Uncaught_exception_/logging\n```\n  File \"/b/s/w/ir/kitchen-checkout/build/recipes/recipes/presubmit.py\", line 83, in RunSteps\n    return api.presubmit.execute(\n           ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/b/s/w/ir/kitchen-checkout/depot_tools/recipes/recipe_modules/presubmit/api.py\", line 193, in execute\n    self._upload_findings_from_result(step_json)\n  File \"/b/s/w/ir/kitchen-checkout/depot_tools/recipes/recipe_modules/presubmit/api.py\", line 226, in _upload_findings_from_result\n    host\u003dself.m.tryserver.gerrit_change.host,\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: \u0027NoneType\u0027 object has no attribute \u0027host\u0027\n```",
       "revId": "e62c712cec60a0009a55c45d3a3d9a095ac772c2",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5f815eae_60d0a8d9",
+        "filename": "recipes/recipe_modules/presubmit/api.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 194,
+      "author": {
+        "id": 1170419
+      },
+      "writtenOn": "2025-04-24T22:59:57Z",
+      "side": 1,
+      "message": "Yes that\u0027s what this will fix once it fully propagates. See the attached bug.",
+      "parentUuid": "f3ea0369_f6e98380",
+      "revId": "e62c712cec60a0009a55c45d3a3d9a095ac772c2",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

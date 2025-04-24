@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6f20f94d_8a9b86da",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1289180
+      },
+      "writtenOn": "2025-04-24T16:06:43Z",
+      "side": 1,
+      "message": "Is there a manual roll for build ready for this? The build recipe roller is failing.",
+      "revId": "aacf07dc8bc6336ef20873b93207fbf4482792ef",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

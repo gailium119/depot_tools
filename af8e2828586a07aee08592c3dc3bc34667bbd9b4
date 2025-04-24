@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d3dd69f3_bd97172e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 10
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1367998
+      },
+      "writtenOn": "2025-04-24T17:18:08Z",
+      "side": 1,
+      "message": "changes overall look good, minus the read() comment in gsutil",
+      "revId": "af8e2828586a07aee08592c3dc3bc34667bbd9b4",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "84637f9e_83288484",
+        "filename": "gsutil.py",
+        "patchSetId": 10
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 1367998
+      },
+      "writtenOn": "2025-04-24T17:18:08Z",
+      "side": 1,
+      "message": "We should keep reading in chunks to avoid excessive memory usage",
+      "range": {
+        "startLine": 62,
+        "startChar": 31,
+        "endLine": 62,
+        "endChar": 39
+      },
+      "revId": "af8e2828586a07aee08592c3dc3bc34667bbd9b4",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

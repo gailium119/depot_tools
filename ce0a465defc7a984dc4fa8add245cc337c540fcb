@@ -51,6 +51,23 @@
       "message": "the exact behavior of this method is dependent on the response to http://b/401148931#comment2, namely:\n1. what format `rootRepo:` should be\n2. whether a CL to the superproject should set rootRepo",
       "revId": "ce0a465defc7a984dc4fa8add245cc337c540fcb",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6fa025e7_454784e8",
+        "filename": "git_cl.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 3015,
+      "author": {
+        "id": 1560543
+      },
+      "writtenOn": "2025-04-24T01:27:47Z",
+      "side": 1,
+      "message": "this is not used anywhere, is it?",
+      "revId": "ce0a465defc7a984dc4fa8add245cc337c540fcb",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

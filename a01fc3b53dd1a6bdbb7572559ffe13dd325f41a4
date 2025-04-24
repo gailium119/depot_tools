@@ -1,0 +1,45 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8efb2387_ed11781e",
+        "filename": "recipes/recipe_modules/presubmit/api.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 219,
+      "author": {
+        "id": 1367998
+      },
+      "writtenOn": "2025-04-24T17:33:30Z",
+      "side": 1,
+      "message": "nit: Parse",
+      "range": {
+        "startLine": 219,
+        "startChar": 7,
+        "endLine": 219,
+        "endChar": 12
+      },
+      "fixSuggestions": [
+        {
+          "fixId": "4ea86521_fc15dc2e",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "recipes/recipe_modules/presubmit/api.py",
+              "range": {
+                "startLine": 219,
+                "startChar": 0,
+                "endLine": 220,
+                "endChar": 0
+              },
+              "replacement": "    \"\"\"Parse code findings from presubmit results and then upload them.\n"
+            }
+          ]
+        }
+      ],
+      "revId": "a01fc3b53dd1a6bdbb7572559ffe13dd325f41a4",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

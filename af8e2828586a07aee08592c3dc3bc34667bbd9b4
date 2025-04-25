@@ -110,6 +110,30 @@
       },
       "revId": "af8e2828586a07aee08592c3dc3bc34667bbd9b4",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fa13efb6_29e0a1f3",
+        "filename": "gsutil.py",
+        "patchSetId": 10
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 1147264
+      },
+      "writtenOn": "2025-04-25T19:31:39Z",
+      "side": 1,
+      "message": "SGTM; I agree that urlretrieve() is a good choice here. thanks",
+      "parentUuid": "7d53e28d_5f7381d4",
+      "range": {
+        "startLine": 72,
+        "startChar": 19,
+        "endLine": 72,
+        "endChar": 30
+      },
+      "revId": "af8e2828586a07aee08592c3dc3bc34667bbd9b4",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

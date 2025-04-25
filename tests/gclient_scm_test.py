@@ -747,8 +747,12 @@ class ManagedGitWrapperTestCaseMock(unittest.TestCase):
         mockExists.side_effect = lambda path: path == self.base_path
         mockRun.side_effect = ['refs/remotes/origin/main', '', '']
         mockClone.side_effect = [
-            git_common.subprocess2.CalledProcessError(None, None, None, None,
-                                                      None),
+            git_common.subprocess2.CalledProcessError(
+                None,
+                None,
+                None,
+                None,
+                stderr='fatal: fatal: unable to read'.encode('utf-8')),
             None,
         ]
 

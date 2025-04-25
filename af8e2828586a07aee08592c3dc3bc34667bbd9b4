@@ -41,6 +41,30 @@
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "4ae117e3_72db3fe2",
+        "filename": "gsutil.py",
+        "patchSetId": 10
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 1493367
+      },
+      "writtenOn": "2025-04-25T09:30:18Z",
+      "side": 1,
+      "message": "Agree, done!\n\nThe chunk size is taken from similar functions in `download_from_google_storage.py` and `upload_to_google_storage.py`.",
+      "parentUuid": "84637f9e_83288484",
+      "range": {
+        "startLine": 62,
+        "startChar": 31,
+        "endLine": 62,
+        "endChar": 39
+      },
+      "revId": "af8e2828586a07aee08592c3dc3bc34667bbd9b4",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "9e94934b_3a7cd830",
@@ -54,6 +78,30 @@
       "writtenOn": "2025-04-24T17:53:04Z",
       "side": 1,
       "message": "https://docs.python.org/3/library/urllib.request.html#legacy-interface\n\nurllib.request.urlretrieve() is a legacy interface and may get deprecated at some point. I think we should consider the use of `requests`, as suggested in https://docs.python.org/3/library/urllib.request.html#module-urllib.request.\n\nThe package is already available in depot_tools; i.e., you can import and use it.\n: https://source.chromium.org/chromium/chromium/tools/depot_tools/+/main:.vpython3;l\u003d35",
+      "range": {
+        "startLine": 72,
+        "startChar": 19,
+        "endLine": 72,
+        "endChar": 30
+      },
+      "revId": "af8e2828586a07aee08592c3dc3bc34667bbd9b4",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7d53e28d_5f7381d4",
+        "filename": "gsutil.py",
+        "patchSetId": 10
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 1493367
+      },
+      "writtenOn": "2025-04-25T09:30:18Z",
+      "side": 1,
+      "message": "As much as I\u0027d like to use `requests`, this will require `gsutil.py` to be run via `vpython3`. This is not the case right now (see shebang, `gsutil.py.bat`), and I don\u0027t think it\u0027s a safe switch to do, because a lot of dependent things should be rewritten accordingly.\n\n\u003e urllib.request.urlretrieve() is a legacy interface\n\nWhile urllib.request.urlretrieve() is indeed part of the legacy interface, I believe it\u0027s fine to use it for now, because:\n\n1. It provides a simple, well-tested implementation for our current needs.\n2. The alternative would be to reimplement similar functionality using `urllib.request.urlopen()` with chunked reading and proper error handling, which would introduce more complexity and potential for bugs.\n3. Even though it\u0027s in the legacy interface, it\u0027s still widely used and included in Python\u0027s standard library with no immediate deprecation plans.\n\nAt the moment of deprecation we can easily restore it as `gclient_utils.urlretreive()`.",
+      "parentUuid": "9e94934b_3a7cd830",
       "range": {
         "startLine": 72,
         "startChar": 19,

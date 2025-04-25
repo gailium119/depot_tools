@@ -841,6 +841,14 @@ class GitWrapper(SCMWrapper):
             except subprocess2.CalledProcessError as e:
                 logging.warning('Clone failed due to: %s', e)
                 self._DeleteOrMove(options.force)
+
+                if (b'fatal: fatal: unable to read' in e.stderr and mirror):
+                    # This indicates that the local checkout, and the local cache
+                    # could also be corrupted, causing the following _Clone()
+                    # fail. Update the mirror to ensure that it contains cache
+                    # for the complete set of the remote tree.
+                    self._UpdateMirror(mirror, options, rev_type, revision)
+
                 self.current_revision = self._Clone(revision, url, options)
             if file_list is not None:
                 files = self._Capture(
@@ -1330,20 +1338,26 @@ class GitWrapper(SCMWrapper):
         return git_cache.Mirror(url, **mirror_kwargs)
 
     def _UpdateMirrorIfNotContains(self, mirror, options, rev_type, revision):
-        """Update a git mirror unless it already contains a hash revision.
-
-        This raises an error if a SHA-1 revision isn't present even after
-        fetching from the remote.
-        """
+        """Update a git mirror unless it already contains a hash revision."""
         # 'hash' is overloaded and can refer to a SHA-1 hash or refs/changes/*.
         is_sha = gclient_utils.IsFullGitSha(revision)
-
         if rev_type == 'hash' and is_sha and mirror.contains_revision(revision):
             if options.verbose:
                 self.Print('skipping mirror update, it has rev=%s already' %
                            revision,
                            timestamp=False)
             return
+
+        return self._UpdateMirror(mirror, options, rev_type, revision)
+
+    def _UpdateMirror(self, mirror, options, rev_type, revision):
+        """Update a git mirror.
+
+        This raises an error if a SHA-1 revision isn't present even after
+        fetching from the remote.
+        """
+        # 'hash' is overloaded and can refer to a SHA-1 hash or refs/changes/*.
+        is_sha = gclient_utils.IsFullGitSha(revision)
 
         if getattr(options, 'shallow', False):
             depth = 10000

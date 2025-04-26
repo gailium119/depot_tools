@@ -3,6 +3,23 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "a4966973_34380aaa",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1147264
+      },
+      "writtenOn": "2025-04-26T00:06:42Z",
+      "side": 1,
+      "message": "I will leave this CL unsubmuitted, as planned in https://g-issues.chromium.org/issues/41488725#comment16.\n\nIf it turns out that the symptom stops after crrev.com/c/6491733, I will abandon this CL.",
+      "revId": "343a583a17c62a0a16c16264d73e12a520feb939",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "5c5072c1_afc86ea3",
         "filename": "gclient_scm.py",
         "patchSetId": 3
@@ -14,6 +31,30 @@
       "writtenOn": "2025-04-25T22:47:18Z",
       "side": 1,
       "message": "could you update mirror.contains_revision so that it always returns false if _init_sentient_file is present? We should do that for exists too IMO.",
+      "range": {
+        "startLine": 1345,
+        "startChar": 52,
+        "endLine": 1345,
+        "endChar": 69
+      },
+      "revId": "343a583a17c62a0a16c16264d73e12a520feb939",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ec62ac74_6ded91b3",
+        "filename": "gclient_scm.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 1345,
+      "author": {
+        "id": 1147264
+      },
+      "writtenOn": "2025-04-26T00:06:42Z",
+      "side": 1,
+      "message": "Sent crrev.com/c/6491733.",
+      "parentUuid": "5c5072c1_afc86ea3",
       "range": {
         "startLine": 1345,
         "startChar": 52,

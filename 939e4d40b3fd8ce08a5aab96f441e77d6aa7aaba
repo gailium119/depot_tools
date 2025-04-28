@@ -16,6 +16,24 @@
       "message": "Doesn\u0027t this cause similar issue with http://b/414231904?",
       "revId": "939e4d40b3fd8ce08a5aab96f441e77d6aa7aaba",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4223112a_80295d1e",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1001939
+      },
+      "writtenOn": "2025-04-28T04:52:36Z",
+      "side": 1,
+      "message": "but should be consist with autoninja, or siso?\n\notherwise, why autoninja and siso needs to use bundled python, but gn doesn\u0027t?",
+      "parentUuid": "996f36f5_19f407e9",
+      "revId": "939e4d40b3fd8ce08a5aab96f441e77d6aa7aaba",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

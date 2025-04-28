@@ -40,6 +40,30 @@
       ],
       "revId": "3bb83774be739b09ac7a7072f02a0882a96a7c19",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5d64f387_8929dea3",
+        "filename": "autoninja",
+        "patchSetId": 2
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1001939
+      },
+      "writtenOn": "2025-04-28T02:35:24Z",
+      "side": 1,
+      "message": "either would be ok.\n\nbtw, no need to fix siso too?\n(and gn etc?)",
+      "parentUuid": "23fb7dd9_962b9693",
+      "range": {
+        "startLine": 19,
+        "startChar": 7,
+        "endLine": 19,
+        "endChar": 34
+      },
+      "revId": "3bb83774be739b09ac7a7072f02a0882a96a7c19",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

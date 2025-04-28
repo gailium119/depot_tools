@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "379f623f_258406f4",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 3601422
+      },
+      "writtenOn": "2025-04-28T10:21:33Z",
+      "side": 1,
+      "message": "There is a consistent failure to generate orderfiles:\nhttp://ci.chromium.org/b/8716354265030531521\n\nIt mentions that \n```\n/b/swarming/w/ir/kitchen-checkout/depot_tools/gn: line 14: /b/swarming/w/ir/kitchen-checkout/depot_tools/python-bin/python3: No such file or directory\n```\n\nand it\u0027s likely that this CL caused it. I\u0027ll dig a bit more to confirm it but feel free to chime in early.",
+      "revId": "fa8fc854e1766b86f10c9a15902cf3cc23adaac2",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

@@ -34,6 +34,24 @@
       "parentUuid": "379f623f_258406f4",
       "revId": "fa8fc854e1766b86f10c9a15902cf3cc23adaac2",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "bf2d9e78_a407b406",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 3601422
+      },
+      "writtenOn": "2025-04-28T12:17:56Z",
+      "side": 1,
+      "message": "After reverting, the bots with the latest change seem to improve, see https://crbug.com/414312048.\n\nOnce the first build succeeds, I\u0027ll resume the rolls. (~2hrs but given that all runs so far died after ~5\u0027 and the current ones are running significantly longer than that, it looks promising.)",
+      "parentUuid": "09d760a5_4e0ae1a5",
+      "revId": "fa8fc854e1766b86f10c9a15902cf3cc23adaac2",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

@@ -1,6 +1,23 @@
 {
   "comments": [
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "27640f01_235a6ec6",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1366072
+      },
+      "writtenOn": "2025-04-28T04:07:48Z",
+      "side": 1,
+      "message": "Discussed offline: Chromium IDE will ensure the depot_tools Python3. So this CL isn\u0027t necessary.",
+      "revId": "3bb83774be739b09ac7a7072f02a0882a96a7c19",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "23fb7dd9_962b9693",
@@ -56,6 +73,30 @@
       "side": 1,
       "message": "either would be ok.\n\nbtw, no need to fix siso too?\n(and gn etc?)",
       "parentUuid": "23fb7dd9_962b9693",
+      "range": {
+        "startLine": 19,
+        "startChar": 7,
+        "endLine": 19,
+        "endChar": 34
+      },
+      "revId": "3bb83774be739b09ac7a7072f02a0882a96a7c19",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "beed62a5_5d9c6f69",
+        "filename": "autoninja",
+        "patchSetId": 2
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1366072
+      },
+      "writtenOn": "2025-04-28T04:07:48Z",
+      "side": 1,
+      "message": "Ah, yeah. I\u0027m reluctant to have a different env var for each tool...",
+      "parentUuid": "5d64f387_8929dea3",
       "range": {
         "startLine": 19,
         "startChar": 7,

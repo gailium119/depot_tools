@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4a2fc819_bae7bf92",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 11
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1493367
+      },
+      "writtenOn": "2025-04-28T07:25:11Z",
+      "side": 1,
+      "message": "Waiting for a second approve.",
+      "revId": "b2cde295b9e51c15a9cdc78c8b8ee6b3a62f3316",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

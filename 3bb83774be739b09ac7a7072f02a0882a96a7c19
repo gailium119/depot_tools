@@ -64,6 +64,23 @@
       },
       "revId": "3bb83774be739b09ac7a7072f02a0882a96a7c19",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "15707d5b_8fede600",
+        "filename": "autoninja",
+        "patchSetId": 2
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1118346
+      },
+      "writtenOn": "2025-04-28T02:48:20Z",
+      "side": 1,
+      "message": "Thanks for the change!\n\nHowever, I\u0027m a bit afraid that this approach may increase the script\u0027s maintainance cost: autoninja now gets a code path that\u0027s used only for an exceptional case (ChromiumIDE\u0027s Java support) but not for 99% of its use cases. For example, in the future, one may make changes to `autoninja.py` that works for the depot_tools\u0027 pinned-version python interpreter but not for system-installed Python interpreters (e.g. due to version difference).\n\nWDYT?",
+      "revId": "3bb83774be739b09ac7a7072f02a0882a96a7c19",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

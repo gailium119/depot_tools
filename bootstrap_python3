@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-function bootstrap_python3 {
+function _bootstrap_python3 {
   base_dir=$(dirname "${BASH_SOURCE[0]}")
 
   cd "${base_dir}"
@@ -33,3 +33,5 @@ function bootstrap_python3 {
 
   cd - > /dev/null
 }
+
+_bootstrap_python3

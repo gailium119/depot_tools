@@ -125,8 +125,7 @@ else
   # Don't bootstrap Python 3 on windows, since it is already done by
   # bootstrap/win_tools.bat.
   if [ "X$MINGW" != "X0" -a "X$DEPOT_TOOLS_BOOTSTRAP_PYTHON3" != "X0" ]; then
-    source "$base_dir/bootstrap_python3"
-    bootstrap_python3
+    "$base_dir/bootstrap_python3"
   fi
 
 fi

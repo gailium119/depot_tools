@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c7a90d71_4805c56d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 3601422
+      },
+      "writtenOn": "2025-04-28T11:17:27Z",
+      "side": 1,
+      "message": "FYI: [A build with the revert](https://ci.chromium.org/ui/p/chrome/builders/ci/orderfile-clankium/27140/overview) still failed. The CL seems to be not the culprit or at least not on its own.\n(Which is strange since I reproduced the issue locally and the revert fixed it for me.)",
+      "revId": "a3cdfed6c4f175036560721de6f8b90bc658d09a",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

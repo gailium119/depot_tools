@@ -34,6 +34,24 @@
       "parentUuid": "c7a90d71_4805c56d",
       "revId": "a3cdfed6c4f175036560721de6f8b90bc658d09a",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8f1c65cd_fc833aa4",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 3601422
+      },
+      "writtenOn": "2025-04-28T12:18:56Z",
+      "side": 1,
+      "message": "Correct, ukai@ found that I only reverted the roll into the public repo. See https://crbug.com/414312048 for details :)",
+      "parentUuid": "45ab3496_fa2e7c4a",
+      "revId": "a3cdfed6c4f175036560721de6f8b90bc658d09a",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

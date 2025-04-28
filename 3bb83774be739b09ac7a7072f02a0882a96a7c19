@@ -1,0 +1,45 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "23fb7dd9_962b9693",
+        "filename": "autoninja",
+        "patchSetId": 2
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1366072
+      },
+      "writtenOn": "2025-04-28T02:31:18Z",
+      "side": 1,
+      "message": "`AUTONINJA_PYTHON_PATH\u003dpython3` is more flexible?",
+      "range": {
+        "startLine": 19,
+        "startChar": 7,
+        "endLine": 19,
+        "endChar": 34
+      },
+      "fixSuggestions": [
+        {
+          "fixId": "2344aec0_5a8e0969",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "autoninja",
+              "range": {
+                "startLine": 19,
+                "startChar": 0,
+                "endLine": 21,
+                "endChar": 0
+              },
+              "replacement": "if [ -n \"$AUTONINJA_PYTHON_PATH\" ]; then\n  python_path\u003d\"$AUTONINJA_PYTHON_PATH\"\n"
+            }
+          ]
+        }
+      ],
+      "revId": "3bb83774be739b09ac7a7072f02a0882a96a7c19",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

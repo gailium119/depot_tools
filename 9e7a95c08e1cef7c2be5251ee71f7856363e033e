@@ -16,6 +16,23 @@
       "message": "Sorry, local run just failed, seems like this doesn\u0027t fully fix it.",
       "revId": "9e7a95c08e1cef7c2be5251ee71f7856363e033e",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7be3e0db_0b6f8228",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1002869
+      },
+      "writtenOn": "2025-04-29T19:15:11Z",
+      "side": 1,
+      "message": "Seems like the local test that failed was using the wrong branch of depot_tools. Now it passes, landing...\n\nThanks Andrew!",
+      "revId": "9e7a95c08e1cef7c2be5251ee71f7856363e033e",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

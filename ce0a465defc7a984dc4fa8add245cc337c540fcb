@@ -36,6 +36,24 @@
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "ae331200_a8055cef",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1367998
+      },
+      "writtenOn": "2025-04-29T16:17:32Z",
+      "side": 1,
+      "message": "tests as-is would require a heavy amount of mocking, and the old `_run_gerrit_upload_test` doesn\u0027t work anymore. i\u0027ll move forward without tests.",
+      "parentUuid": "5bdade38_e4607085",
+      "revId": "ce0a465defc7a984dc4fa8add245cc337c540fcb",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "9b9c5bba_15c7f640",
@@ -49,6 +67,24 @@
       "writtenOn": "2025-04-21T22:58:31Z",
       "side": 1,
       "message": "the exact behavior of this method is dependent on the response to http://b/401148931#comment2, namely:\n1. what format `rootRepo:` should be\n2. whether a CL to the superproject should set rootRepo",
+      "revId": "ce0a465defc7a984dc4fa8add245cc337c540fcb",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "baef0339_1030206d",
+        "filename": "git_cl.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 826,
+      "author": {
+        "id": 1367998
+      },
+      "writtenOn": "2025-04-29T16:17:32Z",
+      "side": 1,
+      "message": "1. `rootRepo:$host/$repo`\n2. set unconditionally\n\nnothing needs to be changed here",
+      "parentUuid": "9b9c5bba_15c7f640",
       "revId": "ce0a465defc7a984dc4fa8add245cc337c540fcb",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },

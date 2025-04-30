@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0cec522e_71b99b65",
+        "filename": "README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1366072
+      },
+      "writtenOn": "2025-04-30T04:55:59Z",
+      "side": 1,
+      "message": "Please fix this WARNING reported by Spellchecker: \"deperecated\" is a possible misspelling of \"deprecated\".\n\nAnalyzer Description: Checks for common typos.\nOwner: chops-source-team@google.com\n\n\"deperecated\" is a possible misspelling of \"deprecated\".\n\nTo bypass Spellchecker, add a footer with DISABLE_SPELLCHECKER",
+      "range": {
+        "startLine": 31,
+        "startChar": 56,
+        "endLine": 31,
+        "endChar": 67
+      },
+      "revId": "5408afab9f54462357deb2539202297354d05fb2",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

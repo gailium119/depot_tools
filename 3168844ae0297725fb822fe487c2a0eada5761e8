@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e8b09bdc_4d4770a7",
+        "filename": "python-bin/python3.bat",
+        "patchSetId": 2
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1161379
+      },
+      "writtenOn": "2025-04-30T09:29:37Z",
+      "side": 1,
+      "message": "It might be better to redirect the message to stderr for the consistency with shell script for bash?\nref: https://stackoverflow.com/questions/6359318/how-do-i-send-a-message-to-stderr-from-cmd",
+      "range": {
+        "startLine": 10,
+        "startChar": 0,
+        "endLine": 11,
+        "endChar": 44
+      },
+      "revId": "3168844ae0297725fb822fe487c2a0eada5761e8",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

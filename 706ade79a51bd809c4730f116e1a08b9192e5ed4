@@ -1,0 +1,106 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1823ddae_fed09c1e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1115868
+      },
+      "writtenOn": "2025-04-30T13:33:38Z",
+      "side": 1,
+      "message": "just some minor suggestions for clarity",
+      "revId": "706ade79a51bd809c4730f116e1a08b9192e5ed4",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5619530a_5f5716b7",
+        "filename": "README.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 1115868
+      },
+      "writtenOn": "2025-04-30T13:33:38Z",
+      "side": 1,
+      "message": "```suggestion\nThese shell script/batch file runs python script with `python-bin/python3`\n```",
+      "revId": "706ade79a51bd809c4730f116e1a08b9192e5ed4",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "810e7c45_b639356e",
+        "filename": "README.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1115868
+      },
+      "writtenOn": "2025-04-30T13:33:38Z",
+      "side": 1,
+      "message": "```suggestion\nTo use these wrappers, you need to initialize/bootstrap depot_tools (using\n```",
+      "revId": "706ade79a51bd809c4730f116e1a08b9192e5ed4",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "84674a1c_b7d3412a",
+        "filename": "README.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 1115868
+      },
+      "writtenOn": "2025-04-30T13:33:38Z",
+      "side": 1,
+      "message": "```suggestion\n`python-bin/python3` binary available), so the build tool wrapper won\u0027t work,\n```",
+      "revId": "706ade79a51bd809c4730f116e1a08b9192e5ed4",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ac730656_a7833a5c",
+        "filename": "README.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 1115868
+      },
+      "writtenOn": "2025-04-30T13:33:38Z",
+      "side": 1,
+      "message": "```suggestion\nunless it is explicitly initialized by `ensure_bootstrap`.\n```",
+      "revId": "706ade79a51bd809c4730f116e1a08b9192e5ed4",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7ad8c7d4_ad8aecd9",
+        "filename": "README.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 1115868
+      },
+      "writtenOn": "2025-04-30T13:33:38Z",
+      "side": 1,
+      "message": "```suggestion\nOr, directly call the python script instead of using the shell script/batch file.\n```",
+      "revId": "706ade79a51bd809c4730f116e1a08b9192e5ed4",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

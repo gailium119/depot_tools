@@ -35,6 +35,24 @@
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "d1c8735e_783372e4",
+        "filename": "README.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 1001939
+      },
+      "writtenOn": "2025-04-30T23:48:05Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5619530a_5f5716b7",
+      "revId": "706ade79a51bd809c4730f116e1a08b9192e5ed4",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "810e7c45_b639356e",
@@ -48,6 +66,24 @@
       "writtenOn": "2025-04-30T13:33:38Z",
       "side": 1,
       "message": "```suggestion\nTo use these wrappers, you need to initialize/bootstrap depot_tools (using\n```",
+      "revId": "706ade79a51bd809c4730f116e1a08b9192e5ed4",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "92bfd48f_fc9ef1d1",
+        "filename": "README.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1001939
+      },
+      "writtenOn": "2025-04-30T23:48:05Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "810e7c45_b639356e",
       "revId": "706ade79a51bd809c4730f116e1a08b9192e5ed4",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
@@ -69,6 +105,24 @@
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "bbcd2077_65656278",
+        "filename": "README.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 1001939
+      },
+      "writtenOn": "2025-04-30T23:48:05Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "84674a1c_b7d3412a",
+      "revId": "706ade79a51bd809c4730f116e1a08b9192e5ed4",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "ac730656_a7833a5c",
@@ -86,6 +140,24 @@
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "4089fccb_a6209d3f",
+        "filename": "README.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 1001939
+      },
+      "writtenOn": "2025-04-30T23:48:05Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ac730656_a7833a5c",
+      "revId": "706ade79a51bd809c4730f116e1a08b9192e5ed4",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "7ad8c7d4_ad8aecd9",
@@ -99,6 +171,24 @@
       "writtenOn": "2025-04-30T13:33:38Z",
       "side": 1,
       "message": "```suggestion\nOr, directly call the python script instead of using the shell script/batch file.\n```",
+      "revId": "706ade79a51bd809c4730f116e1a08b9192e5ed4",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "372b21a4_d6478ec6",
+        "filename": "README.md",
+        "patchSetId": 4
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 1001939
+      },
+      "writtenOn": "2025-04-30T23:48:05Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7ad8c7d4_ad8aecd9",
       "revId": "706ade79a51bd809c4730f116e1a08b9192e5ed4",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }

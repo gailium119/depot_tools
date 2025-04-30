@@ -22,6 +22,30 @@
       },
       "revId": "3168844ae0297725fb822fe487c2a0eada5761e8",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "efa9c226_1ad1d8c5",
+        "filename": "python-bin/python3.bat",
+        "patchSetId": 2
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1001939
+      },
+      "writtenOn": "2025-04-30T09:38:06Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e8b09bdc_4d4770a7",
+      "range": {
+        "startLine": 10,
+        "startChar": 0,
+        "endLine": 11,
+        "endChar": 44
+      },
+      "revId": "3168844ae0297725fb822fe487c2a0eada5761e8",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

@@ -1,0 +1,45 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "97b6a4d4_23ea0920",
+        "filename": "README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1161379
+      },
+      "writtenOn": "2025-04-30T05:11:26Z",
+      "side": 1,
+      "message": "ninja?",
+      "range": {
+        "startLine": 29,
+        "startChar": 40,
+        "endLine": 29,
+        "endChar": 49
+      },
+      "fixSuggestions": [
+        {
+          "fixId": "226160a8_8c9944e4",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "README.md",
+              "range": {
+                "startLine": 29,
+                "startChar": 0,
+                "endLine": 30,
+                "endChar": 0
+              },
+              "replacement": "- `autoninja`: a wrapper for `siso` or `ninja`.\n"
+            }
+          ]
+        }
+      ],
+      "revId": "aae0bf8bb0eb14a9df84321842725fb690547504",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

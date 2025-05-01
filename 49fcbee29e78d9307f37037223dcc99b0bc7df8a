@@ -16,6 +16,24 @@
       "message": "This fails to roll into ANGLE here:\nhttps://chromium-review.googlesource.com/c/angle/angle/+/6503456/1\nhttps://ci.chromium.org/ui/p/angle/builders/try/linux-trace/11592/overview\nhttps://ci.chromium.org/ui/p/angle/builders/try/presubmit/59576/overview\nhttps://ci.chromium.org/ui/p/angle/builders/try/win-trace/12513/overview\nExample failing command:\n```\nthird_party/depot_tools/gn gen --args\u003d\u0027angle_with_capture_by_default\u003dtrue angle_enable_vulkan_api_dump_layer\u003dfalse angle_enable_wgpu\u003dfalse use_remoteexec\u003dtrue is_debug\u003dfalse symbol_level\u003d1 angle_assert_always_on\u003dtrue\u0027 ./out/CaptureReplayTest/Capture\npython3_bin_reldir.txt not found. need to initialize depot_tools by\nrunning gclient, update_depot_tools or ensure_bootstrap.\n```\nThis is due to https://source.chromium.org/chromium/chromium/src/+/main:third_party/angle/DEPS;l\u003d5402;drc\u003d432d1d1efdbd0e8d5788529fe193e0eb1e8456bf\nBut Chromium has it as well https://source.chromium.org/chromium/chromium/src/+/main:DEPS;l\u003d5031;drc\u003dbf93e98ba5beda97121e6299f2b82bd0acad1c79\nSo how does this work?",
       "revId": "49fcbee29e78d9307f37037223dcc99b0bc7df8a",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c440e9b7_4fcc2015",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1001921
+      },
+      "writtenOn": "2025-05-01T14:05:42Z",
+      "side": 1,
+      "message": "Ah, presubmit failure is actually different:\n```\n[D2025-05-01 05:37:04,289 25882 140535183664896 subprocess2.py] vpython3 /b/s/w/ir/cache/builder/presubmit/angle/scripts/run_code_generation.py --verify-no-dirty;  cwd\u003d/b/s/w/ir/cache/builder/presubmit/angle\n/b/s/w/ir/kitchen-checkout/depot_tools/gn: line 14: /b/s/w/ir/kitchen-checkout/depot_tools/python-bin/python3: No such file or directory\n```\nIt actually started failing earlier than that roll, in https://ci.chromium.org/ui/p/angle/builders/try/presubmit/59571/overview.\nIt sounds like the version of `depot_tools` in `kitchen-checkout` has this change, but doesn\u0027t have python3 for some reason?",
+      "parentUuid": "89b321fe_bb747482",
+      "revId": "49fcbee29e78d9307f37037223dcc99b0bc7df8a",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

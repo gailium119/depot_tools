@@ -16,6 +16,24 @@
       "message": "In crrev.com/c/6504096 I\u0027m trying to add hjson parsing support to presubmit in web-tests. \n\nIt seems that depot_tools uses the depot_tools .vpython3 spec for presubmit instead of the .vpython3 spec in the directory where the presubmit script is located. Is there a better way to accomplish this than adding the wheel here?",
       "revId": "c48f7bc383fb66e4de879eabe0d336af5222e191",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4349ed11_f6f0ce23",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1381059
+      },
+      "writtenOn": "2025-05-02T00:43:57Z",
+      "side": 1,
+      "message": "This is not ideal but I think it\u0027s the only way for now.",
+      "parentUuid": "eddcb105_50d301b9",
+      "revId": "c48f7bc383fb66e4de879eabe0d336af5222e191",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

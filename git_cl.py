@@ -7040,11 +7040,6 @@ def _RunLUCICfgFormat(opts, paths, top_dir, upstream_commit):
     return ret
 
 
-def MatchingFileType(file_name: str, extensions: list[str]) -> bool:
-    """Returns True if the file name ends with one of the given extensions."""
-    return bool([ext for ext in extensions if file_name.lower().endswith(ext)])
-
-
 FormatterFunction = Callable[[Any, list[str], str, str], int]
 
 
@@ -7059,8 +7054,8 @@ def CMDformat(parser: optparse.OptionParser, args: list[str]):
             'functionality in the command palette in the editor instead.',
             file=sys.stderr)
         return 1
-    clang_exts = ['.cc', '.cpp', '.h', '.m', '.mm', '.proto']
-    GN_EXTS = ['.gn', '.gni', '.typemap']
+    clang_exts = ('.cc', '.cpp', '.h', '.m', '.mm', '.proto')
+    GN_EXTS = ('.gn', '.gni', '.typemap')
     parser.add_option('--full',
                       action='store_true',
                       help='Reformat the full content of all touched files')
@@ -7169,31 +7164,31 @@ def CMDformat(parser: optparse.OptionParser, args: list[str]):
     diff_files = diff_output.splitlines()
 
     if opts.js:
-        clang_exts.extend(['.js', '.ts'])
+        clang_exts += ('.js', '.ts')
 
-    formatters: list[tuple[list[str], FormatterFunction]] = [
+    formatters: list[tuple[str | tuple[str, ...], FormatterFunction]] = [
         (GN_EXTS, _RunGnFormat),
-        (['.xml'], _RunMetricsXMLFormat),
+        ('.xml', _RunMetricsXMLFormat),
     ]
     if not opts.no_java:
-        formatters.append((['.java'], _RunGoogleJavaFormat))
+        formatters.append(('.java', _RunGoogleJavaFormat))
     if opts.clang_format:
         formatters.append((clang_exts, _RunClangFormatDiff))
     if opts.use_rust_fmt:
-        formatters.append((['.rs'], _RunRustFmt))
+        formatters.append(('.rs', _RunRustFmt))
     if opts.use_swift_format:
-        formatters.append((['.swift'], _RunSwiftFormat))
+        formatters.append(('.swift', _RunSwiftFormat))
     if opts.python is not False:
-        formatters.append((['.py'], _RunYapf))
+        formatters.append(('.py', _RunYapf))
     if opts.mojom:
-        formatters.append((['.mojom', '.test-mojom'], _RunMojomFormat))
+        formatters.append((('.mojom', '.test-mojom'), _RunMojomFormat))
     if opts.lucicfg:
-        formatters.append((['.star'], _RunLUCICfgFormat))
+        formatters.append(('.star', _RunLUCICfgFormat))
 
     top_dir = settings.GetRoot()
     return_value = 0
     for file_types, format_func in formatters:
-        paths = [p for p in diff_files if MatchingFileType(p, file_types)]
+        paths = [p for p in diff_files if p.lower().endswith(file_types)]
         if not paths:
             continue
         ret = format_func(opts, paths, top_dir, upstream_commit)

@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "dcf6d32f_8c185e9b",
+        "filename": "git_cl.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 7169,
+      "author": {
+        "id": 1147264
+      },
+      "writtenOn": "2025-05-06T16:46:25Z",
+      "side": 1,
+      "message": "Not sure if this is a readability improvement. This just makes the code a bit harder to read, and I don\u0027t find obvious benefits of this type change from `list[str]` to `str | tuple[str, ...]`\n\nAlso, the var name `file_types` in L7190 is no longer valid, if it can be either string or string(s).\n\nHow about just casting the list to tuple?\n\n```\nif not opts.no_java:\n    formatters.append(([\u0027.java\u0027], ...))\nif opts.clang_format:\n    formatters.append(([\u0027.rs\u0027], ...))\n...\n\nfor file_types, format_func in formatters:\n    paths \u003d [p for p in diff_files if p.lower().endswith(tuple(file_types))]\n```",
+      "range": {
+        "startLine": 7169,
+        "startChar": 27,
+        "endLine": 7169,
+        "endChar": 48
+      },
+      "revId": "2dd1e82d1f7bbecf5315641aaf7f6eb8c738bd13",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

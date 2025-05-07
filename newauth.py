@@ -69,6 +69,14 @@ def ExplicitlyEnabled() -> bool:
 
     Directly checks config and doesn't do gitcookie check.
     """
+    if os.getenv("DEPOT_TOOLS_FORCE_NEW_AUTH"):
+        sys.stderr.write('''
+DEPOT_TOOLS_FORCE_NEW_AUTH is set to a non-empty string!
+
+This setting has priority over your .gitconfig .
+See b/416306350 for details.
+''')
+        return True
     return scm.GIT.GetConfig(os.getcwd(),
                              'depot-tools.usenewauthstack') in ('yes', 'on',
                                                                 'true', '1')

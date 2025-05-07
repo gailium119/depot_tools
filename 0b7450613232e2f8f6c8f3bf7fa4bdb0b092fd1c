@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "61d6ac38_86ce68bf",
+        "filename": "presubmit_canned_checks.py",
+        "patchSetId": 6
+      },
+      "lineNbr": 1881,
+      "author": {
+        "id": 1115868
+      },
+      "writtenOn": "2025-05-07T14:31:28Z",
+      "side": 1,
+      "message": "It looks like typically in this script we use `input_api.python3_executable`, which is actually vpython3.\n\nAny reason not to do that here? Are you specifically opting out of vpython?",
+      "revId": "0b7450613232e2f8f6c8f3bf7fa4bdb0b092fd1c",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

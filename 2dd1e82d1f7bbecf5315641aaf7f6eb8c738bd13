@@ -22,6 +22,30 @@
       },
       "revId": "2dd1e82d1f7bbecf5315641aaf7f6eb8c738bd13",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d4e05590_a1e8bf89",
+        "filename": "git_cl.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 7169,
+      "author": {
+        "id": 1394418
+      },
+      "writtenOn": "2025-05-07T00:37:58Z",
+      "side": 1,
+      "message": "Looking back at this code, I agree. Done",
+      "parentUuid": "dcf6d32f_8c185e9b",
+      "range": {
+        "startLine": 7169,
+        "startChar": 27,
+        "endLine": 7169,
+        "endChar": 48
+      },
+      "revId": "2dd1e82d1f7bbecf5315641aaf7f6eb8c738bd13",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

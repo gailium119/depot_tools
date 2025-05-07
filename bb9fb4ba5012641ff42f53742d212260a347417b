@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fd9ac489_a0643d43",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1272455
+      },
+      "writtenOn": "2025-05-07T22:36:00Z",
+      "side": 1,
+      "message": "I don\u0027t quite understand what this change is for.\n\na) new auth is on by default already\nb) why do we need another way to enable it other than .gitconfig?",
+      "revId": "bb9fb4ba5012641ff42f53742d212260a347417b",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

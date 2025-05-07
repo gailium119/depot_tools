@@ -117,6 +117,30 @@
       },
       "revId": "75b96a5b6417aa937007914e7583074de72416aa",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "60d46bdb_9018c04c",
+        "filename": "presubmit_canned_checks.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 1881,
+      "author": {
+        "id": 1001939
+      },
+      "writtenOn": "2025-05-07T06:13:31Z",
+      "side": 1,
+      "message": "fixed in patchset 6\n(also fix os.path -\u003e input_api.os_path)",
+      "parentUuid": "76b14272_029aea2a",
+      "range": {
+        "startLine": 1881,
+        "startChar": 25,
+        "endLine": 1881,
+        "endChar": 31
+      },
+      "revId": "75b96a5b6417aa937007914e7583074de72416aa",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

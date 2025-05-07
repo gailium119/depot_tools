@@ -24,6 +24,30 @@
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "960c7fd2_5c48f1af",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 1001939
+      },
+      "writtenOn": "2025-05-07T04:39:23Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2d3a851e_33ae25dd",
+      "range": {
+        "startLine": 36,
+        "startChar": 30,
+        "endLine": 36,
+        "endChar": 36
+      },
+      "revId": "75b96a5b6417aa937007914e7583074de72416aa",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "c5b24fd3_a35fd6fb",
@@ -37,6 +61,30 @@
       "writtenOn": "2025-05-07T00:48:54Z",
       "side": 1,
       "message": "is this defined anywhere?",
+      "range": {
+        "startLine": 1881,
+        "startChar": 25,
+        "endLine": 1881,
+        "endChar": 31
+      },
+      "revId": "75b96a5b6417aa937007914e7583074de72416aa",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3c4688a0_a230d80a",
+        "filename": "presubmit_canned_checks.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 1881,
+      "author": {
+        "id": 1001939
+      },
+      "writtenOn": "2025-05-07T04:39:23Z",
+      "side": 1,
+      "message": "line 18 ?",
+      "parentUuid": "c5b24fd3_a35fd6fb",
       "range": {
         "startLine": 1881,
         "startChar": 25,

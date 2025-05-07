@@ -93,6 +93,30 @@
       },
       "revId": "75b96a5b6417aa937007914e7583074de72416aa",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "76b14272_029aea2a",
+        "filename": "presubmit_canned_checks.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 1881,
+      "author": {
+        "id": 1367998
+      },
+      "writtenOn": "2025-05-07T05:15:31Z",
+      "side": 1,
+      "message": "line 18 is `_HERE \u003d _os.path.dirname(_os.path.abspath(__file__))`",
+      "parentUuid": "3c4688a0_a230d80a",
+      "range": {
+        "startLine": 1881,
+        "startChar": 25,
+        "endLine": 1881,
+        "endChar": 31
+      },
+      "revId": "75b96a5b6417aa937007914e7583074de72416aa",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

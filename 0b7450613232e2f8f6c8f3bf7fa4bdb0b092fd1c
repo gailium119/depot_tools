@@ -16,6 +16,42 @@
       "message": "It looks like typically in this script we use `input_api.python3_executable`, which is actually vpython3.\n\nAny reason not to do that here? Are you specifically opting out of vpython?",
       "revId": "0b7450613232e2f8f6c8f3bf7fa4bdb0b092fd1c",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c3449ba1_fad8666b",
+        "filename": "presubmit_canned_checks.py",
+        "patchSetId": 6
+      },
+      "lineNbr": 1881,
+      "author": {
+        "id": 1001939
+      },
+      "writtenOn": "2025-05-08T01:14:59Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "61d6ac38_86ce68bf",
+      "revId": "0b7450613232e2f8f6c8f3bf7fa4bdb0b092fd1c",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "cfad9f73_c395770d",
+        "filename": "presubmit_canned_checks.py",
+        "patchSetId": 6
+      },
+      "lineNbr": 1881,
+      "author": {
+        "id": 1001939
+      },
+      "writtenOn": "2025-05-08T01:14:59Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "61d6ac38_86ce68bf",
+      "revId": "0b7450613232e2f8f6c8f3bf7fa4bdb0b092fd1c",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

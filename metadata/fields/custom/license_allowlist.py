@@ -145,6 +145,8 @@ EXTENDED_LICENSE_CLASSIFIERS = frozenset([
     "Libpng-2.0",
     "LicenseRef-base64",
     "LicenseRef-base64-cpp",
+    "LicenseRef-Public-Domain-Gutenberg",
+    "LicenseRef-MicrosoftEnterpriseWindowsDriverKit",
     "LicenseRef-OpenGLUT",
     "LicenseRef-takuya-ooura",
     "pffft",

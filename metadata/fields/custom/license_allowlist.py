@@ -86,6 +86,7 @@ ALLOWED_SPDX_LICENSES = frozenset([
     "JSON",
     "Libpng",
     "libtiff",
+    "LicenseRef-Public-Domain-Gutenberg",
     "MIT",
     "MIT-Modern-Variant",
     "MS-PL",
@@ -195,6 +196,7 @@ WITH_PERMISSION_ONLY = frozenset([
     # by_exception_only.
     # go/keep-sorted start case=no
     "Commercial",
+    "LicenseRef-MicrosoftEnterpriseWindowsDriverKit",
     "LicenseRef-Play-Core-SDK-TOS",
     "LicenseRef-Unity-Companion-License-1.3",
     "Opus-Patent-BSD-3-Clause",

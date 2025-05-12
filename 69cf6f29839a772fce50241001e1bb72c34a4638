@@ -16,6 +16,29 @@
       "message": "PTAL",
       "revId": "69cf6f29839a772fce50241001e1bb72c34a4638",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "278709ed_350a54c6",
+        "filename": "metadata/fields/custom/license_allowlist.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 150,
+      "author": {
+        "id": 3388142
+      },
+      "writtenOn": "2025-05-12T01:15:50Z",
+      "side": 1,
+      "message": "Please use https://opensource.corp.google.com/license/analyze (go/lican) to put these in the correct spots. You can provide just the license names instead of the whole license. I\u0027ve attached a screenshot to show the results:\nhttps://screenshot.googleplex.com/4XCbSTMAuJL5QrG\n\n\"LicenseRef-Public-Domain-Gutenberg\"\nThis is unencumbered\n\n\n\"LicenseRef-MicrosoftEnterpriseWindowsDriverKit\"\nThe bug regarding this classification has been addressed and it now correctly identifies it as \u0027by_exception_only\u0027 you can add it to WITH_PERMISSION_ONLY under \u0027by_exception_only\u0027 _if_ you have an exception to use it.\nThere are a lot of conditions of using this, e.g. under 2.iii. one of the conditions is:\n```\niii. Distribution Restrictions. You may not distribute Distributable Code to run on a platform other than the Windows platform;\n```\n\nDoes screen-ai have an exception to use this license? If not please email opensource-licensing@google.com",
+      "range": {
+        "startLine": 150,
+        "startChar": 5,
+        "endLine": 150,
+        "endChar": 39
+      },
+      "revId": "69cf6f29839a772fce50241001e1bb72c34a4638",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

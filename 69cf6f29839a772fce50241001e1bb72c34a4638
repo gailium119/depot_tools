@@ -63,6 +63,30 @@
       },
       "revId": "69cf6f29839a772fce50241001e1bb72c34a4638",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "05a95466_65642d6a",
+        "filename": "metadata/fields/custom/license_allowlist.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 150,
+      "author": {
+        "id": 3388142
+      },
+      "writtenOn": "2025-05-12T05:50:06Z",
+      "side": 1,
+      "message": "Excellent, thanks for that, send me the approval when you get it and I will LGTM this CL.",
+      "parentUuid": "d6137e02_283b70c3",
+      "range": {
+        "startLine": 150,
+        "startChar": 5,
+        "endLine": 150,
+        "endChar": 39
+      },
+      "revId": "69cf6f29839a772fce50241001e1bb72c34a4638",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

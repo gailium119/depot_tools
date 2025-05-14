@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cd879509_7d2f7794",
+        "filename": "ninjalog_uploader.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 182,
+      "author": {
+        "id": 1366072
+      },
+      "writtenOn": "2025-05-14T04:54:15Z",
+      "side": 1,
+      "message": "nit: `if os.path.exists()`?",
+      "range": {
+        "startLine": 182,
+        "startChar": 0,
+        "endLine": 182,
+        "endChar": 48
+      },
+      "fixSuggestions": [
+        {
+          "fixId": "a3d0a6d6_8eab71e1",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "ninjalog_uploader.py",
+              "range": {
+                "startLine": 21,
+                "startChar": 0,
+                "endLine": 22,
+                "endChar": 0
+              },
+              "replacement": ""
+            },
+            {
+              "path": "ninjalog_uploader.py",
+              "range": {
+                "startLine": 182,
+                "startChar": 0,
+                "endLine": 183,
+                "endChar": 0
+              },
+              "replacement": "    siso_metadata_path \u003d os.path.join(build_dir, \".siso_metadata.json\")\n    if os.path.exists(siso_metadata_path):\n"
+            }
+          ]
+        }
+      ],
+      "revId": "259e27e190c2f297fcfdcbf606c555741b5e5739",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

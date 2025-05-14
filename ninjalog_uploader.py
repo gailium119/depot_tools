@@ -178,6 +178,11 @@ def GetMetadata(cmdline, ninjalog, exit_code, build_duration, user):
     if jflag is not None:
         metadata["jobs"] = jflag
 
+    siso_metadata_path = os.path.join(build_dir, ".siso_metadata.json")
+    if os.path.isfile(siso_metadata_path):
+        with open(siso_metadata_path, "r") as f:
+            metadata["siso_metadata"] = json.load(f)
+
     return metadata
 
 

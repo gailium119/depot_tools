@@ -5258,6 +5258,35 @@ class CMDFormatTestCase(unittest.TestCase):
         mock_call.return_value = 255
         self.assertEqual(run(mock_opts, files, self._top_dir, 'HEAD'), 2)
 
+    def testClangFormatDiffFullParallel(self):
+        # Create multiple temporary C++ files to format.
+        num_files = 4
+        diff_files = []
+        for i in range(num_files):
+            fname = f'test_{i}.cc'
+            self._make_temp_file(fname, ['// test'])
+            diff_files.append(os.path.join(self._top_dir, fname))
+
+        git_cl.settings.GetFormatFullByDefault.return_value = False
+
+        mock_opts = mock.Mock(full=True, dry_run=True, diff=False)
+
+        call_counter = {
+            'count': 0,
+        }
+
+        def _counting_run_command(*_args, **_kwargs):  # pylint: disable=unused-argument
+            call_counter['count'] += 1
+            return '// test'
+
+        git_cl.RunCommand.side_effect = _counting_run_command
+
+        _ = git_cl._RunClangFormatDiff(mock_opts, diff_files, self._top_dir,
+                                       'HEAD')
+
+        # Ensure RunCommand was called once per file.
+        self.assertEqual(call_counter['count'], num_files)
+
 
 @unittest.skipIf(gclient_utils.IsEnvCog(),
                 'not supported in non-git environment')

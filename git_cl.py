@@ -6694,12 +6694,16 @@ def _RunClangFormatDiff(opts, clang_diff_files, top_dir, upstream_commit):
     except clang_format.NotFoundError as e:
         DieWithError(e)
 
+    # Parallelization pool size: one worker per logical CPU for good balance.
+    pool_size = max(1, multiprocessing.cpu_count())
+
     if opts.full:
-        cmd = [clang_format_tool]
-        if not opts.dry_run and not opts.diff:
-            cmd.append('-i')
-        if opts.dry_run:
-            for diff_file in clang_diff_files:
+
+        def format_file(diff_file):
+            cmd = [clang_format_tool]
+            if not opts.dry_run and not opts.diff:
+                cmd.append('-i')
+            if opts.dry_run:
                 with open(diff_file, 'r') as myfile:
                     code = myfile.read().replace('\r\n', '\n')
                     stdout = RunCommand(cmd + [diff_file], cwd=top_dir)
@@ -6707,30 +6711,57 @@ def _RunClangFormatDiff(opts, clang_diff_files, top_dir, upstream_commit):
                     if opts.diff:
                         sys.stdout.write(stdout)
                     if code != stdout:
-                        return_value = 2
-        else:
-            stdout = RunCommand(cmd + clang_diff_files, cwd=top_dir)
+                        return 2
+                    return 0
+            stdout = RunCommand(cmd + [diff_file], cwd=top_dir)
             if opts.diff:
                 sys.stdout.write(stdout)
-    else:
-        try:
-            script = clang_format.FindClangFormatScriptInChromiumTree(
-                'clang-format-diff.py')
-        except clang_format.NotFoundError as e:
-            DieWithError(e)
+                return 0
 
+        results = []
+        with multiprocessing.pool.ThreadPool(pool_size) as pool:
+            for diff_file in clang_diff_files:
+                results.append(pool.apply_async(format_file,
+                                                args=(diff_file, )))
+            for result in results:
+                ret = result.get()
+                return_value = return_value or ret
+        return return_value
+
+    try:
+        script = clang_format.FindClangFormatScriptInChromiumTree(
+            'clang-format-diff.py')
+    except clang_format.NotFoundError as e:
+        DieWithError(e)
+
+    # Get the diff once at the start, then release git lock. Having the diff
+    # in memory allows formatting without holding the git index lock.
+    diff_output = RunGitDiffCmd(['-U0'], upstream_commit, clang_diff_files)
+
+    # Split the diff into per-file chunks
+    file_diffs = {}
+    current_file = None
+    current_diff = []
+
+    for line in diff_output.splitlines():
+        if line.startswith('diff --git'):
+            if current_file:
+                file_diffs[current_file] = '\n'.join(current_diff) + '\n'
+            current_file = line.split(' b/')[-1]
+            current_diff = [line]
+        elif current_file:
+            current_diff.append(line)
+    if current_file:
+        file_diffs[current_file] = '\n'.join(current_diff) + '\n'
+
+    if not file_diffs:
+        # Fallback to original behaviour: call clang-format-diff once.
         cmd = ['vpython3', script, '-p0']
         if not opts.dry_run and not opts.diff:
             cmd.append('-i')
-
-        diff_output = RunGitDiffCmd(['-U0'], upstream_commit, clang_diff_files)
-
         env = os.environ.copy()
         env['PATH'] = (str(os.path.dirname(clang_format_tool)) + os.pathsep +
                        env['PATH'])
-        # If `clang-format-diff.py` is run without `-i` and the diff is
-        # non-empty, it returns an error code of 1. This will cause `RunCommand`
-        # to die with an error if `error_ok` is not set.
         stdout = RunCommand(cmd,
                             error_ok=True,
                             stdin=diff_output.encode(),
@@ -6741,9 +6772,41 @@ def _RunClangFormatDiff(opts, clang_diff_files, top_dir, upstream_commit):
             sys.stdout.write(stdout)
         if opts.dry_run and len(stdout) > 0:
             return_value = 2
+        return return_value
+
+    def format_file_diff(file_path, file_diff):
+        cmd = ['vpython3', script, '-p0']
+        if not opts.dry_run and not opts.diff:
+            cmd.append('-i')
+
+        env = os.environ.copy()
+        env['PATH'] = (str(os.path.dirname(clang_format_tool)) + os.pathsep +
+                       env['PATH'])
+
+        # Process each file's diff independently
+        stdout = RunCommand(cmd,
+                            error_ok=True,
+                            stdin=file_diff.encode(),
+                            cwd=top_dir,
+                            env=env,
+                            shell=sys.platform.startswith('win32'))
+        if opts.diff:
+            sys.stdout.write(stdout)
+        if opts.dry_run and len(stdout) > 0:
+            return 2
+        return 0
+
+    # Process all file diffs in parallel
+    results = []
+    with multiprocessing.pool.ThreadPool(pool_size) as pool:
+        for file_path, file_diff in file_diffs.items():
+            results.append(
+                pool.apply_async(format_file_diff, args=(file_path, file_diff)))
+        for result in results:
+            ret = result.get()
+            return_value = return_value or ret
 
     return return_value
-
 
 def _RunGoogleJavaFormat(opts, paths, top_dir, upstream_commit):
     """Runs google-java-format and sets a return value if necessary."""

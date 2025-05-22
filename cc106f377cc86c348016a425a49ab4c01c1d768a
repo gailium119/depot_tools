@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ea888bbe_978843dd",
+        "filename": ".gitattributes",
+        "patchSetId": 4
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1367998
+      },
+      "writtenOn": "2025-05-22T20:41:02Z",
+      "side": 1,
+      "message": "just adding `/cipd`, then running `./dirmd` from the recipe bundle gets:\n```\n./cipd: line 143: ./cipd_client_version.digests: No such file or directory\n```\n\nThere\u0027s a lot of potential cipd deps in depot_tools, and I don\u0027t know which ones are safe to exclude, so included all of them here",
+      "range": {
+        "startLine": 19,
+        "startChar": 1,
+        "endLine": 19,
+        "endChar": 5
+      },
+      "revId": "cc106f377cc86c348016a425a49ab4c01c1d768a",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

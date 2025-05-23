@@ -827,7 +827,8 @@ def _prepare_superproject_push_option() -> str | None:
     parsed_url = urllib.parse.urlparse(superproject_url)
     host = parsed_url.netloc.removesuffix('.googlesource.com')
     project = parsed_url.path.strip('/').removesuffix('.git')
-    return f'custom-keyed-value=rootRepo:{host}/{project}'
+    rev = RunGitSilent(['rev-parse', 'HEAD']).strip()
+    return f'custom-keyed-value=rootRepo:{host}/{project}@{rev}'
 
 
 def print_stats(args):

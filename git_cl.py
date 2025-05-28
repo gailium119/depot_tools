@@ -227,7 +227,7 @@ def RunGit(args, **kwargs) -> str:
     return RunCommand(['git'] + args, **kwargs)
 
 
-def RunGitWithCode(args, suppress_stderr=False):
+def RunGitWithCode(args, suppress_stderr=False, cwd=None):
     """Returns return code and stdout."""
     if suppress_stderr:
         stderr = subprocess2.DEVNULL
@@ -237,16 +237,17 @@ def RunGitWithCode(args, suppress_stderr=False):
         (out, _), code = subprocess2.communicate(['git'] + args,
                                                  env=GetNoGitPagerEnv(),
                                                  stdout=subprocess2.PIPE,
-                                                 stderr=stderr)
+                                                 stderr=stderr,
+                                                 cwd=cwd)
         return code, out.decode('utf-8', 'replace')
     except subprocess2.CalledProcessError as e:
         logging.debug('Failed running %s', ['git'] + args)
         return e.returncode, e.stdout.decode('utf-8', 'replace')
 
 
-def RunGitSilent(args):
+def RunGitSilent(args, cwd=None):
     """Returns stdout, suppresses stderr and ignores the return code."""
-    return RunGitWithCode(args, suppress_stderr=True)[1]
+    return RunGitWithCode(args, suppress_stderr=True, cwd=cwd)[1]
 
 
 def time_sleep(seconds):
@@ -827,7 +828,10 @@ def _prepare_superproject_push_option() -> str | None:
     parsed_url = urllib.parse.urlparse(superproject_url)
     host = parsed_url.netloc.removesuffix('.googlesource.com')
     project = parsed_url.path.strip('/').removesuffix('.git')
-    return f'custom-keyed-value=rootRepo:{host}/{project}'
+
+    soln_root = gclient_paths.GetPrimarySolutionPath()
+    rev = RunGitWithCode(['rev-parse', 'refs/heads/main'], cwd=soln_root)
+    return f'custom-keyed-value=rootRepo:{host}/{project}@{rev}'
 
 
 def print_stats(args):

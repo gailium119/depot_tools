@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "967f2375_04800383",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000768
+      },
+      "writtenOn": "2025-05-28T18:45:34Z",
+      "side": 1,
+      "message": "the docs don\u0027t explicitly say ~ is supported in this config:\nhttps://git-scm.com/docs/git-config#Documentation/git-config.txt-httpcookieFile\n\nbut since it\u0027s of type \"path\", we know ~ works:\nhttps://git-scm.com/docs/git-config#Documentation/git-config.txt---typelttypegt\n\nand it\u0027s what i use in my config file ;)",
+      "revId": "b6a10e5558d5649fdb381fac74df772cc0407aa1",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

@@ -811,10 +811,10 @@ def _prepare_superproject_push_option() -> str | None:
     """Returns the push option specifying the root repo of a gclient checkout.
 
     The push option will be formatted:
-        'custom-keyed-value=rootRepo:{host}/{project}'
+        'custom-keyed-value=rootRepo:{host}/{project}@{ref}'
 
     For chromium/src the entire push option would be:
-        'custom-keyed-value=rootRepo:chromium/chromium/src'.
+        'custom-keyed-value=rootRepo:chromium/chromium/src@d3adb33f'.
     """
     gclient_root = gclient_paths.FindGclientRoot(os.getcwd())
     if not gclient_root:
@@ -827,7 +827,8 @@ def _prepare_superproject_push_option() -> str | None:
     parsed_url = urllib.parse.urlparse(superproject_url)
     host = parsed_url.netloc.removesuffix('.googlesource.com')
     project = parsed_url.path.strip('/').removesuffix('.git')
-    return f'custom-keyed-value=rootRepo:{host}/{project}'
+    rev = RunGitSilent(['rev-parse', 'refs/heads/main']).strip()
+    return f'custom-keyed-value=rootRepo:{host}/{project}@{rev}'
 
 
 def print_stats(args):

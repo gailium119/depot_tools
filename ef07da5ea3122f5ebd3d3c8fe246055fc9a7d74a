@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0f41d220_e3e7e9bc",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1367998
+      },
+      "writtenOn": "2025-05-28T18:34:28Z",
+      "side": 1,
+      "message": "tested by uploading https://webrtc-review.googlesource.com/c/src/+/394004: http://shortn/_bJfRU6lri4",
+      "revId": "ef07da5ea3122f5ebd3d3c8fe246055fc9a7d74a",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

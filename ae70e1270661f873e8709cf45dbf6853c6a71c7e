@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "add67955_a07c1658",
+        "filename": "infra_lib/telemetry/__init__.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 1170419
+      },
+      "writtenOn": "2025-05-30T17:04:23Z",
+      "side": 1,
+      "message": "nit: compare number of hits of https://source.chromium.org/search?q\u003d%22sys.platform.startswith(%27linux%27)%22 vs https://source.chromium.org/search?q\u003d%22sys.platform%20%3D%3D%20%27linux%27%22\n\nThe former might be safer (unless this lib explicitly does some py3 version checking earlier in the call stack)",
+      "range": {
+        "startLine": 72,
+        "startChar": 4,
+        "endLine": 72,
+        "endChar": 35
+      },
+      "revId": "ae70e1270661f873e8709cf45dbf6853c6a71c7e",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

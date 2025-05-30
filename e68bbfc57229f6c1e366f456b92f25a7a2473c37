@@ -51,6 +51,24 @@
       "message": "Hello! Firstly, thanks for this change which makes sense and I do not object to.\n\nI was wondering if you\u0027d consider some way to disable the warning? I don\u0027t need this on each build. I\u0027m happy to attempt to contribute this myself if that\u0027s something you are open to. Thanks!",
       "revId": "e68bbfc57229f6c1e366f456b92f25a7a2473c37",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "75384d6c_387513b8",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1366072
+      },
+      "writtenOn": "2025-05-30T09:35:10Z",
+      "side": 1,
+      "message": "cc: @norberg@google.com \n\nDo we want `--suppress-caffeinate-warning` flag in `caffeinate.py`? It would generate a file in `depot_tools`, and each build will check if the file exists.\nUsually people forget this kind of setting... For example, there is `update_depot_tools_toggle.py` to stop updating depot_tools automatically. But people forget about it and realize depot_tools is stale later. So, not sure if it\u0027s a good idea to suppress the message or always display it. \n\nWYDT?",
+      "parentUuid": "217e68b5_bcf66ede",
+      "revId": "e68bbfc57229f6c1e366f456b92f25a7a2473c37",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

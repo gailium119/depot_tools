@@ -34,6 +34,23 @@
       "parentUuid": "498c017b_03c1b33f",
       "revId": "e68bbfc57229f6c1e366f456b92f25a7a2473c37",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "217e68b5_bcf66ede",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1396442
+      },
+      "writtenOn": "2025-05-30T09:19:55Z",
+      "side": 1,
+      "message": "Hello! Firstly, thanks for this change which makes sense and I do not object to.\n\nI was wondering if you\u0027d consider some way to disable the warning? I don\u0027t need this on each build. I\u0027m happy to attempt to contribute this myself if that\u0027s something you are open to. Thanks!",
+      "revId": "e68bbfc57229f6c1e366f456b92f25a7a2473c37",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

@@ -69,6 +69,41 @@
       "parentUuid": "217e68b5_bcf66ede",
       "revId": "e68bbfc57229f6c1e366f456b92f25a7a2473c37",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "685d441c_4b2a35c1",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1373732
+      },
+      "writtenOn": "2025-05-30T17:14:56Z",
+      "side": 1,
+      "message": "I have just realized that the `--no-caffeinate` flag should probably be `--decaf` instead. 😄",
+      "revId": "e68bbfc57229f6c1e366f456b92f25a7a2473c37",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0a9d7710_c57cac47",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1373732
+      },
+      "writtenOn": "2025-05-30T17:14:56Z",
+      "side": 1,
+      "message": "I think the \"show once, then suppress\" strategy is good. This isn\u0027t going to produce incorrect builds or build failures if people forget about it and it unexpectedly works. It _might_ produce some dead batteries, but I think it will produce a lot more successfully completed builds than it produces dead batteries. Like, what percentage of the time is someone building Chrome on battery with the plan and intent their Mac will go to sleep halfway through?",
+      "parentUuid": "75384d6c_387513b8",
+      "revId": "e68bbfc57229f6c1e366f456b92f25a7a2473c37",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

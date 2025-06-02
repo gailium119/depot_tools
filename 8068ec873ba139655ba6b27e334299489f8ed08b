@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7c975e15_bce4b3ba",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 3388142
+      },
+      "writtenOn": "2025-06-02T08:36:10Z",
+      "side": 1,
+      "message": "Hey Jiewei, this is the presubmit for Update mechanism. I have not enforced having no bug for Autoroll, and I\u0027ve made it so that bug links must be to the public tracker. Do you have any thoughts on these?",
+      "revId": "8068ec873ba139655ba6b27e334299489f8ed08b",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

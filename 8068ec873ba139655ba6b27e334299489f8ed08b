@@ -16,6 +16,24 @@
       "message": "Hey Jiewei, this is the presubmit for Update mechanism. I have not enforced having no bug for Autoroll, and I\u0027ve made it so that bug links must be to the public tracker. Do you have any thoughts on these?",
       "revId": "8068ec873ba139655ba6b27e334299489f8ed08b",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "dfa82c00_3d1a1890",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1378025
+      },
+      "writtenOn": "2025-06-02T10:33:44Z",
+      "side": 1,
+      "message": "Can you have Rachael to have a look at the field\u0027s format (since I haven\u0027t kept up to date with the doc).\n\nI would however recommend requiring https:// in front of crbug.com (without it, some code editors won\u0027t highlight the link properly).\n\nRequiring a crbug.com link makes sense, though depot_tools is used for both external and internal repos, so we might have to accept internal links (e.g. the repo is entirely internal).",
+      "parentUuid": "7c975e15_bce4b3ba",
+      "revId": "8068ec873ba139655ba6b27e334299489f8ed08b",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

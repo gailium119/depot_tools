@@ -18,7 +18,7 @@ sys.path.insert(0, _ROOT_DIR)
 from metadata.fields.field_types import MetadataField
 import metadata.fields.known as fields
 from metadata.dependency_metadata import DependencyMetadata
-
+import metadata.fields.custom.update_mechanism
 
 class FieldValidationTest(unittest.TestCase):
     """Tests narrow_type() on fields we validate and extract structural data."""
@@ -215,6 +215,37 @@ class FieldValidationTest(unittest.TestCase):
 
         self.assertEqual(dm.url, None)
         self.assertEqual(dm.is_canonical, True)
+
+
+    def test_update_mechanism(self):
+        """Tests type narrowing for the Update-Mechanism field."""
+        expect = self._test_on_field(
+            metadata.fields.custom.update_mechanism.UpdateMechanismField())
+
+        # Test cases that should successfully parse
+        expect("Autoroll", ("Autoroll", None),
+               "parse a valid value with no comment")
+        expect("  Autoroll  ", ("Autoroll", None),
+               "parse a valid value and strip whitespace")
+        expect("Manual (crbug.com/12345)", ("Manual", "crbug.com/12345"),
+               "parse a valid value with a comment")
+        expect("Static.HardFork (crbug.com/12345)",
+               ("Static.HardFork", "crbug.com/12345"),
+               "parse a namespaced value with a comment")
+        expect(
+            "Autoroll (crbug.com/12345)", ('Autoroll', 'crbug.com/12345'),
+            "Technically not required but if it's being provided then we won't error"
+        )
+
+        # Test cases that are invalid and should not be parsed
+        expect("", None, "treat empty string as None")
+        expect("  ", None, "treat whitespace-only string as None")
+        expect("Invalid", None, "treat a syntactically invalid value as None")
+        expect("Custom (some-bug)", None, "treat an unknown mechanism as None")
+        expect("Manual", None,
+               "treat a value missing a required bug link as None")
+        expect("Static.HardFork (A bug link)", None,
+               "parse a namespaced value with an invalid comment")
 
 
 if __name__ == "__main__":

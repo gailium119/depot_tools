@@ -561,7 +561,11 @@ class ConfigWizard(object):
             'beto-core.googlesource.com',
             'boringssl.googlesource.com',
             'chromium.googlesource.com',
+            # repo upload uses these hosts for ChromeOS,
+            # even if Git is configured without the -review
+            'chromium-review.googlesource.com',
             'chrome-internal.googlesource.com',
+            'chrome-internal-review.googlesource.com',
             'dawn.googlesource.com',
             'pdfium.googlesource.com',
             'quiche.googlesource.com',

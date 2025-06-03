@@ -440,3 +440,14 @@ class DependencyMetadata:
            Otherwise the text content extracted from the metadata.
         """
         return self._return_as_property(known_fields.LOCAL_MODIFICATIONS)
+
+    @property
+    def update_mechanism(self) -> Optional[Tuple[str, Optional[str]]]:
+        """
+        Returns the parsed Update-Mechanism value.
+
+        The first element of the tuple is the mechanism type (e.g., "Autoroll", "Manual").
+        The second element is the optional bug link, or None if no bug is provided.
+        Returns None if the field is not set or if the raw value is empty.
+        """
+        return self._return_as_property(known_fields.UPDATE_MECHANISM)

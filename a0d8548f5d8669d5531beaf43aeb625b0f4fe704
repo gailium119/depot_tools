@@ -1,0 +1,175 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "40731317_98150d20",
+        "filename": "metadata/fields/custom/update_mechanism.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1553262
+      },
+      "writtenOn": "2025-06-03T05:38:59Z",
+      "side": 1,
+      "message": "nit: You can use a multiline regex to split this out and add the comments where the filtering is happening instead of adding it above.",
+      "revId": "a0d8548f5d8669d5531beaf43aeb625b0f4fe704",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bc3705a9_d00054bb",
+        "filename": "metadata/fields/custom/update_mechanism.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1553262
+      },
+      "writtenOn": "2025-06-03T05:38:59Z",
+      "side": 1,
+      "message": "See other comment. I\u0027m not super convinced we need `b/`. WDYT?",
+      "revId": "a0d8548f5d8669d5531beaf43aeb625b0f4fe704",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4abd24d3_837b2136",
+        "filename": "metadata/tests/dependency_metadata_test.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 464,
+      "author": {
+        "id": 1553262
+      },
+      "writtenOn": "2025-06-03T05:38:59Z",
+      "side": 1,
+      "message": "For crbugs, are we going to enforce the `https://`? I think Jiewei is probably right about making it clickable, though I admit to having not experimented with this much. There\u0027s a lot of varied behaviour with these links e.g Gerrit just requires the bug number with no prefixes.\n\nThis test should now fail shouldn\u0027t it?",
+      "revId": "a0d8548f5d8669d5531beaf43aeb625b0f4fe704",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "00af7d11_0d322a60",
+        "filename": "metadata/tests/dependency_metadata_test.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 516,
+      "author": {
+        "id": 1553262
+      },
+      "writtenOn": "2025-06-03T05:38:59Z",
+      "side": 1,
+      "message": "nit: `Update Mechanism` for consistency",
+      "fixSuggestions": [
+        {
+          "fixId": "104e2daa_25199152",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "metadata/tests/dependency_metadata_test.py",
+              "range": {
+                "startLine": 516,
+                "startChar": 0,
+                "endLine": 517,
+                "endChar": 0
+              },
+              "replacement": "    # Test case for a missing Update Mechanism field, assuming it\u0027s required.\n"
+            },
+            {
+              "path": "metadata/tests/dependency_metadata_test.py",
+              "range": {
+                "startLine": 520,
+                "startChar": 0,
+                "endLine": 521,
+                "endChar": 0
+              },
+              "replacement": "                             \"Test Missing Update Mechanism\")\n"
+            },
+            {
+              "path": "metadata/tests/dependency_metadata_test.py",
+              "range": {
+                "startLine": 528,
+                "startChar": 0,
+                "endLine": 529,
+                "endChar": 0
+              },
+              "replacement": "        # The \"Update Mechanism\" field is omitted.\n"
+            },
+            {
+              "path": "metadata/tests/dependency_metadata_test.py",
+              "range": {
+                "startLine": 535,
+                "startChar": 0,
+                "endLine": 536,
+                "endChar": 0
+              },
+              "replacement": "        # Assuming \u0027Update Mechanism\u0027 is now a required field in your known_fields config.\n"
+            },
+            {
+              "path": "metadata/tests/dependency_metadata_test.py",
+              "range": {
+                "startLine": 542,
+                "startChar": 0,
+                "endLine": 543,
+                "endChar": 0
+              },
+              "replacement": "            \"Expected an error for missing Update Mechanism field.\")\n"
+            }
+          ]
+        }
+      ],
+      "revId": "a0d8548f5d8669d5531beaf43aeb625b0f4fe704",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b5d26e81_5d9215d4",
+        "filename": "metadata/tests/dependency_metadata_test.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 542,
+      "author": {
+        "id": 1553262
+      },
+      "writtenOn": "2025-06-03T05:38:59Z",
+      "side": 1,
+      "message": "Let\u0027s keep consistent naming if we can. The field has no `-`",
+      "fixSuggestions": [
+        {
+          "fixId": "c4096b42_c61dc2ee",
+          "description": "prompt_to_edit API",
+          "replacements": [
+            {
+              "path": "metadata/tests/dependency_metadata_test.py",
+              "range": {
+                "startLine": 535,
+                "startChar": 0,
+                "endLine": 536,
+                "endChar": 0
+              },
+              "replacement": "        # Assuming Update-Mechanism is now a required field in your known_fields config.\n"
+            },
+            {
+              "path": "metadata/tests/dependency_metadata_test.py",
+              "range": {
+                "startLine": 542,
+                "startChar": 0,
+                "endLine": 543,
+                "endChar": 0
+              },
+              "replacement": "            \"Expected an error for missing Update-Mechanism field.\"\n        )\n"
+            }
+          ]
+        }
+      ],
+      "revId": "a0d8548f5d8669d5531beaf43aeb625b0f4fe704",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

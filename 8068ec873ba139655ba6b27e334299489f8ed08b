@@ -34,6 +34,24 @@
       "parentUuid": "7c975e15_bce4b3ba",
       "revId": "8068ec873ba139655ba6b27e334299489f8ed08b",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "eda11fd0_e1b7ec40",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1553262
+      },
+      "writtenOn": "2025-06-03T05:38:59Z",
+      "side": 1,
+      "message": "The logic of the crbug is partially that the only valid entry here is really an autoroll exception filed in the `Third Party \u003e Autoroll Exceptions` component in the chromium tracker. There\u0027s no reason we can\u0027t restrict visibility individually in that component if we need to, but it would be ideal if there was a single place to manage these. Most 3P deps are in chromium instead of chrome-internal and don\u0027t currently distinguish between them when we file metadata bugs.\n\nDo you have an example where you think someone would run into this e.g have a README.chromium file but not be appropriate to file an exception in external component which we could restrict if needed? If yes, then maybe we need a internal component for these exceptions as well?\n\nThe answer to this will probably influence the `Autoroll` with bug as well. We previously documented that the valid values here were exceptions and at a later time, we intended to check these bugs against specific values e.g temporary exception which has filed. Allowing bugs from outside this boundary introduces edge cases here - and in what circumstances would we expect an Autoroll with a bug? Broken autoroller? Would we really validate that here, or by getting metrics out of the roller itself?",
+      "parentUuid": "dfa82c00_3d1a1890",
+      "revId": "8068ec873ba139655ba6b27e334299489f8ed08b",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

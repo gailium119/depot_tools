@@ -330,6 +330,24 @@
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "2f1ac5ad_e8b5771e",
+        "filename": "roll_dep.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 271,
+      "author": {
+        "id": 1001934
+      },
+      "writtenOn": "2025-06-03T20:15:37Z",
+      "side": 1,
+      "message": "Oh, I take that back. The problem I have with `use_relative_paths` is actually the front part of the path is off by directory. I\u0027ll file a new bug...",
+      "parentUuid": "2e6da390_c541b74e",
+      "revId": "1552246f3d9ff537c4a9b12e59cc43a5576cfe42",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "28dfc370_b3088378",

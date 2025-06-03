@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e7ce314d_15dbca48",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1001939
+      },
+      "writtenOn": "2025-06-03T04:01:22Z",
+      "side": 1,
+      "message": "It seems it will remove `url.sso://chromium.insteadof\u003dhttps://chromium.googlesource.com/\n\nso `repo upload` works, but `git cl upload` fails\n\nhttps://g-issues.chromium.org/issues/421831933#comment2 will work.",
+      "revId": "39e269dabf62217a87c03be180a49005add1a2b2",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

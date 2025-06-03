@@ -18,7 +18,7 @@ sys.path.insert(0, _ROOT_DIR)
 from metadata.fields.field_types import MetadataField
 import metadata.fields.known as fields
 from metadata.dependency_metadata import DependencyMetadata
-
+import metadata.fields.custom.update_mechanism
 
 class FieldValidationTest(unittest.TestCase):
     """Tests narrow_type() on fields we validate and extract structural data."""
@@ -215,6 +215,46 @@ class FieldValidationTest(unittest.TestCase):
 
         self.assertEqual(dm.url, None)
         self.assertEqual(dm.is_canonical, True)
+
+
+    def test_update_mechanism(self):
+        """Tests type narrowing for the Update-Mechanism field."""
+        expect = self._test_on_field(
+            metadata.fields.custom.update_mechanism.UpdateMechanismField())
+
+        # Test cases that should successfully parse
+        expect("Autoroll", ("Autoroll", None),
+               "parse a valid value with no bug")
+        expect("  Autoroll  ", ("Autoroll", None),
+               "parse a valid value and strip whitespace")
+        expect("Manual (https://crbug.com/12345)",
+               ("Manual", "https://crbug.com/12345"),
+               "parse a valid value with a bug")
+        expect("Manual (b/12345)", ("Manual", "b/12345"),
+               "parse a valid value with a b/ bug")
+        expect("Manual(https://crbug.com/12345)",
+               ("Manual", "https://crbug.com/12345"),
+               "parse a valid value with no space")
+        expect("Manual", ("Manual", None),
+               "allow Manual with no bug (should still warn)")
+        expect("Static.HardFork (https://crbug.com/12345)",
+               ("Static.HardFork", "https://crbug.com/12345"),
+               "parse a namespaced value with a bug")
+        expect("Static", ("Static", None),
+               "Allow Static with no bug (should still warn)")
+        expect(
+            "Autoroll (https://crbug.com/12345)",
+            ('Autoroll', 'https://crbug.com/12345'),
+            "Technically not required but if it's being provided then we won't error"
+        )
+
+        # Test cases that are invalid and should not be parsed
+        expect("", None, "treat empty string as None")
+        expect("  ", None, "treat whitespace-only string as None")
+        expect("Invalid", None, "treat a syntactically invalid value as None")
+        expect("Custom (some-bug)", None, "treat an unknown mechanism as None")
+        expect("Static.HardFork (A bug link)", None,
+               "parse a namespaced value with an invalid comment")
 
 
 if __name__ == "__main__":

@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f76d309b_fe748080",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1147264
+      },
+      "writtenOn": "2025-06-04T17:13:36Z",
+      "side": 1,
+      "message": "The unexpected LockError()s are occurring in ChromeOS builds at a high chance, and I hope this CL will drop the occurrence rate dramatically. If not, then there might be other culprits and further investigation would be necessary.\n\nIf this drops the occurrence rate dramatically, but still happens once in a while, we\u0027d probably want to implement a read-write lock in lockfile.py.\n\nLet\u0027s land this CL first and then see if this resolves the ChromeOS build failures.",
+      "revId": "04c1b97b89a0fe9e14b543beaa76906311aaefe5",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

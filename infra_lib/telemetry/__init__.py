@@ -77,7 +77,11 @@ def initialize(service_name,
 
     cfg = config.Config(cfg_file)
 
-    if not cfg.trace_config.has_enabled():
+    if cfg.trace_config.has_enabled():
+        if not cfg.trace_config.enabled:
+            # Only don't collect if opted out
+            return
+    else:
         if cfg.root_config.notice_countdown > -1:
             print(notice.format(run_count=cfg.root_config.notice_countdown,
                                 config_file=cfg_file),
@@ -88,9 +92,6 @@ def initialize(service_name,
             cfg.trace_config.update(enabled=True, reason='AUTO')
 
         cfg.flush()
-
-    if not cfg.trace_config.enabled:
-        return
 
     default_resource = otel_resources.Resource.create({
         otel_resources.SERVICE_NAME:

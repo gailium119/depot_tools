@@ -193,6 +193,24 @@
       "parentUuid": "712b5f76_f944ce5f",
       "revId": "e68bbfc57229f6c1e366f456b92f25a7a2473c37",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "67ec2480_a115fbd7",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1366072
+      },
+      "writtenOn": "2025-06-04T01:12:33Z",
+      "side": 1,
+      "message": "\u003e +1 to just not showing the warning.\n\nOkay, let\u0027s stop printing the warning.\n\n\u003e is there any context on what motivated this change?\n\nIt was proposed in go/chrome-build-chat. And I didn\u0027t think of an obvious downside with using caffeinate. https://chat.google.com/room/AAAAqkI-BEQ/wyNZ0_rgkIs/wyNZ0_rgkIs?cls\u003d10",
+      "parentUuid": "747338cf_8ad74ede",
+      "revId": "e68bbfc57229f6c1e366f456b92f25a7a2473c37",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

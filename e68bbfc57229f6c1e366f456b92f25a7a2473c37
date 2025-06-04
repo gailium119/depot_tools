@@ -158,6 +158,41 @@
       "parentUuid": "3080a5df_dfbbd332",
       "revId": "e68bbfc57229f6c1e366f456b92f25a7a2473c37",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "03358dba_9da37812",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1001629
+      },
+      "writtenOn": "2025-06-04T00:41:27Z",
+      "side": 1,
+      "message": "(...bu",
+      "revId": "e68bbfc57229f6c1e366f456b92f25a7a2473c37",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "747338cf_8ad74ede",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1001629
+      },
+      "writtenOn": "2025-06-04T00:41:27Z",
+      "side": 1,
+      "message": "(...but is there any context on what motivated this change? There\u0027s no linked bug, macOS\u0027s behavior here hasn\u0027t changed in many years, and it seems it\u0027s been fine so far. I don\u0027t mind the change if it doesn\u0027t print the warning, but it\u0027s also not obvious why we\u0027re making it at this point.)",
+      "parentUuid": "712b5f76_f944ce5f",
+      "revId": "e68bbfc57229f6c1e366f456b92f25a7a2473c37",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

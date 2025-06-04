@@ -16,6 +16,29 @@
       "message": "There\u0027s a row in the traces table with the arg \"--fake-arg-testing-opting-out-first-run-with-no-config-file\" and not the one I tested for opting out so my verification worked",
       "revId": "585c05b91ce007ae599fb844b5ed3492601118e6",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "867ef50f_53c3a874",
+        "filename": "infra_lib/telemetry/__init__.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 1170419
+      },
+      "writtenOn": "2025-06-04T19:35:43Z",
+      "side": 1,
+      "message": "Could be instead:\n```\nif cfg.trace_config.has_enabled() and not cfg.trace_config.enabled:\n  return\nelif not cfg.trace_config.has_enabled():\n  ...\n```\n\nActually, could you encapsulate that in a `disabled()` helper that returns True if `self.has_enabled() and not self.enabled` ?\n\nlgtm either way",
+      "range": {
+        "startLine": 80,
+        "startChar": 0,
+        "endLine": 84,
+        "endChar": 9
+      },
+      "revId": "585c05b91ce007ae599fb844b5ed3492601118e6",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

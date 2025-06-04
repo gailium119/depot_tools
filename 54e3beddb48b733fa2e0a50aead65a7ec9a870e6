@@ -38,6 +38,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "d3f40e7f_efd5c523",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1170419
+      },
+      "writtenOn": "2025-06-04T19:42:19Z",
+      "side": 1,
+      "message": "What\u0027s the bot consumption of the current utr testers? If it\u0027s minimal you could just use the builderless pools for mac.",
+      "parentUuid": "5bcee30c_b7d811f4",
+      "revId": "54e3beddb48b733fa2e0a50aead65a7ec9a870e6",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "d9215d26_8eec31d1",
         "filename": "infra_lib/telemetry/__init__.py",
         "patchSetId": 1

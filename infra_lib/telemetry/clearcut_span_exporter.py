@@ -280,6 +280,7 @@ class ClearcutSpanExporter(otel_export.SpanExporter):
 
         logrequest = self._prepare_request_body(spans)
 
+        print('PUBLISHING TRACE')
         req = urllib.request.Request(
             self._endpoint,
             data=logrequest.SerializeToString(),

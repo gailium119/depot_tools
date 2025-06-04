@@ -62,18 +62,18 @@ def is_google_host() -> bool:
     """Checks if the code is running on google host."""
 
     hostname = get_host_name(fully_qualified=True)
+    print(f'hostname {hostname}')
     return hostname.endswith(_GOOGLE_HOSTNAME_SUFFIX)
 
 
 def initialize(service_name,
                notice=DEFAULT_BANNER,
                cfg_file=config.DEFAULT_CONFIG_FILE):
-    # TODO(326277821): Add support for mac
-    if sys.platform == 'darwin':
-        return
 
+    print('INITIALIZE TELEMETRY LIB')
     if not is_google_host():
         return
+    print('is_googler')
 
     cfg = config.Config(cfg_file)
     if cfg.disabled():

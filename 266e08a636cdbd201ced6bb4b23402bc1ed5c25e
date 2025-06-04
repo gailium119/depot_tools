@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e11828de_27e1ddbb",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1001629
+      },
+      "writtenOn": "2025-06-04T14:38:37Z",
+      "side": 1,
+      "message": "typo: `decaf` (no trailing e)",
+      "revId": "266e08a636cdbd201ced6bb4b23402bc1ed5c25e",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "571de358_0bdf2b8a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1001629
+      },
+      "writtenOn": "2025-06-04T14:38:37Z",
+      "side": 1,
+      "message": "Thanks! Removing the message lgtm (*)\n\nPersonally I wouldn\u0027t rename the flag. --decaf is cute and short, but --no-caffeinate is more descriptive. I realize it\u0027s a bit of a bikeshed though, so up to y\u0027all 😅\n\n*: Apparently I don\u0027t have lg permissions in this repo. I\u0027ll try with my @google account, maybe that works.",
+      "revId": "266e08a636cdbd201ced6bb4b23402bc1ed5c25e",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

@@ -22,6 +22,30 @@
       },
       "revId": "d8d300bf8c45f1df71f16720e28a0e4c156fea3a",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "075278b2_988fa346",
+        "filename": "infra_lib/telemetry/config.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 156,
+      "author": {
+        "id": 1513262
+      },
+      "writtenOn": "2025-06-04T21:39:55Z",
+      "side": 1,
+      "message": "Fix applied.",
+      "parentUuid": "3f737802_33bc4470",
+      "range": {
+        "startLine": 153,
+        "startChar": 0,
+        "endLine": 156,
+        "endChar": 28
+      },
+      "revId": "d8d300bf8c45f1df71f16720e28a0e4c156fea3a",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

@@ -23,7 +23,7 @@ ENABLED_REASON_KEY = "enabled_reason"
 TRACE_SECTION_KEY = "trace"
 DEFAULT_CONFIG = {
     ROOT_SECTION_KEY: {
-        NOTICE_COUNTDOWN_KEY: 10
+        NOTICE_COUNTDOWN_KEY: 9
     },
     TRACE_SECTION_KEY: {},
 }
@@ -131,8 +131,7 @@ class RootConfig:
     @property
     def notice_countdown(self) -> int:
         """Value for root.notice_countdown property in telemetry.cfg."""
-
-        return self._config[ROOT_SECTION_KEY].getint(NOTICE_COUNTDOWN_KEY, 10)
+        return self._config[ROOT_SECTION_KEY].getint(NOTICE_COUNTDOWN_KEY, 9)
 
 
 class Config:

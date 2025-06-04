@@ -39,6 +39,30 @@
       },
       "revId": "585c05b91ce007ae599fb844b5ed3492601118e6",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8e545e4c_7b0686bb",
+        "filename": "infra_lib/telemetry/__init__.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 1513262
+      },
+      "writtenOn": "2025-06-04T20:47:07Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "867ef50f_53c3a874",
+      "range": {
+        "startLine": 80,
+        "startChar": 0,
+        "endLine": 84,
+        "endChar": 9
+      },
+      "revId": "585c05b91ce007ae599fb844b5ed3492601118e6",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

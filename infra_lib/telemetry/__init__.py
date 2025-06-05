@@ -52,7 +52,6 @@ def get_host_name(fully_qualified: bool = False) -> str:
             hostname,
             e,
         )
-
     if fully_qualified:
         return hostname
     return hostname.partition('.')[0]
@@ -76,7 +75,7 @@ def initialize(service_name,
         return
 
     cfg = config.Config(cfg_file)
-    if cfg.disabled():
+    if cfg.trace_config.disabled():
         return
 
     if not cfg.trace_config.has_enabled():

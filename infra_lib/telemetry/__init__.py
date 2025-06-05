@@ -76,7 +76,7 @@ def initialize(service_name,
         return
 
     cfg = config.Config(cfg_file)
-    if cfg.disabled():
+    if cfg.trace_config.disabled():
         return
 
     if not cfg.trace_config.has_enabled():

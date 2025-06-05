@@ -92,7 +92,7 @@ class TraceConfig:
 
     def disabled(self) -> bool:
         """Checks if the enabled probperty exists and is false"""
-        return self.trace_config.has_enabled() and not self.trace_config.enabled
+        return self.has_enabled() and not self.enabled
 
     @property
     def enabled(self) -> bool:

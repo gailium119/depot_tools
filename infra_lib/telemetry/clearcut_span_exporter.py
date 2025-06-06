@@ -280,6 +280,7 @@ class ClearcutSpanExporter(otel_export.SpanExporter):
 
         logrequest = self._prepare_request_body(spans)
 
+        print('PUBLISHING TRACE')
         req = urllib.request.Request(
             self._endpoint,
             data=logrequest.SerializeToString(),
@@ -291,6 +292,7 @@ class ClearcutSpanExporter(otel_export.SpanExporter):
             with urllib.request.urlopen(req, timeout=timeout
                                         or self._timeout) as f:
                 logresponse.ParseFromString(f.read())
+            print('SUCCESS')
         except urllib.error.URLError as url_exception:
             logging.warning(url_exception)
             return False

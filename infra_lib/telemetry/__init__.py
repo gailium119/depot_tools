@@ -68,15 +68,12 @@ def is_google_host() -> bool:
 def initialize(service_name,
                notice=DEFAULT_BANNER,
                cfg_file=config.DEFAULT_CONFIG_FILE):
-    # TODO(326277821): Add support for mac
-    if sys.platform == 'darwin':
-        return
-
-    if not is_google_host():
-        return
-
     cfg = config.Config(cfg_file)
     if cfg.trace_config.disabled():
+        return
+
+    if (not is_google_host()
+            and not cfg.trace_config.enabled_reason() == 'BOT_USER'):
         return
 
     if not cfg.trace_config.has_enabled():

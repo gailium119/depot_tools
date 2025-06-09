@@ -45,7 +45,8 @@ class TraceConfig:
         if not self.has_enabled() or self.enabled:
             self.gen_id()
 
-    def update(self, enabled: bool, reason: Literal["AUTO", "USER"]) -> None:
+    def update(self, enabled: bool, reason: Literal["AUTO", "USER",
+                                                    "BOT_USER"]) -> None:
         """Update the config."""
         self._config[TRACE_SECTION_KEY][ENABLED_KEY] = str(enabled)
         self._config[TRACE_SECTION_KEY][ENABLED_REASON_KEY] = reason

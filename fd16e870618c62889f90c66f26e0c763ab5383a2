@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0909d32b_622ab1dd",
+        "filename": "infra_lib/telemetry/__init__.py",
+        "patchSetId": 8
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1170419
+      },
+      "writtenOn": "2025-06-09T17:16:16Z",
+      "side": 1,
+      "message": "Hard-coding this doesn\u0027t feel right. This is just to enable metrics collections from bots hosted in golo? (Detailed commit msg would be good.) If so, what about bay area lab(s)? And what about gce?\n\nBut I\u0027d be ok if someone from fleet OKs this too. Otherwise, prob want to expose this via cmd line (something like \"--force-metrics-collection\") and then pass that into the utr on the utr recipe invocations.",
+      "range": {
+        "startLine": 38,
+        "startChar": 28,
+        "endLine": 38,
+        "endChar": 46
+      },
+      "revId": "fd16e870618c62889f90c66f26e0c763ab5383a2",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

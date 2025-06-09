@@ -22,6 +22,30 @@
       },
       "revId": "fd16e870618c62889f90c66f26e0c763ab5383a2",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4991a34e_73a0970c",
+        "filename": "infra_lib/telemetry/__init__.py",
+        "patchSetId": 8
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1128684
+      },
+      "writtenOn": "2025-06-09T17:21:23Z",
+      "side": 1,
+      "message": "Ben brings up a good point. SFO hosts are `*.br.sfo36.cr.dev`, while the new ATL and IAD sites are `*.br.atl97.cr.dev` and `*.br.iad65.cr.dev`. It\u0027d be preferred we\u0027re not having to hard code yet something else that might not be discoverable if we end up adding sites or changing domains.",
+      "parentUuid": "0909d32b_622ab1dd",
+      "range": {
+        "startLine": 38,
+        "startChar": 28,
+        "endLine": 38,
+        "endChar": 46
+      },
+      "revId": "fd16e870618c62889f90c66f26e0c763ab5383a2",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

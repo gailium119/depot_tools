@@ -46,6 +46,30 @@
       },
       "revId": "fd16e870618c62889f90c66f26e0c763ab5383a2",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "40f732a3_7edd1804",
+        "filename": "infra_lib/telemetry/__init__.py",
+        "patchSetId": 8
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1513262
+      },
+      "writtenOn": "2025-06-10T17:56:34Z",
+      "side": 1,
+      "message": "Rather than pass a flag through UTR just for testing the telemetry lib I added a \"--bot-enable\" opt in option that will skip the googler check since the recipe already opts in and removed the golo entry\n\nTested here: https://ci.chromium.org/ui/p/chromium/builders/try.shadow/mac-utr-tester/12/infra",
+      "parentUuid": "4991a34e_73a0970c",
+      "range": {
+        "startLine": 38,
+        "startChar": 28,
+        "endLine": 38,
+        "endChar": 46
+      },
+      "revId": "fd16e870618c62889f90c66f26e0c763ab5383a2",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

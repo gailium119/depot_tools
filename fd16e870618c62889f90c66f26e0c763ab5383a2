@@ -94,6 +94,30 @@
       },
       "revId": "fd16e870618c62889f90c66f26e0c763ab5383a2",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2c7da5b5_5e3c9c18",
+        "filename": "infra_lib/telemetry/__init__.py",
+        "patchSetId": 8
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1513262
+      },
+      "writtenOn": "2025-06-10T20:10:16Z",
+      "side": 1,
+      "message": "That is very strange... I\u0027ll figure that out before trying to land the UTR test recipe change that will actually enable this",
+      "parentUuid": "aa73e0bb_81515b37",
+      "range": {
+        "startLine": 38,
+        "startChar": 28,
+        "endLine": 38,
+        "endChar": 46
+      },
+      "revId": "fd16e870618c62889f90c66f26e0c763ab5383a2",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

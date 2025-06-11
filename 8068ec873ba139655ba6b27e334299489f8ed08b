@@ -52,6 +52,24 @@
       "parentUuid": "dfa82c00_3d1a1890",
       "revId": "8068ec873ba139655ba6b27e334299489f8ed08b",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7af865ae_8866c0d0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 3388142
+      },
+      "writtenOn": "2025-06-11T08:49:38Z",
+      "side": 1,
+      "message": "\u003e \u0027Do you have an example where you think someone would run into this e.g have a README.chromium file but not be appropriate to file an exception in external component which we could restrict if needed?\u0027 \n\nNo\n\nAs for the Autoroll with bug, if a dep is flip flopping between Autoroll and Manual then it probably makes sense to allow it to keep the same bug, save looking it up each time. In general I think it\u0027s ok to allow a bug there, but not enforce either way.\n\nWDYT?",
+      "parentUuid": "eda11fd0_e1b7ec40",
+      "revId": "8068ec873ba139655ba6b27e334299489f8ed08b",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

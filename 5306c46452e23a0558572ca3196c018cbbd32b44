@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "693bba1c_7aa3a332",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 3388142
+      },
+      "writtenOn": "2025-06-11T08:49:38Z",
+      "side": 1,
+      "message": "I also changed the parsing function to return a tuple of (primary, secondary, bug_link)",
+      "revId": "5306c46452e23a0558572ca3196c018cbbd32b44",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

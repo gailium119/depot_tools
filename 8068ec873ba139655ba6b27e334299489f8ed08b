@@ -70,6 +70,24 @@
       "parentUuid": "eda11fd0_e1b7ec40",
       "revId": "8068ec873ba139655ba6b27e334299489f8ed08b",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e47f2d3b_434d3705",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1553262
+      },
+      "writtenOn": "2025-06-11T22:56:20Z",
+      "side": 1,
+      "message": "I think if something is flip flopping between autorolled and manual then its manual because the auto part is broken in some way. \n\nI don\u0027t really see this as a hill to die on, so feel free to decide as the owner of the problem, but IMO we should not cater to weird things like this.",
+      "parentUuid": "7af865ae_8866c0d0",
+      "revId": "8068ec873ba139655ba6b27e334299489f8ed08b",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

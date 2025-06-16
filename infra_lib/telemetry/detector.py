@@ -37,14 +37,22 @@ class ProcessDetector(resources.ResourceDetector):
     def detect(self) -> resources.Resource:
         env = os.environ
         resource = {
-            PROCESS_CWD: os.getcwd(),
-            PROCESS_RUNTIME_API_VERSION: sys.api_version,
-            resources.PROCESS_PID: os.getpid(),
-            resources.PROCESS_OWNER: os.geteuid(),
-            resources.PROCESS_EXECUTABLE_NAME: Path(sys.executable).name,
-            resources.PROCESS_EXECUTABLE_PATH: sys.executable,
-            resources.PROCESS_COMMAND: sys.argv[0],
-            resources.PROCESS_COMMAND_ARGS: sys.argv[1:],
+            PROCESS_CWD:
+            os.getcwd(),
+            PROCESS_RUNTIME_API_VERSION:
+            sys.api_version,
+            resources.PROCESS_PID:
+            os.getpid(),
+            resources.PROCESS_OWNER:
+            os.geteuid() if os.name.startswith('linux') else 'Unknown',
+            resources.PROCESS_EXECUTABLE_NAME:
+            Path(sys.executable).name,
+            resources.PROCESS_EXECUTABLE_PATH:
+            sys.executable,
+            resources.PROCESS_COMMAND:
+            sys.argv[0],
+            resources.PROCESS_COMMAND_ARGS:
+            sys.argv[1:],
         }
         resource.update({
             f"{PROCESS_ENV}.{k}": env[k]
@@ -92,19 +100,21 @@ class MemoryInfo:
         self._total_physical_ram = 0
         self._total_virtual_memory = 0
         self._total_swap_memory = 0
-        try:
-            contents = PROC_MEMINFO_PATH.read_text(encoding="utf-8")
-        except OSError as e:
-            logging.warning("Encountered an issue reading /proc/meminfo: %s", e)
-            return
+        if sys.platform.startswith('linux'):
+            try:
+                contents = PROC_MEMINFO_PATH.read_text(encoding="utf-8")
+            except OSError as e:
+                logging.warning(
+                    "Encountered an issue reading /proc/meminfo: %s", e)
+                return
 
-        for line in contents.splitlines():
-            if line.startswith(self.MEMINFO_SWAP_MEMORY_TOTAL):
-                self._total_swap_memory = self._get_mem_value(line)
-            elif line.startswith(self.MEMINFO_VIRTUAL_MEMORY_TOTAL):
-                self._total_virtual_memory = self._get_mem_value(line)
-            elif line.startswith(self.MEMINFO_PHYSICAL_RAM_TOTAL):
-                self._total_physical_ram = self._get_mem_value(line)
+            for line in contents.splitlines():
+                if line.startswith(self.MEMINFO_SWAP_MEMORY_TOTAL):
+                    self._total_swap_memory = self._get_mem_value(line)
+                elif line.startswith(self.MEMINFO_VIRTUAL_MEMORY_TOTAL):
+                    self._total_virtual_memory = self._get_mem_value(line)
+                elif line.startswith(self.MEMINFO_PHYSICAL_RAM_TOTAL):
+                    self._total_physical_ram = self._get_mem_value(line)
 
     @property
     def total_physical_ram(self) -> int:

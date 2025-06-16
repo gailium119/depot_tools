@@ -22,6 +22,30 @@
       },
       "revId": "c87848f920822abf11a9428a2caf9f301eac6e60",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d4b60855_32393a16",
+        "filename": "infra_lib/telemetry/detector.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 107,
+      "author": {
+        "id": 1513262
+      },
+      "writtenOn": "2025-06-16T21:20:03Z",
+      "side": 1,
+      "message": "Ah good point. I was too focused on non-linux but this is probably an issue too. The span exporter should be able to stay since it would only be called post init though",
+      "parentUuid": "75227be8_d3621adf",
+      "range": {
+        "startLine": 107,
+        "startChar": 16,
+        "endLine": 107,
+        "endChar": 31
+      },
+      "revId": "c87848f920822abf11a9428a2caf9f301eac6e60",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

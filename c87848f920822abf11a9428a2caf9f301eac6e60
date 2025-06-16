@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "75227be8_d3621adf",
+        "filename": "infra_lib/telemetry/detector.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 107,
+      "author": {
+        "id": 1170419
+      },
+      "writtenOn": "2025-06-16T20:01:40Z",
+      "side": 1,
+      "message": "Should this be print() too?",
+      "range": {
+        "startLine": 107,
+        "startChar": 16,
+        "endLine": 107,
+        "endChar": 31
+      },
+      "revId": "c87848f920822abf11a9428a2caf9f301eac6e60",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

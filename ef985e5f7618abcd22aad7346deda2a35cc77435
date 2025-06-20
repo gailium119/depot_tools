@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1add1efe_18ca04a2",
+        "filename": "autoninja.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 267,
+      "author": {
+        "id": 1001939
+      },
+      "writtenOn": "2025-06-20T00:07:28Z",
+      "side": 1,
+      "message": "can\u0027t we make this default to True?\n\n(and remove `if use_siso is None:` below?)",
+      "revId": "ef985e5f7618abcd22aad7346deda2a35cc77435",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "baa34e9f_ca155e4b",
+        "filename": "autoninja.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 392,
+      "author": {
+        "id": 1001939
+      },
+      "writtenOn": "2025-06-20T00:07:28Z",
+      "side": 1,
+      "message": "ok when output_dir is not specified?",
+      "revId": "ef985e5f7618abcd22aad7346deda2a35cc77435",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

@@ -18,6 +18,24 @@
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "c1a76411_52c16677",
+        "filename": "autoninja.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 267,
+      "author": {
+        "id": 1366072
+      },
+      "writtenOn": "2025-06-20T04:16:03Z",
+      "side": 1,
+      "message": "I think downstream projects and some non-Chromium projects still use Ninja.",
+      "parentUuid": "1add1efe_18ca04a2",
+      "revId": "ef985e5f7618abcd22aad7346deda2a35cc77435",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "baa34e9f_ca155e4b",
@@ -31,6 +49,24 @@
       "writtenOn": "2025-06-20T00:07:28Z",
       "side": 1,
       "message": "ok when output_dir is not specified?",
+      "revId": "ef985e5f7618abcd22aad7346deda2a35cc77435",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b904c29d_a53cd5bd",
+        "filename": "autoninja.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 392,
+      "author": {
+        "id": 1366072
+      },
+      "writtenOn": "2025-06-20T04:16:03Z",
+      "side": 1,
+      "message": "The default is `output_dir \u003d \".\"`. Then, it should still work. output_dir is used for a specific case in the function.",
+      "parentUuid": "baa34e9f_ca155e4b",
       "revId": "ef985e5f7618abcd22aad7346deda2a35cc77435",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }

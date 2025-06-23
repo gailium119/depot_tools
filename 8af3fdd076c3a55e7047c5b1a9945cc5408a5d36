@@ -16,6 +16,24 @@
       "message": "Hi @gavinmak@google.com, I\u0027d like to add `lxml` support in PRESUBMIT scripts-- specifically, I want to validate the Windows debug visualizer files (.natvis) against the XML schema to make them (slightly) more robust.\n\nThis dependency is only required for win platforms, but I imagine XML schema validation could be useful elsewhere as well.\n\nI don\u0027t normally modify infra-related code, so please let me know if there\u0027s cost to this I\u0027m unaware of or if there\u0027s some additional process needed for a change like this.\n\nThank you for your time!",
       "revId": "8af3fdd076c3a55e7047c5b1a9945cc5408a5d36",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "85ffd2be_7ac9c614",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1367998
+      },
+      "writtenOn": "2025-06-23T21:33:21Z",
+      "side": 1,
+      "message": "The content of this change looks fine to me, but I\u0027m not sure this is the right `.vpython3` to do it in. Maybe https://crsrc.org/c/.vpython3 ?",
+      "parentUuid": "5069b6e5_665b8cf2",
+      "revId": "8af3fdd076c3a55e7047c5b1a9945cc5408a5d36",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

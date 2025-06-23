@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9d8f1519_1629d458",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1513262
+      },
+      "writtenOn": "2025-06-23T21:12:13Z",
+      "side": 1,
+      "message": "The bots are successfully publishing these: http://screen/9KN2jS2stTfbumu\n\nMac led: https://ci.chromium.org/ui/p/chromium/builders/try.shadow/mac-utr-tester/39/infra\nWin led: https://ci.chromium.org/ui/p/chromium/builders/try.shadow/win-utr-tester/4/infra",
+      "revId": "915e2df9ce141b76028fea1ffcee6caac0f7c1c9",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

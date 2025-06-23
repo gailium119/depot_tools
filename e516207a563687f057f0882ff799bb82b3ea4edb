@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c8cb4e1b_90c00b27",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1367998
+      },
+      "writtenOn": "2025-06-23T18:35:15Z",
+      "side": 1,
+      "message": "Could I get a little more context for this change? Why do we want a new `deps_parser.py` in depot_tools, and why can\u0027t this script live somewhere else (maybe closer to the place it\u0027ll be used)?",
+      "revId": "e516207a563687f057f0882ff799bb82b3ea4edb",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

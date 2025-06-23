@@ -52,6 +52,24 @@
       "parentUuid": "85ffd2be_7ac9c614",
       "revId": "8af3fdd076c3a55e7047c5b1a9945cc5408a5d36",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "85ec4f6b_542601e2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1367998
+      },
+      "writtenOn": "2025-06-23T23:24:54Z",
+      "side": 1,
+      "message": "Got it, I think it\u0027s that depot_tools looks at its own vpython3 when running presubmit, LGTMed.",
+      "parentUuid": "db1f831d_83fc4a1a",
+      "revId": "8af3fdd076c3a55e7047c5b1a9945cc5408a5d36",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

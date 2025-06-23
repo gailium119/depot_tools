@@ -34,6 +34,24 @@
       "parentUuid": "c8cb4e1b_90c00b27",
       "revId": "e516207a563687f057f0882ff799bb82b3ea4edb",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9893d61d_0dd39153",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1549252
+      },
+      "writtenOn": "2025-06-23T18:41:47Z",
+      "side": 1,
+      "message": "The usage case if only for Cider. Do you any suggestion way that we could use the \"gclient_eval.Parse\" if we don\u0027t create a separate script here?",
+      "parentUuid": "b8d1a817_75c6d2f3",
+      "revId": "e516207a563687f057f0882ff799bb82b3ea4edb",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

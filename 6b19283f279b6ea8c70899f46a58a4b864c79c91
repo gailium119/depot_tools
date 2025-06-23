@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "329f2c74_b063c796",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1366072
+      },
+      "writtenOn": "2025-06-23T03:49:47Z",
+      "side": 1,
+      "message": "I extracted the logic as a helper function. PTAL.",
+      "revId": "6b19283f279b6ea8c70899f46a58a4b864c79c91",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

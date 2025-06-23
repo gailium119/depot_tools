@@ -16,6 +16,24 @@
       "message": "Could I get a little more context for this change? Why do we want a new `deps_parser.py` in depot_tools, and why can\u0027t this script live somewhere else (maybe closer to the place it\u0027ll be used)?",
       "revId": "e516207a563687f057f0882ff799bb82b3ea4edb",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b8d1a817_75c6d2f3",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1549252
+      },
+      "writtenOn": "2025-06-23T18:40:17Z",
+      "side": 1,
+      "message": "OH yes, so I need to have a way to parse different version of DEPS files, and compare the result and generate new gitlink patch. This will be used in the Cider extension.\n\nI didn\u0027t see any current gclient command to output all DEPS file information, but the \"gclient_eval.Parse\" function already parse the DEPS file. So I create this script to use this function and called from the cider extension to get the DEPS file information.",
+      "parentUuid": "c8cb4e1b_90c00b27",
+      "revId": "e516207a563687f057f0882ff799bb82b3ea4edb",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

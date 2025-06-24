@@ -70,6 +70,24 @@
       "parentUuid": "db1f831d_83fc4a1a",
       "revId": "8af3fdd076c3a55e7047c5b1a9945cc5408a5d36",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "66393a97_a48295f0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1393273
+      },
+      "writtenOn": "2025-06-24T00:05:36Z",
+      "side": 1,
+      "message": "Thanks, is there anything special I need to do to ensure that chromium/src uses the right depot_tools version? I think `update_depot_tools` will \"roll\" this for us, but I\u0027m wondering ig there\u0027s any consideration for backwards/forwards compat?",
+      "parentUuid": "85ec4f6b_542601e2",
+      "revId": "8af3fdd076c3a55e7047c5b1a9945cc5408a5d36",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

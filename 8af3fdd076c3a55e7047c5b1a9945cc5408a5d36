@@ -157,6 +157,23 @@
       "message": "Looks fine to me. I patched this in and did a quick test:\n\n```\n$ vpython3\nStarting interactive mode, loading vpython spec from .vpython3\nPython 3.11.9 (chromium.36, Jan  8 2025, 12:20:10) [GCC 10.2.1 20210130 (Red Hat 10.2.1-11)] on linux\nType \"help\", \"copyright\", \"credits\" or \"license\" for more information.\n\u003e\u003e\u003e import lxml\n```\n\nwith no errors.",
       "revId": "8af3fdd076c3a55e7047c5b1a9945cc5408a5d36",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "462ba75e_125e164b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1393273
+      },
+      "writtenOn": "2025-06-24T19:38:53Z",
+      "side": 1,
+      "message": "Thank you all!",
+      "revId": "8af3fdd076c3a55e7047c5b1a9945cc5408a5d36",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

@@ -105,6 +105,23 @@
       "message": "Thank you for the review!",
       "revId": "8af3fdd076c3a55e7047c5b1a9945cc5408a5d36",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a78fdd13_82aa8ed8",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1393273
+      },
+      "writtenOn": "2025-06-24T18:19:23Z",
+      "side": 1,
+      "message": "Hi @bryner@google.com, can you please take a look at this change?\n\nI\u0027d like to add lxml support in PRESUBMIT scripts-- specifically, I want to validate the Windows debug visualizer files (.natvis) against the XML schema to make them (slightly) more robust.\n\nThank you for your time!",
+      "revId": "8af3fdd076c3a55e7047c5b1a9945cc5408a5d36",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

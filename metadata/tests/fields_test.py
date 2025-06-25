@@ -270,19 +270,23 @@ class FieldValidationTest(unittest.TestCase):
             valid_values=[
                 "Autoroll",
                 "  Autoroll  ",
-                "Manual (crbug.com/12345)",
-                "Static (crbug.com/54321)",
-                "Static.HardFork (crbug.com/98765)",
+                "Manual (https://crbug.com/12345)",
+                "Static (https://crbug.com/54321)",
+                "Static.HardFork (https://crbug.com/98765)",
             ],
             error_values=[
                 "",
                 " ",
                 "Invalid Value",
                 "Custom (crbug.com/123)",
+                "Custom (https://crbug.com/123)",
             ],
             warning_values=[
                 "Static",
                 "Static.HardFork",
+                "Manual (crbug.com/12345)",
+                "Static (crbug.com/54321)",
+                "Static.HardFork (crbug.com/98765)",
             ],
         )
 

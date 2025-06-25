@@ -25,7 +25,7 @@ UPDATE_MECHANISM_REGEX = re.compile(
       ([^\s(]+) # Capture the secondary mechanism.
     )?          # Indicates 'secondary' is optional.
 
-                # Group 3 (optional): A bug link in parentheses (e.g., "(crbug.com/12345)").
+                # Group 3 (optional): A bug link in parentheses (e.g., "(https://crbug.com/12345)").
     (?:         # Use a non-capturing group to catch the parentheses and whitespace.
       \s*       # Optional whitespace.
       \(        # (
@@ -36,7 +36,11 @@ UPDATE_MECHANISM_REGEX = re.compile(
     $           # End of the string.
     """, re.VERBOSE)
 
-BUG_PREFIXES = ['crbug.com/']
+
+# Regex for validating the format of the bug link and capturing the bug ID.
+# It matches optional http(s)://, followed by crbug, optional .com, a slash,
+# and captures the digits that follow.
+BUG_LINK_REGEX = re.compile(r"^(?:https?://)?crbug(?:\.com)?/(\d+)$")
 
 # A set of the fully-qualified, allowed mechanism values.
 ALLOWED_MECHANISMS = {
@@ -85,7 +89,7 @@ class UpdateMechanismField(field_types.SingleLineTextField):
                 reason=f"{self._name} field cannot be empty.",
                 additional=[
                     f"Must be one of {util.quoted(sorted(ALLOWED_MECHANISMS))}.",
-                    "Example: 'Autoroll' or 'Manual (crbug.com/12345)'"
+                    "Example: 'Autoroll' or 'Manual (https://crbug.com/12345)'"
                 ])
 
         primary, secondary, bug_link = parse_update_mechanism(value)
@@ -96,7 +100,7 @@ class UpdateMechanismField(field_types.SingleLineTextField):
                 additional=[
                     "Expected format: Mechanism[.SubMechanism] [(bug)]",
                     f"Allowed mechanisms: {util.quoted(sorted(ALLOWED_MECHANISMS))}.",
-                    "Example: 'Static.HardFork (crbug.com/12345)'",
+                    "Example: 'Static.HardFork (https://crbug.com/12345)'",
                 ])
 
         mechanism = primary
@@ -105,7 +109,7 @@ class UpdateMechanismField(field_types.SingleLineTextField):
         # Second, check if the mechanism is a known, allowed value.
         if mechanism not in ALLOWED_MECHANISMS:
             return vr.ValidationError(
-                reason=f"Invalid mechanism '{mechanism}'.",
+                reason=f"{self._name} has invalid mechanism '{mechanism}'.",
                 additional=[
                     f"Must be one of {util.quoted(sorted(ALLOWED_MECHANISMS))}.",
                 ])
@@ -114,24 +118,34 @@ class UpdateMechanismField(field_types.SingleLineTextField):
         # Only warn for Static, for now.
         elif primary == "Static" and bug_link is None:
             return vr.ValidationWarning(
-                reason="No bug link to autoroll exception provided.",
+                reason="{self._name} has no link to autoroll exception.",
                 additional=[
                     "Please add a link if an exception bug has been filed.",
-                    f"Example: '{mechanism} (crbug.com/12345)'"
+                    f"Example: '{mechanism} (https://crbug.com/12345)'"
                 ])
 
-        # The bug link must be for the public tracker or 'b/' for internal.
-        elif bug_link and not any(x in bug_link for x in BUG_PREFIXES):
-            return vr.ValidationError(
-                reason=
-                f"Bug links must begin with {util.quoted(sorted(BUG_PREFIXES))}.",
-                additional=[
-                    f"Please add a bug link using {util.quoted(sorted(BUG_PREFIXES))} in parentheses.",
-                    f"Example: '{mechanism} (crbug.com/12345)'"
-                ])
+        # Validate the bug link format if present.
+        if bug_link and not BUG_LINK_REGEX.match(bug_link):
+            bug_num = bug_link.split("/")[-1]
+            # If it's a number, then provide a copy pastable correct value.
+            if bug_num.isdigit():
+                return vr.ValidationError(
+                    reason=f"{self._name} bug link should be `(https://crbug.com/{bug_num})`",
+                    additional=[
+                        f"{bug_link} is not a valid crbug link."
+                        "Note that 'http[s]://' and '.com' are optional.",
+                    ])
+            else:
+                return vr.ValidationError(
+                    reason=f"{self._name} has invalid bug link {bug_link}",
+                    additional=[
+                        "bug links must be like (https://crbug.com/...)",
+                        "'http[s]://' and '.com' are optional.",
+                        f"Example: '{mechanism} (https://crbug.com/12345)'",
+                    ])
 
         # The bug link must be for the public tracker or 'b/' for internal.
-        elif primary == "Autoroll" and bug_link:
+        if primary == "Autoroll" and bug_link:
             return vr.ValidationError(
                 reason="Autoroll does not permit an autoroll exception.",
                 additional=[
@@ -154,4 +168,12 @@ class UpdateMechanismField(field_types.SingleLineTextField):
         if validation and validation.is_fatal():
             # It cannot be narrowed if there is a fatal error.
             return None, None, None
-        return parse_update_mechanism(value)
+
+        primary, secondary, bug_link = parse_update_mechanism(value)
+
+        # If a bug link is present, parse it into canonical format.
+        if bug_link:
+            bug_num = bug_link.split("/")[-1]
+            bug_link = f"https://crbug.com/{bug_num}"
+
+        return primary, secondary, bug_link

@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "850b8372_fd3bb0b3",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 9
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 3388142
+      },
+      "writtenOn": "2025-06-25T03:11:46Z",
+      "side": 1,
+      "message": "It now demands perfection.",
+      "revId": "0c58a89aaf976dcc86ea57e251eb4c15e899d47d",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "10ff9b41_319dd281",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 9
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 3388142
+      },
+      "writtenOn": "2025-06-25T03:11:46Z",
+      "side": 1,
+      "message": "It now demands perfection.",
+      "revId": "0c58a89aaf976dcc86ea57e251eb4c15e899d47d",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

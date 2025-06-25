@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b66a6afa_c5f2b500",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 3388142
+      },
+      "writtenOn": "2025-06-25T02:15:39Z",
+      "side": 1,
+      "message": "It now insists that the link be in the format https://crbug.com/... but will only warn if http[s] or .com are missing",
+      "revId": "209372855de6d0547732b37241d3a6417063416f",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    }
+  ]
+}

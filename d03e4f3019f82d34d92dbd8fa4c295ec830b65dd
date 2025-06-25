@@ -24,6 +24,30 @@
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "987f9cee_76115e52",
+        "filename": "metadata/fields/custom/update_mechanism.py",
+        "patchSetId": 6
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 3388142
+      },
+      "writtenOn": "2025-06-25T02:15:39Z",
+      "side": 1,
+      "message": "Because the bug that was filed was because they left off the .com.",
+      "parentUuid": "c8680113_07a6525f",
+      "range": {
+        "startLine": 41,
+        "startChar": 53,
+        "endLine": 41,
+        "endChar": 66
+      },
+      "revId": "d03e4f3019f82d34d92dbd8fa4c295ec830b65dd",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "a88f5d04_4da63993",
@@ -41,6 +65,24 @@
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "130185d8_34a7e802",
+        "filename": "metadata/fields/custom/update_mechanism.py",
+        "patchSetId": 6
+      },
+      "lineNbr": 143,
+      "author": {
+        "id": 3388142
+      },
+      "writtenOn": "2025-06-25T02:15:39Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "a88f5d04_4da63993",
+      "revId": "d03e4f3019f82d34d92dbd8fa4c295ec830b65dd",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "d9ee37be_20ee15d2",
@@ -54,6 +96,42 @@
       "writtenOn": "2025-06-25T01:32:38Z",
       "side": 1,
       "message": "This isn\u0027t valid without the `.com` is it? I don\u0027t think we should allow this one.",
+      "revId": "d03e4f3019f82d34d92dbd8fa4c295ec830b65dd",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "036f7293_3fa5065a",
+        "filename": "metadata/tests/type_narrowing_test.py",
+        "patchSetId": 6
+      },
+      "lineNbr": 234,
+      "author": {
+        "id": 3388142
+      },
+      "writtenOn": "2025-06-25T02:15:39Z",
+      "side": 1,
+      "message": "I\u0027ll warn if they provide it.",
+      "parentUuid": "d9ee37be_20ee15d2",
+      "revId": "d03e4f3019f82d34d92dbd8fa4c295ec830b65dd",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "60318cc8_4205732c",
+        "filename": "metadata/tests/type_narrowing_test.py",
+        "patchSetId": 6
+      },
+      "lineNbr": 234,
+      "author": {
+        "id": 3388142
+      },
+      "writtenOn": "2025-06-25T02:15:39Z",
+      "side": 1,
+      "message": "I\u0027ll warn if they provide it.",
+      "parentUuid": "d9ee37be_20ee15d2",
       "revId": "d03e4f3019f82d34d92dbd8fa4c295ec830b65dd",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }

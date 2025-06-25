@@ -16,6 +16,24 @@
       "message": "```suggestion\n               \"not parse a bug with a trailing space\")\n```",
       "revId": "d52dda15875f2cffe9a71f186412f403a348e83f",
       "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "917baa23_056964bb",
+        "filename": "metadata/tests/type_narrowing_test.py",
+        "patchSetId": 10
+      },
+      "lineNbr": 254,
+      "author": {
+        "id": 3388142
+      },
+      "writtenOn": "2025-06-25T06:15:46Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1a592833_06b52b43",
+      "revId": "d52dda15875f2cffe9a71f186412f403a348e83f",
+      "serverId": "3ce6091f-6c88-37e8-8c75-72f92ae8dfba"
     }
   ]
 }

@@ -292,6 +292,7 @@ class GclientApi(recipe_api.RecipeApi):
     return self.m.step('cleanup index.lock', cmd)
 
   def get_gerrit_patch_root(self, gclient_config=None):
+    self.m.step("startof get_gerrit_patch_root.", ["echo", "hi"])
     """Returns local path to the repo where gerrit patch will be applied.
 
     If there is no patch, returns None.
@@ -332,7 +333,9 @@ class GclientApi(recipe_api.RecipeApi):
 
   def _get_repo_path(self, repo_url, gclient_config=None):
     repo_url = self._canonicalize_repo_url(repo_url)
+    self.m.step("I am in gclient.", ["echo", "hi"])
     cfg = gclient_config or self.c
+    self.m.step("view config", ["echo", string(cfg)])
     rel_path, _ = cfg.repo_path_map.get(repo_url, ('', ''))
     if rel_path:
       return rel_path

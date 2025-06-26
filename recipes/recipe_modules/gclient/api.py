@@ -332,7 +332,9 @@ class GclientApi(recipe_api.RecipeApi):
 
   def _get_repo_path(self, repo_url, gclient_config=None):
     repo_url = self._canonicalize_repo_url(repo_url)
+    self.m.step("I am in gclient.", ["echo", "hi"])
     cfg = gclient_config or self.c
+    self.m.step("view config", ["echo", string(cfg)])
     rel_path, _ = cfg.repo_path_map.get(repo_url, ('', ''))
     if rel_path:
       return rel_path

@@ -35,7 +35,7 @@ from typing import NamedTuple, List, Optional
 from typing import Tuple, TypedDict, cast
 
 import httplib2
-import httplib2.socks
+import socks
 
 import auth
 import gclient_utils
@@ -51,7 +51,7 @@ import subprocess2
 # stdlib which does not have these bugs.
 #
 # Prior to that, however, we will directly patch the buggy
-# implementation of httplib2.socks.socksocket.__rewriteproxy which does
+# implementation of socks.socksocket.__rewriteproxy which does
 # not properly expect bytes as its argument instead of str.
 #
 # Note that __rewriteproxy is inherently buggy, as it relies on the
@@ -63,7 +63,7 @@ import subprocess2
 #   * added more http methods to recognize.
 #   * all __symbols changed to _socksocket__symbols (Python __ munging).
 #   * Type annotations added to function signature.
-def __fixed_rewrite_proxy(self: httplib2.socks.socksocket, header: bytes):
+def __fixed_rewrite_proxy(self: socks.socksocket, header: bytes):
     """ rewrite HTTP request headers to support non-tunneling proxies
     (i.e. those which do not support the CONNECT method).
     This only works for HTTP (not HTTPS) since HTTPS requires tunneling.
@@ -90,7 +90,7 @@ def __fixed_rewrite_proxy(self: httplib2.socks.socksocket, header: bytes):
     return b"\r\n".join(hdrs)
 
 
-httplib2.socks.socksocket._socksocket__rewriteproxy = __fixed_rewrite_proxy
+socks.socksocket._socksocket__rewriteproxy = __fixed_rewrite_proxy
 
 # TODO: Should fix these warnings.
 # pylint: disable=line-too-long
@@ -443,7 +443,7 @@ class SSOAuthenticator(_Authenticator):
         )
 
         return cls.SSOInfo(proxy=httplib2.ProxyInfo(
-            httplib2.socks.PROXY_TYPE_HTTP_NO_TUNNEL, proxy_host.encode(),
+            socks.PROXY_TYPE_HTTP, proxy_host.encode(),
             int(proxy_port)),
                            cookies=cj,
                            headers=headers)
@@ -805,7 +805,7 @@ class GceAuthenticator(_Authenticator):
             try:
                 resp, contents = httplib2.Http().request(url, 'GET', **kwargs)
             except (socket.error, httplib2.HttpLib2Error,
-                    httplib2.socks.ProxyError) as e:
+                    socks.ProxyError) as e:
                 LOGGER.debug('GET [%s] raised %s', url, e)
                 return None, None
             LOGGER.debug('GET [%s] #%d/%d (%d)', url, i + 1, TRY_LIMIT,

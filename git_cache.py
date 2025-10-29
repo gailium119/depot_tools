@@ -49,7 +49,7 @@ class ClobberNeeded(Exception):
 
 class Mirror(object):
 
-    git_exe = 'git.bat' if sys.platform.startswith('win') else 'git'
+    git_exe = 'git'
     gsutil_exe = os.path.join(os.path.dirname(os.path.abspath(__file__)),
                               'gsutil.py')
     cachepath_lock = threading.Lock()

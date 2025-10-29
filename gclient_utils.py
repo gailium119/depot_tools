@@ -1191,7 +1191,7 @@ def freeze(obj):
 
   Will raise TypeError if you pass an object which is not hashable.
   """
-  if isinstance(obj, collections.Mapping):
+  if isinstance(obj, collections.abc.Mapping):
     return FrozenDict((freeze(k), freeze(v)) for k, v in obj.items())
   elif isinstance(obj, (list, tuple)):
     return tuple(freeze(i) for i in obj)
@@ -1202,7 +1202,7 @@ def freeze(obj):
     return obj
 
 
-class FrozenDict(collections.Mapping):
+class FrozenDict(collections.abc.Mapping):
   """An immutable OrderedDict.
 
   Modified From: http://stackoverflow.com/a/2704866
@@ -1216,7 +1216,7 @@ class FrozenDict(collections.Mapping):
         operator.xor, (hash(i) for i in enumerate(self._d.items())), 0)
 
   def __eq__(self, other):
-    if not isinstance(other, collections.Mapping):
+    if not isinstance(other, collections.abc.Mapping):
       return NotImplemented
     if self is other:
       return True

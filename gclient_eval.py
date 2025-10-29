@@ -22,7 +22,7 @@ else:
   basestring = str
 
 
-class _NodeDict(collections.MutableMapping):
+class _NodeDict(collections.abc.MutableMapping):
   """Dict-like type that also stores information on AST nodes and tokens."""
   def __init__(self, data, tokens=None):
     self.data = collections.OrderedDict(data)

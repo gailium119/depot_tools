@@ -387,7 +387,7 @@ class Annotated(Wrapper):
       self.lock.release()
 
     # Continue lockless.
-    obj[0] += out
+    obj[0] += str(out)
     while True:
       # TODO(agable): find both of these with a single pass.
       cr_loc = obj[0].find('\r')
